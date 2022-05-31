@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "preventer",
+  "version": "${version}",
+  "name": "Preventer",
+  "description": "A mod that prevents you from doing dumb things",
+  "authors": ["DasHomi"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/preventer/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.dashomi.preventer.PreventerClient"
+    ]
+  },
+  "mixins": [
+    "preventer.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "1.18.2",
+    "java": ">=17"
+  }
+}
