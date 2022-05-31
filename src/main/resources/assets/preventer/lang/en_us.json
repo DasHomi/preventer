@@ -1,0 +1,6 @@
+{
+  "config.preventer.noStrip": "No Strip",
+  "config.preventer.noStrip.tooltip": "Prevents you from stripping Logs",
+  "config.preventer.noPath": "No Path",
+  "config.preventer.noPath.tooltip": "Prevents you from creating path blocks"
+}
