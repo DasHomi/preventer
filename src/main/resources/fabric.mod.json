@@ -3,9 +3,12 @@
   "id": "preventer",
   "version": "${version}",
   "name": "Preventer",
-  "description": "A mod that prevents you from doing dumb things",
+  "description": "A mod that prevents you and Minecraft from doing dumb and annoying things",
   "authors": ["DasHomi"],
-  "contact": {},
+  "contact": {
+    "sources": "https://github.com/DasHomi/preventer",
+    "issues": "https://github.com/DasHomi/preventer/issues"
+  },
   "license": "MIT",
   "icon": "assets/preventer/icon.png",
   "environment": "client",
@@ -21,6 +24,11 @@
     "fabricloader": ">=0.14.6",
     "fabric": "*",
     "minecraft": "1.18.2",
-    "java": ">=17"
+    "java": ">=17",
+    "completeconfig": "^1.0.0"
+  },
+  "suggests": {
+    "modmenu": "*",
+    "cloth-config": "*"
   }
 }
