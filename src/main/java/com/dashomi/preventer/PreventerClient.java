@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 public class PreventerClient implements ClientModInitializer {
 	public static final String MOD_ID = "preventer";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	static PreventerConfig config;
+	public static PreventerConfig config;
 
 	@Override
 	public void onInitializeClient() {

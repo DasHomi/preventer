@@ -2,5 +2,9 @@
   "config.preventer.noStrip": "No Strip",
   "config.preventer.noStrip.tooltip": "Prevents you from stripping Logs",
   "config.preventer.noPath": "No Path",
-  "config.preventer.noPath.tooltip": "Prevents you from creating path blocks"
+  "config.preventer.noPath.tooltip": "Prevents you from creating path blocks",
+  "config.preventer.hideTotem": "Hide Totem",
+  "config.preventer.hideTotem.tooltip": "Hides totems of undying in the offhand",
+  "config.preventer.hideShield": "Hide Shield",
+  "config.preventer.hideShield.tooltip": "Hides shields in the offhand"
 }

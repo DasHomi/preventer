@@ -25,9 +25,15 @@ public class PreventerConfig extends Config implements ConfigContainer {
     }
 
     @ConfigEntry(tooltipTranslationKeys = "noStrip.tooltip")
-    private boolean noStrip = false;
+    public boolean noStrip = false;
 
     @ConfigEntry(tooltipTranslationKeys = "noPath.tooltip")
-    private boolean noPath = false;
+    public boolean noPath = false;
+
+    @ConfigEntry(tooltipTranslationKeys = "hideShield.tooltip")
+    public boolean hideShield = false;
+
+    @ConfigEntry(tooltipTranslationKeys = "hideTotem.tooltip")
+    public boolean hideTotem = false;
 
 }
