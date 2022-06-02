@@ -1,6 +1,7 @@
 package com.dashomi.preventer.modules;
 
 import com.dashomi.preventer.PreventerClient;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
@@ -44,6 +45,19 @@ public class UseBlockModule {
                 if (HoeItem.TILLING_ACTIONS.containsKey(blockState.getBlock())) {
                     return ActionResult.FAIL;
                 }
+            }
+        }
+        if (PreventerClient.config.noGlowBerrieHarvest) {
+            BlockState blockState = world.getBlockState(blockHitResult.getBlockPos());
+            List<Block> glowBerryBlocks = Arrays.asList(Blocks.CAVE_VINES, Blocks.CAVE_VINES_PLANT);
+            if (glowBerryBlocks.contains(blockState.getBlock())) {
+                return ActionResult.FAIL;
+            }
+        }
+        if (PreventerClient.config.noSweetBerrieHarvest) {
+            BlockState blockState = world.getBlockState(blockHitResult.getBlockPos());
+            if (blockState.getBlock().equals(Blocks.SWEET_BERRY_BUSH)) {
+                return ActionResult.FAIL;
             }
         }
         return ActionResult.PASS;

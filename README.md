@@ -1,6 +1,6 @@
 # Preventer
 
-A fabric mod that prevents you and Minecraft from doing dumb and annoying things.
+A fabric mod that prevents you from doing dumb things.
 Every Feature can be toggled individually.
 
 ## **Features**
@@ -9,6 +9,8 @@ Every Feature can be toggled individually.
 - No Strip
 - No Path
 - No Farmland
+- Prevent Glow Berrie Harvest
+- Prevent Sweet Berrie Harvest
 
 ## Planed Features
 - Only harvest mature Plants
@@ -16,6 +18,7 @@ Every Feature can be toggled individually.
 - Prevent Copper scraping
 - No active tool drop
 - Prevent Harvest
+- No Cake today
 
 ## Dependencies
 **Included:**  

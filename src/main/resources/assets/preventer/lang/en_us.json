@@ -8,5 +8,9 @@
   "config.preventer.hideShield": "Hide Shield",
   "config.preventer.hideShield.tooltip": "Hides shields in the offhand",
   "config.preventer.noFarmland": "No Farmland",
-  "config.preventer.noFarmland.tooltip": "Prevents you from creating farmland"
+  "config.preventer.noFarmland.tooltip": "Prevents you from creating farmland",
+  "config.preventer.noGlowBerrieHarvest": "No Glow Berrie Harvest",
+  "config.preventer.noGlowBerrieHarvest.tooltip": "Prevents you from harvesting Glow Berries",
+  "config.preventer.noSweetBerrieHarvest": "No Sweet Berrie Harvest",
+  "config.preventer.noSweetBerrieHarvest.tooltip": "Prevents you from harvesting Sweet Berries "
 }

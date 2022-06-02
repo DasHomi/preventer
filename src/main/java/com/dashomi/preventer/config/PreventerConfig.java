@@ -38,4 +38,10 @@ public class PreventerConfig extends Config implements ConfigContainer {
     @ConfigEntry(tooltipTranslationKeys = "hideTotem.tooltip")
     public boolean hideTotem = false;
 
+    @ConfigEntry(tooltipTranslationKeys = "noSweetBerrieHarvest.tooltip")
+    public boolean noSweetBerrieHarvest = false;
+
+    @ConfigEntry(tooltipTranslationKeys = "noGlowBerrieHarvest.tooltip")
+    public boolean noGlowBerrieHarvest = false;
+
 }
