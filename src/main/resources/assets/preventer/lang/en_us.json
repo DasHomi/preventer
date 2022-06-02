@@ -6,5 +6,7 @@
   "config.preventer.hideTotem": "Hide Totem",
   "config.preventer.hideTotem.tooltip": "Hides totems of undying in the offhand",
   "config.preventer.hideShield": "Hide Shield",
-  "config.preventer.hideShield.tooltip": "Hides shields in the offhand"
+  "config.preventer.hideShield.tooltip": "Hides shields in the offhand",
+  "config.preventer.noFarmland": "No Farmland",
+  "config.preventer.noFarmland.tooltip": "Prevents you from creating farmland"
 }

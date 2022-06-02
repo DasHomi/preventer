@@ -30,5 +30,6 @@
   "suggests": {
     "modmenu": "*",
     "cloth-config": "*"
-  }
+  },
+  "accessWidener": "preventer.accesswidener"
 }

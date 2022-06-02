@@ -2,7 +2,6 @@ package com.dashomi.preventer.config;
 
 import com.dashomi.preventer.PreventerClient;
 import me.lortseam.completeconfig.api.ConfigContainer;
-import me.lortseam.completeconfig.api.ConfigEntries;
 import me.lortseam.completeconfig.api.ConfigEntry;
 import me.lortseam.completeconfig.data.Config;
 import me.lortseam.completeconfig.gui.ConfigScreenBuilder;
@@ -29,6 +28,9 @@ public class PreventerConfig extends Config implements ConfigContainer {
 
     @ConfigEntry(tooltipTranslationKeys = "noPath.tooltip")
     public boolean noPath = false;
+
+    @ConfigEntry(tooltipTranslationKeys = "noFarmland.tooltip")
+    public boolean noFarmland = false;
 
     @ConfigEntry(tooltipTranslationKeys = "hideShield.tooltip")
     public boolean hideShield = false;

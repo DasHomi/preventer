@@ -6,13 +6,16 @@ Every Feature can be toggled individually.
 ## **Features**
 - Hide Shield
 - Hide Totem of Undying
+- No Strip
+- No Path
+- No Farmland
 
 ## Planed Features
 - Only harvest mature Plants
-- No Field
-- No Strip
-- No Path
-- hide Fire
+- Prevent Copper wax removing
+- Prevent Copper scraping
+- No active tool drop
+- Prevent Harvest
 
 ## Dependencies
 **Included:**  
