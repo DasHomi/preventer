@@ -12,5 +12,13 @@
   "config.preventer.noGlowBerrieHarvest": "No Glow Berrie Harvest",
   "config.preventer.noGlowBerrieHarvest.tooltip": "Prevents you from harvesting Glow Berries",
   "config.preventer.noSweetBerrieHarvest": "No Sweet Berrie Harvest",
-  "config.preventer.noSweetBerrieHarvest.tooltip": "Prevents you from harvesting Sweet Berries "
+  "config.preventer.noSweetBerrieHarvest.tooltip": "Prevents you from harvesting Sweet Berries",
+  "config.preventer.onlyMaturePlantsHarvest": "Only Mature Plants Harvest",
+  "config.preventer.onlyMaturePlantsHarvest.tooltip": "Only harvest mature Plants",
+  "config.preventer.noCake": "No Cake Eating",
+  "config.preventer.noCake.tooltip": "Prevents you from eating cakes",
+  "config.preventer.noScraping": "No Copper Scraping",
+  "config.preventer.noScraping.tooltip": "Prevents scraping oxidation from copper",
+  "config.preventer.noDeWax": "No Copper Dewax",
+  "config.preventer.noDeWax.tooltip": "Prevents dewaxing copper"
 }

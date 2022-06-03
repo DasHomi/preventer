@@ -4,20 +4,26 @@ A fabric mod that prevents you from doing dumb things.
 Every Feature can be toggled individually.
 
 ## **Features**
-- Hide Shield
-- Hide Totem of Undying
 - No Strip
+  - _Prevents creation of Stripped Logs_
 - No Path
+  - _Prevents creation of Paths_
 - No Farmland
+  - _Prevents creation of Farmland_
 - Prevent Glow Berrie Harvest
+  - _Prevents harvesting Glow Berries_
 - Prevent Sweet Berrie Harvest
+  - _Prevents harvesting Sweet Berries_
+- Prevent Copper wax removing
+  - _Prevents removing wax from copper_
+- Prevent Copper scraping
+  - _Prevents removing oxidation from copper_
 
 ## Planed Features
 - Only harvest mature Plants
-- Prevent Copper wax removing
-- Prevent Copper scraping
 - No active tool drop
 - Prevent Harvest
+- Prevent Villager Punch
 - No Cake today
 
 ## Dependencies
