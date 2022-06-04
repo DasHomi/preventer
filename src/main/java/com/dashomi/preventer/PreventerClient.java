@@ -19,5 +19,6 @@ public class PreventerClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		config = PreventerConfig.initialize();
 		UseBlockCallback.EVENT.register(UseBlockModule::checkBlockUse);
+		LOGGER.info("Initialized");
 	}
 }
