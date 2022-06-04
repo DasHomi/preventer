@@ -1,10 +1,7 @@
 package com.dashomi.preventer.modules;
 
 import com.dashomi.preventer.PreventerClient;
-import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
-import net.fabricmc.fabric.mixin.content.registry.OxidizableMixin;
 import net.minecraft.block.*;
-import net.minecraft.client.particle.GlowParticle;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.util.ActionResult;

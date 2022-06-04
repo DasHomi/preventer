@@ -16,7 +16,6 @@ repositories {
 	maven {
 		url "https://maven.shedaniel.me/"
 	}
-
 }
 
 dependencies {
@@ -25,7 +24,6 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	modImplementation("com.gitlab.Lortseam:completeconfig:1.4.1")
@@ -74,7 +72,12 @@ jar {
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
-			from components.java
+			artifact(remapJar) {
+				builtBy remapJar
+			}
+			artifact(sourcesJar) {
+				builtBy remapSourcesJar
+			}
 		}
 	}
 

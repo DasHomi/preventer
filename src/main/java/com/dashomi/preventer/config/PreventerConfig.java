@@ -11,10 +11,13 @@ import net.fabricmc.loader.api.FabricLoader;
 
 public class PreventerConfig extends Config implements ConfigContainer {
     public static PreventerConfig initialize() {
+        PreventerClient.LOGGER.info("Initializing Config");
         PreventerConfig config = new PreventerConfig();
         config.load();
         if (FabricLoader.getInstance().isModLoaded("cloth-config")) {
             ConfigScreenBuilder.setMain(PreventerClient.MOD_ID, new ClothConfigScreenBuilder());
+        } else {
+            PreventerClient.LOGGER.warn("Couldn't initialize Cloth Config Screen");
         }
         return config;
     }

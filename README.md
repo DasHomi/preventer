@@ -28,10 +28,12 @@ Every Feature can be toggled individually.
 
 ## Dependencies
 **Included:**  
-[Complete Config](https://gitlab.com/Lortseam/completeconfig) (Configuration)
+
 
 **Required:**  
 [Fabric API](https://github.com/FabricMC/fabric)
+[Complete Config](https://gitlab.com/Lortseam/completeconfig) (Configuration)\
+[Cloth Config](https://github.com/shedaniel/cloth-config) (Configuration)
 
 **Suggested:**  
 [Mod Menu](https://github.com/TerraformersMC/ModMenu) (In game Config editing)
