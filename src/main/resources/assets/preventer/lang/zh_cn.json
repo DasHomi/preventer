@@ -1,7 +1,7 @@
 {
   "config.preventer.noStrip": "禁止去皮",
   "config.preventer.noStrip.tooltip": "防止你给原木去皮",
-  "config.preventer.noPath": "禁止土径",
+  "config.preventer.noPath": "禁止制造土径",
   "config.preventer.noPath.tooltip": "防止你制造土径",
   "config.preventer.hideTotem": "隐藏图腾",
   "config.preventer.hideTotem.tooltip": "隐藏副手的不死图腾",
@@ -19,6 +19,6 @@
   "config.preventer.noCake.tooltip": "防止你吃蛋糕",
   "config.preventer.noScraping": "禁止除锈",
   "config.preventer.noScraping.tooltip": "防止你给铜块除锈",
-  "config.preventer.noDeWax": "禁止涂蜡",
-  "config.preventer.noDeWax.tooltip": "防止你给铜块涂蜡"
+  "config.preventer.noDeWax": "禁止去蜡",
+  "config.preventer.noDeWax.tooltip": "防止你给铜块去蜡"
 }
