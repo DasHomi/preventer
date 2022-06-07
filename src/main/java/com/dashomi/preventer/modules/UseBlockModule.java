@@ -1,6 +1,7 @@
 package com.dashomi.preventer.modules;
 
 import com.dashomi.preventer.PreventerClient;
+import com.dashomi.preventer.util.LowDurabilityProtectionHelper;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -23,6 +24,8 @@ public class UseBlockModule {
                     return ActionResult.FAIL;
                 }
             }
+        } else {
+            return LowDurabilityProtectionHelper.doDurabilityCheck(playerEntity.getStackInHand(hand), playerEntity);
         }
         if (PreventerClient.config.noPath) {
             if (playerEntity.getStackInHand(hand).getItem() instanceof ShovelItem) {
@@ -31,6 +34,8 @@ public class UseBlockModule {
                     return ActionResult.FAIL;
                 }
             }
+        } else {
+            return LowDurabilityProtectionHelper.doDurabilityCheck(playerEntity.getStackInHand(hand), playerEntity);
         }
         if (PreventerClient.config.noFarmland) {
             if (playerEntity.getStackInHand(hand).getItem() instanceof HoeItem) {
@@ -39,6 +44,8 @@ public class UseBlockModule {
                     return ActionResult.FAIL;
                 }
             }
+        } else {
+            return LowDurabilityProtectionHelper.doDurabilityCheck(playerEntity.getStackInHand(hand), playerEntity);
         }
         if (PreventerClient.config.noGlowBerrieHarvest) {
             BlockState blockState = world.getBlockState(blockHitResult.getBlockPos());
@@ -59,6 +66,8 @@ public class UseBlockModule {
                     return ActionResult.FAIL;
                 }
             }
+        } else {
+            return LowDurabilityProtectionHelper.doDurabilityCheck(playerEntity.getStackInHand(hand), playerEntity);
         }
         if (PreventerClient.config.noDeWax) {
             if (playerEntity.getStackInHand(hand).getItem() instanceof AxeItem) {
@@ -67,6 +76,8 @@ public class UseBlockModule {
                     return ActionResult.FAIL;
                 }
             }
+        } else {
+            return LowDurabilityProtectionHelper.doDurabilityCheck(playerEntity.getStackInHand(hand), playerEntity);
         }
         return ActionResult.PASS;
     }
