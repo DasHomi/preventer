@@ -20,5 +20,9 @@
   "config.preventer.noScraping": "No Copper Scraping",
   "config.preventer.noScraping.tooltip": "Prevents scraping oxidation from copper",
   "config.preventer.noDeWax": "No Copper Dewax",
-  "config.preventer.noDeWax.tooltip": "Prevents dewaxing copper"
+  "config.preventer.noDeWax.tooltip": "Prevents dewaxing copper",
+  "config.preventer.lowDurabilityProtection": "Low Durability Protection",
+  "config.preventer.lowDurabilityProtection.tooltip": "Prevents tools from being broken due to low durability.",
+  "config.preventer.lowDurabilityProtectionRange": "Low Durability Protection Range",
+  "config.preventer.lowDurabilityProtectionRange.tooltip": "Specify when the durability will be checked (Basically maxDamage - lowDurabilityProtectionRange)"
 }

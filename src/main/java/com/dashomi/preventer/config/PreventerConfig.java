@@ -59,4 +59,9 @@ public class PreventerConfig extends Config implements ConfigContainer {
     @ConfigEntry(tooltipTranslationKeys = "noDeWax.tooltip")
     public boolean noDeWax = false;
 
+    @ConfigEntry(tooltipTranslationKeys = "lowDurabilityProtection.tooltip")
+    public boolean lowDurabilityProtection = false;
+
+    @ConfigEntry(tooltipTranslationKeys = "lowDurabilityProtectionRange.tooltip")
+    public int lowDurabilityProtectionRange = 1;
 }
