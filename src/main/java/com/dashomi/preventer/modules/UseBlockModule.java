@@ -13,14 +13,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class UseBlockModule {
-    static List<Item> shovelItems = Arrays.asList(Items.NETHERITE_SHOVEL, Items.DIAMOND_SHOVEL, Items.GOLDEN_SHOVEL, Items.IRON_SHOVEL, Items.STONE_SHOVEL, Items.WOODEN_SHOVEL);
-    static List<Item> axeItems = Arrays.asList(Items.NETHERITE_AXE, Items.DIAMOND_AXE, Items.GOLDEN_AXE, Items.IRON_AXE, Items.STONE_AXE, Items.WOODEN_AXE);
-    static List<Item> hoeItems = Arrays.asList(Items.NETHERITE_HOE, Items.DIAMOND_HOE, Items.GOLDEN_HOE, Items.IRON_HOE, Items.STONE_HOE, Items.WOODEN_HOE);
     static List<Block> glowBerryBlocks = Arrays.asList(Blocks.CAVE_VINES, Blocks.CAVE_VINES_PLANT);
 
     public static ActionResult checkBlockUse(PlayerEntity playerEntity, World world, Hand hand, BlockHitResult blockHitResult) {
         if (PreventerClient.config.noStrip) {
-            if (axeItems.contains(playerEntity.getStackInHand(hand).getItem())) {
+            if (playerEntity.getStackInHand(hand).getItem() instanceof AxeItem) {
                 BlockState blockState = world.getBlockState(blockHitResult.getBlockPos());
                 if (AxeItem.STRIPPED_BLOCKS.containsKey(blockState.getBlock())) {
                     return ActionResult.FAIL;
@@ -28,7 +25,7 @@ public class UseBlockModule {
             }
         }
         if (PreventerClient.config.noPath) {
-            if (shovelItems.contains(playerEntity.getStackInHand(hand).getItem())) {
+            if (playerEntity.getStackInHand(hand).getItem() instanceof ShovelItem) {
                 BlockState blockState = world.getBlockState(blockHitResult.getBlockPos());
                 if (ShovelItem.PATH_STATES.containsKey(blockState.getBlock())) {
                     return ActionResult.FAIL;
@@ -36,7 +33,7 @@ public class UseBlockModule {
             }
         }
         if (PreventerClient.config.noFarmland) {
-            if (hoeItems.contains(playerEntity.getStackInHand(hand).getItem())) {
+            if (playerEntity.getStackInHand(hand).getItem() instanceof HoeItem) {
                 BlockState blockState = world.getBlockState(blockHitResult.getBlockPos());
                 if (HoeItem.TILLING_ACTIONS.containsKey(blockState.getBlock())) {
                     return ActionResult.FAIL;
@@ -56,7 +53,7 @@ public class UseBlockModule {
             }
         }
         if (PreventerClient.config.noScraping) {
-            if (axeItems.contains(playerEntity.getStackInHand(hand).getItem())) {
+            if (playerEntity.getStackInHand(hand).getItem() instanceof AxeItem) {
                 Block block = world.getBlockState(blockHitResult.getBlockPos()).getBlock();
                 if (block instanceof Oxidizable) {
                     return ActionResult.FAIL;
@@ -64,7 +61,7 @@ public class UseBlockModule {
             }
         }
         if (PreventerClient.config.noDeWax) {
-            if (axeItems.contains(playerEntity.getStackInHand(hand).getItem())) {
+            if (playerEntity.getStackInHand(hand).getItem() instanceof AxeItem) {
                 Block block = world.getBlockState(blockHitResult.getBlockPos()).getBlock();
                 if (HoneycombItem.WAXED_TO_UNWAXED_BLOCKS.get().containsKey(block)) {
                     return ActionResult.FAIL;
