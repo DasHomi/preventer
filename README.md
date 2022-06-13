@@ -18,6 +18,8 @@ Every Feature can be toggled individually.
   - _Prevents removing wax from copper_
 - Prevent Copper scraping
   - _Prevents removing oxidation from copper_
+- Low Durability Protection
+  - _Prevent tools & weapons from being broken due to low durability_
 
 ## Planed Features
 - Only harvest mature Plants

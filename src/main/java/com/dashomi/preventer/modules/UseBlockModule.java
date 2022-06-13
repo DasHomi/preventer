@@ -17,6 +17,9 @@ public class UseBlockModule {
     static List<Block> glowBerryBlocks = Arrays.asList(Blocks.CAVE_VINES, Blocks.CAVE_VINES_PLANT);
 
     public static ActionResult checkBlockUse(PlayerEntity playerEntity, World world, Hand hand, BlockHitResult blockHitResult) {
+        if (LowDurabilityProtectionHelper.doDurabilityCheck(playerEntity.getStackInHand(hand), playerEntity) == ActionResult.FAIL){
+            return ActionResult.FAIL;
+        }
         if (PreventerClient.config.noStrip) {
             if (playerEntity.getStackInHand(hand).getItem() instanceof AxeItem) {
                 BlockState blockState = world.getBlockState(blockHitResult.getBlockPos());
@@ -24,8 +27,6 @@ public class UseBlockModule {
                     return ActionResult.FAIL;
                 }
             }
-        } else {
-            return LowDurabilityProtectionHelper.doDurabilityCheck(playerEntity.getStackInHand(hand), playerEntity);
         }
         if (PreventerClient.config.noPath) {
             if (playerEntity.getStackInHand(hand).getItem() instanceof ShovelItem) {
@@ -34,8 +35,6 @@ public class UseBlockModule {
                     return ActionResult.FAIL;
                 }
             }
-        } else {
-            return LowDurabilityProtectionHelper.doDurabilityCheck(playerEntity.getStackInHand(hand), playerEntity);
         }
         if (PreventerClient.config.noFarmland) {
             if (playerEntity.getStackInHand(hand).getItem() instanceof HoeItem) {
@@ -44,8 +43,6 @@ public class UseBlockModule {
                     return ActionResult.FAIL;
                 }
             }
-        } else {
-            return LowDurabilityProtectionHelper.doDurabilityCheck(playerEntity.getStackInHand(hand), playerEntity);
         }
         if (PreventerClient.config.noGlowBerrieHarvest) {
             BlockState blockState = world.getBlockState(blockHitResult.getBlockPos());
@@ -66,8 +63,6 @@ public class UseBlockModule {
                     return ActionResult.FAIL;
                 }
             }
-        } else {
-            return LowDurabilityProtectionHelper.doDurabilityCheck(playerEntity.getStackInHand(hand), playerEntity);
         }
         if (PreventerClient.config.noDeWax) {
             if (playerEntity.getStackInHand(hand).getItem() instanceof AxeItem) {
@@ -76,8 +71,6 @@ public class UseBlockModule {
                     return ActionResult.FAIL;
                 }
             }
-        } else {
-            return LowDurabilityProtectionHelper.doDurabilityCheck(playerEntity.getStackInHand(hand), playerEntity);
         }
         return ActionResult.PASS;
     }

@@ -20,5 +20,9 @@
   "config.preventer.noScraping": "No Copper Scraping",
   "config.preventer.noScraping.tooltip": "Verhindert die Oxidation von Kupferblöcken zu entfernen",
   "config.preventer.noDeWax": "No Copper Dewax",
-  "config.preventer.noDeWax.tooltip": "Verhindert das Wachs von Kupferblöcken zu entfernen"
+  "config.preventer.noDeWax.tooltip": "Verhindert das Wachs von Kupferblöcken zu entfernen",
+  "config.preventer.lowDurabilityProtection": "Low Durability Protection",
+  "config.preventer.lowDurabilityProtection.tooltip": "Verhindert Zerstörung von Werkzeug & Waffen aufgrund von geringer Haltbarkeit",
+  "config.preventer.lowDurabilityProtectionRange": "Low Durability Protection Range",
+  "config.preventer.lowDurabilityProtectionRange.tooltip": "Gibt die niedrigste Haltbarkeit von Werkzeugen & Waffen an"
 }
