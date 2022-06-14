@@ -26,6 +26,10 @@ public class PreventerConfig extends Config implements ConfigContainer {
         super(PreventerClient.MOD_ID);
     }
 
+    @Transitive
+    public final ModuleConfigGroup moduleConfigGroup = new ModuleConfigGroup();
+
+    // Toggles
     @ConfigEntry(tooltipTranslationKeys = "noStrip.tooltip")
     public boolean noStrip = false;
 
@@ -61,7 +65,4 @@ public class PreventerConfig extends Config implements ConfigContainer {
 
     @ConfigEntry(tooltipTranslationKeys = "lowDurabilityProtection.tooltip")
     public boolean lowDurabilityProtection = false;
-
-    @ConfigEntry(tooltipTranslationKeys = "lowDurabilityProtectionRange.tooltip")
-    public int lowDurabilityProtectionRange = 1;
 }

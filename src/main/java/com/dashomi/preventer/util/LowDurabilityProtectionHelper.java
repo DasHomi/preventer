@@ -11,7 +11,7 @@ public class LowDurabilityProtectionHelper {
         if (PreventerClient.config.lowDurabilityProtection) { // Annoying if-s, I know
             if (!player.isCreative() && !player.isSpectator()) { // AttackBlockCallback does not do game mode check for us, so we need to do it by ourselves
                 if (stack.isDamageable()) { // Check if the item is damageable
-                    if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.lowDurabilityProtectionRange) { // Check if the item is *almost* broken
+                    if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.moduleConfigGroup.lowDurabilityProtectionRange) { // Check if the item is *almost* broken
                         player.sendMessage(new TranslatableText("config.preventer.lowDurabilityProtection.text"), true);
                         return ActionResult.FAIL;
                     }

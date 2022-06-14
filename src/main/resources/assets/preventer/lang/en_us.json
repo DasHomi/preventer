@@ -1,29 +1,44 @@
 {
+  "config.preventer": "Module Toggles",
+  "config.preventer.moduleConfigGroup": "Module Configuration",
+
   "config.preventer.noStrip": "No Strip",
   "config.preventer.noStrip.tooltip": "Prevents you from stripping Logs",
+
   "config.preventer.noPath": "No Path",
   "config.preventer.noPath.tooltip": "Prevents you from creating path blocks",
+
   "config.preventer.hideTotem": "Hide Totem",
   "config.preventer.hideTotem.tooltip": "Hides totems of undying in the offhand",
+
   "config.preventer.hideShield": "Hide Shield",
   "config.preventer.hideShield.tooltip": "Hides shields in the offhand",
+
   "config.preventer.noFarmland": "No Farmland",
   "config.preventer.noFarmland.tooltip": "Prevents you from creating farmland",
+
   "config.preventer.noGlowBerrieHarvest": "No Glow Berrie Harvest",
   "config.preventer.noGlowBerrieHarvest.tooltip": "Prevents you from harvesting Glow Berries",
+
   "config.preventer.noSweetBerrieHarvest": "No Sweet Berrie Harvest",
   "config.preventer.noSweetBerrieHarvest.tooltip": "Prevents you from harvesting Sweet Berries",
+
   "config.preventer.onlyMaturePlantsHarvest": "Only Mature Plants Harvest",
   "config.preventer.onlyMaturePlantsHarvest.tooltip": "Only harvest mature Plants",
+
   "config.preventer.noCake": "No Cake Eating",
   "config.preventer.noCake.tooltip": "Prevents you from eating cakes",
+
   "config.preventer.noScraping": "No Copper Scraping",
   "config.preventer.noScraping.tooltip": "Prevents scraping oxidation from copper",
+
   "config.preventer.noDeWax": "No Copper Dewax",
   "config.preventer.noDeWax.tooltip": "Prevents dewaxing copper",
+
   "config.preventer.lowDurabilityProtection": "Low Durability Protection",
-  "config.preventer.lowDurabilityProtection.tooltip": "Prevents tools & weapons from being broken due to low durability",
+  "config.preventer.lowDurabilityProtection.tooltip": "Prevents tools & weapons from \nbeing broken due to low durability",
   "config.preventer.lowDurabilityProtection.text": "§4Tool usage prevented due to low durability§4",
-  "config.preventer.lowDurabilityProtectionRange": "Low Durability Protection Range",
-  "config.preventer.lowDurabilityProtectionRange.tooltip": "Specify the lowest durability for tools & weapons"
+  "config.preventer.lowDurabilityProtectionRange": "Low Durability Protection Threshold",
+  "config.preventer.lowDurabilityProtectionRange.tooltip": "Specify the lowest durability for tools & weapons",
+  "config.preventer.lowDurabilityProtectionRange.valueKey": "Durability: %d"
 }
