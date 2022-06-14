@@ -23,6 +23,7 @@
   "config.preventer.noDeWax.tooltip": "Prevents dewaxing copper",
   "config.preventer.lowDurabilityProtection": "Low Durability Protection",
   "config.preventer.lowDurabilityProtection.tooltip": "Prevents tools & weapons from being broken due to low durability",
+  "config.preventer.lowDurabilityProtection.text": "§4Tool usage prevented due to low durability§4",
   "config.preventer.lowDurabilityProtectionRange": "Low Durability Protection Range",
   "config.preventer.lowDurabilityProtectionRange.tooltip": "Specify the lowest durability for tools & weapons"
 }
