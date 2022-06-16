@@ -20,9 +20,10 @@ Every Feature can be toggled individually.
   - _Prevents removing oxidation from copper_
 - Low Durability Protection
   - _Prevent tools & weapons from being broken due to low durability_
+- Only harvest mature Crops
+  - _Prevents harvesting/breaking of non-mature plants_
 
 ## Planed Features
-- Only harvest mature Plants
 - No active tool drop
 - Prevent Harvest
 - Prevent Villager Punch

@@ -1,7 +1,6 @@
 package com.dashomi.preventer.modules;
 
 import com.dashomi.preventer.PreventerClient;
-import com.dashomi.preventer.util.LowDurabilityProtectionHelper;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
