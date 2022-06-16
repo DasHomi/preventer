@@ -51,8 +51,8 @@ public class PreventerConfig extends Config implements ConfigContainer {
     @ConfigEntry(tooltipTranslationKeys = "noGlowBerrieHarvest.tooltip")
     public boolean noGlowBerrieHarvest = false;
 
-    //@ConfigEntry(tooltipTranslationKeys = "onlyMaturePlantsHarvest.tooltip")
-    //public boolean onlyMaturePlantsHarvest = false;
+    @ConfigEntry(tooltipTranslationKeys = "onlyMatureCropHarvest.tooltip")
+    public boolean onlyMatureCropHarvest = false;
 
     //@ConfigEntry(tooltipTranslationKeys = "noCake.tooltip")
     //public boolean noCake = false;

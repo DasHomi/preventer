@@ -23,8 +23,8 @@
   "config.preventer.noSweetBerrieHarvest": "No Sweet Berrie Harvest",
   "config.preventer.noSweetBerrieHarvest.tooltip": "Prevents you from harvesting Sweet Berries",
 
-  "config.preventer.onlyMaturePlantsHarvest": "Only Mature Plants Harvest",
-  "config.preventer.onlyMaturePlantsHarvest.tooltip": "Only harvest mature Plants",
+  "config.preventer.onlyMatureCropHarvest": "Only Mature Crop Harvest",
+  "config.preventer.onlyMatureCropHarvest.tooltip": "Prevents you from harvesting \n(breaking) non mature crops",
 
   "config.preventer.noCake": "No Cake Eating",
   "config.preventer.noCake.tooltip": "Prevents you from eating cakes",

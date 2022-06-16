@@ -23,8 +23,8 @@
   "config.preventer.noSweetBerrieHarvest": "Kein Süßbeeren Ernten",
   "config.preventer.noSweetBerrieHarvest.tooltip": "Verhindert das Ernten von Süßbeeren",
 
-  "config.preventer.onlyMaturePlantsHarvest": "Nur Reife Pflanzen Ernten",
-  "config.preventer.onlyMaturePlantsHarvest.tooltip": "Verhindert das Ernten von unreifen Pflanzen",
+  "config.preventer.onlyMatureCropHarvest": "Nur Reife Pflanzen Ernten",
+  "config.preventer.onlyMatureCropHarvest.tooltip": "Verhindert das Ernten (Zerstören) \nvon unreifen Pflanzen",
 
   "config.preventer.noCake": "Kein Kuchen Essen",
   "config.preventer.noCake.tooltip": "Verhindert das Essen von Kuchen",
