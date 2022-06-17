@@ -40,5 +40,8 @@
   "config.preventer.lowDurabilityProtection.text": "§4Tool usage prevented due to low durability§4",
   "config.preventer.lowDurabilityProtectionRange": "Low Durability Protection Threshold",
   "config.preventer.lowDurabilityProtectionRange.tooltip": "Specify the lowest durability for tools & weapons",
-  "config.preventer.lowDurabilityProtectionRange.valueKey": "Durability: %d"
+  "config.preventer.lowDurabilityProtectionRange.valueKey": "Durability: %d",
+
+  "config.preventer.preventVillagerPunch": "Prevent Villager Punch",
+  "config.preventer.preventVillagerPunch.tooltip": "Prevents you from attacking villagers"
 }

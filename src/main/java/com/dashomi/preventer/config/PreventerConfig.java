@@ -65,4 +65,7 @@ public class PreventerConfig extends Config implements ConfigContainer {
 
     @ConfigEntry(tooltipTranslationKeys = "lowDurabilityProtection.tooltip")
     public boolean lowDurabilityProtection = false;
+
+    @ConfigEntry(tooltipTranslationKeys = "preventVillagerPunch.tooltip")
+    public boolean preventVillagerPunch = false;
 }

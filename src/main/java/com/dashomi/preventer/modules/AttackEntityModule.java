@@ -2,6 +2,7 @@ package com.dashomi.preventer.modules;
 
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.TranslatableText;
@@ -22,6 +23,12 @@ public class AttackEntityModule {
                         return ActionResult.FAIL;
                     }
                 }
+            }
+        }
+
+        if (PreventerClient.config.preventVillagerPunch) {
+            if (entity instanceof VillagerEntity) {
+                return ActionResult.FAIL;
             }
         }
 
