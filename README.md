@@ -24,6 +24,7 @@ Every Feature can be toggled individually.
   - _Prevents harvesting/breaking of non-mature plants_
 
 ## Planed Features
+- #### For feature requests, submit an issue on GitHub with the enhancement label
 - No active tool drop
 - Prevent Harvest
 - Prevent Villager Punch
@@ -32,7 +33,7 @@ Every Feature can be toggled individually.
 ## Dependencies
 **Included:**  
 [Complete Config](https://gitlab.com/Lortseam/completeconfig) (Configuration)\
-[Cloth Config](https://github.com/shedaniel/cloth-config) (Configuration)
+[Coat](https://github.com/Siphalor/coat) (Configuration GUI)
 
 **Required:**  
 [Fabric API](https://github.com/FabricMC/fabric)
