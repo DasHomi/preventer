@@ -22,12 +22,13 @@ Every Feature can be toggled individually.
   - _Prevent tools & weapons from being broken due to low durability_
 - Only harvest mature Crops
   - _Prevents harvesting/breaking of non-mature plants_
+- Prevent Villager Punch
+  - _Prevents you from damaging villagers_
 
 ## Planed Features
-- #### For feature requests, submit an issue on GitHub with the enhancement label
+- #### For feature requests, submit an issue with the enhancement label
 - No active tool drop
 - Prevent Harvest
-- Prevent Villager Punch
 - No Cake today
 
 ## Dependencies
