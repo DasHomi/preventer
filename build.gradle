@@ -16,6 +16,10 @@ repositories {
 	maven {
 		url "https://maven.shedaniel.me/"
 	}
+	maven {
+		url "https://maven.siphalor.de/"
+	}
+
 }
 
 dependencies {
@@ -26,9 +30,12 @@ dependencies {
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	modImplementation "com.gitlab.Lortseam:completeconfig:${project.completeconfig_version}"
-	include "com.gitlab.Lortseam:completeconfig:${project.completeconfig_version}"
-	include "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}"
+	modApi "com.gitlab.Lortseam.completeconfig:base:${project.completeconfig_version}"
+	modApi "com.gitlab.Lortseam.completeconfig:gui-coat:${project.completeconfig_version}"
+
+	include "com.gitlab.Lortseam.completeconfig:base:${project.completeconfig_version}"
+	include "com.gitlab.Lortseam.completeconfig:gui-coat:${project.completeconfig_version}"
+	include("de.siphalor:coat-${project.minecraft_version}:${project.coat_version}")
 }
 
 processResources {

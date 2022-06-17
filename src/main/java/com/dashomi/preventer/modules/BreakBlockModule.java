@@ -5,7 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.CropBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
@@ -28,7 +28,7 @@ public class BreakBlockModule {
                 ItemStack stack = playerEntity.getStackInHand(hand);
                 if (stack.isDamageable()) { // Check if the item is damageable
                     if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.moduleConfigGroup.lowDurabilityProtectionRange) { // Check if the item is *almost* broken
-                        playerEntity.sendMessage(new TranslatableText("config.preventer.lowDurabilityProtection.text"), true);
+                        playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
                         return ActionResult.FAIL;
                     }
                 }

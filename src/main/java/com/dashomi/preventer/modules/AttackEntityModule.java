@@ -4,7 +4,7 @@ import com.dashomi.preventer.PreventerClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.EntityHitResult;
@@ -18,7 +18,7 @@ public class AttackEntityModule {
                 ItemStack stack = playerEntity.getStackInHand(hand);
                 if (stack.isDamageable()) { // Check if the item is damageable
                     if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.moduleConfigGroup.lowDurabilityProtectionRange) { // Check if the item is *almost* broken
-                        playerEntity.sendMessage(new TranslatableText("config.preventer.lowDurabilityProtection.text"), true);
+                        playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
                         return ActionResult.FAIL;
                     }
                 }

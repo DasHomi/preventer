@@ -5,7 +5,7 @@ import me.lortseam.completeconfig.api.ConfigContainer;
 import me.lortseam.completeconfig.api.ConfigEntry;
 import me.lortseam.completeconfig.data.Config;
 import me.lortseam.completeconfig.gui.ConfigScreenBuilder;
-import me.lortseam.completeconfig.gui.cloth.ClothConfigScreenBuilder;
+import me.lortseam.completeconfig.gui.coat.CoatScreenBuilder;
 import net.fabricmc.loader.api.FabricLoader;
 
 
@@ -14,10 +14,10 @@ public class PreventerConfig extends Config implements ConfigContainer {
         PreventerClient.LOGGER.info("Initializing Config");
         PreventerConfig config = new PreventerConfig();
         config.load();
-        if (FabricLoader.getInstance().isModLoaded("cloth-config")) {
-            ConfigScreenBuilder.setMain(PreventerClient.MOD_ID, new ClothConfigScreenBuilder());
+        if (FabricLoader.getInstance().isModLoaded("completeconfig-gui-coat")) {
+            ConfigScreenBuilder.setMain(PreventerClient.MOD_ID, new CoatScreenBuilder());
         } else {
-            PreventerClient.LOGGER.warn("Couldn't initialize Cloth Config Screen");
+            PreventerClient.LOGGER.warn("Couldn't initialize Coat Screen because completeconfig-gui-coat is missing");
         }
         return config;
     }
@@ -30,39 +30,39 @@ public class PreventerConfig extends Config implements ConfigContainer {
     public final ModuleConfigGroup moduleConfigGroup = new ModuleConfigGroup();
 
     // Toggles
-    @ConfigEntry(tooltipTranslationKeys = "noStrip.tooltip")
+    @ConfigEntry(descriptionKey = "noStrip.tooltip")
     public boolean noStrip = false;
 
-    @ConfigEntry(tooltipTranslationKeys = "noPath.tooltip")
+    @ConfigEntry(descriptionKey = "noPath.tooltip")
     public boolean noPath = false;
 
-    @ConfigEntry(tooltipTranslationKeys = "noFarmland.tooltip")
+    @ConfigEntry(descriptionKey = "noFarmland.tooltip")
     public boolean noFarmland = false;
 
-    @ConfigEntry(tooltipTranslationKeys = "hideShield.tooltip")
+    @ConfigEntry(descriptionKey = "hideShield.tooltip")
     public boolean hideShield = false;
 
-    @ConfigEntry(tooltipTranslationKeys = "hideTotem.tooltip")
+    @ConfigEntry(descriptionKey = "hideTotem.tooltip")
     public boolean hideTotem = false;
 
-    @ConfigEntry(tooltipTranslationKeys = "noSweetBerrieHarvest.tooltip")
+    @ConfigEntry(descriptionKey = "noSweetBerrieHarvest.tooltip")
     public boolean noSweetBerrieHarvest = false;
 
-    @ConfigEntry(tooltipTranslationKeys = "noGlowBerrieHarvest.tooltip")
+    @ConfigEntry(descriptionKey = "noGlowBerrieHarvest.tooltip")
     public boolean noGlowBerrieHarvest = false;
 
-    @ConfigEntry(tooltipTranslationKeys = "onlyMatureCropHarvest.tooltip")
+    @ConfigEntry(descriptionKey = "onlyMatureCropHarvest.tooltip")
     public boolean onlyMatureCropHarvest = false;
 
-    //@ConfigEntry(tooltipTranslationKeys = "noCake.tooltip")
+    //@ConfigEntry(descriptionKey = "noCake.tooltip")
     //public boolean noCake = false;
 
-    @ConfigEntry(tooltipTranslationKeys = "noScraping.tooltip")
+    @ConfigEntry(descriptionKey = "noScraping.tooltip")
     public boolean noScraping = false;
 
-    @ConfigEntry(tooltipTranslationKeys = "noDeWax.tooltip")
+    @ConfigEntry(descriptionKey = "noDeWax.tooltip")
     public boolean noDeWax = false;
 
-    @ConfigEntry(tooltipTranslationKeys = "lowDurabilityProtection.tooltip")
+    @ConfigEntry(descriptionKey = "lowDurabilityProtection.tooltip")
     public boolean lowDurabilityProtection = false;
 }
