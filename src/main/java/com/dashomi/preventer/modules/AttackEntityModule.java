@@ -2,6 +2,7 @@ package com.dashomi.preventer.modules;
 
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.mob.ZombifiedPiglinEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -28,6 +29,12 @@ public class AttackEntityModule {
 
         if (PreventerClient.config.preventVillagerPunch) {
             if (entity instanceof VillagerEntity) {
+                return ActionResult.FAIL;
+            }
+        }
+
+        if (PreventerClient.config.noZombifiedPiglinPunch) {
+            if (entity instanceof ZombifiedPiglinEntity) {
                 return ActionResult.FAIL;
             }
         }

@@ -42,6 +42,9 @@
   "config.preventer.lowDurabilityProtectionRange.tooltip": "Specify the lowest durability for tools & weapons",
   "config.preventer.lowDurabilityProtectionRange.valueKey": "Durability: %d",
 
-  "config.preventer.preventVillagerPunch": "Prevent Villager Punch",
-  "config.preventer.preventVillagerPunch.tooltip": "Prevents you from attacking villagers"
+  "config.preventer.preventVillagerPunch": "Prevent Villager Punching",
+  "config.preventer.preventVillagerPunch.tooltip": "Prevents you from attacking villagers",
+
+  "config.preventer.noZombifiedPiglinPunch": "Prevent Zombified Piglin Punching",
+  "config.preventer.noZombifiedPiglinPunch.tooltip": "Prevents you from attacking Zombified Piglins"
 }

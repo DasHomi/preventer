@@ -43,5 +43,8 @@
   "config.preventer.lowDurabilityProtectionRange.valueKey": "Haltbarkeit: %d",
 
   "config.preventer.preventVillagerPunch": "Kein Dorfbewohner Schlagen",
-  "config.preventer.preventVillagerPunch.tooltip": "Verhinder das Schlagen von Dorfbewohnern"
+  "config.preventer.preventVillagerPunch.tooltip": "Verhinder das Schlagen von Dorfbewohnern",
+
+  "config.preventer.noZombifiedPiglinPunch": "Keine Zombifizierten Piglin Schlagen",
+  "config.preventer.noZombifiedPiglinPunch.tooltip": "Verhinder das Schlagen von Zombifizierten Piglins"
 }

@@ -68,4 +68,7 @@ public class PreventerConfig extends Config implements ConfigContainer {
 
     @ConfigEntry(descriptionKey = "preventVillagerPunch.tooltip")
     public boolean preventVillagerPunch = false;
+
+    @ConfigEntry(descriptionKey = "noZombifiedPiglinPunch.tooltip")
+    public boolean noZombifiedPiglinPunch = false;
 }

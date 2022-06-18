@@ -1,6 +1,6 @@
 # Preventer
 
-A fabric mod that prevents you from doing dumb things.
+A fabric mod that prevents you from doing dumb things by accident.
 Every Feature can be toggled individually.
 
 ## **Features**
@@ -23,6 +23,8 @@ Every Feature can be toggled individually.
 - Only harvest mature Crops
   - _Prevents harvesting/breaking of non-mature plants_
 - Prevent Villager Punch
+  - _Prevents you from damaging villagers_
+- Prevent Zombified Piglin Punch
   - _Prevents you from damaging villagers_
 
 ## Planed Features
