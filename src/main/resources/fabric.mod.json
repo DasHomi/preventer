@@ -27,8 +27,8 @@
     "java": ">=17",
     "fabric": "*",
     "completeconfig-base": "2.0.0",
-    "completeconfig-gui-coat": "2.0.0",
-    "coat": "*"
+    "completeconfig-gui-cloth": "2.0.0",
+    "cloth-config": "*"
   },
   "suggests": {
     "modmenu": "*"

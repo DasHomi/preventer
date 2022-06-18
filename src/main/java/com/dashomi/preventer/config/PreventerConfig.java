@@ -5,20 +5,20 @@ import me.lortseam.completeconfig.api.ConfigContainer;
 import me.lortseam.completeconfig.api.ConfigEntry;
 import me.lortseam.completeconfig.data.Config;
 import me.lortseam.completeconfig.gui.ConfigScreenBuilder;
-import me.lortseam.completeconfig.gui.coat.CoatScreenBuilder;
+import me.lortseam.completeconfig.gui.cloth.ClothConfigScreenBuilder;
 import net.fabricmc.loader.api.FabricLoader;
-
 
 public class PreventerConfig extends Config implements ConfigContainer {
     public static PreventerConfig initialize() {
         PreventerClient.LOGGER.info("Initializing Config");
         PreventerConfig config = new PreventerConfig();
         config.load();
-        if (FabricLoader.getInstance().isModLoaded("completeconfig-gui-coat")) {
-            ConfigScreenBuilder.setMain(PreventerClient.MOD_ID, new CoatScreenBuilder());
+        if (FabricLoader.getInstance().isModLoaded("completeconfig-gui-cloth")) {
+            ConfigScreenBuilder.setMain(PreventerClient.MOD_ID, new ClothConfigScreenBuilder());
         } else {
-            PreventerClient.LOGGER.warn("Couldn't initialize Coat Screen because completeconfig-gui-coat is missing");
+            PreventerClient.LOGGER.warn("Couldn't initialize Cloth Screen because completeconfig-gui-cloth is missing");
         }
+
         return config;
     }
 
