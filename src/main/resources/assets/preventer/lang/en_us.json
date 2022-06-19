@@ -1,12 +1,18 @@
 {
   "config.preventer": "Module Toggles",
-  "config.preventer.moduleConfigGroup": "Module Configuration",
+  "config.preventer.moduleConfigGroup": "Configuration",
+  "config.preventer.moduleUseInfoGroup" : "Usage Messages Toggles",
+
+  "config.preventer.description" : "§cBelow you can toggle Module Notifications§c",
+  "config.preventer.description.description" : "'Module Notifications' will be displayed if a \nactivated module prevents an action. \n§4This button doesn't do anything!§4",
 
   "config.preventer.noStrip": "No Strip",
   "config.preventer.noStrip.tooltip": "Prevents you from stripping Logs",
+  "config.preventer.noStrip.text": "§4Log stripping was prevented§4",
 
   "config.preventer.noPath": "No Path",
   "config.preventer.noPath.tooltip": "Prevents you from creating path blocks",
+  "config.preventer.noPath.text": "§4Path creation was prevented§4",
 
   "config.preventer.hideTotem": "Hide Totem",
   "config.preventer.hideTotem.tooltip": "Hides totems of undying in the offhand",
@@ -16,24 +22,31 @@
 
   "config.preventer.noFarmland": "No Farmland",
   "config.preventer.noFarmland.tooltip": "Prevents you from creating farmland",
+  "config.preventer.noFarmland.text": "§4Farmland creation was prevented§4",
 
   "config.preventer.noGlowBerrieHarvest": "No Glow Berrie Harvest",
   "config.preventer.noGlowBerrieHarvest.tooltip": "Prevents you from harvesting Glow Berries",
+  "config.preventer.noGlowBerrieHarvest.text": "§4Glow Berrie harvesting was prevented§4",
 
   "config.preventer.noSweetBerrieHarvest": "No Sweet Berrie Harvest",
   "config.preventer.noSweetBerrieHarvest.tooltip": "Prevents you from harvesting Sweet Berries",
+  "config.preventer.noSweetBerrieHarvest.text": "§4Sweet Berrie harvesting was prevented§4",
 
   "config.preventer.onlyMatureCropHarvest": "Only Mature Crop Harvest",
   "config.preventer.onlyMatureCropHarvest.tooltip": "Prevents you from harvesting \n(breaking) non mature crops",
+  "config.preventer.onlyMatureCropHarvest.text": "§4The targeted crop is not yet mature§4",
 
   "config.preventer.noCake": "No Cake Eating",
   "config.preventer.noCake.tooltip": "Prevents you from eating cakes",
+  "config.preventer.noCake.text": "§4Cake eating was prevented§4",
 
   "config.preventer.noScraping": "No Copper Scraping",
   "config.preventer.noScraping.tooltip": "Prevents scraping oxidation from copper",
+  "config.preventer.noScraping.text": "§4Copper scraping was prevented§4",
 
   "config.preventer.noDeWax": "No Copper Dewax",
   "config.preventer.noDeWax.tooltip": "Prevents dewaxing copper",
+  "config.preventer.noDeWax.text": "§4Copper wax removal was prevented§4",
 
   "config.preventer.lowDurabilityProtection": "Low Durability Protection",
   "config.preventer.lowDurabilityProtection.tooltip": "Prevents tools & weapons from \nbeing broken due to low durability",
@@ -42,6 +55,11 @@
   "config.preventer.lowDurabilityProtectionRange.tooltip": "Specify the lowest durability for tools & weapons",
   "config.preventer.lowDurabilityProtectionRange.valueKey": "Durability: %d",
 
-  "config.preventer.preventVillagerPunch": "Prevent Villager Punch",
-  "config.preventer.preventVillagerPunch.tooltip": "Prevents you from attacking villagers"
+  "config.preventer.preventVillagerPunch": "Prevent Villager Punching",
+  "config.preventer.preventVillagerPunch.tooltip": "Prevents you from attacking villagers",
+  "config.preventer.preventVillagerPunch.text": "§4Villager punching was prevented§4",
+
+  "config.preventer.noZombifiedPiglinPunch": "Prevent Zombified Piglin Punching",
+  "config.preventer.noZombifiedPiglinPunch.tooltip": "Prevents you from attacking Zombified Piglins",
+  "config.preventer.noZombifiedPiglinPunch.text": "§4Zombified Piglin punching was prevented§4"
 }

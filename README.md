@@ -1,8 +1,10 @@
 # Preventer 1.18
 
-A fabric mod that prevents you from doing dumb things.
-Every Feature can be toggled individually. Note, the 1.18 version will still get updates occasionally 
-but the focus is more on the main point
+A fabric mod that prevents you from doing dumb things by accident.
+For example accidentally creating stripped logs.
+You can toggle every module in the settings and decide if
+you want a notification from the mod if it prevented you from doing something.
+Note, the 1.18 version will still get updates sometimes but the 1.19 version will be more up to date
 
 ## **Features**
 - No Strip
@@ -25,12 +27,13 @@ but the focus is more on the main point
   - _Prevents harvesting/breaking of non-mature plants_
 - Prevent Villager Punch
   - _Prevents you from damaging villagers_
+- Prevent Zombified Piglin Punch
+  - _Prevents you from damaging villagers_
 
 ## Planed Features
 #### For feature requests, submit an issue with the enhancement label
 - No active tool drop
 - Prevent Harvest
-- Prevent Villager Punch
 - No Cake today
 
 ## Dependencies

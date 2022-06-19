@@ -8,7 +8,6 @@ import me.lortseam.completeconfig.gui.ConfigScreenBuilder;
 import me.lortseam.completeconfig.gui.cloth.ClothConfigScreenBuilder;
 import net.fabricmc.loader.api.FabricLoader;
 
-
 public class PreventerConfig extends Config implements ConfigContainer {
     public static PreventerConfig initialize() {
         PreventerClient.LOGGER.info("Initializing Config");
@@ -28,6 +27,9 @@ public class PreventerConfig extends Config implements ConfigContainer {
 
     @Transitive
     public final ModuleConfigGroup moduleConfigGroup = new ModuleConfigGroup();
+
+    @Transitive
+    public final ModuleUseInfoGroup moduleUseInfoGroup = new ModuleUseInfoGroup();
 
     // Toggles
     @ConfigEntry(tooltipTranslationKeys = "noStrip.tooltip")
@@ -68,4 +70,7 @@ public class PreventerConfig extends Config implements ConfigContainer {
 
     @ConfigEntry(tooltipTranslationKeys = "preventVillagerPunch.tooltip")
     public boolean preventVillagerPunch = false;
+
+    @ConfigEntry(tooltipTranslationKeys = "noZombifiedPiglinPunch.tooltip")
+    public boolean noZombifiedPiglinPunch = false;
 }

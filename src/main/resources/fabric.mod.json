@@ -3,7 +3,7 @@
   "id": "preventer",
   "version": "${version}",
   "name": "Preventer",
-  "description": "A mod that prevents you from doing dumb things",
+  "description": "A mod that prevents you from doing dumb things by accident",
   "authors": ["DasHomi"],
   "contact": {
     "sources": "https://github.com/DasHomi/preventer",

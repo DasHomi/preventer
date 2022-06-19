@@ -2,6 +2,7 @@ package com.dashomi.preventer.modules;
 
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.mob.ZombifiedPiglinEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -19,7 +20,9 @@ public class AttackEntityModule {
                 ItemStack stack = playerEntity.getStackInHand(hand);
                 if (stack.isDamageable()) { // Check if the item is damageable
                     if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.moduleConfigGroup.lowDurabilityProtectionRange) { // Check if the item is *almost* broken
-                        playerEntity.sendMessage(new TranslatableText("config.preventer.lowDurabilityProtection.text"), true);
+                        if (PreventerClient.config.moduleUseInfoGroup.lowDurabilityProtection_msg) {
+                            playerEntity.sendMessage(new TranslatableText("config.preventer.lowDurabilityProtection.text"), true);
+                        }
                         return ActionResult.FAIL;
                     }
                 }
@@ -28,6 +31,18 @@ public class AttackEntityModule {
 
         if (PreventerClient.config.preventVillagerPunch) {
             if (entity instanceof VillagerEntity) {
+                if (PreventerClient.config.moduleUseInfoGroup.preventVillagerPunch_msg) {
+                    playerEntity.sendMessage(new TranslatableText("config.preventer.preventVillagerPunch.text"), true);
+                }
+                return ActionResult.FAIL;
+            }
+        }
+
+        if (PreventerClient.config.noZombifiedPiglinPunch) {
+            if (entity instanceof ZombifiedPiglinEntity) {
+                if (PreventerClient.config.moduleUseInfoGroup.noZombifiedPiglinPunch_msg) {
+                    playerEntity.sendMessage(new TranslatableText("config.preventer.noZombifiedPiglinPunch.text"), true);
+                }
                 return ActionResult.FAIL;
             }
         }
