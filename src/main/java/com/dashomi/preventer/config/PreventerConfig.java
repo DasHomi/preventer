@@ -29,6 +29,9 @@ public class PreventerConfig extends Config implements ConfigContainer {
     @Transitive
     public final ModuleConfigGroup moduleConfigGroup = new ModuleConfigGroup();
 
+    @Transitive
+    public final ModuleUseInfoGroup moduleUseInfoGroup = new ModuleUseInfoGroup();
+
     // Toggles
     @ConfigEntry(descriptionKey = "noStrip.tooltip")
     public boolean noStrip = false;

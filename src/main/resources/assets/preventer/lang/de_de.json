@@ -1,12 +1,18 @@
 {
   "config.preventer": "Modul Schalter",
-  "config.preventer.moduleConfigGroup": "Modul Konfiguration",
+  "config.preventer.moduleConfigGroup": "Konfiguration",
+  "config.preventer.moduleUseInfoGroup" : "Fehler Meldung Konfiguration",
+
+  "config.preventer.description" : "§cDrunter können Modul-Benachrichtigungen geschaltet werden§c",
+  "config.preventer.description.description" : "'Modul-Benachrichtigungen' werden angezeigt wenn \nein Modul eine Handlung verhindert hat. \n§4Dieser Schalter macht nichts!§4",
 
   "config.preventer.noStrip": "Keine Entrindung",
   "config.preventer.noStrip.tooltip": "Verhinder das Erstellen von entrindeten Stämmen",
+  "config.preventer.noStrip.text": "§4Stämme Entrinden verhindert§4",
 
   "config.preventer.noPath": "Kein Pfad",
   "config.preventer.noPath.tooltip": "Verhindert das Erstellen von Pfad Blöcken",
+  "config.preventer.noPath.text": "§4Das erstellen eines Pfad Block wurde verhindert§4",
 
   "config.preventer.hideTotem": "Versteckt das Totem",
   "config.preventer.hideTotem.tooltip": "Versteckt das Totem der Unsterblichkeit in der Nebenhand",
@@ -16,24 +22,31 @@
 
   "config.preventer.noFarmland": "Kein Ackerboden",
   "config.preventer.noFarmland.tooltip": "Verhindert das Erstellen von Ackerboden Blöcken",
+  "config.preventer.noFarmland.text": "§4Das erstellen von Ackerboden wurde verhindert§4",
 
   "config.preventer.noGlowBerrieHarvest": "Kein Leuchtbeeren Ernten",
   "config.preventer.noGlowBerrieHarvest.tooltip": "Verhindert das Ernten von Leuchtbeeren",
+  "config.preventer.noGlowBerrieHarvest.text": "§4Leuchtbeeren ernten wurde verhindert§4",
 
   "config.preventer.noSweetBerrieHarvest": "Kein Süßbeeren Ernten",
   "config.preventer.noSweetBerrieHarvest.tooltip": "Verhindert das Ernten von Süßbeeren",
+  "config.preventer.noSweetBerrieHarvest.text": "§4Süßbeeren ernten wurde verhindert§4",
 
   "config.preventer.onlyMatureCropHarvest": "Nur Reife Pflanzen Ernten",
   "config.preventer.onlyMatureCropHarvest.tooltip": "Verhindert das Ernten (Zerstören) \nvon unreifen Pflanzen",
+  "config.preventer.onlyMatureCropHarvest.text": "§4Die Pflanze ist noch nicht reif§4",
 
   "config.preventer.noCake": "Kein Kuchen Essen",
   "config.preventer.noCake.tooltip": "Verhindert das Essen von Kuchen",
+  "config.preventer.noCake.text": "§4Kuchen essen wurde verhindert§4",
 
   "config.preventer.noScraping": "Kein Kupfer De-Oxidieren",
   "config.preventer.noScraping.tooltip": "Verhindert die Oxidation von \nKupfer zu entfernen",
+  "config.preventer.noScraping.text": "§4Kupfer de-Oxidieren wurde verhindert§4",
 
   "config.preventer.noDeWax": "Kein Kupfer De-Wachsen",
   "config.preventer.noDeWax.tooltip": "Verhindert das Wachs von \nKupfer zu entfernen",
+  "config.preventer.noDeWax.text": "§4Kupfer ent-wachsen wurde verhindert§4",
 
   "config.preventer.lowDurabilityProtection": "Geringer Haltbarkeit Sicherheit",
   "config.preventer.lowDurabilityProtection.tooltip": "Verhindert Zerstörung von Werkzeug & \nWaffen aufgrund von geringer Haltbarkeit",
@@ -44,7 +57,9 @@
 
   "config.preventer.preventVillagerPunch": "Kein Dorfbewohner Schlagen",
   "config.preventer.preventVillagerPunch.tooltip": "Verhinder das Schlagen von Dorfbewohnern",
+  "config.preventer.preventVillagerPunch.text": "§4Dorfbewohner schlagen wurde verhindert§4",
 
   "config.preventer.noZombifiedPiglinPunch": "Keine Zombifizierten Piglin Schlagen",
-  "config.preventer.noZombifiedPiglinPunch.tooltip": "Verhinder das Schlagen von Zombifizierten Piglins"
+  "config.preventer.noZombifiedPiglinPunch.tooltip": "Verhinder das Schlagen von Zombifizierten Piglins",
+  "config.preventer.noZombifiedPiglinPunch.text": "§4Zombifizierten Piglin schlagen verhindert§4"
 }

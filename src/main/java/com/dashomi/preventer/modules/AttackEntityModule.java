@@ -20,7 +20,9 @@ public class AttackEntityModule {
                 ItemStack stack = playerEntity.getStackInHand(hand);
                 if (stack.isDamageable()) { // Check if the item is damageable
                     if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.moduleConfigGroup.lowDurabilityProtectionRange) { // Check if the item is *almost* broken
-                        playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
+                        if (PreventerClient.config.moduleUseInfoGroup.lowDurabilityProtection_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
+                        }
                         return ActionResult.FAIL;
                     }
                 }
@@ -29,12 +31,18 @@ public class AttackEntityModule {
 
         if (PreventerClient.config.preventVillagerPunch) {
             if (entity instanceof VillagerEntity) {
+                if (PreventerClient.config.moduleUseInfoGroup.preventVillagerPunch_msg) {
+                    playerEntity.sendMessage(Text.translatable("config.preventer.preventVillagerPunch.text"), true);
+                }
                 return ActionResult.FAIL;
             }
         }
 
         if (PreventerClient.config.noZombifiedPiglinPunch) {
             if (entity instanceof ZombifiedPiglinEntity) {
+                if (PreventerClient.config.moduleUseInfoGroup.noZombifiedPiglinPunch_msg) {
+                    playerEntity.sendMessage(Text.translatable("config.preventer.noZombifiedPiglinPunch.text"), true);
+                }
                 return ActionResult.FAIL;
             }
         }

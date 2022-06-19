@@ -18,6 +18,9 @@ public class BreakBlockModule {
         if (PreventerClient.config.onlyMatureCropHarvest) {
             if (targetBlock instanceof CropBlock) {
                 if (!((CropBlock) targetBlock).isMature(world.getBlockState(pos))) {
+                    if (PreventerClient.config.moduleUseInfoGroup.onlyMatureCropHarvest_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.onlyMatureCropHarvest.text"), true);
+                    }
                     return ActionResult.FAIL;
                 }
             }
@@ -28,7 +31,9 @@ public class BreakBlockModule {
                 ItemStack stack = playerEntity.getStackInHand(hand);
                 if (stack.isDamageable()) { // Check if the item is damageable
                     if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.moduleConfigGroup.lowDurabilityProtectionRange) { // Check if the item is *almost* broken
-                        playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
+                        if (PreventerClient.config.moduleUseInfoGroup.lowDurabilityProtection_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
+                        }
                         return ActionResult.FAIL;
                     }
                 }

@@ -1,7 +1,9 @@
 # Preventer
 
 A fabric mod that prevents you from doing dumb things by accident.
-Every Feature can be toggled individually.
+For example accidentally creating stripped logs.
+You can toggle every module in the settings and decide if 
+you want a notification from the mod if it prevented you from doing something.
 
 ## **Features**
 - No Strip
@@ -25,7 +27,7 @@ Every Feature can be toggled individually.
 - Prevent Villager Punch
   - _Prevents you from damaging villagers_
 - Prevent Zombified Piglin Punch
-  - _Prevents you from damaging villagers_
+  - _Prevents you from damaging Zombified Piglins_
 
 ## Planed Features
 - #### For feature requests, submit an issue with the enhancement label
@@ -35,10 +37,10 @@ Every Feature can be toggled individually.
 
 ## Dependencies
 **Included:**  
-[Complete Config](https://gitlab.com/Lortseam/completeconfig) (Configuration)\
-[Coat](https://github.com/Siphalor/coat) (Configuration GUI)
+[Complete Config](https://gitlab.com/Lortseam/completeconfig) (Configuration)
 
-**Required:**  
+**Required:**\
+[Cloth Config](https://github.com/shedaniel/cloth-config) (Configuration GUI) \
 [Fabric API](https://github.com/FabricMC/fabric)
 
 **Suggested:**  
