@@ -74,4 +74,7 @@ public class PreventerConfig extends Config implements ConfigContainer {
 
     @ConfigEntry(descriptionKey = "noZombifiedPiglinPunch.tooltip")
     public boolean noZombifiedPiglinPunch = false;
+
+    @ConfigEntry(descriptionKey = "noTrappedChestOpening.tooltip")
+    public boolean noTrappedChestOpening = false;
 }

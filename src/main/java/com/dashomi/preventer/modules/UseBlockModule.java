@@ -103,6 +103,15 @@ public class UseBlockModule {
             }
         }
 
+        if (PreventerClient.config.noTrappedChestOpening) {
+            if (targetBlock instanceof TrappedChestBlock) {
+                if (PreventerClient.config.moduleUseInfoGroup.noTrappedChestOpening_msg) {
+                    playerEntity.sendMessage(Text.translatable("config.preventer.noTrappedChestOpening.text"), true);
+                }
+                return ActionResult.FAIL;
+            }
+        }
+
         if (PreventerClient.config.lowDurabilityProtection){
             if (!playerEntity.isCreative() && !playerEntity.isSpectator()) { // AttackBlockCallback does not do game mode check for us, so we need to do it by ourselves
                 ItemStack stack = playerEntity.getStackInHand(hand);

@@ -61,5 +61,9 @@
 
   "config.preventer.noZombifiedPiglinPunch": "Prevent Zombified Piglin Punching",
   "config.preventer.noZombifiedPiglinPunch.tooltip": "Prevents you from attacking Zombified Piglins",
-  "config.preventer.noZombifiedPiglinPunch.text": "§4Zombified Piglin punching was prevented§4"
+  "config.preventer.noZombifiedPiglinPunch.text": "§4Zombified Piglin punching was prevented§4",
+
+  "config.preventer.noTrappedChestOpening": "Prevent Trapped Chest Opening",
+  "config.preventer.noTrappedChestOpening.tooltip": "Prevents you from opening trapped chests",
+  "config.preventer.noTrappedChestOpening.text": "§4This is a trapped chest§4"
 }

@@ -30,12 +30,13 @@ you want a notification from the mod if it prevented you from doing something.
   - _Prevents you from punching Zombified Piglins_
 - No Cake today
   - _Prevents you from eating Cake_
+- Prevent trapped chest opening
+  - _Prevents you from opening trapped chests_
  
 ## Planed Features
 - #### For feature requests, submit an issue with the enhancement label
 - No active tool drop
 - Override Key
-- Prevent trapped chest opening
 - Prevent Plant Breaking
 
 ## Dependencies

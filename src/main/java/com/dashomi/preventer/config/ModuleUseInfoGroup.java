@@ -43,4 +43,7 @@ public class ModuleUseInfoGroup implements ConfigGroup {
 
     @ConfigEntry(nameKey = "noCake")
     public boolean noCake_msg = false;
+
+    @ConfigEntry(nameKey = "noTrappedChestOpening")
+    public boolean noTrappedChestOpening_msg = false;
 }

@@ -61,5 +61,9 @@
 
   "config.preventer.noZombifiedPiglinPunch": "Keine Zombifizierten Piglin Schlagen",
   "config.preventer.noZombifiedPiglinPunch.tooltip": "Verhinder das Schlagen von Zombifizierten Piglins",
-  "config.preventer.noZombifiedPiglinPunch.text": "§4Zombifizierten Piglin schlagen verhindert§4"
+  "config.preventer.noZombifiedPiglinPunch.text": "§4Zombifizierten Piglin schlagen verhindert§4",
+
+  "config.preventer.noTrappedChestOpening": "Kein Redstone Truhen Öffnen",
+  "config.preventer.noTrappedChestOpening.tooltip": "Verhindert das öffnen von Redstone Truhen",
+  "config.preventer.noTrappedChestOpening.text": "§4Dies ist eine Redstone Truhe§4"
 }
