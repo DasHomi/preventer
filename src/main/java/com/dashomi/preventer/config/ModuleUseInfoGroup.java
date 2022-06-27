@@ -40,4 +40,7 @@ public class ModuleUseInfoGroup implements ConfigGroup {
 
     @ConfigEntry(nameKey = "noZombifiedPiglinPunch")
     public boolean noZombifiedPiglinPunch_msg = false;
+
+    @ConfigEntry(nameKey = "noCake")
+    public boolean noCake_msg = false;
 }

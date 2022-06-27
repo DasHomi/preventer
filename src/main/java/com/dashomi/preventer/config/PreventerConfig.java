@@ -57,8 +57,8 @@ public class PreventerConfig extends Config implements ConfigContainer {
     @ConfigEntry(descriptionKey = "onlyMatureCropHarvest.tooltip")
     public boolean onlyMatureCropHarvest = false;
 
-    //@ConfigEntry(descriptionKey = "noCake.tooltip")
-    //public boolean noCake = false;
+    @ConfigEntry(descriptionKey = "noCake.tooltip")
+    public boolean noCake = false;
 
     @ConfigEntry(descriptionKey = "noScraping.tooltip")
     public boolean noScraping = false;

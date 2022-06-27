@@ -25,15 +25,18 @@ you want a notification from the mod if it prevented you from doing something.
 - Only harvest mature Crops
   - _Prevents harvesting/breaking of non-mature plants_
 - Prevent Villager Punch
-  - _Prevents you from damaging villagers_
+  - _Prevents you from punching villagers_
 - Prevent Zombified Piglin Punch
-  - _Prevents you from damaging Zombified Piglins_
-
+  - _Prevents you from punching Zombified Piglins_
+- No Cake today
+  - _Prevents you from eating Cake_
+ 
 ## Planed Features
 - #### For feature requests, submit an issue with the enhancement label
 - No active tool drop
-- Prevent Harvest
-- No Cake today
+- Override Key
+- Prevent trapped chest opening
+- Prevent Plant Breaking
 
 ## Dependencies
 **Included:**  

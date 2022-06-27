@@ -16,8 +16,9 @@ import static net.minecraft.block.SweetBerryBushBlock.AGE;
 public class UseBlockModule {
     public static ActionResult checkBlockUse(PlayerEntity playerEntity, World world, Hand hand, BlockHitResult blockHitResult) {
         Block targetBlock = world.getBlockState(blockHitResult.getBlockPos()).getBlock();
+        Item handItem = playerEntity.getStackInHand(hand).getItem();
         if (PreventerClient.config.noStrip) {
-            if (playerEntity.getStackInHand(hand).getItem() instanceof AxeItem) {
+            if (handItem instanceof AxeItem) {
                 if (AxeItem.STRIPPED_BLOCKS.containsKey(targetBlock)) {
                     if (PreventerClient.config.moduleUseInfoGroup.noStrip_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.noStrip.text"), true);
@@ -28,7 +29,7 @@ public class UseBlockModule {
         }
 
         if (PreventerClient.config.noPath) {
-            if (playerEntity.getStackInHand(hand).getItem() instanceof ShovelItem) {
+            if (handItem instanceof ShovelItem) {
                 if (ShovelItem.PATH_STATES.containsKey(targetBlock)) {
                     if (PreventerClient.config.moduleUseInfoGroup.noPath_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.noPath.text"), true);
@@ -39,7 +40,7 @@ public class UseBlockModule {
         }
 
         if (PreventerClient.config.noFarmland) {
-            if (playerEntity.getStackInHand(hand).getItem() instanceof HoeItem) {
+            if (handItem instanceof HoeItem) {
                 if (HoeItem.TILLING_ACTIONS.containsKey(targetBlock)) {
                     if (PreventerClient.config.moduleUseInfoGroup.noFarmland_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.noFarmland.text"), true);
@@ -72,7 +73,7 @@ public class UseBlockModule {
         }
 
         if (PreventerClient.config.noScraping) {
-            if (playerEntity.getStackInHand(hand).getItem() instanceof AxeItem) {
+            if (handItem instanceof AxeItem) {
                 if (targetBlock instanceof Oxidizable) {
                     if (PreventerClient.config.moduleUseInfoGroup.noScraping_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.noScraping.text"), true);
@@ -83,13 +84,22 @@ public class UseBlockModule {
         }
 
         if (PreventerClient.config.noDeWax) {
-            if (playerEntity.getStackInHand(hand).getItem() instanceof AxeItem) {
+            if (handItem instanceof AxeItem) {
                 if (HoneycombItem.WAXED_TO_UNWAXED_BLOCKS.get().containsKey(targetBlock)) {
                     if (PreventerClient.config.moduleUseInfoGroup.noDeWax_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.noDeWax.text"), true);
                     }
                     return ActionResult.FAIL;
                 }
+            }
+        }
+
+        if (PreventerClient.config.noCake) {
+            if (targetBlock instanceof CakeBlock || targetBlock instanceof CandleCakeBlock) {
+                if (PreventerClient.config.moduleUseInfoGroup.noCake_msg) {
+                    playerEntity.sendMessage(Text.translatable("config.preventer.noCake.text"), true);
+                }
+                return ActionResult.FAIL;
             }
         }
 
