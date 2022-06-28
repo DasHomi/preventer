@@ -4,8 +4,9 @@ A fabric mod that prevents you from doing dumb things by accident.
 For example accidentally creating stripped logs.
 You can toggle every module in the settings and decide if 
 you want a notification from the mod if it prevented you from doing something.
+There is also an OVERRIDE KEY to temporarily allow an action (_Default keybinding is R_).
 
-## **Features**
+## **Modules**
 - No Strip
   - _Prevents creation of Stripped Logs_
 - No Path
@@ -36,15 +37,14 @@ you want a notification from the mod if it prevented you from doing something.
 ## Planed Features
 - #### For feature requests, submit an issue with the enhancement label
 - No active tool drop
-- Override Key
 - Prevent Plant Breaking
 
 ## Dependencies
 **Included:**  
 [Complete Config](https://gitlab.com/Lortseam/completeconfig) (Configuration)
 
-**Required:**\
-[Cloth Config](https://github.com/shedaniel/cloth-config) (Configuration GUI) \
+**Required:**  
+[Cloth Config](https://github.com/shedaniel/cloth-config) (Configuration GUI)  
 [Fabric API](https://github.com/FabricMC/fabric)
 
 **Suggested:**  

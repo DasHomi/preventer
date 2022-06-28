@@ -25,6 +25,9 @@ public class PreventerClient implements ClientModInitializer {
 		UseBlockCallback.EVENT.register(UseBlockModule::checkBlockUse);
 		AttackBlockCallback.EVENT.register(BreakBlockModule::checkBlockBreak);
 		AttackEntityCallback.EVENT.register(AttackEntityModule::checkEntityAttack);
+
+		RegisterKeyBindings.register();
+
 		LOGGER.info("Initialized");
 	}
 }

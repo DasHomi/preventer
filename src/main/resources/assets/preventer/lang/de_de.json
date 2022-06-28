@@ -1,4 +1,7 @@
 {
+  "key.preventer.overrideKey": "Überschreib Taste",
+  "key.preventer.category": "Preventer",
+
   "config.preventer": "Modul Schalter",
   "config.preventer.moduleConfigGroup": "Konfiguration",
   "config.preventer.moduleUseInfoGroup" : "Fehler Meldung Konfiguration",

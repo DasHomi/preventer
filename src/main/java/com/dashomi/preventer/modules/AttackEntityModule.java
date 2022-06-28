@@ -15,38 +15,39 @@ import org.jetbrains.annotations.Nullable;
 
 public class AttackEntityModule {
     public static ActionResult checkEntityAttack(PlayerEntity playerEntity, World world, Hand hand, Entity entity, @Nullable EntityHitResult result) {
-        if (PreventerClient.config.lowDurabilityProtection) {
-            if (!playerEntity.isCreative() && !playerEntity.isSpectator()) { // AttackBlockCallback does not do game mode check for us, so we need to do it by ourselves
-                ItemStack stack = playerEntity.getStackInHand(hand);
-                if (stack.isDamageable()) { // Check if the item is damageable
-                    if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.moduleConfigGroup.lowDurabilityProtectionRange) { // Check if the item is *almost* broken
-                        if (PreventerClient.config.moduleUseInfoGroup.lowDurabilityProtection_msg) {
-                            playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
+        if (!PreventerClient.config.overrideKeyPressed) {
+            if (PreventerClient.config.lowDurabilityProtection) {
+                if (!playerEntity.isCreative() && !playerEntity.isSpectator()) { // AttackBlockCallback does not do game mode check for us, so we need to do it by ourselves
+                    ItemStack stack = playerEntity.getStackInHand(hand);
+                    if (stack.isDamageable()) { // Check if the item is damageable
+                        if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.moduleConfigGroup.lowDurabilityProtectionRange) { // Check if the item is *almost* broken
+                            if (PreventerClient.config.moduleUseInfoGroup.lowDurabilityProtection_msg) {
+                                playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
+                            }
+                            return ActionResult.FAIL;
                         }
-                        return ActionResult.FAIL;
                     }
                 }
             }
-        }
 
-        if (PreventerClient.config.preventVillagerPunch) {
-            if (entity instanceof VillagerEntity) {
-                if (PreventerClient.config.moduleUseInfoGroup.preventVillagerPunch_msg) {
-                    playerEntity.sendMessage(Text.translatable("config.preventer.preventVillagerPunch.text"), true);
+            if (PreventerClient.config.preventVillagerPunch) {
+                if (entity instanceof VillagerEntity) {
+                    if (PreventerClient.config.moduleUseInfoGroup.preventVillagerPunch_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventVillagerPunch.text"), true);
+                    }
+                    return ActionResult.FAIL;
                 }
-                return ActionResult.FAIL;
+            }
+
+            if (PreventerClient.config.noZombifiedPiglinPunch) {
+                if (entity instanceof ZombifiedPiglinEntity) {
+                    if (PreventerClient.config.moduleUseInfoGroup.noZombifiedPiglinPunch_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.noZombifiedPiglinPunch.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
             }
         }
-
-        if (PreventerClient.config.noZombifiedPiglinPunch) {
-            if (entity instanceof ZombifiedPiglinEntity) {
-                if (PreventerClient.config.moduleUseInfoGroup.noZombifiedPiglinPunch_msg) {
-                    playerEntity.sendMessage(Text.translatable("config.preventer.noZombifiedPiglinPunch.text"), true);
-                }
-                return ActionResult.FAIL;
-            }
-        }
-
         return ActionResult.PASS;
     }
 }

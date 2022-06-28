@@ -1,4 +1,7 @@
 {
+  "key.preventer.overrideKey": "Override Key",
+  "key.preventer.category": "Preventer",
+
   "config.preventer": "Module Toggles",
   "config.preventer.moduleConfigGroup": "Configuration",
   "config.preventer.moduleUseInfoGroup" : "Usage Messages Toggles",

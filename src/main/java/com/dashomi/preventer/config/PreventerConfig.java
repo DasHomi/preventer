@@ -9,6 +9,7 @@ import me.lortseam.completeconfig.gui.cloth.ClothConfigScreenBuilder;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class PreventerConfig extends Config implements ConfigContainer {
+    public boolean overrideKeyPressed = false;
     public static PreventerConfig initialize() {
         PreventerClient.LOGGER.info("Initializing Config");
         PreventerConfig config = new PreventerConfig();
