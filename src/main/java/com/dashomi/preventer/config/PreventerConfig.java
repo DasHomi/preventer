@@ -9,6 +9,7 @@ import me.lortseam.completeconfig.gui.cloth.ClothConfigScreenBuilder;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class PreventerConfig extends Config implements ConfigContainer {
+    public boolean overrideKeyPressed = false;
     public static PreventerConfig initialize() {
         PreventerClient.LOGGER.info("Initializing Config");
         PreventerConfig config = new PreventerConfig();
@@ -56,8 +57,8 @@ public class PreventerConfig extends Config implements ConfigContainer {
     @ConfigEntry(tooltipTranslationKeys = "onlyMatureCropHarvest.tooltip")
     public boolean onlyMatureCropHarvest = false;
 
-    //@ConfigEntry(tooltipTranslationKeys = "noCake.tooltip")
-    //public boolean noCake = false;
+    @ConfigEntry(tooltipTranslationKeys = "noCake.tooltip")
+    public boolean noCake = false;
 
     @ConfigEntry(tooltipTranslationKeys = "noScraping.tooltip")
     public boolean noScraping = false;
@@ -73,4 +74,7 @@ public class PreventerConfig extends Config implements ConfigContainer {
 
     @ConfigEntry(tooltipTranslationKeys = "noZombifiedPiglinPunch.tooltip")
     public boolean noZombifiedPiglinPunch = false;
+
+    @ConfigEntry(tooltipTranslationKeys = "noTrappedChestOpening.tooltip")
+    public boolean noTrappedChestOpening = false;
 }
