@@ -4,7 +4,7 @@ A fabric mod that prevents you from doing dumb things by accident.
 For example accidentally creating stripped logs.
 You can toggle every module in the settings and decide if 
 you want a notification from the mod if it prevented you from doing something.
-There is also an OVERRIDE KEY to temporarily allow an action (_Default keybinding is R_).
+There is also an OVERRIDE KEY to temporarily allow an otherwise prevented action (_Default keybinding is R_).
 
 ## **Modules**
 - No Strip

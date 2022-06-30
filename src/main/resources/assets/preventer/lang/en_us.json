@@ -1,5 +1,6 @@
 {
   "key.preventer.overrideKey": "Override Key",
+  "key.preventer.overrideKey.text": "Override Active",
   "key.preventer.category": "Preventer",
 
   "config.preventer": "Module Toggles",
