@@ -78,4 +78,7 @@ public class PreventerConfig extends Config implements ConfigContainer {
 
     @ConfigEntry(descriptionKey = "noTrappedChestOpening.tooltip")
     public boolean noTrappedChestOpening = false;
+
+    @ConfigEntry(descriptionKey = "preventBuddingAmethystBreaking.tooltip")
+    public boolean preventBuddingAmethystBreaking = false;
 }

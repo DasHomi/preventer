@@ -46,4 +46,7 @@ public class ModuleUseInfoGroup implements ConfigGroup {
 
     @ConfigEntry(nameKey = "noTrappedChestOpening")
     public boolean noTrappedChestOpening_msg = false;
+
+    @ConfigEntry(nameKey = "preventBuddingAmethystBreaking")
+    public boolean preventBuddingAmethystBreaking_msg = false;
 }

@@ -69,5 +69,9 @@
 
   "config.preventer.noTrappedChestOpening": "Prevent Trapped Chest Opening",
   "config.preventer.noTrappedChestOpening.tooltip": "Prevents you from opening trapped chests",
-  "config.preventer.noTrappedChestOpening.text": "§4This is a trapped chest§4"
+  "config.preventer.noTrappedChestOpening.text": "§cThis is a trapped chest§c",
+
+  "config.preventer.preventBuddingAmethystBreaking": "Prevent Budding Amethyst Breaking",
+  "config.preventer.preventBuddingAmethystBreaking.tooltip": "Prevents you from breaking Budding Amethyst blocks",
+  "config.preventer.preventBuddingAmethystBreaking.text": "§4Budding Amethyst Block breaking Prevented§4"
 }

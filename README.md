@@ -33,6 +33,8 @@ There is also an OVERRIDE KEY to temporarily allow an otherwise prevented action
   - _Prevents you from eating Cake_
 - Prevent trapped chest opening
   - _Prevents you from opening trapped chests_
+- Prevent Budding Amethyst block breaking
+  - _Prevents you from breaking Budding Amethyst blocks_
  
 ## Planed Features
 - #### For feature requests, submit an issue with the enhancement label

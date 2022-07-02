@@ -69,5 +69,9 @@
 
   "config.preventer.noTrappedChestOpening": "Kein Redstone Truhen Öffnen",
   "config.preventer.noTrappedChestOpening.tooltip": "Verhindert das öffnen von Redstone Truhen",
-  "config.preventer.noTrappedChestOpening.text": "§4Dies ist eine Redstone Truhe§4"
+  "config.preventer.noTrappedChestOpening.text": "§4Dies ist eine Redstone Truhe§4",
+
+  "config.preventer.preventBuddingAmethystBreaking": "Verhindert Amethystknospenblock Zerstören",
+  "config.preventer.preventBuddingAmethystBreaking.tooltip": "Verhindert das Zerstören von Amethystknospenblöcken",
+  "config.preventer.preventBuddingAmethystBreaking.text": "§4Amethystknospenblock zerstören verhindert§4"
 }
