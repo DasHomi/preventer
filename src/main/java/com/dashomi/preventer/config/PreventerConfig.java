@@ -81,4 +81,7 @@ public class PreventerConfig extends Config implements ConfigContainer {
 
     @ConfigEntry(descriptionKey = "preventBuddingAmethystBreaking.tooltip")
     public boolean preventBuddingAmethystBreaking = false;
+
+    @ConfigEntry(descriptionKey = "preventRocketUse.tooltip")
+    public boolean preventRocketUse = false;
 }

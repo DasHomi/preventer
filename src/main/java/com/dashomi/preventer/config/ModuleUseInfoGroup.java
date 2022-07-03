@@ -49,4 +49,7 @@ public class ModuleUseInfoGroup implements ConfigGroup {
 
     @ConfigEntry(nameKey = "preventBuddingAmethystBreaking")
     public boolean preventBuddingAmethystBreaking_msg = false;
+
+    @ConfigEntry(nameKey = "preventRocketUse")
+    public boolean preventRocketUse_msg = false;
 }

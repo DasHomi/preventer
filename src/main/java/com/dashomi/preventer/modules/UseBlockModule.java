@@ -7,6 +7,7 @@ import net.minecraft.item.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.world.World;
 
@@ -110,6 +111,23 @@ public class UseBlockModule {
                         playerEntity.sendMessage(Text.translatable("config.preventer.noTrappedChestOpening.text"), true);
                     }
                     return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventRocketUse && !playerEntity.isSpectator()) {
+                if (!playerEntity.isFallFlying()) {
+                    if (PreventerClient.config.moduleConfigGroup.rocketInOffhand && playerEntity.getOffHandStack().getItem() instanceof FireworkRocketItem) {
+                        if (PreventerClient.config.moduleUseInfoGroup.preventRocketUse_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventRocketUse.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                    if (PreventerClient.config.moduleConfigGroup.rocketInMainHand && playerEntity.getMainHandStack().getItem() instanceof FireworkRocketItem) {
+                        if (PreventerClient.config.moduleUseInfoGroup.preventRocketUse_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventRocketUse.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
                 }
             }
 

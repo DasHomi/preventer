@@ -73,5 +73,13 @@
 
   "config.preventer.preventBuddingAmethystBreaking": "Prevent Budding Amethyst Breaking",
   "config.preventer.preventBuddingAmethystBreaking.tooltip": "Prevents you from breaking Budding Amethyst blocks",
-  "config.preventer.preventBuddingAmethystBreaking.text": "§4Budding Amethyst Block breaking Prevented§4"
+  "config.preventer.preventBuddingAmethystBreaking.text": "§4Budding Amethyst Block breaking Prevented§4",
+
+  "config.preventer.preventRocketUse": "Prevent Firework Rocket Use",
+  "config.preventer.preventRocketUse.tooltip": "Prevents you from using firework rockets by accident",
+  "config.preventer.preventRocketUse.text": "§4Firework Rocket use prevented§4",
+  "config.preventer.preventRocketUse.offhand": "Prevent Rocket Use in Offhand",
+  "config.preventer.preventRocketUse.mainHand": "Prevent Rocket Use in Main Hand",
+  "config.preventer.preventRocketUse.offhand.tooltip": "Prevents Accidental rocket use in the offhand",
+  "config.preventer.preventRocketUse.mainHand.tooltip": "Prevents Accidental rocket use in the main hand"
 }

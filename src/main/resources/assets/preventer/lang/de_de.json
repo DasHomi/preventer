@@ -73,5 +73,13 @@
 
   "config.preventer.preventBuddingAmethystBreaking": "Verhindert Amethystknospenblock Zerstören",
   "config.preventer.preventBuddingAmethystBreaking.tooltip": "Verhindert das Zerstören von Amethystknospenblöcken",
-  "config.preventer.preventBuddingAmethystBreaking.text": "§4Amethystknospenblock zerstören verhindert§4"
+  "config.preventer.preventBuddingAmethystBreaking.text": "§4Amethystknospenblock zerstören verhindert§4",
+
+  "config.preventer.preventRocketUse": "Verhindert Feuerwerksrakete Benutzung",
+  "config.preventer.preventRocketUse.tooltip": "Verhindert das benutzen von Feuerwerksraketen",
+  "config.preventer.preventRocketUse.text": "§4Feuerwerksraketen benutzung verhindert§4",
+  "config.preventer.preventRocketUse.offhand": "Verhindert Feuerwerksraketen benutzen in der Nebenhand",
+  "config.preventer.preventRocketUse.mainHand": "Verhindert Feuerwerksraketen benutzen in der Haupthand",
+  "config.preventer.preventRocketUse.offhand.tooltip": "Verhindert ausersehene Feuerwerksraketen Benutzung in der Haupthand",
+  "config.preventer.preventRocketUse.mainHand.tooltip": "Verhindert ausersehene Feuerwerksraketen Benutzung in der Nebenhand"
 }

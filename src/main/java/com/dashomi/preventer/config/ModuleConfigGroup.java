@@ -8,4 +8,10 @@ public class ModuleConfigGroup implements ConfigGroup {
     @ConfigEntry.BoundedInteger(min = 1, max = 30)
     @ConfigEntry.Slider(valueKey = "lowDurabilityProtectionRange.valueKey")
     public int lowDurabilityProtectionRange = 1;
+
+    @ConfigEntry(nameKey = "preventRocketUse.offhand", descriptionKey = "preventRocketUse.offhand.tooltip")
+    public boolean rocketInOffhand = true;
+
+    @ConfigEntry(nameKey = "preventRocketUse.mainHand", descriptionKey = "preventRocketUse.mainHand.tooltip")
+    public boolean rocketInMainHand = false;
 }
