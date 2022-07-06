@@ -52,4 +52,7 @@ public class ModuleUseInfoGroup implements ConfigGroup {
 
     @ConfigEntry(nameKey = "preventRocketUse")
     public boolean preventRocketUse_msg = false;
+
+    @ConfigEntry(nameKey = "preventEndCrystalHitting")
+    public boolean preventEndCrystalHitting_msg = false;
 }

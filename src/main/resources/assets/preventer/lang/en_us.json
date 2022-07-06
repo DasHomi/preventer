@@ -81,5 +81,9 @@
   "config.preventer.preventRocketUse.offhand": "Prevent Rocket Use in Offhand",
   "config.preventer.preventRocketUse.mainHand": "Prevent Rocket Use in Main Hand",
   "config.preventer.preventRocketUse.offhand.tooltip": "Prevents Accidental rocket use in the offhand",
-  "config.preventer.preventRocketUse.mainHand.tooltip": "Prevents Accidental rocket use in the main hand"
+  "config.preventer.preventRocketUse.mainHand.tooltip": "Prevents Accidental rocket use in the main hand",
+
+  "config.preventer.preventEndCrystalHitting": "Prevent End Crystal Hitting",
+  "config.preventer.preventEndCrystalHitting.tooltip": "Prevents you from hitting End Crystals",
+  "config.preventer.preventEndCrystalHitting.text": "§4End Crystal hitting prevented§4"
 }

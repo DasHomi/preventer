@@ -81,5 +81,9 @@
   "config.preventer.preventRocketUse.offhand": "Verhindert Feuerwerksraketen benutzen in der Nebenhand",
   "config.preventer.preventRocketUse.mainHand": "Verhindert Feuerwerksraketen benutzen in der Haupthand",
   "config.preventer.preventRocketUse.offhand.tooltip": "Verhindert ausersehene Feuerwerksraketen Benutzung in der Haupthand",
-  "config.preventer.preventRocketUse.mainHand.tooltip": "Verhindert ausersehene Feuerwerksraketen Benutzung in der Nebenhand"
+  "config.preventer.preventRocketUse.mainHand.tooltip": "Verhindert ausersehene Feuerwerksraketen Benutzung in der Nebenhand",
+
+  "config.preventer.preventEndCrystalHitting": "Verhindert Enderkristall Schlage",
+  "config.preventer.preventEndCrystalHitting.tooltip": "Verhindert das schlagen von Enderkristallen",
+  "config.preventer.preventEndCrystalHitting.text": "§4Enderkristall schlagen verhindert§4"
 }

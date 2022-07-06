@@ -2,6 +2,7 @@ package com.dashomi.preventer.modules;
 
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.decoration.EndCrystalEntity;
 import net.minecraft.entity.mob.ZombifiedPiglinEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -43,6 +44,15 @@ public class AttackEntityModule {
                 if (entity instanceof ZombifiedPiglinEntity) {
                     if (PreventerClient.config.moduleUseInfoGroup.noZombifiedPiglinPunch_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.noZombifiedPiglinPunch.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventEndCrystalHitting) {
+                if (entity instanceof EndCrystalEntity) {
+                    if (PreventerClient.config.moduleUseInfoGroup.preventEndCrystalHitting_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventEndCrystalHitting.text"), true);
                     }
                     return ActionResult.FAIL;
                 }

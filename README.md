@@ -35,6 +35,10 @@ There is also an OVERRIDE KEY to temporarily allow an otherwise prevented action
   - _Prevents you from opening trapped chests_
 - Prevent Budding Amethyst block breaking
   - _Prevents you from breaking Budding Amethyst blocks_
+- Prevent Accidental Rocket Use
+  - _Prevents you from accidental using Firework Rockets_
+- Prevent End Crystal hitting
+  - _Prevents you hitting End Crystals_
  
 ## Planed Features
 - #### For feature requests, submit an issue with the enhancement label
