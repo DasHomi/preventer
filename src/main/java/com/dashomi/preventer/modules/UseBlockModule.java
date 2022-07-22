@@ -9,6 +9,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.world.World;
+import net.minecraft.world.dimension.DimensionType;
 
 import static net.minecraft.block.CaveVines.BERRIES;
 import static net.minecraft.block.SweetBerryBushBlock.AGE;
@@ -110,6 +111,17 @@ public class UseBlockModule {
                         playerEntity.sendMessage(Text.translatable("config.preventer.noTrappedChestOpening.text"), true);
                     }
                     return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventBedUse) {
+                if (!world.getDimension().bedWorks()) {
+                    if (targetBlock instanceof BedBlock) {
+                        if (PreventerClient.config.moduleUseInfoGroup.preventBedUse_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventBedUse.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
                 }
             }
 

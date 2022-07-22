@@ -68,14 +68,14 @@
   "config.preventer.noZombifiedPiglinPunch.text": "§4Zombifizierten Piglin schlagen verhindert§4",
 
   "config.preventer.noTrappedChestOpening": "Kein Redstone Truhen Öffnen",
-  "config.preventer.noTrappedChestOpening.tooltip": "Verhindert das öffnen von Redstone Truhen",
+  "config.preventer.noTrappedChestOpening.tooltip": "Verhindert das Öffnen von Redstone Truhen",
   "config.preventer.noTrappedChestOpening.text": "§4Dies ist eine Redstone Truhe§4",
 
   "config.preventer.preventBuddingAmethystBreaking": "Verhindert Amethystknospenblock Zerstören",
   "config.preventer.preventBuddingAmethystBreaking.tooltip": "Verhindert das Zerstören von Amethystknospenblöcken",
   "config.preventer.preventBuddingAmethystBreaking.text": "§4Amethystknospenblock zerstören verhindert§4",
 
-  "config.preventer.preventRocketUse": "Verhindert Feuerwerksrakete Benutzung",
+  "config.preventer.preventRocketUse": "Verhinder Feuerwerksrakete Benutzung",
   "config.preventer.preventRocketUse.tooltip": "Verhindert das benutzen von Feuerwerksraketen",
   "config.preventer.preventRocketUse.text": "§4Feuerwerksraketen benutzung verhindert§4",
   "config.preventer.preventRocketUse.offhand": "Verhindert Feuerwerksraketen benutzen in der Nebenhand",
@@ -83,7 +83,11 @@
   "config.preventer.preventRocketUse.offhand.tooltip": "Verhindert ausersehene Feuerwerksraketen Benutzung in der Haupthand",
   "config.preventer.preventRocketUse.mainHand.tooltip": "Verhindert ausersehene Feuerwerksraketen Benutzung in der Nebenhand",
 
-  "config.preventer.preventEndCrystalHitting": "Verhindert Enderkristall Schlage",
-  "config.preventer.preventEndCrystalHitting.tooltip": "Verhindert das schlagen von Enderkristallen",
-  "config.preventer.preventEndCrystalHitting.text": "§4Enderkristall schlagen verhindert§4"
+  "config.preventer.preventEndCrystalHitting": "Verhinder Enderkristall Schlage",
+  "config.preventer.preventEndCrystalHitting.tooltip": "Verhindert das Schlagen von Enderkristallen",
+  "config.preventer.preventEndCrystalHitting.text": "§4Enderkristall schlagen verhindert§4",
+
+  "config.preventer.preventBedUse": "Verhiner Bett Benutzung",
+  "config.preventer.preventBedUse.tooltip": "Verhindert das Benutzen eines Bettes in der End oder Nether Dimension",
+  "config.preventer.preventBedUse.text": "§4Bett benutzen verhindert§4"
 }

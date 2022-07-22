@@ -88,6 +88,9 @@ public class PreventerConfig extends Config implements ConfigContainer {
     @ConfigEntry(descriptionKey = "preventEndCrystalHitting.tooltip")
     public boolean preventEndCrystalHitting = false;
 
+    @ConfigEntry(descriptionKey = "preventBedUse.tooltip")
+    public boolean preventBedUse = false;
+
     //@ConfigEntry(descriptionKey = "preventActiveToolDrop.tooltip")
     //public boolean preventActiveToolDrop = false;
 }

@@ -55,4 +55,7 @@ public class ModuleUseInfoGroup implements ConfigGroup {
 
     @ConfigEntry(nameKey = "preventEndCrystalHitting")
     public boolean preventEndCrystalHitting_msg = false;
+
+    @ConfigEntry(nameKey = "preventBedUse")
+    public boolean preventBedUse_msg = false;
 }
