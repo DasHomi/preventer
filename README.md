@@ -41,12 +41,14 @@ There is also an OVERRIDE KEY to temporarily allow an otherwise prevented action
   - _Prevents you hitting End Crystals_
 - Prevent Bed Use
   - _Prevents you from using beds in the Nether or End dimension_
+- Prevent Coral Placing
+  - _Prevents you from placing corals out of water_
 
 ## Planed Features
 - #### For feature requests, submit an issue with the enhancement label
 - No active tool drop
 - Prevent Plant Breaking
-- Prevent Coral Placing
+- Prevent Block Under Player Breaking
 
 
 ## Dependencies

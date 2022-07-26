@@ -87,7 +87,11 @@
   "config.preventer.preventEndCrystalHitting.tooltip": "Verhindert das Schlagen von Enderkristallen",
   "config.preventer.preventEndCrystalHitting.text": "§4Enderkristall schlagen verhindert§4",
 
-  "config.preventer.preventBedUse": "Verhiner Bett Benutzung",
+  "config.preventer.preventBedUse": "Verhinder Bett Benutzung",
   "config.preventer.preventBedUse.tooltip": "Verhindert das Benutzen eines Bettes in der End oder Nether Dimension",
-  "config.preventer.preventBedUse.text": "§4Bett benutzen verhindert§4"
+  "config.preventer.preventBedUse.text": "§4Bett benutzen verhindert§4",
+
+  "config.preventer.preventCoralPlace": "Verhinder Korallen Platzieren",
+  "config.preventer.preventCoralPlace.tooltip": "Verhindert das Platzieren von Korallen außerhalb von Wasser",
+  "config.preventer.preventCoralPlace.text": "§4Korallen außerhalb des Wassers platzieren wurde verhindert§4"
 }

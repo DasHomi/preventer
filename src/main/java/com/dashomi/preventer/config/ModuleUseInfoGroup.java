@@ -58,4 +58,7 @@ public class ModuleUseInfoGroup implements ConfigGroup {
 
     @ConfigEntry(nameKey = "preventBedUse")
     public boolean preventBedUse_msg = false;
+
+    @ConfigEntry(nameKey = "preventCoralPlace")
+    public boolean preventCoralPlace_msg = false;
 }
