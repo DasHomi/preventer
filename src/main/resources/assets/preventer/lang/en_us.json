@@ -93,5 +93,9 @@
 
   "config.preventer.preventCoralPlace": "Prevent Coral Placing",
   "config.preventer.preventCoralPlace.tooltip": "Prevents you from placing corals out of water",
-  "config.preventer.preventCoralPlace.text": "§4Out of water coral placing was prevented§4"
+  "config.preventer.preventCoralPlace.text": "§4Out of water coral placing was prevented§4",
+
+  "config.preventer.preventWaterPlace": "Prevent Water Placing",
+  "config.preventer.preventWaterPlace.tooltip": "Prevents you from placing water in the Nether",
+  "config.preventer.preventWaterPlace.text": "§4Water placing in Nether prevented§4"
 }

@@ -61,4 +61,7 @@ public class ModuleUseInfoGroup implements ConfigGroup {
 
     @ConfigEntry(nameKey = "preventCoralPlace")
     public boolean preventCoralPlace_msg = false;
+
+    @ConfigEntry(nameKey = "preventWaterPlace")
+    public boolean preventWaterPlace_msg = false;
 }

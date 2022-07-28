@@ -93,5 +93,9 @@
 
   "config.preventer.preventCoralPlace": "Verhinder Korallen Platzieren",
   "config.preventer.preventCoralPlace.tooltip": "Verhindert das Platzieren von Korallen außerhalb von Wasser",
-  "config.preventer.preventCoralPlace.text": "§4Korallen außerhalb des Wassers platzieren wurde verhindert§4"
+  "config.preventer.preventCoralPlace.text": "§4Korallen außerhalb des Wassers platzieren wurde verhindert§4",
+
+  "config.preventer.preventWaterPlace": "Verhinder Wasser Platzieren",
+  "config.preventer.preventWaterPlace.tooltip": "Verhindert das Platzieren von Wasser im Nether",
+  "config.preventer.preventWaterPlace.text": "§4Wasser im Nether platzieren verhindert§4"
 }

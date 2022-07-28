@@ -94,6 +94,6 @@ public class PreventerConfig extends Config implements ConfigContainer {
     @ConfigEntry(descriptionKey = "preventCoralPlace.tooltip")
     public boolean preventCoralPlace = false;
 
-    //@ConfigEntry(descriptionKey = "preventActiveToolDrop.tooltip")
-    //public boolean preventActiveToolDrop = false;
+    @ConfigEntry(descriptionKey = "preventWaterPlace.tooltip")
+    public boolean preventWaterPlace = false;
 }

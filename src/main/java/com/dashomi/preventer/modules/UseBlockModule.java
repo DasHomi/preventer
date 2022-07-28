@@ -129,15 +129,28 @@ public class UseBlockModule {
                 }
             }
 
-            if (PreventerClient.config.preventCoralPlace) {
-                Block handItemBlock = ((BlockItem) handItem).getBlock();
-                if (handItemBlock instanceof CoralBlock || handItemBlock instanceof CoralBlockBlock || handItemBlock instanceof CoralFanBlock) {
-                    Block targetBlock2 = world.getBlockState(blockHitResult.getBlockPos().offset(blockHitResult.getSide(), 1)).getBlock();
-                    if (!targetBlock2.equals(Blocks.WATER)) {
-                        if (PreventerClient.config.moduleUseInfoGroup.preventCoralPlace_msg) {
-                            playerEntity.sendMessage(Text.translatable("config.preventer.preventCoralPlace.text"), true);
+            if (PreventerClient.config.preventWaterPlace) {
+                if (handItem.equals(Items.WATER_BUCKET)) {
+                    if (world.getDimension().ultrawarm()) {
+                        if (PreventerClient.config.moduleUseInfoGroup.preventWaterPlace_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventWaterPlace.text"), true);
                         }
                         return ActionResult.FAIL;
+                    }
+                }
+            }
+
+            if (PreventerClient.config.preventCoralPlace) {
+                if (handItem instanceof BlockItem){
+                    Block handItemBlock = ((BlockItem) handItem).getBlock();
+                    if (handItemBlock instanceof CoralBlock || handItemBlock instanceof CoralBlockBlock || handItemBlock instanceof CoralFanBlock) {
+                        Block targetBlock2 = world.getBlockState(blockHitResult.getBlockPos().offset(blockHitResult.getSide(), 1)).getBlock();
+                        if (!targetBlock2.equals(Blocks.WATER)) {
+                            if (PreventerClient.config.moduleUseInfoGroup.preventCoralPlace_msg) {
+                                playerEntity.sendMessage(Text.translatable("config.preventer.preventCoralPlace.text"), true);
+                            }
+                            return ActionResult.FAIL;
+                        }
                     }
                 }
             }
