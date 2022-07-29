@@ -46,4 +46,22 @@ public class ModuleUseInfoGroup implements ConfigGroup {
 
     @ConfigEntry(translationKey = "noTrappedChestOpening")
     public boolean noTrappedChestOpening_msg = false;
+
+    @ConfigEntry(translationKey = "preventBuddingAmethystBreaking")
+    public boolean preventBuddingAmethystBreaking_msg = false;
+
+    @ConfigEntry(translationKey = "preventRocketUse")
+    public boolean preventRocketUse_msg = false;
+
+    @ConfigEntry(translationKey = "preventEndCrystalHitting")
+    public boolean preventEndCrystalHitting_msg = false;
+
+    @ConfigEntry(translationKey = "preventBedUse")
+    public boolean preventBedUse_msg = false;
+
+    @ConfigEntry(translationKey = "preventCoralPlace")
+    public boolean preventCoralPlace_msg = false;
+
+    @ConfigEntry(translationKey = "preventWaterPlace")
+    public boolean preventWaterPlace_msg = false;
 }

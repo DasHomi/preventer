@@ -4,6 +4,7 @@ A fabric mod that prevents you from doing dumb things by accident.
 For example accidentally creating stripped logs.
 You can toggle every module in the settings and decide if
 you want a notification from the mod if it prevented you from doing something.
+There is also an OVERRIDE KEY to temporarily allow an otherwise prevented action (_Default keybinding is R_).
 Note, the 1.18 version will still get updates sometimes but the 1.19 version will be more up to date
 
 ## **Features**
@@ -26,15 +27,31 @@ Note, the 1.18 version will still get updates sometimes but the 1.19 version wil
 - Only harvest mature Crops
   - _Prevents harvesting/breaking of non-mature plants_
 - Prevent Villager Punch
-  - _Prevents you from damaging villagers_
+  - _Prevents you from punching villagers_
 - Prevent Zombified Piglin Punch
-  - _Prevents you from damaging villagers_
+  - _Prevents you from punching Zombified Piglins_
+- No Cake today
+  - _Prevents you from eating Cake_
+- Prevent trapped chest opening
+  - _Prevents you from opening trapped chests_
+- Prevent Budding Amethyst block breaking
+  - _Prevents you from breaking Budding Amethyst blocks_
+- Prevent Accidental Rocket Use
+  - _Prevents you from accidental using Firework Rockets_
+- Prevent End Crystal hitting
+  - _Prevents you hitting End Crystals_
+- Prevent Bed Use
+  - _Prevents you from using beds in the Nether or End dimension_
+- Prevent Coral Placing
+  - _Prevents you from placing corals out of water_
+- Prevent Water Placing
+  - _Prevents you from placing water in the Nether_
 
 ## Planed Features
 #### For feature requests, submit an issue with the enhancement label
 - No active tool drop
-- Prevent Harvest
-- No Cake today
+- Prevent Plant Breaking
+- Prevent Block Under Player Breaking
 
 ## Dependencies
 **Included:**  

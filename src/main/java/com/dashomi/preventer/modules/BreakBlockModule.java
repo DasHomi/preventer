@@ -2,6 +2,7 @@ package com.dashomi.preventer.modules;
 
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.block.Block;
+import net.minecraft.block.BuddingAmethystBlock;
 import net.minecraft.block.CropBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -26,6 +27,16 @@ public class BreakBlockModule {
                     }
                 }
             }
+
+            if (PreventerClient.config.preventBuddingAmethystBreaking) {
+                if (targetBlock instanceof BuddingAmethystBlock) {
+                    if (PreventerClient.config.moduleUseInfoGroup.preventBuddingAmethystBreaking_msg) {
+                        playerEntity.sendMessage(new TranslatableText("config.preventer.preventBuddingAmethystBreaking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
 
             if (PreventerClient.config.lowDurabilityProtection) {
                 if (!playerEntity.isCreative() && !playerEntity.isSpectator()) { // AttackBlockCallback does not do game mode check for us, so we need to do it by ourselves

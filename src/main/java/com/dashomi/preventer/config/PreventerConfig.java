@@ -77,4 +77,22 @@ public class PreventerConfig extends Config implements ConfigContainer {
 
     @ConfigEntry(tooltipTranslationKeys = "noTrappedChestOpening.tooltip")
     public boolean noTrappedChestOpening = false;
+
+    @ConfigEntry(tooltipTranslationKeys = "preventBuddingAmethystBreaking.tooltip")
+    public boolean preventBuddingAmethystBreaking = false;
+
+    @ConfigEntry(tooltipTranslationKeys = "preventRocketUse.tooltip")
+    public boolean preventRocketUse = false;
+
+    @ConfigEntry(tooltipTranslationKeys = "preventEndCrystalHitting.tooltip")
+    public boolean preventEndCrystalHitting = false;
+
+    @ConfigEntry(tooltipTranslationKeys = "preventBedUse.tooltip")
+    public boolean preventBedUse = false;
+
+    @ConfigEntry(tooltipTranslationKeys = "preventCoralPlace.tooltip")
+    public boolean preventCoralPlace = false;
+
+    @ConfigEntry(tooltipTranslationKeys = "preventWaterPlace.tooltip")
+    public boolean preventWaterPlace = false;
 }

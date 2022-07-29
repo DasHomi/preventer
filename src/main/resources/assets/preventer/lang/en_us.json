@@ -69,5 +69,33 @@
 
   "config.preventer.noTrappedChestOpening": "Prevent Trapped Chest Opening",
   "config.preventer.noTrappedChestOpening.tooltip": "Prevents you from opening trapped chests",
-  "config.preventer.noTrappedChestOpening.text": "§4This is a trapped chest§4"
+  "config.preventer.noTrappedChestOpening.text": "§cThis is a trapped chest§c",
+
+  "config.preventer.preventBuddingAmethystBreaking": "Prevent Budding Amethyst Breaking",
+  "config.preventer.preventBuddingAmethystBreaking.tooltip": "Prevents you from breaking Budding Amethyst blocks",
+  "config.preventer.preventBuddingAmethystBreaking.text": "§4Budding Amethyst Block breaking Prevented§4",
+
+  "config.preventer.preventRocketUse": "Prevent Firework Rocket Use",
+  "config.preventer.preventRocketUse.tooltip": "Prevents you from using firework rockets by accident",
+  "config.preventer.preventRocketUse.text": "§4Firework Rocket use prevented§4",
+  "config.preventer.preventRocketUse.offhand": "Prevent Rocket Use in Offhand",
+  "config.preventer.preventRocketUse.mainHand": "Prevent Rocket Use in Main Hand",
+  "config.preventer.preventRocketUse.offhand.tooltip": "Prevents Accidental rocket use in the offhand",
+  "config.preventer.preventRocketUse.mainHand.tooltip": "Prevents Accidental rocket use in the main hand",
+
+  "config.preventer.preventEndCrystalHitting": "Prevent End Crystal Hitting",
+  "config.preventer.preventEndCrystalHitting.tooltip": "Prevents you from hitting End Crystals",
+  "config.preventer.preventEndCrystalHitting.text": "§4End Crystal hitting prevented§4",
+
+  "config.preventer.preventBedUse": "Prevent Bed Use",
+  "config.preventer.preventBedUse.tooltip": "Prevents you using beds in the End or Nether dimension",
+  "config.preventer.preventBedUse.text": "§4Bed using was prevented§4",
+
+  "config.preventer.preventCoralPlace": "Prevent Coral Placing",
+  "config.preventer.preventCoralPlace.tooltip": "Prevents you from placing corals out of water",
+  "config.preventer.preventCoralPlace.text": "§4Out of water coral placing was prevented§4",
+
+  "config.preventer.preventWaterPlace": "Prevent Water Placing",
+  "config.preventer.preventWaterPlace.tooltip": "Prevents you from placing water in the Nether",
+  "config.preventer.preventWaterPlace.text": "§4Water placing in Nether prevented§4"
 }

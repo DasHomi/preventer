@@ -113,6 +113,60 @@ public class UseBlockModule {
                 }
             }
 
+            if (PreventerClient.config.preventBedUse) {
+                if (targetBlock instanceof BedBlock) {
+                    if (!world.getDimension().isBedWorking()) {
+                        if (PreventerClient.config.moduleUseInfoGroup.preventBedUse_msg) {
+                            playerEntity.sendMessage(new TranslatableText("config.preventer.preventBedUse.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
+            if (PreventerClient.config.preventWaterPlace) {
+                if (handItem.equals(Items.WATER_BUCKET)) {
+                    if (world.getDimension().isUltrawarm()) {
+                        if (PreventerClient.config.moduleUseInfoGroup.preventWaterPlace_msg) {
+                            playerEntity.sendMessage(new TranslatableText("config.preventer.preventWaterPlace.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
+            if (PreventerClient.config.preventCoralPlace) {
+                if (handItem instanceof BlockItem){
+                    Block handItemBlock = ((BlockItem) handItem).getBlock();
+                    if (handItemBlock instanceof CoralBlock || handItemBlock instanceof CoralBlockBlock || handItemBlock instanceof CoralFanBlock) {
+                        Block targetBlock2 = world.getBlockState(blockHitResult.getBlockPos().offset(blockHitResult.getSide(), 1)).getBlock();
+                        if (!targetBlock2.equals(Blocks.WATER)) {
+                            if (PreventerClient.config.moduleUseInfoGroup.preventCoralPlace_msg) {
+                                playerEntity.sendMessage(new TranslatableText("config.preventer.preventCoralPlace.text"), true);
+                            }
+                            return ActionResult.FAIL;
+                        }
+                    }
+                }
+            }
+
+            if (PreventerClient.config.preventRocketUse && !playerEntity.isSpectator()) {
+                if (!playerEntity.isFallFlying()) {
+                    if (PreventerClient.config.moduleConfigGroup.rocketInOffhand && playerEntity.getOffHandStack().getItem() instanceof FireworkRocketItem) {
+                        if (PreventerClient.config.moduleUseInfoGroup.preventRocketUse_msg) {
+                            playerEntity.sendMessage(new TranslatableText("config.preventer.preventRocketUse.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                    if (PreventerClient.config.moduleConfigGroup.rocketInMainHand && playerEntity.getMainHandStack().getItem() instanceof FireworkRocketItem) {
+                        if (PreventerClient.config.moduleUseInfoGroup.preventRocketUse_msg) {
+                            playerEntity.sendMessage(new TranslatableText("config.preventer.preventRocketUse.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
             if (PreventerClient.config.lowDurabilityProtection) {
                 if (!playerEntity.isCreative() && !playerEntity.isSpectator()) { // AttackBlockCallback does not do game mode check for us, so we need to do it by ourselves
                     ItemStack stack = playerEntity.getStackInHand(hand);
