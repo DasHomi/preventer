@@ -13,9 +13,9 @@ There is also an OVERRIDE KEY to temporarily allow an otherwise prevented action
   - _Prevents creation of Paths_
 - No Farmland
   - _Prevents creation of Farmland_
-- Prevent Glow Berrie Harvest
+- Prevent Glow Berry Harvest
   - _Prevents harvesting Glow Berries_
-- Prevent Sweet Berrie Harvest
+- Prevent Sweet Berry Harvest
   - _Prevents harvesting Sweet Berries_
 - Prevent Copper wax removing
   - _Prevents removing wax from copper_
