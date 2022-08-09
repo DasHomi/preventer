@@ -17,21 +17,21 @@ import org.slf4j.LoggerFactory;
 
 @Environment(EnvType.CLIENT)
 public class PreventerClient implements ClientModInitializer {
-	public static final String MOD_ID = "preventer";
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	public static PreventerConfig config;
+    public static final String MOD_ID = "preventer";
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static PreventerConfig config;
 
-	@Override
-	public void onInitializeClient() {
-		AutoConfig.register(PreventerConfig.class, GsonConfigSerializer::new);
-		config = AutoConfig.getConfigHolder(PreventerConfig.class).getConfig();
+    @Override
+    public void onInitializeClient() {
+        AutoConfig.register(PreventerConfig.class, GsonConfigSerializer::new);
+        config = AutoConfig.getConfigHolder(PreventerConfig.class).getConfig();
 
-		UseBlockCallback.EVENT.register(UseBlockModule::checkBlockUse);
-		AttackBlockCallback.EVENT.register(BreakBlockModule::checkBlockBreak);
-		AttackEntityCallback.EVENT.register(AttackEntityModule::checkEntityAttack);
+        UseBlockCallback.EVENT.register(UseBlockModule::checkBlockUse);
+        AttackBlockCallback.EVENT.register(BreakBlockModule::checkBlockBreak);
+        AttackEntityCallback.EVENT.register(AttackEntityModule::checkEntityAttack);
 
-		RegisterKeyBindings.register();
+        RegisterKeyBindings.register();
 
-		LOGGER.info("Initialized");
-	}
+        LOGGER.info("Initialized");
+    }
 }

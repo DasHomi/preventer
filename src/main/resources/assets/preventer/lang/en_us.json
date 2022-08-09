@@ -31,15 +31,15 @@
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noFarmland_msg": "No Farmland",
   "config.preventer.noFarmland.text": "§4Farmland creation was prevented§4",
 
-  "text.autoconfig.PreventerConfig.option.noGlowBerrieHarvest": "No Glow Berrie Harvest",
+  "text.autoconfig.PreventerConfig.option.noGlowBerrieHarvest": "No Glow Berry Harvest",
   "text.autoconfig.PreventerConfig.option.noGlowBerrieHarvest.@Tooltip": "Prevents you from harvesting Glow Berries",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noGlowBerrieHarvest_msg": "No Glow Berrie Harvest",
-  "config.preventer.noGlowBerrieHarvest.text": "§4Glow Berrie harvesting was prevented§4",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noGlowBerrieHarvest_msg": "No Glow Berry Harvest",
+  "config.preventer.noGlowBerrieHarvest.text": "§4Glow Berry harvesting was prevented§4",
 
-  "text.autoconfig.PreventerConfig.option.noSweetBerrieHarvest": "No Sweet Berrie Harvest",
+  "text.autoconfig.PreventerConfig.option.noSweetBerrieHarvest": "No Sweet Berry Harvest",
   "text.autoconfig.PreventerConfig.option.noSweetBerrieHarvest.@Tooltip": "Prevents you from harvesting Sweet Berries",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noSweetBerrieHarvest_msg": "No Sweet Berrie Harvest",
-  "config.preventer.noSweetBerrieHarvest.text": "§4Sweet Berrie harvesting was prevented§4",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noSweetBerrieHarvest_msg": "No Sweet Berry Harvest",
+  "config.preventer.noSweetBerrieHarvest.text": "§4Sweet Berry harvesting was prevented§4",
 
   "text.autoconfig.PreventerConfig.option.onlyMatureCropHarvest": "Only Mature Crop Harvest",
   "text.autoconfig.PreventerConfig.option.onlyMatureCropHarvest.@Tooltip": "Prevents you from harvesting \n(breaking) non mature crops",

@@ -28,11 +28,11 @@
     "fabricloader": ">=0.14.8",
     "minecraft": "1.19.*",
     "java": ">=17",
-    "fabric": "*",
-    "cloth-config": ">=4.0.0"
+    "fabric": ">=0.58.0",
+    "cloth-config": ">=8.0.0"
   },
   "suggests": {
-    "modmenu": "*"
+    "modmenu": ">=4.0.0"
   },
   "accessWidener": "preventer.accesswidener"
 }

@@ -38,10 +38,10 @@ public class BreakBlockModule {
             }
 
             if (PreventerClient.config.lowDurabilityProtection) {
-                if (!playerEntity.isCreative() && !playerEntity.isSpectator()) { // AttackBlockCallback does not do game mode check for us, so we need to do it by ourselves
+                if (!playerEntity.isCreative() && !playerEntity.isSpectator()) {
                     ItemStack stack = playerEntity.getStackInHand(hand);
-                    if (stack.isDamageable()) { // Check if the item is damageable
-                        if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.moduleConfigGroup.lowDurabilityProtectionRange) { // Check if the item is *almost* broken
+                    if (stack.isDamageable()) {
+                        if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.moduleConfigGroup.lowDurabilityProtectionRange) {
                             if (PreventerClient.config.moduleUseInfoGroup.lowDurabilityProtection_msg) {
                                 playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
                             }
