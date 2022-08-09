@@ -1,17 +1,16 @@
 package com.dashomi.preventer.config;
 
-import me.lortseam.completeconfig.api.ConfigEntry;
-import me.lortseam.completeconfig.api.ConfigGroup;
+import me.shedaniel.autoconfig.ConfigData;
+import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
-public class ModuleConfigGroup implements ConfigGroup {
-    @ConfigEntry(nameKey = "lowDurabilityProtectionRange",descriptionKey = "lowDurabilityProtectionRange.tooltip")
-    @ConfigEntry.BoundedInteger(min = 1, max = 30)
-    @ConfigEntry.Slider(valueKey = "lowDurabilityProtectionRange.valueKey")
+@Config(name = "ModuleConfigGroup")
+public class ModuleConfigGroup implements ConfigData {
+    @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.BoundedDiscrete(min = 1, max = 30)
     public int lowDurabilityProtectionRange = 1;
-
-    @ConfigEntry(nameKey = "preventRocketUse.offhand", descriptionKey = "preventRocketUse.offhand.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean rocketInOffhand = true;
-
-    @ConfigEntry(nameKey = "preventRocketUse.mainHand", descriptionKey = "preventRocketUse.mainHand.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean rocketInMainHand = false;
 }

@@ -16,6 +16,9 @@
   "entrypoints": {
     "client": [
       "com.dashomi.preventer.PreventerClient"
+    ],
+    "modmenu" : [
+      "com.dashomi.preventer.config.ModMenuIntegration"
     ]
   },
   "mixins": [
@@ -26,9 +29,7 @@
     "minecraft": "1.19.*",
     "java": ">=17",
     "fabric": "*",
-    "completeconfig-base": "2.0.0",
-    "completeconfig-gui-cloth": "2.0.0",
-    "cloth-config": "*"
+    "cloth-config": ">=4.0.0"
   },
   "suggests": {
     "modmenu": "*"

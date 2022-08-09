@@ -1,99 +1,61 @@
 package com.dashomi.preventer.config;
 
-import com.dashomi.preventer.PreventerClient;
-import me.lortseam.completeconfig.api.ConfigContainer;
-import me.lortseam.completeconfig.api.ConfigEntry;
-import me.lortseam.completeconfig.data.Config;
-import me.lortseam.completeconfig.gui.ConfigScreenBuilder;
-import me.lortseam.completeconfig.gui.cloth.ClothConfigScreenBuilder;
-import net.fabricmc.loader.api.FabricLoader;
+import me.shedaniel.autoconfig.ConfigData;
+import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
-public class PreventerConfig extends Config implements ConfigContainer {
+@Config(name = "PreventerConfig")
+public class PreventerConfig implements ConfigData {
+    @ConfigEntry.Gui.Excluded
     public boolean overrideKeyPressed = false;
-    public static PreventerConfig initialize() {
-        PreventerClient.LOGGER.info("Initializing Config");
-        PreventerConfig config = new PreventerConfig();
-        config.load();
-        if (FabricLoader.getInstance().isModLoaded("completeconfig-gui-cloth")) {
-            ConfigScreenBuilder.setMain(PreventerClient.MOD_ID, new ClothConfigScreenBuilder());
-        } else {
-            PreventerClient.LOGGER.warn("Couldn't initialize Cloth Screen because completeconfig-gui-cloth is missing");
-        }
+    @ConfigEntry.Category("moduleConfigGroup")
+    @ConfigEntry.Gui.TransitiveObject
+    public ModuleConfigGroup moduleConfigGroup = new ModuleConfigGroup();
 
-        return config;
-    }
+    @ConfigEntry.Category("moduleUseInfoGroup")
+    @ConfigEntry.Gui.TransitiveObject
+    public ModuleUseInfoGroup moduleUseInfoGroup = new ModuleUseInfoGroup();
 
-    public PreventerConfig() {
-        super(PreventerClient.MOD_ID);
-    }
-
-    @Transitive
-    public final ModuleConfigGroup moduleConfigGroup = new ModuleConfigGroup();
-
-    @Transitive
-    public final ModuleUseInfoGroup moduleUseInfoGroup = new ModuleUseInfoGroup();
-
-    // Toggles
-    @ConfigEntry(descriptionKey = "noStrip.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean noStrip = false;
-
-    @ConfigEntry(descriptionKey = "noPath.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean noPath = false;
-
-    @ConfigEntry(descriptionKey = "noFarmland.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean noFarmland = false;
-
-    @ConfigEntry(descriptionKey = "hideShield.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean hideShield = false;
-
-    @ConfigEntry(descriptionKey = "hideTotem.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean hideTotem = false;
-
-    @ConfigEntry(descriptionKey = "noSweetBerrieHarvest.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean noSweetBerrieHarvest = false;
-
-    @ConfigEntry(descriptionKey = "noGlowBerrieHarvest.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean noGlowBerrieHarvest = false;
-
-    @ConfigEntry(descriptionKey = "onlyMatureCropHarvest.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean onlyMatureCropHarvest = false;
-
-    @ConfigEntry(descriptionKey = "noCake.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean noCake = false;
-
-    @ConfigEntry(descriptionKey = "noScraping.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean noScraping = false;
-
-    @ConfigEntry(descriptionKey = "noDeWax.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean noDeWax = false;
-
-    @ConfigEntry(descriptionKey = "lowDurabilityProtection.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean lowDurabilityProtection = false;
-
-    @ConfigEntry(descriptionKey = "preventVillagerPunch.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean preventVillagerPunch = false;
-
-    @ConfigEntry(descriptionKey = "noZombifiedPiglinPunch.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean noZombifiedPiglinPunch = false;
-
-    @ConfigEntry(descriptionKey = "noTrappedChestOpening.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean noTrappedChestOpening = false;
-
-    @ConfigEntry(descriptionKey = "preventBuddingAmethystBreaking.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean preventBuddingAmethystBreaking = false;
-
-    @ConfigEntry(descriptionKey = "preventRocketUse.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean preventRocketUse = false;
-
-    @ConfigEntry(descriptionKey = "preventEndCrystalHitting.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean preventEndCrystalHitting = false;
-
-    @ConfigEntry(descriptionKey = "preventBedUse.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean preventBedUse = false;
-
-    @ConfigEntry(descriptionKey = "preventCoralPlace.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean preventCoralPlace = false;
-
-    @ConfigEntry(descriptionKey = "preventWaterPlace.tooltip")
+    @ConfigEntry.Gui.Tooltip
     public boolean preventWaterPlace = false;
 }
