@@ -1,6 +1,6 @@
-{
-  "key.preventer.overrideKey": "Überschreib Taste",
-  "key.preventer.overrideKey.text": "Überschreiben Aktiv",
+  {
+  "key.preventer.overrideKey": "Override-Taste",
+  "key.preventer.overrideKey.text": "Override Aktiv",
   "key.preventer.category": "Preventer",
 
   "text.autoconfig.PreventerConfig.category.default": "Modul Schalter",
@@ -8,17 +8,17 @@
   "text.autoconfig.PreventerConfig.category.moduleUseInfoGroup": "Modul Benachrichtigungen Konfiguration",
   "text.autoconfig.PreventerConfig.title": "Preventer Konfiguration",
 
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noStrip_msg.@PrefixText": "Modul Benachrichtigungen werden angezeigt, wenn ein Modul eine Aktion verhinder hat",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noStrip_msg.@PrefixText": "Unten kannst du die Modulbenachrichtigungen einschalten, die angezeigt werden, wenn ein Modul eine Aktion verhindert hat",
 
   "text.autoconfig.PreventerConfig.option.noStrip": "Keine Entrindung",
-  "text.autoconfig.PreventerConfig.option.noStrip.@Tooltip": "Verhinder das Erstellen von entrindeten Stämmen",
+  "text.autoconfig.PreventerConfig.option.noStrip.@Tooltip": "Verhindert das entrinden von Bäumen",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noStrip_msg": "Keine Entrindung",
   "config.preventer.noStrip.text": "§4Stämme Entrinden verhindert§4",
 
-  "text.autoconfig.PreventerConfig.option.noPath": "Kein Pfad",
+  "text.autoconfig.PreventerConfig.option.noPath": "Keine Pfade",
   "text.autoconfig.PreventerConfig.option.noPath.@Tooltip": "Verhindert das Erstellen von Pfad Blöcken",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noPath_msg": "Kein Pfad",
-  "config.preventer.noPath.text": "§4Das erstellen eines Pfad Block wurde verhindert§4",
+  "config.preventer.noPath.text": "§4Das erstellen eines Pfades wurde verhindert§4",
 
   "text.autoconfig.PreventerConfig.option.hideTotem": "Versteckt das Totem",
   "text.autoconfig.PreventerConfig.option.hideTotem.@Tooltip": "Versteckt das Totem der Unsterblichkeit in der Nebenhand",
@@ -27,9 +27,9 @@
   "text.autoconfig.PreventerConfig.option.hideShield.@Tooltip": "Versteckt den Schild in der Nebenhand",
 
   "text.autoconfig.PreventerConfig.option.noFarmland": "Kein Ackerboden",
-  "text.autoconfig.PreventerConfig.option.noFarmland.@Tooltip": "Verhindert das Erstellen von Ackerboden Blöcken",
+  "text.autoconfig.PreventerConfig.option.noFarmland.@Tooltip": "Verhindert das Erstellen von Ackerboden",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noFarmland_msg": "Kein Ackerboden",
-  "config.preventer.noFarmland.text": "§4Das erstellen von Ackerboden wurde verhindert§4",
+  "config.preventer.noFarmland.text": "§4Das erstellen eines Ackerbodens wurde verhindert§4",
 
   "text.autoconfig.PreventerConfig.option.noGlowBerrieHarvest": "Kein Leuchtbeeren Ernten",
   "text.autoconfig.PreventerConfig.option.noGlowBerrieHarvest.@Tooltip": "Verhindert das Ernten von Leuchtbeeren",
@@ -42,7 +42,7 @@
   "config.preventer.noSweetBerrieHarvest.text": "§4Süßbeeren ernten wurde verhindert§4",
 
   "text.autoconfig.PreventerConfig.option.onlyMatureCropHarvest": "Nur Reife Pflanzen Ernten",
-  "text.autoconfig.PreventerConfig.option.onlyMatureCropHarvest.@Tooltip": "Verhindert das Ernten (Zerstören) \nvon unreifen Pflanzen",
+  "text.autoconfig.PreventerConfig.option.onlyMatureCropHarvest.@Tooltip": "Verhindert das versehentliche Ernten \nvon unreifen Pflanzen",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.onlyMatureCropHarvest_msg": "Nur Reife Pflanzen Ernten",
   "config.preventer.onlyMatureCropHarvest.text": "§4Die Pflanze ist noch nicht reif§4",
 
@@ -52,31 +52,31 @@
   "config.preventer.noCake.text": "§4Kuchen essen wurde verhindert§4",
 
   "text.autoconfig.PreventerConfig.option.noScraping": "Kein Kupfer De-Oxidieren",
-  "text.autoconfig.PreventerConfig.option.noScraping.@Tooltip": "Verhindert die Oxidation von \nKupfer zu entfernen",
+  "text.autoconfig.PreventerConfig.option.noScraping.@Tooltip": "Verhindert die Oxidation von \n einem Kupferblock zu entfernen",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noScraping_msg": "Kein Kupfer De-Oxidieren",
   "config.preventer.noScraping.text": "§4Kupfer de-Oxidieren wurde verhindert§4",
 
-  "text.autoconfig.PreventerConfig.option.noDeWax": "Kein Kupfer De-Wachsen",
-  "text.autoconfig.PreventerConfig.option.noDeWax.@Tooltip": "Verhindert das Wachs von \nKupfer zu entfernen",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noDeWax_msg": "Kein Kupfer De-Wachsen",
+  "text.autoconfig.PreventerConfig.option.noDeWax": "Kein Kupfer Entwachsen",
+  "text.autoconfig.PreventerConfig.option.noDeWax.@Tooltip": "Verhindert das Wachs von \nKupfer entfernt wird",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noDeWax_msg": "Kein Kupfer Entwachsen",
   "config.preventer.noDeWax.text": "§4Kupfer ent-wachsen wurde verhindert§4",
 
-  "text.autoconfig.PreventerConfig.option.lowDurabilityProtection": "Geringer Haltbarkeit Sicherheit",
+  "text.autoconfig.PreventerConfig.option.lowDurabilityProtection": "Schutz bei geringer Haltbarkeit",
   "text.autoconfig.PreventerConfig.option.lowDurabilityProtection.@Tooltip": "Verhindert Zerstörung von Werkzeug & \nWaffen aufgrund von geringer Haltbarkeit",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.lowDurabilityProtection_msg": "Geringer Haltbarkeit Sicherheit",
-  "config.preventer.lowDurabilityProtection.text": "§4Werkzeugbenutzung aufgrund von \ngeringer Haltbarkeit verhindert§4",
-  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.lowDurabilityProtectionRange": "Geringe Haltbarkeit Schwelle",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.lowDurabilityProtection_msg": "Schutz bei geringer Haltbarkeit",
+  "config.preventer.lowDurabilityProtection.text": "§4Werkzeugbenutzung aufgrund von \ngeringer Haltbarkeit blockiert§4",
+  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.lowDurabilityProtectionRange": "Geringe Haltbarkeits Schwelle",
   "text.autoconfig.PreventerConfig.option.moduleConfigGroup.lowDurabilityProtectionRange.@Tooltip": "Gibt die niedrigste Haltbarkeit \nvon Werkzeugen & Waffen an",
   "text.autoconfig.PreventerConfig.option.moduleConfigGroup.lowDurabilityProtectionRange.valueKey": "Haltbarkeit: %d",
 
   "text.autoconfig.PreventerConfig.option.preventVillagerPunch": "Kein Dorfbewohner Schlagen",
-  "text.autoconfig.PreventerConfig.option.preventVillagerPunch.@Tooltip": "Verhinder das Schlagen von Dorfbewohnern",
+  "text.autoconfig.PreventerConfig.option.preventVillagerPunch.@Tooltip": "Verhindert das Schlagen von Dorfbewohnern",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventVillagerPunch_msg": "Kein Dorfbewohner Schlagen",
   "config.preventer.preventVillagerPunch.text": "§4Dorfbewohner schlagen wurde verhindert§4",
 
-  "text.autoconfig.PreventerConfig.option.noZombifiedPiglinPunch": "Keine Zombifizierten Piglin Schlagen",
-  "text.autoconfig.PreventerConfig.option.noZombifiedPiglinPunch.@Tooltip": "Verhinder das Schlagen von Zombifizierten Piglins",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noZombifiedPiglinPunch_msg": "Keine Zombifizierten Piglin Schlagen",
+  "text.autoconfig.PreventerConfig.option.noZombifiedPiglinPunch": "Keine Zombifizierten Piglins Schlagen",
+  "text.autoconfig.PreventerConfig.option.noZombifiedPiglinPunch.@Tooltip": "Verhindert das Schlagen von Zombifizierten Piglins",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noZombifiedPiglinPunch_msg": "Keine Zombifizierten Piglins Schlagen",
   "config.preventer.noZombifiedPiglinPunch.text": "§4Zombifizierten Piglin schlagen verhindert§4",
 
   "text.autoconfig.PreventerConfig.option.noTrappedChestOpening": "Kein Redstone Truhen Öffnen",
@@ -84,37 +84,37 @@
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noTrappedChestOpening_msg": "Kein Redstone Truhen Öffnen",
   "config.preventer.noTrappedChestOpening.text": "§cDies ist eine Redstone Truhe§c",
 
-  "text.autoconfig.PreventerConfig.option.preventBuddingAmethystBreaking": "Verhindert Amethystknospenblock Zerstören",
+  "text.autoconfig.PreventerConfig.option.preventBuddingAmethystBreaking": "Verhindert das zerstören von Amethystknospenblock",
   "text.autoconfig.PreventerConfig.option.preventBuddingAmethystBreaking.@Tooltip": "Verhindert das Zerstören von Amethystknospenblöcken",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventBuddingAmethystBreaking_msg": "Verhindert Amethystknospenblock Zerstören",
   "config.preventer.preventBuddingAmethystBreaking.text": "§4Amethystknospenblock zerstören verhindert§4",
 
-  "text.autoconfig.PreventerConfig.option.preventRocketUse": "Verhinder Feuerwerksrakete Benutzung",
+  "text.autoconfig.PreventerConfig.option.preventRocketUse": "Verwendung von Feuerwerksraketen verhindern",
   "text.autoconfig.PreventerConfig.option.preventRocketUse.@Tooltip": "Verhindert das benutzen von Feuerwerksraketen",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventRocketUse_msg": "Verhinder Feuerwerksrakete Benutzung",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventRocketUse_msg": "Verhindert Feuerwerksraketen Benutzung",
   "config.preventer.preventRocketUse.text": "§4Feuerwerksraketen benutzung verhindert§4",
-  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInOffhand": "Verhindert Feuerwerksraketen benutzen in der Nebenhand",
-  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInMainHand": "Verhindert Feuerwerksraketen benutzen in der Haupthand",
-  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInOffhand.@Tooltip": "Verhindert ausersehene Feuerwerksraketen Benutzung in der Haupthand",
-  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInMainHand.@Tooltip": "Verhindert ausersehene Feuerwerksraketen Benutzung in der Nebenhand",
+  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInOffhand": "Verhindert Feuerwerksraketen Nutzung in der Nebenhand",
+  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInMainHand": "Verhindert Feuerwerksraketen Nutzung in der Haupthand",
+  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInOffhand.@Tooltip": "Verhindert den versehentlichen Einsatz einer Rakete in der freien Hand",
+  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInMainHand.@Tooltip": "Verhindert die versehentliche Verwendung einer Rakete in der Haupthand",
 
   "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting": "Verhinder Enderkristall Schlage",
   "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting.@Tooltip": "Verhindert das Schlagen von Enderkristallen",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventEndCrystalHitting_msg": "Verhinder Enderkristall Schlage",
   "config.preventer.preventEndCrystalHitting.text": "§4Enderkristall schlagen verhindert§4",
 
-  "text.autoconfig.PreventerConfig.option.preventBedUse": "Verhinder Bett Benutzung",
-  "text.autoconfig.PreventerConfig.option.preventBedUse.@Tooltip": "Verhindert das Benutzen eines Bettes in der End oder Nether Dimension",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventBedUse_msg": "Verhinder Bett Benutzung",
+  "text.autoconfig.PreventerConfig.option.preventBedUse": "Verhindere Bett Benutzung",
+  "text.autoconfig.PreventerConfig.option.preventBedUse.@Tooltip": "Verhindert das Benutzen eines Bettes in der Nether oder End Dimension",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventBedUse_msg": "Verhindere Bett Benutzung",
   "config.preventer.preventBedUse.text": "§4Bett benutzen verhindert§4",
 
-  "text.autoconfig.PreventerConfig.option.preventCoralPlace": "Verhinder Korallen Platzieren",
+  "text.autoconfig.PreventerConfig.option.preventCoralPlace": "Verhindere Korallen Platzieren",
   "text.autoconfig.PreventerConfig.option.preventCoralPlace.@Tooltip": "Verhindert das Platzieren von Korallen außerhalb von Wasser",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventCoralPlace_msg": "Verhinder Korallen Platzieren",
-  "config.preventer.preventCoralPlace.text": "§4Korallen außerhalb des Wassers platzieren wurde verhindert§4",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventCoralPlace_msg": "Verhindere Korallen Platzieren",
+  "config.preventer.preventCoralPlace.text": "§4Du kannst Korallen nur im Wasser platzieren§4",
 
-  "text.autoconfig.PreventerConfig.option.preventWaterPlace": "Verhinder Wasser Platzieren",
+  "text.autoconfig.PreventerConfig.option.preventWaterPlace": "Verhindere Wasser Platzieren",
   "text.autoconfig.PreventerConfig.option.preventWaterPlace.@Tooltip": "Verhindert das Platzieren von Wasser im Nether",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventWaterPlace_msg": "Verhinder Wasser Platzieren",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventWaterPlace_msg": "Verhindert Wasser Platzieren",
   "config.preventer.preventWaterPlace.text": "§4Wasser im Nether platzieren verhindert§4"
 }
