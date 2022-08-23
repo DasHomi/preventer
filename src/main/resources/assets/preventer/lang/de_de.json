@@ -23,11 +23,11 @@
   "text.autoconfig.PreventerConfig.option.hideTotem": "Versteckt das Totem",
   "text.autoconfig.PreventerConfig.option.hideTotem.@Tooltip": "Versteckt das Totem der Unsterblichkeit in der Nebenhand",
 
-  "text.autoconfig.PreventerConfig.option.hideShield": "Versteckt den Schild",
-  "text.autoconfig.PreventerConfig.option.hideShield.@Tooltip": "Versteckt den Schild in der Nebenhand",
+  "text.autoconfig.PreventerConfig.option.hideShield": "Versteckt das Schild",
+  "text.autoconfig.PreventerConfig.option.hideShield.@Tooltip": "Versteckt das Schild in der Nebenhand",
 
   "text.autoconfig.PreventerConfig.option.noFarmland": "Kein Ackerboden",
-  "text.autoconfig.PreventerConfig.option.noFarmland.@Tooltip": "Verhindert das Erstellen von Ackerboden",
+  "text.autoconfig.PreventerConfig.option.noFarmland.@Tooltip": "Verhindert das Erstellen von Ackerböden",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noFarmland_msg": "Kein Ackerboden",
   "config.preventer.noFarmland.text": "§4Das erstellen eines Ackerbodens wurde verhindert§4",
 
@@ -44,7 +44,7 @@
   "text.autoconfig.PreventerConfig.option.onlyMatureCropHarvest": "Nur Reife Pflanzen Ernten",
   "text.autoconfig.PreventerConfig.option.onlyMatureCropHarvest.@Tooltip": "Verhindert das versehentliche Ernten \nvon unreifen Pflanzen",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.onlyMatureCropHarvest_msg": "Nur Reife Pflanzen Ernten",
-  "config.preventer.onlyMatureCropHarvest.text": "§4Die Pflanze ist noch nicht reif§4",
+  "config.preventer.onlyMatureCropHarvest.text": "§4Diese Pflanze ist noch nicht reif§4",
 
   "text.autoconfig.PreventerConfig.option.noCake": "Kein Kuchen Essen",
   "text.autoconfig.PreventerConfig.option.noCake.@Tooltip": "Verhindert das Essen von Kuchen",
