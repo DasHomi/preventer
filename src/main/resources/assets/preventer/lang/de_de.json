@@ -1,14 +1,14 @@
 {
-  "key.preventer.overrideKey": "Überschreib Taste",
-  "key.preventer.overrideKey.text": "Überschreiben Aktiv",
+  "key.preventer.overrideKey": "Override-Taste",
+  "key.preventer.overrideKey.text": "Override Aktiv",
   "key.preventer.category": "Preventer",
 
   "config.preventer": "Modul Schalter",
   "config.preventer.moduleConfigGroup": "Konfiguration",
   "config.preventer.moduleUseInfoGroup" : "Fehler Meldung Konfiguration",
 
-  "config.preventer.description" : "§cDrunter können Modul-Benachrichtigungen geschaltet werden§c",
-  "config.preventer.description.description" : "'Modul-Benachrichtigungen' werden angezeigt wenn \nein Modul eine Handlung verhindert hat. \n§4Dieser Schalter macht nichts!§4",
+  "config.preventer.description" : "§cUnten kannst du die Modulbenachrichtigungen umschalten§c",
+  "config.preventer.description.description" : "'Modulbenachrichtigungen' werden angezeigt, wenn ein \naktiviertes Modul eine Aktion verhindert. \n§4Diese Schaltfläche bewirkt gar nichts!§4",
 
   "config.preventer.noStrip": "Keine Entrindung",
   "config.preventer.noStrip.tooltip": "Verhinder das Erstellen von entrindeten Stämmen",
