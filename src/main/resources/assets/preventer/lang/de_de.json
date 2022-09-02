@@ -1,73 +1,73 @@
 {
-  "key.preventer.overrideKey": "Überschreib Taste",
-  "key.preventer.overrideKey.text": "Überschreiben Aktiv",
+  "key.preventer.overrideKey": "Override-Taste",
+  "key.preventer.overrideKey.text": "Override Aktiv",
   "key.preventer.category": "Preventer",
 
   "config.preventer": "Modul Schalter",
   "config.preventer.moduleConfigGroup": "Konfiguration",
   "config.preventer.moduleUseInfoGroup" : "Fehler Meldung Konfiguration",
 
-  "config.preventer.description" : "§cDrunter können Modul-Benachrichtigungen geschaltet werden§c",
-  "config.preventer.description.description" : "'Modul-Benachrichtigungen' werden angezeigt wenn \nein Modul eine Handlung verhindert hat. \n§4Dieser Schalter macht nichts!§4",
+  "config.preventer.description" : "§cUnten kannst du die Modulbenachrichtigungen umschalten§c",
+  "config.preventer.description.description" : "'Modulbenachrichtigungen' werden angezeigt, wenn ein \naktiviertes Modul eine Aktion verhindert. \n§4Diese Schaltfläche bewirkt gar nichts!§4",
 
   "config.preventer.noStrip": "Keine Entrindung",
-  "config.preventer.noStrip.tooltip": "Verhinder das Erstellen von entrindeten Stämmen",
+  "config.preventer.noStrip.tooltip": "Verhindert das Erstellen von entrindeten Stämmen",
   "config.preventer.noStrip.text": "§4Stämme Entrinden verhindert§4",
 
   "config.preventer.noPath": "Kein Pfad",
-  "config.preventer.noPath.tooltip": "Verhindert das Erstellen von Pfad Blöcken",
-  "config.preventer.noPath.text": "§4Das erstellen eines Pfad Block wurde verhindert§4",
+  "config.preventer.noPath.tooltip": "Verhindert das Erstellen von Pfaden",
+  "config.preventer.noPath.text": "§4Das erstellen eines Pfades verhindert§4",
 
   "config.preventer.hideTotem": "Versteckt das Totem",
-  "config.preventer.hideTotem.tooltip": "Versteckt das Totem der Unsterblichkeit in der Nebenhand",
+  "config.preventer.hideTotem.tooltip": "Versteckt das Totem in deiner Nebenhand",
 
   "config.preventer.hideShield": "Versteckt den Schild",
   "config.preventer.hideShield.tooltip": "Versteckt den Schild in der Nebenhand",
 
   "config.preventer.noFarmland": "Kein Ackerboden",
-  "config.preventer.noFarmland.tooltip": "Verhindert das Erstellen von Ackerboden Blöcken",
+  "config.preventer.noFarmland.tooltip": "Verhindert das Erstellen von Ackerböden",
   "config.preventer.noFarmland.text": "§4Das erstellen von Ackerboden wurde verhindert§4",
 
   "config.preventer.noGlowBerrieHarvest": "Kein Leuchtbeeren Ernten",
   "config.preventer.noGlowBerrieHarvest.tooltip": "Verhindert das Ernten von Leuchtbeeren",
   "config.preventer.noGlowBerrieHarvest.text": "§4Leuchtbeeren ernten wurde verhindert§4",
 
-  "config.preventer.noSweetBerrieHarvest": "Kein Süßbeeren Ernten",
+  "config.preventer.noSweetBerrieHarvest": "Keine Süßbeeren Ernte",
   "config.preventer.noSweetBerrieHarvest.tooltip": "Verhindert das Ernten von Süßbeeren",
   "config.preventer.noSweetBerrieHarvest.text": "§4Süßbeeren ernten wurde verhindert§4",
 
   "config.preventer.onlyMatureCropHarvest": "Nur Reife Pflanzen Ernten",
-  "config.preventer.onlyMatureCropHarvest.tooltip": "Verhindert das Ernten (Zerstören) \nvon unreifen Pflanzen",
-  "config.preventer.onlyMatureCropHarvest.text": "§4Die Pflanze ist noch nicht reif§4",
+  "config.preventer.onlyMatureCropHarvest.tooltip": "Verhindert das Ernten/Zerstören \nvon unreifen Pflanzen",
+  "config.preventer.onlyMatureCropHarvest.text": "§4Diese Pflanze ist noch nicht reif§4",
 
   "config.preventer.noCake": "Kein Kuchen Essen",
   "config.preventer.noCake.tooltip": "Verhindert das Essen von Kuchen",
   "config.preventer.noCake.text": "§4Kuchen essen wurde verhindert§4",
 
   "config.preventer.noScraping": "Kein Kupfer De-Oxidieren",
-  "config.preventer.noScraping.tooltip": "Verhindert die Oxidation von \nKupfer zu entfernen",
+  "config.preventer.noScraping.tooltip": "Verhindert die versehentliche Entfernung der Kuper-Oxidation",
   "config.preventer.noScraping.text": "§4Kupfer de-Oxidieren wurde verhindert§4",
 
   "config.preventer.noDeWax": "Kein Kupfer De-Wachsen",
-  "config.preventer.noDeWax.tooltip": "Verhindert das Wachs von \nKupfer zu entfernen",
+  "config.preventer.noDeWax.tooltip": "Verhindert das versehentliche entfernen von Wachs auf Kupfer",
   "config.preventer.noDeWax.text": "§4Kupfer ent-wachsen wurde verhindert§4",
 
-  "config.preventer.lowDurabilityProtection": "Geringer Haltbarkeit Sicherheit",
+  "config.preventer.lowDurabilityProtection": "Geringe Haltbarkeit Schutz",
   "config.preventer.lowDurabilityProtection.tooltip": "Verhindert Zerstörung von Werkzeug & \nWaffen aufgrund von geringer Haltbarkeit",
   "config.preventer.lowDurabilityProtection.text": "§4Werkzeugbenutzung aufgrund von \ngeringer Haltbarkeit verhindert§4",
-  "config.preventer.lowDurabilityProtectionRange": "Geringe Haltbarkeit Schwelle",
+  "config.preventer.lowDurabilityProtectionRange": "Geringe Haltbarkeits Schwelle",
   "config.preventer.lowDurabilityProtectionRange.tooltip": "Gibt die niedrigste Haltbarkeit \nvon Werkzeugen & Waffen an",
   "config.preventer.lowDurabilityProtectionRange.valueKey": "Haltbarkeit: %d",
 
   "config.preventer.preventVillagerPunch": "Kein Dorfbewohner Schlagen",
-  "config.preventer.preventVillagerPunch.tooltip": "Verhinder das Schlagen von Dorfbewohnern",
+  "config.preventer.preventVillagerPunch.tooltip": "Verhindert das Schlagen von Dorfbewohnern",
   "config.preventer.preventVillagerPunch.text": "§4Dorfbewohner schlagen wurde verhindert§4",
 
   "config.preventer.noZombifiedPiglinPunch": "Keine Zombifizierten Piglin Schlagen",
-  "config.preventer.noZombifiedPiglinPunch.tooltip": "Verhinder das Schlagen von Zombifizierten Piglins",
+  "config.preventer.noZombifiedPiglinPunch.tooltip": "Verhindert das Schlagen von Zombifizierten Piglins",
   "config.preventer.noZombifiedPiglinPunch.text": "§4Zombifizierten Piglin schlagen verhindert§4",
 
-  "config.preventer.noTrappedChestOpening": "Kein Redstone Truhen Öffnen",
+  "config.preventer.noTrappedChestOpening": "Keine Redstone Truhen Öffnen",
   "config.preventer.noTrappedChestOpening.tooltip": "Verhindert das Öffnen von Redstone Truhen",
   "config.preventer.noTrappedChestOpening.text": "§4Dies ist eine Redstone Truhe§4",
 
@@ -75,27 +75,27 @@
   "config.preventer.preventBuddingAmethystBreaking.tooltip": "Verhindert das Zerstören von Amethystknospenblöcken",
   "config.preventer.preventBuddingAmethystBreaking.text": "§4Amethystknospenblock zerstören verhindert§4",
 
-  "config.preventer.preventRocketUse": "Verhinder Feuerwerksrakete Benutzung",
+  "config.preventer.preventRocketUse": "Verwendung von Feuerwerksraketen verhindern",
   "config.preventer.preventRocketUse.tooltip": "Verhindert das benutzen von Feuerwerksraketen",
   "config.preventer.preventRocketUse.text": "§4Feuerwerksraketen benutzung verhindert§4",
   "config.preventer.preventRocketUse.offhand": "Verhindert Feuerwerksraketen benutzen in der Nebenhand",
   "config.preventer.preventRocketUse.mainHand": "Verhindert Feuerwerksraketen benutzen in der Haupthand",
-  "config.preventer.preventRocketUse.offhand.tooltip": "Verhindert ausersehene Feuerwerksraketen Benutzung in der Haupthand",
-  "config.preventer.preventRocketUse.mainHand.tooltip": "Verhindert ausersehene Feuerwerksraketen Benutzung in der Nebenhand",
+  "config.preventer.preventRocketUse.offhand.tooltip": "Verhindert ausversehene Feuerwerksraketen Benutzung in der Haupthand",
+  "config.preventer.preventRocketUse.mainHand.tooltip": "Verhindert ausversehene Feuerwerksraketen Benutzung in der Nebenhand",
 
-  "config.preventer.preventEndCrystalHitting": "Verhinder Enderkristall Schlage",
+  "config.preventer.preventEndCrystalHitting": "Endkristall-Schläge verhindern",
   "config.preventer.preventEndCrystalHitting.tooltip": "Verhindert das Schlagen von Enderkristallen",
   "config.preventer.preventEndCrystalHitting.text": "§4Enderkristall schlagen verhindert§4",
 
-  "config.preventer.preventBedUse": "Verhinder Bett Benutzung",
+  "config.preventer.preventBedUse": "Verhindere Bett Benutzung",
   "config.preventer.preventBedUse.tooltip": "Verhindert das Benutzen eines Bettes in der End oder Nether Dimension",
   "config.preventer.preventBedUse.text": "§4Bett benutzen verhindert§4",
 
-  "config.preventer.preventCoralPlace": "Verhinder Korallen Platzieren",
+  "config.preventer.preventCoralPlace": "Verhindere Korallen Platzieren",
   "config.preventer.preventCoralPlace.tooltip": "Verhindert das Platzieren von Korallen außerhalb von Wasser",
   "config.preventer.preventCoralPlace.text": "§4Korallen außerhalb des Wassers platzieren wurde verhindert§4",
 
-  "config.preventer.preventWaterPlace": "Verhinder Wasser Platzieren",
+  "config.preventer.preventWaterPlace": "Verhindere Wasser Platzieren",
   "config.preventer.preventWaterPlace.tooltip": "Verhindert das Platzieren von Wasser im Nether",
   "config.preventer.preventWaterPlace.text": "§4Wasser im Nether platzieren verhindert§4"
 }
