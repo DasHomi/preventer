@@ -21,7 +21,7 @@
   "config.preventer.noPath.text": "§4Das erstellen eines Pfades wurde verhindert§4",
 
   "text.autoconfig.PreventerConfig.option.hideTotem": "Versteckt das Totem",
-  "text.autoconfig.PreventerConfig.option.hideTotem.@Tooltip": "Versteckt das Totem der Unsterblichkeit in der Nebenhand",
+  "text.autoconfig.PreventerConfig.option.hideTotem.@Tooltip": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",
 
   "text.autoconfig.PreventerConfig.option.hideShield": "Versteckt das Schild",
   "text.autoconfig.PreventerConfig.option.hideShield.@Tooltip": "Versteckt das Schild in der Nebenhand",
@@ -52,7 +52,7 @@
   "config.preventer.noCake.text": "§4Kuchen essen wurde verhindert§4",
 
   "text.autoconfig.PreventerConfig.option.noScraping": "Kein Kupfer De-Oxidieren",
-  "text.autoconfig.PreventerConfig.option.noScraping.@Tooltip": "Verhindert die Oxidation von \n einem Kupferblock zu entfernen",
+  "text.autoconfig.PreventerConfig.option.noScraping.@Tooltip": "Verhindert die Oxidation von \neinem Kupferblock zu entfernen",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noScraping_msg": "Kein Kupfer De-Oxidieren",
   "config.preventer.noScraping.text": "§4Kupfer de-Oxidieren wurde verhindert§4",
 
@@ -67,7 +67,6 @@
   "config.preventer.lowDurabilityProtection.text": "§4Werkzeugbenutzung aufgrund von \ngeringer Haltbarkeit blockiert§4",
   "text.autoconfig.PreventerConfig.option.moduleConfigGroup.lowDurabilityProtectionRange": "Geringe Haltbarkeits Schwelle",
   "text.autoconfig.PreventerConfig.option.moduleConfigGroup.lowDurabilityProtectionRange.@Tooltip": "Gibt die niedrigste Haltbarkeit \nvon Werkzeugen & Waffen an",
-  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.lowDurabilityProtectionRange.valueKey": "Haltbarkeit: %d",
 
   "text.autoconfig.PreventerConfig.option.preventVillagerPunch": "Kein Dorfbewohner Schlagen",
   "text.autoconfig.PreventerConfig.option.preventVillagerPunch.@Tooltip": "Verhindert das Schlagen von Dorfbewohnern",
@@ -86,30 +85,28 @@
 
   "text.autoconfig.PreventerConfig.option.preventBuddingAmethystBreaking": "Verhindert das zerstören von Amethystknospenblock",
   "text.autoconfig.PreventerConfig.option.preventBuddingAmethystBreaking.@Tooltip": "Verhindert das Zerstören von Amethystknospenblöcken",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventBuddingAmethystBreaking_msg": "Verhindert Amethystknospenblock Zerstören",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventBuddingAmethystBreaking_msg": "Verhindert das zerstören von Amethystknospenblock",
   "config.preventer.preventBuddingAmethystBreaking.text": "§4Amethystknospenblock zerstören verhindert§4",
 
   "text.autoconfig.PreventerConfig.option.preventRocketUse": "Verwendung von Feuerwerksraketen verhindern",
-  "text.autoconfig.PreventerConfig.option.preventRocketUse.@Tooltip": "Verhindert das benutzen von Feuerwerksraketen",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventRocketUse_msg": "Verhindert Feuerwerksraketen Benutzung",
+  "text.autoconfig.PreventerConfig.option.preventRocketUse.@Tooltip": "Verhindert das du Raketen nutzt, während du am Boden bist",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventRocketUse_msg": "Verwendung von Feuerwerksraketen verhindern",
   "config.preventer.preventRocketUse.text": "§4Feuerwerksraketen benutzung verhindert§4",
   "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInOffhand": "Verhindert Feuerwerksraketen Nutzung in der Nebenhand",
   "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInMainHand": "Verhindert Feuerwerksraketen Nutzung in der Haupthand",
-  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInOffhand.@Tooltip": "Verhindert den versehentlichen Einsatz einer Rakete in der freien Hand",
-  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInMainHand.@Tooltip": "Verhindert die versehentliche Verwendung einer Rakete in der Haupthand",
 
-  "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting": "Verhinder Enderkristall Schlage",
+  "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting": "Verhinder Enderkristall Schlagen",
   "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting.@Tooltip": "Verhindert das Schlagen von Enderkristallen",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventEndCrystalHitting_msg": "Verhinder Enderkristall Schlage",
   "config.preventer.preventEndCrystalHitting.text": "§4Enderkristall schlagen verhindert§4",
 
   "text.autoconfig.PreventerConfig.option.preventBedUse": "Verhindere Bett Benutzung",
-  "text.autoconfig.PreventerConfig.option.preventBedUse.@Tooltip": "Verhindert das Benutzen eines Bettes in der Nether oder End Dimension",
+  "text.autoconfig.PreventerConfig.option.preventBedUse.@Tooltip": "Verhindert das Benutzen eines Bettes\nin der Nether oder End Dimension",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventBedUse_msg": "Verhindere Bett Benutzung",
   "config.preventer.preventBedUse.text": "§4Bett benutzen verhindert§4",
 
   "text.autoconfig.PreventerConfig.option.preventCoralPlace": "Verhindere Korallen Platzieren",
-  "text.autoconfig.PreventerConfig.option.preventCoralPlace.@Tooltip": "Verhindert das Platzieren von Korallen außerhalb von Wasser",
+  "text.autoconfig.PreventerConfig.option.preventCoralPlace.@Tooltip": "Verhindert das Platzieren von\nKorallen außerhalb von Wasser",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventCoralPlace_msg": "Verhindere Korallen Platzieren",
   "config.preventer.preventCoralPlace.text": "§4Du kannst Korallen nur im Wasser platzieren§4",
 

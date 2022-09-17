@@ -11,7 +11,7 @@
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noStrip_msg.@PrefixText": "Below you can toggle Module Notifications, which will be displayed if a module prevented an action",
 
   "text.autoconfig.PreventerConfig.option.noStrip": "No Strip",
-  "text.autoconfig.PreventerConfig.option.noStrip.@Tooltip": "Prevents you from stripping Logs",
+  "text.autoconfig.PreventerConfig.option.noStrip.@Tooltip": "Prevents you from stripping logs",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noStrip_msg": "No Strip",
   "config.preventer.noStrip.text": "§4Log stripping was prevented§4",
 
@@ -31,19 +31,19 @@
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noFarmland_msg": "No Farmland",
   "config.preventer.noFarmland.text": "§4Farmland creation was prevented§4",
 
-  "text.autoconfig.PreventerConfig.option.noGlowBerrieHarvest": "No Glow Berry Harvest",
+  "text.autoconfig.PreventerConfig.option.noGlowBerrieHarvest": "No Glow Berry Harvesting",
   "text.autoconfig.PreventerConfig.option.noGlowBerrieHarvest.@Tooltip": "Prevents you from harvesting Glow Berries",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noGlowBerrieHarvest_msg": "No Glow Berry Harvest",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noGlowBerrieHarvest_msg": "No Glow Berry Harvesting",
   "config.preventer.noGlowBerrieHarvest.text": "§4Glow Berry harvesting was prevented§4",
 
-  "text.autoconfig.PreventerConfig.option.noSweetBerrieHarvest": "No Sweet Berry Harvest",
+  "text.autoconfig.PreventerConfig.option.noSweetBerrieHarvest": "No Sweet Berry Harvesting",
   "text.autoconfig.PreventerConfig.option.noSweetBerrieHarvest.@Tooltip": "Prevents you from harvesting Sweet Berries",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noSweetBerrieHarvest_msg": "No Sweet Berry Harvest",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noSweetBerrieHarvest_msg": "No Sweet Berry Harvesting",
   "config.preventer.noSweetBerrieHarvest.text": "§4Sweet Berry harvesting was prevented§4",
 
-  "text.autoconfig.PreventerConfig.option.onlyMatureCropHarvest": "Only Mature Crop Harvest",
+  "text.autoconfig.PreventerConfig.option.onlyMatureCropHarvest": "Only Mature Crop Harvesting",
   "text.autoconfig.PreventerConfig.option.onlyMatureCropHarvest.@Tooltip": "Prevents you from harvesting \n(breaking) non mature crops",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.onlyMatureCropHarvest_msg": "Only Mature Crop Harvest",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.onlyMatureCropHarvest_msg": "Only Mature Crop Harvesting",
   "config.preventer.onlyMatureCropHarvest.text": "§4The targeted crop is not yet mature§4",
 
   "text.autoconfig.PreventerConfig.option.noCake": "No Cake Eating",
@@ -56,18 +56,17 @@
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noScraping_msg": "No Copper Scraping",
   "config.preventer.noScraping.text": "§4Copper scraping was prevented§4",
 
-  "text.autoconfig.PreventerConfig.option.noDeWax": "No Copper Dewax",
+  "text.autoconfig.PreventerConfig.option.noDeWax": "No Copper Dewaxing",
   "text.autoconfig.PreventerConfig.option.noDeWax.@Tooltip": "Prevents dewaxing copper",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noDeWax_msg": "No Copper Dewax",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noDeWax_msg": "No Copper Dewaxing",
   "config.preventer.noDeWax.text": "§4Copper wax removal was prevented§4",
 
   "text.autoconfig.PreventerConfig.option.lowDurabilityProtection": "Low Durability Protection",
-  "text.autoconfig.PreventerConfig.option.lowDurabilityProtection.@Tooltip": "Prevents tools & weapons from \nbeing broken due to low durability",
+  "text.autoconfig.PreventerConfig.option.lowDurabilityProtection.@Tooltip": "Prevents tools & weapons from \nbreaking due to low durability",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.lowDurabilityProtection_msg": "Low Durability Protection",
   "config.preventer.lowDurabilityProtection.text": "§4Tool usage prevented due to low durability§4",
   "text.autoconfig.PreventerConfig.option.moduleConfigGroup.lowDurabilityProtectionRange": "Low Durability Protection Threshold",
   "text.autoconfig.PreventerConfig.option.moduleConfigGroup.lowDurabilityProtectionRange.@Tooltip": "Specify the lowest durability for tools & weapons",
-  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.lowDurabilityProtectionRange.valueKey": "Durability: %d",
 
   "text.autoconfig.PreventerConfig.option.preventVillagerPunch": "Prevent Villager Punching",
   "text.autoconfig.PreventerConfig.option.preventVillagerPunch.@Tooltip": "Prevents you from attacking villagers",
@@ -84,19 +83,17 @@
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noTrappedChestOpening_msg": "Prevent Trapped Chest Opening",
   "config.preventer.noTrappedChestOpening.text": "§cThis is a trapped chest§c",
 
-  "text.autoconfig.PreventerConfig.option.preventBuddingAmethystBreaking": "Prevent Budding Amethyst Breaking",
+  "text.autoconfig.PreventerConfig.option.preventBuddingAmethystBreaking": "Prevent Budding Amethyst Block Breaking",
   "text.autoconfig.PreventerConfig.option.preventBuddingAmethystBreaking.@Tooltip": "Prevents you from breaking Budding Amethyst blocks",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventBuddingAmethystBreaking_msg": "Prevent Budding Amethyst Breaking",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventBuddingAmethystBreaking_msg": "Prevent Budding Amethyst Block Breaking",
   "config.preventer.preventBuddingAmethystBreaking.text": "§4Budding Amethyst Block breaking Prevented§4",
 
   "text.autoconfig.PreventerConfig.option.preventRocketUse": "Prevent Firework Rocket Use",
-  "text.autoconfig.PreventerConfig.option.preventRocketUse.@Tooltip": "Prevents you from using firework rockets by accident",
+  "text.autoconfig.PreventerConfig.option.preventRocketUse.@Tooltip": "Prevents you from using firework\nrockets while not flying",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventRocketUse_msg": "Prevent Firework Rocket Use",
   "config.preventer.preventRocketUse.text": "§4Firework Rocket use prevented§4",
   "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInOffhand": "Prevent Rocket Use in Offhand",
   "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInMainHand": "Prevent Rocket Use in Main Hand",
-  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInOffhand.@Tooltip": "Prevents Accidental rocket use in the offhand",
-  "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInMainHand.@Tooltip": "Prevents Accidental rocket use in the main hand",
 
   "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting": "Prevent End Crystal Hitting",
   "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting.@Tooltip": "Prevents you from hitting End Crystals",
