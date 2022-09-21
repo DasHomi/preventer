@@ -6,7 +6,6 @@
   "description": "A mod that prevents you from doing dumb things by accident",
   "authors": ["DasHomi"],
   "contact": {
-    "sources": "https://github.com/DasHomi/preventer",
     "issues": "https://github.com/DasHomi/preventer/issues",
     "homepage" : "https://github.com/DasHomi/preventer"
   },
@@ -28,8 +27,8 @@
     "fabricloader": ">=0.14.8",
     "minecraft": "1.19.*",
     "java": ">=17",
-    "fabric": ">=0.58.0",
-    "cloth-config": ">=8.0.0"
+    "fabric": ">=0.56.0",
+    "cloth-config": ">=8.0.75"
   },
   "suggests": {
     "modmenu": ">=4.0.0"

@@ -31,7 +31,5 @@ public class PreventerClient implements ClientModInitializer {
         AttackEntityCallback.EVENT.register(AttackEntityModule::checkEntityAttack);
 
         RegisterKeyBindings.register();
-
-        LOGGER.info("Initialized");
     }
 }
