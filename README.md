@@ -1,11 +1,10 @@
-# Preventer 1.18
+# Preventer
 
 A fabric mod that prevents you from doing dumb things by accident.
 For example accidentally creating stripped logs.
 You can toggle every module in the settings and decide if
-you want a notification from the mod if it prevented you from doing something.
+you want a notification from the mod if it prevented an action.
 There is also an OVERRIDE KEY to temporarily allow an otherwise prevented action (_Default keybinding is R_).
-Note, the 1.18 version will still get updates sometimes but the 1.19 version will be more up to date
 
 ## **Features**
 - No Strip
@@ -14,32 +13,32 @@ Note, the 1.18 version will still get updates sometimes but the 1.19 version wil
   - _Prevents creation of Paths_
 - No Farmland
   - _Prevents creation of Farmland_
-- Prevent Glow Berrie Harvest
+- No Glow Berry Harvesting
   - _Prevents harvesting Glow Berries_
-- Prevent Sweet Berrie Harvest
+- No Sweet Berry Harvesting
   - _Prevents harvesting Sweet Berries_
-- Prevent Copper wax removing
+- No Copper Dewaxing
   - _Prevents removing wax from copper_
-- Prevent Copper scraping
+- No Copper Scraping
   - _Prevents removing oxidation from copper_
 - Low Durability Protection
   - _Prevent tools & weapons from being broken due to low durability_
-- Only harvest mature Crops
+- Only Mature Crop Harvesting
   - _Prevents harvesting/breaking of non-mature plants_
-- Prevent Villager Punch
+- Prevent Villager Punching
   - _Prevents you from punching villagers_
-- Prevent Zombified Piglin Punch
+- Prevent Zombified Piglin Punching
   - _Prevents you from punching Zombified Piglins_
-- No Cake today
+- No Cake Eating
   - _Prevents you from eating Cake_
-- Prevent trapped chest opening
+- Prevent Trapped Chest Opening
   - _Prevents you from opening trapped chests_
-- Prevent Budding Amethyst block breaking
+- Prevent Budding Amethyst Block Breaking
   - _Prevents you from breaking Budding Amethyst blocks_
-- Prevent Accidental Rocket Use
-  - _Prevents you from accidental using Firework Rockets_
-- Prevent End Crystal hitting
-  - _Prevents you hitting End Crystals_
+- Prevent Firework Rocket Use
+  - _Prevents you from using firework rockets while not flying_
+- Prevent End Crystal Hitting
+  - _Prevents you from hitting End Crystals_
 - Prevent Bed Use
   - _Prevents you from using beds in the Nether or End dimension_
 - Prevent Coral Placing
@@ -48,17 +47,14 @@ Note, the 1.18 version will still get updates sometimes but the 1.19 version wil
   - _Prevents you from placing water in the Nether_
 
 ## Planed Features
-#### For feature requests, submit an issue with the enhancement label
+- #### For feature requests, submit an issue with the enhancement label
 - No active tool drop
 - Prevent Plant Breaking
 - Prevent Block Under Player Breaking
 
 ## Dependencies
-**Included:**  
-[Complete Config](https://gitlab.com/Lortseam/completeconfig) (Configuration)\
-[Cloth Config](https://github.com/shedaniel/cloth-config) (Configuration)
-
 **Required:**  
+[Cloth Config](https://github.com/shedaniel/cloth-config) (Configuration)  
 [Fabric API](https://github.com/FabricMC/fabric)
 
 **Suggested:**  
