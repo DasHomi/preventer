@@ -6,7 +6,6 @@
   "description": "A mod that prevents you from doing dumb things by accident",
   "authors": ["DasHomi"],
   "contact": {
-    "sources": "https://github.com/DasHomi/preventer",
     "issues": "https://github.com/DasHomi/preventer/issues",
     "homepage" : "https://github.com/DasHomi/preventer"
   },
@@ -16,21 +15,23 @@
   "entrypoints": {
     "client": [
       "com.dashomi.preventer.PreventerClient"
+    ],
+    "modmenu" : [
+      "com.dashomi.preventer.config.ModMenuIntegration"
     ]
   },
   "mixins": [
     "preventer.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.6",
-    "minecraft": "1.18.2",
+    "fabricloader": ">=0.14.8",
+    "minecraft": "1.18.*",
     "java": ">=17",
-    "completeconfig": "^1.0.0",
-    "fabric": "*",
-    "cloth-config": "*"
+    "fabric": ">=0.44.0",
+    "cloth-config": ">=6.2.57"
   },
   "suggests": {
-    "modmenu": "*"
+    "modmenu": ">=3.0.0"
   },
   "accessWidener": "preventer.accesswidener"
 }

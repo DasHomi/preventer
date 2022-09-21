@@ -4,6 +4,8 @@ import com.dashomi.preventer.config.PreventerConfig;
 import com.dashomi.preventer.modules.AttackEntityModule;
 import com.dashomi.preventer.modules.BreakBlockModule;
 import com.dashomi.preventer.modules.UseBlockModule;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -21,13 +23,13 @@ public class PreventerClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-		config = PreventerConfig.initialize();
+		AutoConfig.register(PreventerConfig.class, GsonConfigSerializer::new);
+		config = AutoConfig.getConfigHolder(PreventerConfig.class).getConfig();
+
 		UseBlockCallback.EVENT.register(UseBlockModule::checkBlockUse);
 		AttackBlockCallback.EVENT.register(BreakBlockModule::checkBlockBreak);
 		AttackEntityCallback.EVENT.register(AttackEntityModule::checkEntityAttack);
 
 		RegisterKeyBindings.register();
-
-		LOGGER.info("Initialized");
 	}
 }
