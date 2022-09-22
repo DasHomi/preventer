@@ -23,10 +23,6 @@ public class PreventerConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public boolean noFarmland = false;
     @ConfigEntry.Gui.Tooltip
-    public boolean hideShield = false;
-    @ConfigEntry.Gui.Tooltip
-    public boolean hideTotem = false;
-    @ConfigEntry.Gui.Tooltip
     public boolean noSweetBerrieHarvest = false;
     @ConfigEntry.Gui.Tooltip
     public boolean noGlowBerrieHarvest = false;
@@ -58,4 +54,10 @@ public class PreventerConfig implements ConfigData {
     public boolean preventCoralPlace = false;
     @ConfigEntry.Gui.Tooltip
     public boolean preventWaterPlace = false;
+
+    // Configs that don't have a usage msg
+    @ConfigEntry.Gui.Tooltip
+    public boolean hideShield = false;
+    @ConfigEntry.Gui.Tooltip
+    public boolean hideTotem = false;
 }

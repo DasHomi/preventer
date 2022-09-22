@@ -14,12 +14,12 @@ public class ModuleUseInfoGroup implements ConfigData {
     public boolean noSweetBerrieHarvest_msg = false;
     public boolean noGlowBerrieHarvest_msg = false;
     public boolean onlyMatureCropHarvest_msg = false;
+    public boolean noCake_msg = false;
     public boolean noScraping_msg = false;
     public boolean noDeWax_msg = false;
     public boolean lowDurabilityProtection_msg = false;
     public boolean preventVillagerPunch_msg = false;
     public boolean noZombifiedPiglinPunch_msg = false;
-    public boolean noCake_msg = false;
     public boolean noTrappedChestOpening_msg = false;
     public boolean preventBuddingAmethystBreaking_msg = false;
     public boolean preventRocketUse_msg = false;
@@ -27,5 +27,4 @@ public class ModuleUseInfoGroup implements ConfigData {
     public boolean preventBedUse_msg = false;
     public boolean preventCoralPlace_msg = false;
     public boolean preventWaterPlace_msg = false;
-
 }
