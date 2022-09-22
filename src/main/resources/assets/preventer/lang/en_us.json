@@ -2,6 +2,7 @@
   "key.preventer.overrideKey": "Override Key",
   "key.preventer.overrideKey.text": "Override Active",
   "key.preventer.category": "Preventer",
+  "modmenu.descriptionTranslation.preventer": "A mod that prevents you from doing dumb things by accident",
 
   "text.autoconfig.PreventerConfig.category.default": "Module Toggles",
   "text.autoconfig.PreventerConfig.category.moduleConfigGroup": "Configuration",

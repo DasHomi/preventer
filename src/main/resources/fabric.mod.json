@@ -33,5 +33,13 @@
   "suggests": {
     "modmenu": ">=4.0.0"
   },
-  "accessWidener": "preventer.accesswidener"
+  "accessWidener": "preventer.accesswidener",
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.modrinth": "https://modrinth.com/mod/preventer",
+        "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/preventer"
+      }
+    }
+  }
 }

@@ -2,6 +2,7 @@
   "key.preventer.overrideKey": "Override-Taste",
   "key.preventer.overrideKey.text": "Override Aktiv",
   "key.preventer.category": "Preventer",
+  "modmenu.descriptionTranslation.preventer": "Ein Mod der dich daran hindert aus Versehen dumme dinge zu tun",
 
   "text.autoconfig.PreventerConfig.category.default": "Modul Schalter",
   "text.autoconfig.PreventerConfig.category.moduleConfigGroup": "Konfiguration",
