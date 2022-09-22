@@ -24,7 +24,7 @@
     "preventer.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.8",
+    "fabricloader": ">=0.14.6",
     "minecraft": "1.18.*",
     "java": ">=17",
     "fabric": ">=0.44.0",
@@ -33,5 +33,13 @@
   "suggests": {
     "modmenu": ">=3.0.0"
   },
-  "accessWidener": "preventer.accesswidener"
+  "accessWidener": "preventer.accesswidener",
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.modrinth": "https://modrinth.com/mod/preventer",
+        "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/preventer"
+      }
+    }
+  }
 }
