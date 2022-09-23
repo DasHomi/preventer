@@ -2,7 +2,7 @@
   "key.preventer.overrideKey": "Override-Taste",
   "key.preventer.overrideKey.text": "Override Aktiv",
   "key.preventer.category": "Preventer",
-  "modmenu.descriptionTranslation.preventer": "Ein Mod der dich daran hindert aus Versehen dumme dinge zu tun",
+  "modmenu.descriptionTranslation.preventer": "Ein Mod der verhindert das du versehentlich Dinge zerstörst.",
 
   "text.autoconfig.PreventerConfig.category.default": "Modul Schalter",
   "text.autoconfig.PreventerConfig.category.moduleConfigGroup": "Konfiguration",
@@ -96,7 +96,7 @@
   "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInOffhand": "Verhindert Feuerwerksraketen Nutzung in der Nebenhand",
   "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInMainHand": "Verhindert Feuerwerksraketen Nutzung in der Haupthand",
 
-  "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting": "Verhinder Enderkristall Schlagen",
+  "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting": "Verhindert das Schlagen von Enderkristallen",
   "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting.@Tooltip": "Verhindert das Schlagen von Enderkristallen",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventEndCrystalHitting_msg": "Verhinder Enderkristall Schlage",
   "config.preventer.preventEndCrystalHitting.text": "§4Enderkristall schlagen verhindert§4",
