@@ -45,6 +45,8 @@ There is also an OVERRIDE KEY to temporarily allow an otherwise prevented action
   - _Prevents you from placing corals out of water_
 - Prevent water placing
   - _Prevents you from placing water in the nether_
+- Prevent stem breaking
+  - _Prevents you from breaking pumpkin/melon stems_
 
 ## Planed Features
 - #### For feature requests, submit an issue with the enhancement label

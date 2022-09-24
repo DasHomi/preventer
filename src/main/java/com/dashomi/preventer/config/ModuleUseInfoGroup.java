@@ -27,4 +27,5 @@ public class ModuleUseInfoGroup implements ConfigData {
     public boolean preventBedUse_msg = false;
     public boolean preventCoralPlace_msg = false;
     public boolean preventWaterPlace_msg = false;
+    public boolean preventStemBreaking_msg = false;
 }

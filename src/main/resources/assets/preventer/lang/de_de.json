@@ -114,5 +114,10 @@
   "text.autoconfig.PreventerConfig.option.preventWaterPlace": "Verhindere Wasser Platzieren",
   "text.autoconfig.PreventerConfig.option.preventWaterPlace.@Tooltip": "Verhindert das Platzieren von Wasser im Nether",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventWaterPlace_msg": "Verhindert Wasser Platzieren",
-  "config.preventer.preventWaterPlace.text": "§4Wasser im Nether platzieren verhindert§4"
+  "config.preventer.preventWaterPlace.text": "§4Wasser im Nether platzieren verhindert§4",
+
+  "text.autoconfig.PreventerConfig.option.preventStemBreaking": "Prevent stem breaking",
+  "text.autoconfig.PreventerConfig.option.preventStemBreaking.@Tooltip": "Prevents you from breaking pumpkin/melon stems",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventStemBreaking_msg": "Prevent stem breaking",
+  "config.preventer.preventStemBreaking.text": "§4Stem breaking was prevented§4"
 }

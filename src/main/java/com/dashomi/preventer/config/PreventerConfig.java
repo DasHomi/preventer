@@ -54,6 +54,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventCoralPlace = false;
     @ConfigEntry.Gui.Tooltip
     public boolean preventWaterPlace = false;
+    @ConfigEntry.Gui.Tooltip
+    public boolean preventStemBreaking = false;
 
     // Configs that don't have a usage msg
     @ConfigEntry.Gui.Tooltip

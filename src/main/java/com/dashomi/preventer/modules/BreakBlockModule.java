@@ -1,9 +1,7 @@
 package com.dashomi.preventer.modules;
 
 import com.dashomi.preventer.PreventerClient;
-import net.minecraft.block.Block;
-import net.minecraft.block.BuddingAmethystBlock;
-import net.minecraft.block.CropBlock;
+import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
@@ -32,6 +30,15 @@ public class BreakBlockModule {
                 if (targetBlock instanceof BuddingAmethystBlock) {
                     if (PreventerClient.config.moduleUseInfoGroup.preventBuddingAmethystBreaking_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.preventBuddingAmethystBreaking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventStemBreaking) {
+                if (targetBlock instanceof AttachedStemBlock || targetBlock instanceof StemBlock) {
+                    if (PreventerClient.config.moduleUseInfoGroup.preventStemBreaking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventStemBreaking.text"), true);
                     }
                     return ActionResult.FAIL;
                 }
