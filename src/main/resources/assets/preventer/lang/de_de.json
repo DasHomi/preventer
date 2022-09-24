@@ -119,5 +119,5 @@
   "text.autoconfig.PreventerConfig.option.preventStemBreaking": "Verhindert das Abbauen von Stämmen",
   "text.autoconfig.PreventerConfig.option.preventStemBreaking.@Tooltip": "Verhindert das Abbauen von Kürbis-/Melonenstielen",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventStemBreaking_msg": "Verhindert das Abbauen von Stämmen",
-  "config.preventer.preventStemBreaking.text": "§4Diesen Stamm kannst du nicht abbauen§4"
+  "config.preventer.preventStemBreaking.text": "§4Es wurde verhindert das du diesen Stamm abbaust§4"
 }
