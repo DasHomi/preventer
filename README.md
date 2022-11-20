@@ -49,7 +49,7 @@ There is also an OVERRIDE KEY to temporarily allow an otherwise prevented action
   - _Prevents you from breaking pumpkin/melon stems_
 
 ## Planed Features
-- #### For feature requests, submit an issue with the enhancement label
+- #### Feature requests welcome
 - No active tool drop
 - Prevent Plant Breaking
 - Prevent Block Under Player Breaking
