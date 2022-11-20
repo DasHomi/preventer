@@ -3,13 +3,14 @@ package com.dashomi.preventer.modules;
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
+
+import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityProtection;
 
 public class BreakBlockModule {
     public static ActionResult checkBlockBreak(PlayerEntity playerEntity, World world, Hand hand, BlockPos pos, Direction direction) {
@@ -44,20 +45,9 @@ public class BreakBlockModule {
                 }
             }
 
-            if (PreventerClient.config.lowDurabilityProtection) {
-                if (!playerEntity.isCreative() && !playerEntity.isSpectator()) {
-                    ItemStack stack = playerEntity.getStackInHand(hand);
-                    if (stack.isDamageable()) {
-                        if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.moduleConfigGroup.lowDurabilityProtectionRange) {
-                            if (PreventerClient.config.moduleUseInfoGroup.lowDurabilityProtection_msg) {
-                                playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
-                            }
-                            return ActionResult.FAIL;
-                        }
-                    }
-                }
-            }
+            if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
+
         return ActionResult.PASS;
     }
 }

@@ -1,12 +1,12 @@
 # Preventer
 
-A fabric mod that prevents you from doing dumb things by accident.
-For example accidentally creating stripped logs.
-You can toggle every module in the settings and decide if 
-you want a notification from the mod if it prevented an action.
-There is also an OVERRIDE KEY to temporarily allow an otherwise prevented action (_Default keybinding is R_).
+A client side fabric mod that prevents you from doing dumb things by accident, like breaking blocks you don't want to break, or placing blocks you don't want to place.
+(e.g. accidentally creating stripped logs or breaking budding amethyst)  
+The whole mod is highly configurable, so you can disable any feature you don't want. 
+The config can be reached in game by pressing `I` or via the "Mod menu" mod.
+If you want to temporarily disable the entire mod, use the _Override Key_ (_default keybinding:_ `R`).
 
-## **Modules**
+## Modules
 - Prevent log stripping
   - _Prevents you from stripping logs_
 - Prevent path creation
@@ -49,11 +49,10 @@ There is also an OVERRIDE KEY to temporarily allow an otherwise prevented action
   - _Prevents you from breaking pumpkin/melon stems_
 
 ## Planed Features
-- #### Feature requests welcome
+- **_Feature requests welcome_**
 - No active tool drop
 - Prevent Plant Breaking
 - Prevent Block Under Player Breaking
-
 
 ## Dependencies
 **Required:**  

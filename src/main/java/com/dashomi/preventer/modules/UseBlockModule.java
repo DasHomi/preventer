@@ -10,6 +10,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.world.World;
 
+import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityProtection;
 import static net.minecraft.block.CaveVines.BERRIES;
 import static net.minecraft.block.SweetBerryBushBlock.AGE;
 
@@ -167,19 +168,7 @@ public class UseBlockModule {
                 }
             }
 
-            if (PreventerClient.config.lowDurabilityProtection){
-                if (!playerEntity.isCreative() && !playerEntity.isSpectator()) {
-                    ItemStack stack = playerEntity.getStackInHand(hand);
-                    if (stack.isDamageable()) {
-                        if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.moduleConfigGroup.lowDurabilityProtectionRange) {
-                            if (PreventerClient.config.moduleUseInfoGroup.lowDurabilityProtection_msg) {
-                                playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
-                            }
-                            return ActionResult.FAIL;
-                        }
-                    }
-                }
-            }
+            if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 
         return ActionResult.PASS;
