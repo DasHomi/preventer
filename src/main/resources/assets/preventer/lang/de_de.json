@@ -117,8 +117,18 @@
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventWaterPlace_msg": "Verhindert Wasser Platzieren",
   "config.preventer.preventWaterPlace.text": "§4Wasser im Nether platzieren verhindert§4",
 
-  "text.autoconfig.PreventerConfig.option.preventStemBreaking": "Verhindert das Abbauen von Stämmen",
+  "text.autoconfig.PreventerConfig.option.preventStemBreaking": "Verhindere das Abbauen von Stämmen",
   "text.autoconfig.PreventerConfig.option.preventStemBreaking.@Tooltip": "Verhindert das Abbauen von Kürbis-/Melonenstielen",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventStemBreaking_msg": "Verhindert das Abbauen von Stämmen",
-  "config.preventer.preventStemBreaking.text": "§4Es wurde verhindert das du diesen Stamm abbaust§4"
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventStemBreaking_msg": "Verhindere das Abbauen von Stämmen",
+  "config.preventer.preventStemBreaking.text": "§4Es wurde verhindert das du diesen Stamm abbaust§4",
+
+  "text.autoconfig.PreventerConfig.option.preventItemFrameBreaking": "Verhindere das Zerstören von Rahmen",
+  "text.autoconfig.PreventerConfig.option.preventItemFrameBreaking.@Tooltip": "Verhindert das Zerstören von Rahmen (und Leuchtrahmen)",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventItemFrameBreaking_msg": "Verhindere das Zerstören von Rahmen",
+  "config.preventer.preventItemFrameBreaking.text": "§4Rahmen zerstören wurde verhindert§4",
+
+  "text.autoconfig.PreventerConfig.option.preventPaintingBreaking": "Verhindere das Zerstören von Gemälden",
+  "text.autoconfig.PreventerConfig.option.preventPaintingBreaking.@Tooltip": "Verhindert das Zerstören von Gemälden",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventPaintingBreaking_msg": "Verhindere das Zerstören von Gemälden",
+  "config.preventer.preventPaintingBreaking.text": "§4Gemälde zerstören wurde verhindert§4"
 }

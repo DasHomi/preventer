@@ -5,6 +5,7 @@ import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "PreventerConfig")
+@Config.Gui.Background("minecraft:textures/block/stone.png")
 public class PreventerConfig implements ConfigData {
     @ConfigEntry.Gui.Excluded
     public boolean overrideKeyPressed = false;
@@ -56,6 +57,10 @@ public class PreventerConfig implements ConfigData {
     public boolean preventWaterPlace = false;
     @ConfigEntry.Gui.Tooltip
     public boolean preventStemBreaking = false;
+    @ConfigEntry.Gui.Tooltip
+    public boolean preventItemFrameBreaking = false;
+    @ConfigEntry.Gui.Tooltip
+    public boolean preventPaintingBreaking = false;
 
     // Configs that don't have a usage msg
     @ConfigEntry.Gui.Tooltip

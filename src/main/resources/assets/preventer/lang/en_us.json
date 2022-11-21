@@ -120,5 +120,15 @@
   "text.autoconfig.PreventerConfig.option.preventStemBreaking": "Prevent stem breaking",
   "text.autoconfig.PreventerConfig.option.preventStemBreaking.@Tooltip": "Prevents you from breaking pumpkin/melon stems",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventStemBreaking_msg": "Prevent stem breaking",
-  "config.preventer.preventStemBreaking.text": "§4Stem breaking was prevented§4"
+  "config.preventer.preventStemBreaking.text": "§4Stem breaking was prevented§4",
+
+  "text.autoconfig.PreventerConfig.option.preventItemFrameBreaking": "Prevent Item Frame breaking",
+  "text.autoconfig.PreventerConfig.option.preventItemFrameBreaking.@Tooltip": "Prevents you from breaking Item Frames (and glowing Item Frames)",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventItemFrameBreaking_msg": "Prevent Item Frame breaking",
+  "config.preventer.preventItemFrameBreaking.text": "§4Item Frame breaking was prevented§4",
+
+  "text.autoconfig.PreventerConfig.option.preventPaintingBreaking": "Prevent Painting breaking",
+  "text.autoconfig.PreventerConfig.option.preventPaintingBreaking.@Tooltip": "Prevents you from breaking Paintings",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventPaintingBreaking_msg": "Prevent Painting breaking",
+  "config.preventer.preventPaintingBreaking.text": "§4Painting breaking was prevented§4"
 }

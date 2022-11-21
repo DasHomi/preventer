@@ -47,6 +47,10 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
   - _Prevents you from placing water in the nether_
 - Prevent stem breaking
   - _Prevents you from breaking pumpkin/melon stems_
+- Prevent item frame breaking
+  - _Prevents you from breaking item frames (and glowing item frames)_
+- Prevent painting breaking 
+  - _Prevents you from breaking paintings_
 
 ## Planed Features
 - **_Feature requests welcome_**

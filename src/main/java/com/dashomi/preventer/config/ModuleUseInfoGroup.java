@@ -28,4 +28,6 @@ public class ModuleUseInfoGroup implements ConfigData {
     public boolean preventCoralPlace_msg = false;
     public boolean preventWaterPlace_msg = false;
     public boolean preventStemBreaking_msg = false;
+    public boolean preventItemFrameBreaking_msg = false;
+    public boolean preventPaintingBreaking_msg = false;
 }

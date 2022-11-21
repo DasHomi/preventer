@@ -3,6 +3,8 @@ package com.dashomi.preventer.modules;
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.decoration.EndCrystalEntity;
+import net.minecraft.entity.decoration.ItemFrameEntity;
+import net.minecraft.entity.decoration.painting.PaintingEntity;
 import net.minecraft.entity.mob.ZombifiedPiglinEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -40,6 +42,24 @@ public class AttackEntityModule {
                 if (entity instanceof EndCrystalEntity) {
                     if (PreventerClient.config.moduleUseInfoGroup.preventEndCrystalHitting_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.preventEndCrystalHitting.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventItemFrameBreaking) {
+                if (entity instanceof ItemFrameEntity) {
+                    if (PreventerClient.config.moduleUseInfoGroup.preventItemFrameBreaking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventItemFrameBreaking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventPaintingBreaking) {
+                if (entity instanceof PaintingEntity) {
+                    if (PreventerClient.config.moduleUseInfoGroup.preventPaintingBreaking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventPaintingBreaking.text"), true);
                     }
                     return ActionResult.FAIL;
                 }
