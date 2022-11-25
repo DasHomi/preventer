@@ -100,7 +100,7 @@
 
   "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting": "Verhindert das Schlagen von Enderkristallen",
   "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting.@Tooltip": "Verhindert das Schlagen von Enderkristallen",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventEndCrystalHitting_msg": "Verhinder Enderkristall Schlage",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventEndCrystalHitting_msg": "Verhindert Enderkristall Schlagen",
   "config.preventer.preventEndCrystalHitting.text": "§4Enderkristall schlagen verhindert§4",
 
   "text.autoconfig.PreventerConfig.option.preventBedUse": "Verhindere Bett Benutzung",
@@ -130,7 +130,7 @@
 
   "text.autoconfig.PreventerConfig.option.preventPaintingBreaking": "Verhindere das Zerstören von Gemälden",
   "text.autoconfig.PreventerConfig.option.preventPaintingBreaking.@Tooltip": "Verhindert das Zerstören von Gemälden",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventPaintingBreaking_msg": "Verhindere das Zerstören von Gemälden",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventPaintingBreaking_msg": "Verhindert das Zerstören von Gemälden",
   "config.preventer.preventPaintingBreaking.text": "§4Es wurde verhindert das du dieses Gemälde zerstörst§4",
 
   "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing": "Platzieren umbenannter Blöcke verhindern",
