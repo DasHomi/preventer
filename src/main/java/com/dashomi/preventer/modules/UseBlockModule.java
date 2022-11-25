@@ -168,6 +168,17 @@ public class UseBlockModule {
                 }
             }
 
+            if (PreventerClient.config.preventRenamedBlockPlacing) {
+                if (handItem instanceof BlockItem) {
+                    if (!playerEntity.getStackInHand(hand).getName().getString().equals(handItem.getName().getString())) {
+                        if (PreventerClient.config.moduleUseInfoGroup.preventRenamedBlockPlacing_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedItemPlacing.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

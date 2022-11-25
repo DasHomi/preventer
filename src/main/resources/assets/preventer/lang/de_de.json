@@ -11,6 +11,7 @@
   "text.autoconfig.PreventerConfig.title": "Preventer Konfiguration",
 
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noStrip_msg.@PrefixText": "Unten kannst du die Modulbenachrichtigungen einschalten, die angezeigt werden, wenn ein Modul eine Aktion verhindert hat",
+  "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing.@PrefixText": "§c⮟ Experimental / Unstable Modules ⮟§c",
 
   "text.autoconfig.PreventerConfig.option.noStrip": "Keine Entrindung",
   "text.autoconfig.PreventerConfig.option.noStrip.@Tooltip": "Verhindert das entrinden von Bäumen",
@@ -130,5 +131,10 @@
   "text.autoconfig.PreventerConfig.option.preventPaintingBreaking": "Verhindere das Zerstören von Gemälden",
   "text.autoconfig.PreventerConfig.option.preventPaintingBreaking.@Tooltip": "Verhindert das Zerstören von Gemälden",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventPaintingBreaking_msg": "Verhindere das Zerstören von Gemälden",
-  "config.preventer.preventPaintingBreaking.text": "§4Gemälde zerstören wurde verhindert§4"
+  "config.preventer.preventPaintingBreaking.text": "§4Gemälde zerstören wurde verhindert§4",
+
+  "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing": "Prevent renamed block placing",
+  "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing.@Tooltip": "Prevents you from placing renamed blocks",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventRenamedBlockPlacing_msg": "Prevent renamed block placing",
+  "config.preventer.preventRenamedBlockPlacing.text": "§4Renamed block placing was prevented§4"
 }

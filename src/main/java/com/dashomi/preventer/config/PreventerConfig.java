@@ -5,7 +5,6 @@ import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "PreventerConfig")
-@Config.Gui.Background("minecraft:textures/block/stone.png")
 public class PreventerConfig implements ConfigData {
     @ConfigEntry.Gui.Excluded
     public boolean overrideKeyPressed = false;
@@ -67,4 +66,9 @@ public class PreventerConfig implements ConfigData {
     public boolean hideShield = false;
     @ConfigEntry.Gui.Tooltip
     public boolean hideTotem = false;
+
+    // Unstable Modules
+    @ConfigEntry.Gui.PrefixText
+    @ConfigEntry.Gui.Tooltip
+    public boolean preventRenamedBlockPlacing = false;
 }

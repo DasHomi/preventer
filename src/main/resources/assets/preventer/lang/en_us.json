@@ -11,6 +11,7 @@
   "text.autoconfig.PreventerConfig.title": "Preventer Config",
 
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noStrip_msg.@PrefixText": "Below you can toggle Module Notifications, which will be displayed if a module prevented an action",
+  "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing.@PrefixText": "§c⮟ Experimental / Unstable Modules ⮟§c",
 
   "text.autoconfig.PreventerConfig.option.noStrip": "Prevent log stripping",
   "text.autoconfig.PreventerConfig.option.noStrip.@Tooltip": "Prevents you from stripping logs",
@@ -122,13 +123,18 @@
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventStemBreaking_msg": "Prevent stem breaking",
   "config.preventer.preventStemBreaking.text": "§4Stem breaking was prevented§4",
 
-  "text.autoconfig.PreventerConfig.option.preventItemFrameBreaking": "Prevent Item Frame breaking",
-  "text.autoconfig.PreventerConfig.option.preventItemFrameBreaking.@Tooltip": "Prevents you from breaking Item Frames (and glowing Item Frames)",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventItemFrameBreaking_msg": "Prevent Item Frame breaking",
-  "config.preventer.preventItemFrameBreaking.text": "§4Item Frame breaking was prevented§4",
+  "text.autoconfig.PreventerConfig.option.preventItemFrameBreaking": "Prevent item frame breaking",
+  "text.autoconfig.PreventerConfig.option.preventItemFrameBreaking.@Tooltip": "Prevents you from breaking item frames (and glowing item frames)",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventItemFrameBreaking_msg": "Prevent item frame breaking",
+  "config.preventer.preventItemFrameBreaking.text": "§4Item frame breaking was prevented§4",
 
-  "text.autoconfig.PreventerConfig.option.preventPaintingBreaking": "Prevent Painting breaking",
-  "text.autoconfig.PreventerConfig.option.preventPaintingBreaking.@Tooltip": "Prevents you from breaking Paintings",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventPaintingBreaking_msg": "Prevent Painting breaking",
-  "config.preventer.preventPaintingBreaking.text": "§4Painting breaking was prevented§4"
+  "text.autoconfig.PreventerConfig.option.preventPaintingBreaking": "Prevent painting breaking",
+  "text.autoconfig.PreventerConfig.option.preventPaintingBreaking.@Tooltip": "Prevents you from breaking paintings",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventPaintingBreaking_msg": "Prevent painting breaking",
+  "config.preventer.preventPaintingBreaking.text": "§4Painting breaking was prevented§4",
+
+  "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing": "Prevent renamed block placing",
+  "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing.@Tooltip": "Prevents you from placing renamed blocks",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventRenamedBlockPlacing_msg": "Prevent renamed block placing",
+  "config.preventer.preventRenamedBlockPlacing.text": "§4Renamed block placing was prevented§4"
 }

@@ -26,7 +26,7 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
 - Prevent copper de-waxing
   - _Prevents de-waxing copper_
 - Low durability protection
-  - _Prevents tools & weapons from breaking due to low durability_
+  - _Prevent tools & weapons from breaking due to low durability_
 - Prevent villager punching
   - _Prevents you from attacking villagers_
 - Prevent zombified piglin punching
@@ -52,11 +52,17 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
 - Prevent painting breaking 
   - _Prevents you from breaking paintings_
 
-## Planed Features
+## Experimental Modules
+- Prevent renamed block placing
+  - _Prevents you from placing renamed blocks_
+
+## Planed Modules
 - **_Feature requests welcome_**
 - No active tool drop
 - Prevent Plant Breaking
 - Prevent Block Under Player Breaking
+- Prevent renamed food item use
+- Blacklists
 
 ## Dependencies
 **Required:**  
