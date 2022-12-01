@@ -71,4 +71,6 @@ public class PreventerConfig implements ConfigData {
     @ConfigEntry.Gui.PrefixText
     @ConfigEntry.Gui.Tooltip
     public boolean preventRenamedBlockPlacing = false;
+    @ConfigEntry.Gui.Tooltip
+    public boolean preventRenamedItemEating = false;
 }

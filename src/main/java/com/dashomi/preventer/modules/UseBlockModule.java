@@ -170,11 +170,13 @@ public class UseBlockModule {
 
             if (PreventerClient.config.preventRenamedBlockPlacing) {
                 if (handItem instanceof BlockItem) {
-                    if (!playerEntity.getStackInHand(hand).getName().getString().equals(handItem.getName().getString())) {
-                        if (PreventerClient.config.moduleUseInfoGroup.preventRenamedBlockPlacing_msg) {
-                            playerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedItemPlacing.text"), true);
+                    if (!handItem.isFood()) {
+                        if (!playerEntity.getStackInHand(hand).getName().getString().equals(handItem.getName().getString())) {
+                            if (PreventerClient.config.moduleUseInfoGroup.preventRenamedBlockPlacing_msg) {
+                                playerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedBlockPlacing.text"), true);
+                            }
+                            return ActionResult.FAIL;
                         }
-                        return ActionResult.FAIL;
                     }
                 }
             }
