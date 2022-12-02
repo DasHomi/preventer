@@ -123,7 +123,7 @@
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventStemBreaking_msg": "Verhindere das Abbauen von Stämmen",
   "config.preventer.preventStemBreaking.text": "§4Es wurde verhindert das du diesen Stamm abbaust§4",
 
-  "text.autoconfig.PreventerConfig.option.preventItemFrameBreaking": "Verhindert das Zerstören von Rahmen"
+  "text.autoconfig.PreventerConfig.option.preventItemFrameBreaking": "Verhindert das Zerstören von Rahmen",
   "text.autoconfig.PreventerConfig.option.preventItemFrameBreaking.@Tooltip": "Verhindert das Zerstören von Rahmen (und Leuchtrahmen)",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventItemFrameBreaking_msg": "Verhindert das Zerstören von Rahmen",
   "config.preventer.preventItemFrameBreaking.text": "§4Rahmen zerstören wurde verhindert§4",
