@@ -11,7 +11,7 @@
   "text.autoconfig.PreventerConfig.title": "Preventer Konfiguration",
 
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noStrip_msg.@PrefixText": "Unten kannst du die Modulbenachrichtigungen einschalten, die angezeigt werden, wenn ein Modul eine Aktion verhindert hat",
-  "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing.@PrefixText": "§c⮟ Experimentelle Module ⮟§c",
+  "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing.@PrefixText": "§c↓ Experimentelle Module ↓§c",
 
   "text.autoconfig.PreventerConfig.option.noStrip": "Keine Entrindung",
   "text.autoconfig.PreventerConfig.option.noStrip.@Tooltip": "Verhindert das entrinden von Bäumen",
@@ -137,4 +137,10 @@
   "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing.@Tooltip": "Verhindert, dass du umbenannte Blöcke platzierst",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventRenamedBlockPlacing_msg": "Platzieren umbenannter Blöcke verhindern",
   "config.preventer.preventRenamedBlockPlacing.text": "§4Es wurde verhindert, dass du einen umbenannten Block platzierst§4"
+
+  "text.autoconfig.PreventerConfig.option.preventRenamedItemEating": "Prevent renamed food eating",
+  "text.autoconfig.PreventerConfig.option.preventRenamedItemEating.@Tooltip": "Prevents you from eating renamed food",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventRenamedItemEating_msg": "Prevent renamed food eating",
+  "config.preventer.preventRenamedItemEating.text": "§4Renamed food eating was prevented§4"
+
 }

@@ -31,4 +31,5 @@ public class ModuleUseInfoGroup implements ConfigData {
     public boolean preventItemFrameBreaking_msg = false;
     public boolean preventPaintingBreaking_msg = false;
     public boolean preventRenamedBlockPlacing_msg = false;
+    public boolean preventRenamedItemEating_msg = false;
 }

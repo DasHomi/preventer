@@ -4,6 +4,7 @@ import com.dashomi.preventer.config.PreventerConfig;
 import com.dashomi.preventer.modules.AttackEntityModule;
 import com.dashomi.preventer.modules.BreakBlockModule;
 import com.dashomi.preventer.modules.UseBlockModule;
+import com.dashomi.preventer.modules.UseItemModule;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
@@ -12,6 +13,7 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,6 +31,7 @@ public class PreventerClient implements ClientModInitializer {
         UseBlockCallback.EVENT.register(UseBlockModule::checkBlockUse);
         AttackBlockCallback.EVENT.register(BreakBlockModule::checkBlockBreak);
         AttackEntityCallback.EVENT.register(AttackEntityModule::checkEntityAttack);
+        UseItemCallback.EVENT.register(UseItemModule::checkItemUse);
 
         RegisterKeyBindings.register();
     }
