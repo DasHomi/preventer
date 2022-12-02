@@ -136,11 +136,11 @@
   "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing": "Platzieren umbenannter Blöcke verhindern",
   "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing.@Tooltip": "Verhindert, dass du umbenannte Blöcke platzierst",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventRenamedBlockPlacing_msg": "Platzieren umbenannter Blöcke verhindern",
-  "config.preventer.preventRenamedBlockPlacing.text": "§4Es wurde verhindert, dass du einen umbenannten Block platzierst§4"
+  "config.preventer.preventRenamedBlockPlacing.text": "§4Es wurde verhindert, dass du einen umbenannten Block platzierst§4",
 
   "text.autoconfig.PreventerConfig.option.preventRenamedItemEating": "Umbenannte Nahrung essen verhindern",
   "text.autoconfig.PreventerConfig.option.preventRenamedItemEating.@Tooltip": "Verhindert das du umbenannte Nahrung isst",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventRenamedItemEating_msg": "Umbenannte Nahrung essen verhindern",
-  "config.preventer.preventRenamedItemEating.text": "§4Diese Umbenannte Nahrung kannst du nicht essen§4"
+  "config.preventer.preventRenamedItemEating.text": "§4Diese Umbenannte Nahrung kannst du nicht essen§4",
 
 }
