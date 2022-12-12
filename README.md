@@ -1,12 +1,12 @@
 # Preventer
 
-A fabric mod that prevents you from doing dumb things by accident.
-For example accidentally creating stripped logs.
-You can toggle every module in the settings and decide if
-you want a notification from the mod if it prevented an action.
-There is also an OVERRIDE KEY to temporarily allow an otherwise prevented action (_Default keybinding is R_).
+A client side fabric mod that prevents you from doing dumb things by accident, like breaking blocks you don't want to break, or placing blocks you don't want to place.
+(e.g. accidentally creating stripped logs or breaking budding amethyst)  
+The whole mod is highly configurable, so you can disable any feature you don't want.
+The config can be reached in game by pressing `I` or via the "Mod menu" mod.
+If you want to temporarily disable the entire mod, use the _Override Key_ (_default keybinding:_ `R`).
 
-## **Modules**
+## Modules
 - Prevent log stripping
   - _Prevents you from stripping logs_
 - Prevent path creation
@@ -26,7 +26,7 @@ There is also an OVERRIDE KEY to temporarily allow an otherwise prevented action
 - Prevent copper de-waxing
   - _Prevents de-waxing copper_
 - Low durability protection
-  - _Prevents tools & weapons from breaking due to low durability_
+  - _Prevent tools & weapons from breaking due to low durability_
 - Prevent villager punching
   - _Prevents you from attacking villagers_
 - Prevent zombified piglin punching
@@ -45,13 +45,25 @@ There is also an OVERRIDE KEY to temporarily allow an otherwise prevented action
   - _Prevents you from placing corals out of water_
 - Prevent water placing
   - _Prevents you from placing water in the nether_
+- Prevent stem breaking
+  - _Prevents you from breaking pumpkin/melon stems_
+- Prevent item frame breaking
+  - _Prevents you from breaking item frames (and glowing item frames)_
+- Prevent painting breaking
+  - _Prevents you from breaking paintings_
 
-## Planed Features
-- #### For feature requests, submit an issue with the enhancement label
+## Experimental Modules
+- Prevent renamed block placing
+  - _Prevents you from placing renamed blocks_
+- Prevent renamed food item use
+  - _Prevents you from eating renamed food items_
+
+## Planed Modules
+- **_Feature requests welcome_**
 - No active tool drop
 - Prevent Plant Breaking
 - Prevent Block Under Player Breaking
-
+- Blacklists
 
 ## Dependencies
 **Required:**  

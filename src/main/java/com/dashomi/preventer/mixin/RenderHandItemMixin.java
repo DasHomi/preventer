@@ -19,25 +19,25 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(HeldItemRenderer.class)
 public class RenderHandItemMixin {
-	@Inject(
-			method = "renderItem(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/render/model/json/ModelTransformation$Mode;ZLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V",
-			at = @At(value = "HEAD"),
-			cancellable = true
-	)
-	private void hideOffhandItem(LivingEntity entity, ItemStack stack, ModelTransformation.Mode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, CallbackInfo callbackInfo) {
-		if (!MinecraftClient.getInstance().options.getPerspective().isFirstPerson() ||
-				stack.isEmpty() || entity != MinecraftClient.getInstance().player || entity.isUsingItem()) return;
+    @Inject(
+            method = "renderItem(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/render/model/json/ModelTransformation$Mode;ZLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V",
+            at = @At(value = "HEAD"),
+            cancellable = true
+    )
+    private void hideOffhandItem(LivingEntity entity, ItemStack stack, ModelTransformation.Mode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, CallbackInfo callbackInfo) {
+        if (!MinecraftClient.getInstance().options.getPerspective().isFirstPerson() ||
+                stack.isEmpty() || entity != MinecraftClient.getInstance().player || entity.isUsingItem()) return;
 
-		ClientPlayerEntity player = MinecraftClient.getInstance().player;
-		if (player != null && player.getOffHandStack() != stack) return;
-		Identifier handItem = Registry.ITEM.getId(stack.getItem());
+        ClientPlayerEntity player = MinecraftClient.getInstance().player;
+        if (player != null && player.getOffHandStack() != stack) return;
+        Identifier handItem = Registry.ITEM.getId(stack.getItem());
 
-		if (handItem == Registry.ITEM.getId(Items.SHIELD) && PreventerClient.config.hideShield) {
-			callbackInfo.cancel();
-		}
+        if (handItem == Registry.ITEM.getId(Items.SHIELD) && PreventerClient.config.hideShield) {
+            callbackInfo.cancel();
+        }
 
-		if (handItem == Registry.ITEM.getId(Items.TOTEM_OF_UNDYING) && PreventerClient.config.hideTotem) {
-			callbackInfo.cancel();
-		}
-	}
+        if (handItem == Registry.ITEM.getId(Items.TOTEM_OF_UNDYING) && PreventerClient.config.hideTotem) {
+            callbackInfo.cancel();
+        }
+    }
 }

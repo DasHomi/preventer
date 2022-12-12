@@ -10,6 +10,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.world.World;
 
+import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityProtection;
 import static net.minecraft.block.CaveVines.BERRIES;
 import static net.minecraft.block.SweetBerryBushBlock.AGE;
 
@@ -167,19 +168,20 @@ public class UseBlockModule {
                 }
             }
 
-            if (PreventerClient.config.lowDurabilityProtection) {
-                if (!playerEntity.isCreative() && !playerEntity.isSpectator()) { // AttackBlockCallback does not do game mode check for us, so we need to do it by ourselves
-                    ItemStack stack = playerEntity.getStackInHand(hand);
-                    if (stack.isDamageable()) { // Check if the item is damageable
-                        if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.moduleConfigGroup.lowDurabilityProtectionRange) { // Check if the item is *almost* broken
-                            if (PreventerClient.config.moduleUseInfoGroup.lowDurabilityProtection_msg) {
-                                playerEntity.sendMessage(new TranslatableText("config.preventer.lowDurabilityProtection.text"), true);
+            if (PreventerClient.config.preventRenamedBlockPlacing) {
+                if (handItem instanceof BlockItem) {
+                    if (!handItem.isFood()) {
+                        if (!playerEntity.getStackInHand(hand).getName().getString().equals(handItem.getName().getString())) {
+                            if (PreventerClient.config.moduleUseInfoGroup.preventRenamedBlockPlacing_msg) {
+                                playerEntity.sendMessage(new TranslatableText("config.preventer.preventRenamedBlockPlacing.text"), true);
                             }
                             return ActionResult.FAIL;
                         }
                     }
                 }
             }
+
+            if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 
         return ActionResult.PASS;

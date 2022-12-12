@@ -55,10 +55,23 @@ public class PreventerConfig implements ConfigData {
     public boolean preventCoralPlace = false;
     @ConfigEntry.Gui.Tooltip
     public boolean preventWaterPlace = false;
+    @ConfigEntry.Gui.Tooltip
+    public boolean preventStemBreaking = false;
+    @ConfigEntry.Gui.Tooltip
+    public boolean preventItemFrameBreaking = false;
+    @ConfigEntry.Gui.Tooltip
+    public boolean preventPaintingBreaking = false;
 
     // Configs that don't have a usage msg
     @ConfigEntry.Gui.Tooltip
     public boolean hideShield = false;
     @ConfigEntry.Gui.Tooltip
     public boolean hideTotem = false;
+
+    // Unstable Modules
+    @ConfigEntry.Gui.PrefixText
+    @ConfigEntry.Gui.Tooltip
+    public boolean preventRenamedBlockPlacing = false;
+    @ConfigEntry.Gui.Tooltip
+    public boolean preventRenamedItemEating = false;
 }

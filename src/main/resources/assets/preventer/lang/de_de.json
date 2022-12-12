@@ -2,7 +2,8 @@
   "key.preventer.overrideKey": "Override-Taste",
   "key.preventer.overrideKey.text": "Override Aktiv",
   "key.preventer.category": "Preventer",
-  "modmenu.descriptionTranslation.preventer": "Ein Mod der dich daran hindert aus Versehen dumme dinge zu tun",
+  "key.preventer.configKey": "Konfigurationsmenü-Taste",
+  "modmenu.descriptionTranslation.preventer": "Ein Mod der verhindert das du versehentlich Dinge zerstörst.",
 
   "text.autoconfig.PreventerConfig.category.default": "Modul Schalter",
   "text.autoconfig.PreventerConfig.category.moduleConfigGroup": "Konfiguration",
@@ -10,6 +11,7 @@
   "text.autoconfig.PreventerConfig.title": "Preventer Konfiguration",
 
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.noStrip_msg.@PrefixText": "Unten kannst du die Modulbenachrichtigungen einschalten, die angezeigt werden, wenn ein Modul eine Aktion verhindert hat",
+  "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing.@PrefixText": "§c↓ Experimentelle Module ↓§c",
 
   "text.autoconfig.PreventerConfig.option.noStrip": "Keine Entrindung",
   "text.autoconfig.PreventerConfig.option.noStrip.@Tooltip": "Verhindert das entrinden von Bäumen",
@@ -96,9 +98,9 @@
   "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInOffhand": "Verhindert Feuerwerksraketen Nutzung in der Nebenhand",
   "text.autoconfig.PreventerConfig.option.moduleConfigGroup.rocketInMainHand": "Verhindert Feuerwerksraketen Nutzung in der Haupthand",
 
-  "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting": "Verhinder Enderkristall Schlagen",
+  "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting": "Verhindert das Schlagen von Enderkristallen",
   "text.autoconfig.PreventerConfig.option.preventEndCrystalHitting.@Tooltip": "Verhindert das Schlagen von Enderkristallen",
-  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventEndCrystalHitting_msg": "Verhinder Enderkristall Schlage",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventEndCrystalHitting_msg": "Verhindert Enderkristall Schlagen",
   "config.preventer.preventEndCrystalHitting.text": "§4Enderkristall schlagen verhindert§4",
 
   "text.autoconfig.PreventerConfig.option.preventBedUse": "Verhindere Bett Benutzung",
@@ -114,5 +116,30 @@
   "text.autoconfig.PreventerConfig.option.preventWaterPlace": "Verhindere Wasser Platzieren",
   "text.autoconfig.PreventerConfig.option.preventWaterPlace.@Tooltip": "Verhindert das Platzieren von Wasser im Nether",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventWaterPlace_msg": "Verhindert Wasser Platzieren",
-  "config.preventer.preventWaterPlace.text": "§4Wasser im Nether platzieren verhindert§4"
+  "config.preventer.preventWaterPlace.text": "§4Wasser im Nether platzieren verhindert§4",
+
+  "text.autoconfig.PreventerConfig.option.preventStemBreaking": "Verhindere das Abbauen von Stämmen",
+  "text.autoconfig.PreventerConfig.option.preventStemBreaking.@Tooltip": "Verhindert das Abbauen von Kürbis-/Melonenstielen",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventStemBreaking_msg": "Verhindere das Abbauen von Stämmen",
+  "config.preventer.preventStemBreaking.text": "§4Es wurde verhindert das du diesen Stamm abbaust§4",
+
+  "text.autoconfig.PreventerConfig.option.preventItemFrameBreaking": "Verhindert das Zerstören von Rahmen",
+  "text.autoconfig.PreventerConfig.option.preventItemFrameBreaking.@Tooltip": "Verhindert das Zerstören von Rahmen (und Leuchtrahmen)",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventItemFrameBreaking_msg": "Verhindert das Zerstören von Rahmen",
+  "config.preventer.preventItemFrameBreaking.text": "§4Rahmen zerstören wurde verhindert§4",
+
+  "text.autoconfig.PreventerConfig.option.preventPaintingBreaking": "Verhindere das Zerstören von Gemälden",
+  "text.autoconfig.PreventerConfig.option.preventPaintingBreaking.@Tooltip": "Verhindert das Zerstören von Gemälden",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventPaintingBreaking_msg": "Verhindert das Zerstören von Gemälden",
+  "config.preventer.preventPaintingBreaking.text": "§4Es wurde verhindert das du dieses Gemälde zerstörst§4",
+
+  "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing": "Platzieren umbenannter Blöcke verhindern",
+  "text.autoconfig.PreventerConfig.option.preventRenamedBlockPlacing.@Tooltip": "Verhindert, dass du umbenannte Blöcke platzierst",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventRenamedBlockPlacing_msg": "Platzieren umbenannter Blöcke verhindern",
+  "config.preventer.preventRenamedBlockPlacing.text": "§4Es wurde verhindert, dass du einen umbenannten Block platzierst§4",
+
+  "text.autoconfig.PreventerConfig.option.preventRenamedItemEating": "Umbenannte Nahrung essen verhindern",
+  "text.autoconfig.PreventerConfig.option.preventRenamedItemEating.@Tooltip": "Verhindert das du umbenannte Nahrung isst",
+  "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventRenamedItemEating_msg": "Umbenannte Nahrung essen verhindern",
+  "config.preventer.preventRenamedItemEating.text": "§4Diese Umbenannte Nahrung willst du nicht essen§4"
 }
