@@ -55,13 +55,14 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
 ## Experimental Modules
 - Prevent renamed block placing
   - _Prevents you from placing renamed blocks_
+- Prevent renamed food item use
+  - _Prevents you from eating renamed food items_
 
 ## Planed Modules
 - **_Feature requests welcome_**
 - No active tool drop
 - Prevent Plant Breaking
 - Prevent Block Under Player Breaking
-- Prevent renamed food item use
 - Blacklists
 
 ## Dependencies

@@ -141,6 +141,5 @@
   "text.autoconfig.PreventerConfig.option.preventRenamedItemEating": "Umbenannte Nahrung essen verhindern",
   "text.autoconfig.PreventerConfig.option.preventRenamedItemEating.@Tooltip": "Verhindert das du umbenannte Nahrung isst",
   "text.autoconfig.PreventerConfig.option.moduleUseInfoGroup.preventRenamedItemEating_msg": "Umbenannte Nahrung essen verhindern",
-  "config.preventer.preventRenamedItemEating.text": "§4Diese Umbenannte Nahrung kannst du nicht essen§4",
-
+  "config.preventer.preventRenamedItemEating.text": "§4Diese Umbenannte Nahrung willst du nicht essen§4"
 }
