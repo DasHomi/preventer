@@ -14,7 +14,7 @@ public class UseItemModule {
             if (PreventerClient.config.preventRenamedItemEating) {
                 if (player.getStackInHand(hand).isFood()) {
                     if (player.getStackInHand(hand).hasCustomName()) {
-                        if (PreventerClient.config.moduleUseInfoGroup.preventRenamedItemEating_msg) {
+                        if (PreventerClient.config.preventRenamedItemEating_msg) {
                             player.sendMessage(Text.translatable("config.preventer.preventRenamedItemEating.text"), true);
                         }
                         return TypedActionResult.fail(player.getStackInHand(hand));

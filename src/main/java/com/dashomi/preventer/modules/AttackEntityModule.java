@@ -22,7 +22,7 @@ public class AttackEntityModule {
         if (!PreventerClient.config.overrideKeyPressed) {
             if (PreventerClient.config.preventVillagerPunch) {
                 if (entity instanceof VillagerEntity) {
-                    if (PreventerClient.config.moduleUseInfoGroup.preventVillagerPunch_msg) {
+                    if (PreventerClient.config.preventVillagerPunch_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.preventVillagerPunch.text"), true);
                     }
                     return ActionResult.FAIL;
@@ -31,7 +31,7 @@ public class AttackEntityModule {
 
             if (PreventerClient.config.noZombifiedPiglinPunch) {
                 if (entity instanceof ZombifiedPiglinEntity) {
-                    if (PreventerClient.config.moduleUseInfoGroup.noZombifiedPiglinPunch_msg) {
+                    if (PreventerClient.config.noZombifiedPiglinPunch_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.noZombifiedPiglinPunch.text"), true);
                     }
                     return ActionResult.FAIL;
@@ -40,7 +40,7 @@ public class AttackEntityModule {
 
             if (PreventerClient.config.preventEndCrystalHitting) {
                 if (entity instanceof EndCrystalEntity) {
-                    if (PreventerClient.config.moduleUseInfoGroup.preventEndCrystalHitting_msg) {
+                    if (PreventerClient.config.preventEndCrystalHitting_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.preventEndCrystalHitting.text"), true);
                     }
                     return ActionResult.FAIL;
@@ -49,7 +49,7 @@ public class AttackEntityModule {
 
             if (PreventerClient.config.preventItemFrameBreaking) {
                 if (entity instanceof ItemFrameEntity) {
-                    if (PreventerClient.config.moduleUseInfoGroup.preventItemFrameBreaking_msg) {
+                    if (PreventerClient.config.preventItemFrameBreaking_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.preventItemFrameBreaking.text"), true);
                     }
                     return ActionResult.FAIL;
@@ -58,7 +58,7 @@ public class AttackEntityModule {
 
             if (PreventerClient.config.preventPaintingBreaking) {
                 if (entity instanceof PaintingEntity) {
-                    if (PreventerClient.config.moduleUseInfoGroup.preventPaintingBreaking_msg) {
+                    if (PreventerClient.config.preventPaintingBreaking_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.preventPaintingBreaking.text"), true);
                     }
                     return ActionResult.FAIL;

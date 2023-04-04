@@ -1,5 +1,6 @@
 package com.dashomi.preventer;
 
+import com.dashomi.preventer.config.CreateModConfig;
 import com.dashomi.preventer.config.PreventerConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -37,7 +38,7 @@ public class RegisterKeyBindings {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (configKey.wasPressed()) {
-                MinecraftClient.getInstance().setScreenAndRender(AutoConfig.getConfigScreen(PreventerConfig.class, MinecraftClient.getInstance().currentScreen).get());
+                MinecraftClient.getInstance().setScreenAndRender(CreateModConfig.createConfigScreen(MinecraftClient.getInstance().currentScreen));
             }
         });
     }
