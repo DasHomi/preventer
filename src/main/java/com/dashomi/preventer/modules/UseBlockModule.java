@@ -152,14 +152,14 @@ public class UseBlockModule {
             }
 
             if (PreventerClient.config.preventRocketUse && !playerEntity.isSpectator()) {
-                if (!playerEntity.isFallFlying()) {
-                    if (PreventerClient.config.rocketInOffhand && playerEntity.getOffHandStack().getItem() instanceof FireworkRocketItem) {
+                if (!playerEntity.isFallFlying() && handItem instanceof FireworkRocketItem) {
+                    if (PreventerClient.config.rocketInOffhand && Hand.OFF_HAND == hand) {
                         if (PreventerClient.config.preventRocketUse_msg) {
                             playerEntity.sendMessage(Text.translatable("config.preventer.preventRocketUse.text"), true);
                         }
                         return ActionResult.FAIL;
                     }
-                    if (PreventerClient.config.rocketInMainHand && playerEntity.getMainHandStack().getItem() instanceof FireworkRocketItem) {
+                    if (PreventerClient.config.rocketInMainHand && Hand.MAIN_HAND == hand) {
                         if (PreventerClient.config.preventRocketUse_msg) {
                             playerEntity.sendMessage(Text.translatable("config.preventer.preventRocketUse.text"), true);
                         }
