@@ -202,9 +202,11 @@ public class UseBlockModule {
             state.isIn(BlockTags.SIGNS) ||
             state.isIn(BlockTags.FENCE_GATES) ||
             state.isIn(BlockTags.SHULKER_BOXES) ||
+            state.isIn(BlockTags.CANDLE_CAKES) ||
             block == Blocks.BEACON ||
             block == Blocks.BELL ||
             block == Blocks.BREWING_STAND ||
+            block == Blocks.CAKE ||
             block == Blocks.CARTOGRAPHY_TABLE ||
             block == Blocks.CHEST ||
             block == Blocks.TRAPPED_CHEST ||
@@ -218,6 +220,7 @@ public class UseBlockModule {
             block == Blocks.CRAFTING_TABLE ||
             block == Blocks.ENCHANTING_TABLE ||
             block == Blocks.LECTERN ||
+            block == Blocks.GRINDSTONE ||
             block == Blocks.LEVER ||
             block == Blocks.LOOM ||
             block == Blocks.NOTE_BLOCK ||
