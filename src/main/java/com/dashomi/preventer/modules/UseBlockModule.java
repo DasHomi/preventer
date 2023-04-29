@@ -4,6 +4,7 @@ import com.dashomi.preventer.PreventerClient;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -152,7 +153,7 @@ public class UseBlockModule {
                 }
             }
 
-            if (PreventerClient.config.preventRocketUse && !playerEntity.isSpectator()) {
+            if (PreventerClient.config.preventRocketUse && !playerEntity.isSpectator() && !canInteractWithBlock(targetBlockState)) {
                 if (!playerEntity.isFallFlying() && handItem instanceof FireworkRocketItem && playerEntity.world.isClient) {
                     ActionResult actionResult = targetBlockState.onUse(playerEntity.world, playerEntity, hand, blockHitResult);
                     if (actionResult.isAccepted()) return ActionResult.PASS;
@@ -189,5 +190,14 @@ public class UseBlockModule {
         }
 
         return ActionResult.PASS;
+    }
+
+    private static boolean canInteractWithBlock(BlockState block) {
+        return (
+            block.isIn(BlockTags.CANDLE_CAKES) ||
+            block.isOf(Blocks.CAKE) ||
+            block.isOf(Blocks.REPEATER) ||
+            block.isOf(Blocks.COMPARATOR)
+        );
     }
 }
