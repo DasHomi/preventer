@@ -4,7 +4,6 @@ import com.dashomi.preventer.PreventerClient;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -153,8 +152,10 @@ public class UseBlockModule {
                 }
             }
 
-            if (PreventerClient.config.preventRocketUse && !playerEntity.isSpectator() && !canInteractWithBlock(targetBlockState)) {
-                if (!playerEntity.isFallFlying() && handItem instanceof FireworkRocketItem) {
+            if (PreventerClient.config.preventRocketUse && !playerEntity.isSpectator()) {
+                if (!playerEntity.isFallFlying() && handItem instanceof FireworkRocketItem && playerEntity.world.isClient) {
+                    ActionResult actionResult = targetBlockState.onUse(playerEntity.world, playerEntity, hand, blockHitResult);
+                    if (actionResult.isAccepted()) return ActionResult.PASS;
 
                     if (PreventerClient.config.rocketInOffhand && Hand.OFF_HAND == hand) {
                         if (PreventerClient.config.preventRocketUse_msg) {
@@ -188,57 +189,5 @@ public class UseBlockModule {
         }
 
         return ActionResult.PASS;
-    }
-
-    private static boolean canInteractWithBlock(BlockState state)
-    {
-        var block = state.getBlock();
-        return (
-            state.isIn(BlockTags.ANVIL) ||
-            state.isIn(BlockTags.BEDS) ||
-            state.isIn(BlockTags.BUTTONS) ||
-            state.isIn(BlockTags.DOORS) ||
-            state.isIn(BlockTags.TRAPDOORS) ||
-            state.isIn(BlockTags.SIGNS) ||
-            state.isIn(BlockTags.FENCE_GATES) ||
-            state.isIn(BlockTags.SHULKER_BOXES) ||
-            state.isIn(BlockTags.CANDLE_CAKES) ||
-            block == Blocks.BEACON ||
-            block == Blocks.BELL ||
-            block == Blocks.BREWING_STAND ||
-            block == Blocks.CAKE ||
-            block == Blocks.CARTOGRAPHY_TABLE ||
-            block == Blocks.CHEST ||
-            block == Blocks.TRAPPED_CHEST ||
-            block == Blocks.BARREL ||
-            block == Blocks.ENDER_CHEST ||
-            block == Blocks.COMMAND_BLOCK ||
-            block == Blocks.CHAIN_COMMAND_BLOCK ||
-            block == Blocks.REPEATING_COMMAND_BLOCK ||
-            block == Blocks.JIGSAW ||
-            block == Blocks.STRUCTURE_BLOCK ||
-            block == Blocks.CRAFTING_TABLE ||
-            block == Blocks.ENCHANTING_TABLE ||
-            block == Blocks.LECTERN ||
-            block == Blocks.GRINDSTONE ||
-            block == Blocks.LEVER ||
-            block == Blocks.LOOM ||
-            block == Blocks.NOTE_BLOCK ||
-            block == Blocks.JUKEBOX ||
-            block == Blocks.RESPAWN_ANCHOR ||
-            block == Blocks.SMITHING_TABLE ||
-            block == Blocks.FURNACE ||
-            block == Blocks.BLAST_FURNACE ||
-            block == Blocks.SMOKER ||
-            block == Blocks.REDSTONE_WIRE ||
-            block == Blocks.HOPPER ||
-            block == Blocks.DISPENSER ||
-            block == Blocks.DROPPER ||
-            block == Blocks.REPEATER ||
-            block == Blocks.COMPARATOR ||
-            block == Blocks.DAYLIGHT_DETECTOR ||
-            block == Blocks.REDSTONE_ORE ||
-            block == Blocks.STONECUTTER
-        );
     }
 }
