@@ -4,6 +4,7 @@ import com.dashomi.preventer.PreventerClient;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -17,7 +18,8 @@ import static net.minecraft.block.SweetBerryBushBlock.AGE;
 public class UseBlockModule {
     public static ActionResult checkBlockUse(PlayerEntity playerEntity, World world, Hand hand, BlockHitResult blockHitResult) {
         if (!PreventerClient.config.overrideKeyPressed) {
-            Block targetBlock = world.getBlockState(blockHitResult.getBlockPos()).getBlock();
+            BlockState targetBlockState = world.getBlockState(blockHitResult.getBlockPos());
+            Block targetBlock = targetBlockState.getBlock();
             Item handItem = playerEntity.getStackInHand(hand).getItem();
             if (PreventerClient.config.noStrip) {
                 if (handItem instanceof AxeItem) {
@@ -151,15 +153,18 @@ public class UseBlockModule {
                 }
             }
 
-            if (PreventerClient.config.preventRocketUse && !playerEntity.isSpectator()) {
-                if (!playerEntity.isFallFlying()) {
-                    if (PreventerClient.config.rocketInOffhand && playerEntity.getOffHandStack().getItem() instanceof FireworkRocketItem) {
+            if (PreventerClient.config.preventRocketUse && !playerEntity.isSpectator() && !canInteractWithBlock(targetBlockState)) {
+                if (!playerEntity.isFallFlying() && handItem instanceof FireworkRocketItem && playerEntity.world.isClient) {
+                    ActionResult actionResult = targetBlockState.onUse(playerEntity.world, playerEntity, hand, blockHitResult);
+                    if (actionResult.isAccepted()) return ActionResult.PASS;
+
+                    if (PreventerClient.config.rocketInOffhand && Hand.OFF_HAND == hand) {
                         if (PreventerClient.config.preventRocketUse_msg) {
                             playerEntity.sendMessage(Text.translatable("config.preventer.preventRocketUse.text"), true);
                         }
                         return ActionResult.FAIL;
                     }
-                    if (PreventerClient.config.rocketInMainHand && playerEntity.getMainHandStack().getItem() instanceof FireworkRocketItem) {
+                    if (PreventerClient.config.rocketInMainHand && Hand.MAIN_HAND == hand) {
                         if (PreventerClient.config.preventRocketUse_msg) {
                             playerEntity.sendMessage(Text.translatable("config.preventer.preventRocketUse.text"), true);
                         }
@@ -185,5 +190,14 @@ public class UseBlockModule {
         }
 
         return ActionResult.PASS;
+    }
+
+    private static boolean canInteractWithBlock(BlockState block) {
+        return (
+            block.isIn(BlockTags.CANDLE_CAKES) ||
+            block.isOf(Blocks.CAKE) ||
+            block.isOf(Blocks.REPEATER) ||
+            block.isOf(Blocks.COMPARATOR)
+        );
     }
 }
