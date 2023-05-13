@@ -5,7 +5,7 @@ import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.Text;
 
-public class CreateModConfig {
+public class  CreateModConfig {
     public static Screen createConfigScreen(Screen parent) {
         ConfigBuilder builder = ConfigBuilder.create()
                 .setParentScreen(parent)
@@ -189,6 +189,14 @@ public class CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.preventPaintingBreaking"))
                         .setSaveConsumer(value -> config.preventPaintingBreaking = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventToolDropping"),
+                                config.preventToolDropping)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventToolDropping"))
+                        .setSaveConsumer(value -> config.preventToolDropping = value)
                         .build())
 
                 //no usage msg
@@ -413,6 +421,13 @@ public class CreateModConfig {
                         .setSaveConsumer(value -> config.preventPaintingBreaking_msg = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventToolDropping"),
+                                config.preventToolDropping_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventToolDropping_msg = value)
+                        .build())
+
                 // experimental features
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventRenamedBlockPlacing"),
@@ -427,7 +442,6 @@ public class CreateModConfig {
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventRenamedItemEating_msg = value)
                         .build());
-
 
         return builder
                 .setSavingRunnable(PreventerConfig::save)

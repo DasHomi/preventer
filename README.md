@@ -51,6 +51,8 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
   - _Prevents you from breaking item frames (and glowing item frames)_
 - Prevent painting breaking 
   - _Prevents you from breaking paintings_
+- Prevent tool dropping
+  - _Prevents you from dropping tools_
 
 ## Experimental Modules
 - Prevent renamed block placing
@@ -60,11 +62,10 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
 
 ## Planed Features
 - **_Feature requests welcome_**
-- No active tool drop
 - Prevent Plant Breaking
 - Prevent Block Under Player Breaking
-- Blacklists
 - Hotkeys
+- Prevent glass Breaking
 
 ## Dependencies
 **Required:**  

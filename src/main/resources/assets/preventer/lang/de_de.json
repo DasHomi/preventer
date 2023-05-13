@@ -106,6 +106,10 @@
   "tooltip.preventer.preventPaintingBreaking": "Verhindert das Zerstören von Gemälden",
   "config.preventer.preventPaintingBreaking.text": "§4Es wurde verhindert das du dieses Gemälde zerstörst§4",
 
+  "option.preventer.preventToolDropping": "Verhindere das Fallenlassen von Werkzeugen",
+  "tooltip.preventer.preventToolDropping": "Verhindert das Fallenlassen von Werkzeugen und Schwertern",
+  "config.preventer.preventToolDropping.text": "§4Werkzeug fallenlassen wurde verhindert§4",
+
 
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",

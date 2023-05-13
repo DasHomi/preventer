@@ -106,6 +106,10 @@
   "tooltip.preventer.preventPaintingBreaking": "Prevents you from breaking paintings",
   "config.preventer.preventPaintingBreaking.text": "§4Painting breaking was prevented§4",
 
+  "option.preventer.preventToolDropping": "Prevent tool dropping",
+  "tooltip.preventer.preventToolDropping": "Prevents you from dropping tools and swords",
+  "config.preventer.preventToolDropping.text": "§4Tool dropping was prevented§4",
+
 
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
