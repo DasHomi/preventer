@@ -67,6 +67,15 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
 - Prevent Plant Breaking
 - Prevent Block Under Player Breaking
 - Hotkeys
+- Prevent Note Block Editing
+
+## Compatibility
+- Other versions and mod loaders:
+  - This mod will mostly only be up-to-date for the latest version of Minecraft.
+  - There will be semiregular updates for older versions of Minecraft.
+  - There are no plans to support Forge or Minecraft versions older than 1.18.
+- Other mods:
+  - This mod should be compatible with most other mods.
 
 ## Dependencies
 **Required:**  
