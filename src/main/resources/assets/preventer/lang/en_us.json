@@ -107,8 +107,12 @@
   "config.preventer.preventPaintingBreaking.text": "§4Painting breaking was prevented§4",
 
   "option.preventer.preventToolDropping": "Prevent tool dropping",
-  "tooltip.preventer.preventToolDropping": "Prevents you from dropping tools and swords",
+  "tooltip.preventer.preventToolDropping": "Prevents you from dropping tools and swords out of your hotbar",
   "config.preventer.preventToolDropping.text": "§4Tool dropping was prevented§4",
+
+  "option.preventer.preventGlassBreaking": "Prevent glass breaking",
+  "tooltip.preventer.preventGlassBreaking": "Prevents you from breaking glass and glass panes",
+  "config.preventer.preventGlassBreaking.text": "§4Glass breaking prevented§4",
 
 
   "option.preventer.hideTotem": "Hide totem",

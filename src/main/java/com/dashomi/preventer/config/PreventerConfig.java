@@ -69,6 +69,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventPaintingBreaking_msg = false;
     public boolean preventToolDropping = false;
     public boolean preventToolDropping_msg = false;
+    public boolean preventGlassBreaking = false;
+    public boolean preventGlassBreaking_msg = false;
 
     // Configs that don't have a usage msg
     public boolean hideShield = false;

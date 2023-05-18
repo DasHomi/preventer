@@ -199,6 +199,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventToolDropping = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventGlassBreaking"),
+                                config.preventGlassBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventGlassBreaking"))
+                        .setSaveConsumer(value -> config.preventGlassBreaking = value)
+                        .build())
+
                 //no usage msg
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.hideShield"),
@@ -426,6 +434,13 @@ public class  CreateModConfig {
                                 config.preventToolDropping_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventToolDropping_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventGlassBreaking"),
+                                config.preventGlassBreaking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventGlassBreaking_msg = value)
                         .build())
 
                 // experimental features

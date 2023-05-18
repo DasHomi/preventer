@@ -110,6 +110,10 @@
   "tooltip.preventer.preventToolDropping": "Verhindert das Fallenlassen von Werkzeugen und Schwertern",
   "config.preventer.preventToolDropping.text": "§4Werkzeug fallenlassen wurde verhindert§4",
 
+  "option.preventer.preventGlassBreaking": "Verhindere Glas Zerstörung",
+  "tooltip.preventer.preventGlassBreaking": "Verhindert das Zerstören von Glasblöcken und Glasscheiben"
+  "config.preventer.preventGlassBreaking.text": "§4Glas zerstören wurde verhindert§4",
+
 
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",

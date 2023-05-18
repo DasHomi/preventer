@@ -9,6 +9,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
+import net.minecraft.block.GlassBlock;
 
 import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityProtection;
 
@@ -40,6 +41,15 @@ public class BreakBlockModule {
                 if (targetBlock instanceof AttachedStemBlock || targetBlock instanceof StemBlock) {
                     if (PreventerClient.config.preventStemBreaking_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.preventStemBreaking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventGlassBreaking) {
+                if (targetBlock instanceof GlassBlock || targetBlock instanceof StainedGlassBlock || targetBlock instanceof PaneBlock || targetBlock instanceof TintedGlassBlock) {
+                    if (PreventerClient.config.preventGlassBreaking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventGlassBreaking.text"), true);
                     }
                     return ActionResult.FAIL;
                 }
