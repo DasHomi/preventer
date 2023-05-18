@@ -6,7 +6,7 @@
   "mixins": [],
   "client": [
     "RenderHandItemMixin",
-    "PlayerInventoryMixin"
+    "ClientPlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
