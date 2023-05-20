@@ -71,14 +71,12 @@ public class PreventerConfig implements ConfigData {
     public boolean preventToolDropping_msg = false;
     public boolean preventGlassBreaking = false;
     public boolean preventGlassBreaking_msg = false;
-
-    // Configs that don't have a usage msg
-    public boolean hideShield = false;
-    public boolean hideTotem = false;
-
-    // Experimental configs
     public boolean preventRenamedBlockPlacing = false;
     public boolean preventRenamedBlockPlacing_msg = false;
     public boolean preventRenamedItemEating = false;
     public boolean preventRenamedItemEating_msg = false;
+
+    // Configs that don't have a usage msg
+    public boolean hideShield = false;
+    public boolean hideTotem = false;
 }

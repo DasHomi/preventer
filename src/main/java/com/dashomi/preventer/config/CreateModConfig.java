@@ -207,6 +207,22 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventGlassBreaking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventRenamedBlockPlacing"),
+                                config.preventRenamedBlockPlacing)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventRenamedBlockPlacing"))
+                        .setSaveConsumer(value -> config.preventRenamedBlockPlacing = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventRenamedItemEating"),
+                                config.preventRenamedItemEating)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventRenamedItemEating"))
+                        .setSaveConsumer(value -> config.preventRenamedItemEating = value)
+                        .build())
+
                 //no usage msg
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.hideShield"),
@@ -222,27 +238,6 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.hideTotem"))
                         .setSaveConsumer(value -> config.hideTotem = value)
-                        .build())
-
-                // experimental features
-                .addEntry(entryBuilder.startTextDescription(
-                                Text.translatable("text.preventer.experimentalFeatures"))
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRenamedBlockPlacing"),
-                                config.preventRenamedBlockPlacing)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventRenamedBlockPlacing"))
-                        .setSaveConsumer(value -> config.preventRenamedBlockPlacing = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRenamedItemEating"),
-                                config.preventRenamedItemEating)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventRenamedItemEating"))
-                        .setSaveConsumer(value -> config.preventRenamedItemEating = value)
                         .build());
 
 
@@ -443,7 +438,6 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventGlassBreaking_msg = value)
                         .build())
 
-                // experimental features
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventRenamedBlockPlacing"),
                                 config.preventRenamedBlockPlacing_msg)

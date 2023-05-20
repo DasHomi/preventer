@@ -11,6 +11,8 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.world.World;
 
+import java.util.Objects;
+
 import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityProtection;
 import static net.minecraft.block.CaveVines.BERRIES;
 import static net.minecraft.block.SweetBerryBushBlock.AGE;
@@ -99,11 +101,19 @@ public class UseBlockModule {
             }
 
             if (PreventerClient.config.noCake) {
-                if (targetBlock instanceof CakeBlock || targetBlock instanceof CandleCakeBlock) { //broken
+                if (targetBlock instanceof CandleCakeBlock) {
                     if (PreventerClient.config.noCake_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.noCake.text"), true);
                     }
                     return ActionResult.FAIL;
+                } else if (targetBlock instanceof CakeBlock) {
+                    String[] itemName = String.valueOf(handItem).split("_");
+                    if (!Objects.equals(itemName[itemName.length - 1], "candle")) {
+                        if (PreventerClient.config.noCake_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.noCake.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
                 }
             }
 

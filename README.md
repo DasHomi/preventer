@@ -55,8 +55,6 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
   - _Prevents you from dropping tools out of your hotbar_
 - Prevent glass breaking
   - _Prevents you from breaking glass and glass panes_
-
-## Experimental Modules
 - Prevent renamed block placing
   - _Prevents you from placing renamed blocks_
 - Prevent renamed food item use
