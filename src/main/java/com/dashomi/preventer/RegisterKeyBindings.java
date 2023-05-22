@@ -1,8 +1,6 @@
 package com.dashomi.preventer;
 
 import com.dashomi.preventer.config.CreateModConfig;
-import com.dashomi.preventer.config.PreventerConfig;
-import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
@@ -24,11 +22,15 @@ public class RegisterKeyBindings {
         KeyBindingHelper.registerKeyBinding(overrideKey);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            PreventerClient.config.overrideKeyPressed = overrideKey.isPressed();
+
             if (overrideKey.isPressed()) {
                 assert MinecraftClient.getInstance().player != null;
                 MinecraftClient.getInstance().player.sendMessage(Text.translatable("key.preventer.overrideKey.text"), true);
+            } else if (overrideKey.isPressed() != PreventerClient.config.overrideKeyPressed) {
+                assert MinecraftClient.getInstance().player != null;
+                MinecraftClient.getInstance().player.sendMessage(Text.of(""), true);
             }
+            PreventerClient.config.overrideKeyPressed = overrideKey.isPressed();
         });
     }
 
