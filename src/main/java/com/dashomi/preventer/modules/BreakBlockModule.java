@@ -45,6 +45,15 @@ public class BreakBlockModule {
                 }
             }
 
+            if (PreventerClient.config.preventGlassBreaking) {
+                if (targetBlock instanceof GlassBlock || targetBlock instanceof StainedGlassBlock || targetBlock instanceof PaneBlock || targetBlock instanceof TintedGlassBlock) {
+                    if (PreventerClient.config.preventGlassBreaking_msg) {
+                        playerEntity.sendMessage(new TranslatableText("config.preventer.preventGlassBreaking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

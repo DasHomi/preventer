@@ -51,19 +51,29 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
   - _Prevents you from breaking item frames (and glowing item frames)_
 - Prevent painting breaking
   - _Prevents you from breaking paintings_
-
-## Experimental Modules
+- Prevent tool dropping
+  - _Prevents you from dropping tools out of your hotbar_
+- Prevent glass breaking
+  - _Prevents you from breaking glass and glass panes_
 - Prevent renamed block placing
   - _Prevents you from placing renamed blocks_
 - Prevent renamed food item use
   - _Prevents you from eating renamed food items_
 
-## Planed Modules
+## Planed Features
 - **_Feature requests welcome_**
-- No active tool drop
 - Prevent Plant Breaking
 - Prevent Block Under Player Breaking
-- Blacklists
+- Hotkeys
+- Prevent Note Block Editing
+
+## Compatibility
+- Other versions and mod loaders:
+  - This mod will mostly only be up-to-date for the latest version of Minecraft.
+  - There will be semiregular updates for older versions of Minecraft.
+  - There are no plans to support Forge or Minecraft versions older than 1.18.
+- Other mods:
+  - This mod should be compatible with most other mods.
 
 ## Dependencies
 **Required:**  
