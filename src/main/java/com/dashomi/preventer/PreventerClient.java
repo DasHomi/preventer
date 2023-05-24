@@ -26,7 +26,7 @@ public class PreventerClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         AutoConfig.register(PreventerConfig.class, GsonConfigSerializer::new);
-        config = AutoConfig.getConfigHolder(PreventerConfig.class).getConfig();
+        config = PreventerConfig.get();
 
         UseBlockCallback.EVENT.register(UseBlockModule::checkBlockUse);
         AttackBlockCallback.EVENT.register(BreakBlockModule::checkBlockBreak);

@@ -12,8 +12,8 @@ public class DurabilityProtection {
             if (!playerEntity.isCreative() && !playerEntity.isSpectator()) {
                 ItemStack stack = playerEntity.getStackInHand(hand);
                 if (stack.isDamageable()) {
-                    if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.moduleConfigGroup.lowDurabilityProtectionRange) {
-                        if (PreventerClient.config.moduleUseInfoGroup.lowDurabilityProtection_msg) {
+                    if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.lowDurabilityProtectionRange) {
+                        if (PreventerClient.config.lowDurabilityProtection_msg) {
                             playerEntity.sendMessage(new TranslatableText("config.preventer.lowDurabilityProtection.text"), true);
                         }
                         return true;

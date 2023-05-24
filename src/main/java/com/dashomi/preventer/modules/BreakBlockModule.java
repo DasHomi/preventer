@@ -19,7 +19,7 @@ public class BreakBlockModule {
             if (PreventerClient.config.onlyMatureCropHarvest) {
                 if (targetBlock instanceof CropBlock) {
                     if (!((CropBlock) targetBlock).isMature(world.getBlockState(pos))) {
-                        if (PreventerClient.config.moduleUseInfoGroup.onlyMatureCropHarvest_msg) {
+                        if (PreventerClient.config.onlyMatureCropHarvest_msg) {
                             playerEntity.sendMessage(new TranslatableText("config.preventer.onlyMatureCropHarvest.text"), true);
                         }
                         return ActionResult.FAIL;
@@ -29,7 +29,7 @@ public class BreakBlockModule {
 
             if (PreventerClient.config.preventBuddingAmethystBreaking) {
                 if (targetBlock instanceof BuddingAmethystBlock) {
-                    if (PreventerClient.config.moduleUseInfoGroup.preventBuddingAmethystBreaking_msg) {
+                    if (PreventerClient.config.preventBuddingAmethystBreaking_msg) {
                         playerEntity.sendMessage(new TranslatableText("config.preventer.preventBuddingAmethystBreaking.text"), true);
                     }
                     return ActionResult.FAIL;
@@ -38,7 +38,7 @@ public class BreakBlockModule {
 
             if (PreventerClient.config.preventStemBreaking) {
                 if (targetBlock instanceof AttachedStemBlock || targetBlock instanceof StemBlock) {
-                    if (PreventerClient.config.moduleUseInfoGroup.preventStemBreaking_msg) {
+                    if (PreventerClient.config.preventStemBreaking_msg) {
                         playerEntity.sendMessage(new TranslatableText("config.preventer.preventStemBreaking.text"), true);
                     }
                     return ActionResult.FAIL;

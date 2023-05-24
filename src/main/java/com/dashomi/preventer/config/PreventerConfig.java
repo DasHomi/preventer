@@ -1,77 +1,82 @@
 package com.dashomi.preventer.config;
 
+import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
-import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
-@Config(name = "PreventerConfig")
+@Config(name = "preventer")
 public class PreventerConfig implements ConfigData {
-    @ConfigEntry.Gui.Excluded
+    public static PreventerConfig get() {
+        return AutoConfig.getConfigHolder(PreventerConfig.class).getConfig();
+    }
+
     public boolean overrideKeyPressed = false;
 
-    @ConfigEntry.Category("moduleConfigGroup")
-    @ConfigEntry.Gui.TransitiveObject
-    public ModuleConfigGroup moduleConfigGroup = new ModuleConfigGroup();
+    public static void save() {
+        AutoConfig.getConfigHolder(PreventerConfig.class).save();
+    }
 
-    @ConfigEntry.Category("moduleUseInfoGroup")
-    @ConfigEntry.Gui.TransitiveObject
-    public ModuleUseInfoGroup moduleUseInfoGroup = new ModuleUseInfoGroup();
+    public static void load() {
+        AutoConfig.getConfigHolder(PreventerConfig.class).load();
+    }
 
-    @ConfigEntry.Gui.Tooltip
     public boolean noStrip = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean noStrip_msg = false;
     public boolean noPath = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean noPath_msg = false;
     public boolean noFarmland = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean noFarmland_msg = false;
     public boolean noSweetBerrieHarvest = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean noSweetBerrieHarvest_msg = false;
     public boolean noGlowBerrieHarvest = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean noGlowBerrieHarvest_msg = false;
     public boolean onlyMatureCropHarvest = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean onlyMatureCropHarvest_msg = false;
     public boolean noCake = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean noCake_msg = false;
     public boolean noScraping = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean noScraping_msg = false;
     public boolean noDeWax = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean noDeWax_msg = false;
     public boolean lowDurabilityProtection = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean lowDurabilityProtection_msg = false;
+    public int lowDurabilityProtectionRange = 5;
     public boolean preventVillagerPunch = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean preventVillagerPunch_msg = false;
     public boolean noZombifiedPiglinPunch = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean noZombifiedPiglinPunch_msg = false;
     public boolean noTrappedChestOpening = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean noTrappedChestOpening_msg = false;
     public boolean preventBuddingAmethystBreaking = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean preventBuddingAmethystBreaking_msg = false;
     public boolean preventRocketUse = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean preventRocketUse_msg = false;
+    public boolean rocketInOffhand = true;
+    public boolean rocketInMainHand = false;
     public boolean preventEndCrystalHitting = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean preventEndCrystalHitting_msg = false;
     public boolean preventBedUse = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean preventBedUse_msg = false;
     public boolean preventCoralPlace = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean preventCoralPlace_msg = false;
     public boolean preventWaterPlace = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean preventWaterPlace_msg = false;
     public boolean preventStemBreaking = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean preventStemBreaking_msg = false;
     public boolean preventItemFrameBreaking = false;
-    @ConfigEntry.Gui.Tooltip
+    public boolean preventItemFrameBreaking_msg = false;
     public boolean preventPaintingBreaking = false;
+    public boolean preventPaintingBreaking_msg = false;
+    public boolean preventToolDropping = false;
+    public boolean preventToolDropping_msg = false;
+    public boolean preventGlassBreaking = false;
+    public boolean preventGlassBreaking_msg = false;
+    public boolean preventRenamedBlockPlacing = false;
+    public boolean preventRenamedBlockPlacing_msg = false;
+    public boolean preventRenamedItemEating = false;
+    public boolean preventRenamedItemEating_msg = false;
 
     // Configs that don't have a usage msg
-    @ConfigEntry.Gui.Tooltip
     public boolean hideShield = false;
-    @ConfigEntry.Gui.Tooltip
     public boolean hideTotem = false;
-
-    // Unstable Modules
-    @ConfigEntry.Gui.PrefixText
-    @ConfigEntry.Gui.Tooltip
-    public boolean preventRenamedBlockPlacing = false;
-    @ConfigEntry.Gui.Tooltip
-    public boolean preventRenamedItemEating = false;
 }
