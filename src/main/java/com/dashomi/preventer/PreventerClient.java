@@ -14,13 +14,11 @@ import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.event.player.UseItemCallback;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @Environment(EnvType.CLIENT)
 public class PreventerClient implements ClientModInitializer {
     public static final String MOD_ID = "preventer";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    //public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static PreventerConfig config;
 
     @Override
