@@ -201,6 +201,15 @@ public class UseBlockModule {
                 }
             }
 
+            if (PreventerClient.config.preventNoteBlockEditing) {
+                if (targetBlock instanceof NoteBlock) {
+                    if(PreventerClient.config.preventNoteBlockEditing_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventNoteBlockEditing.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

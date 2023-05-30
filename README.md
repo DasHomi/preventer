@@ -59,13 +59,14 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
   - _Prevents you from placing renamed blocks_
 - Prevent renamed food item use
   - _Prevents you from eating renamed food items_
+- Prevent note block editing
+  - _Prevents you from changing the pitch of note blocks_
 
 ## Planed Features
 - **_Feature requests welcome_**
 - Prevent Plant Breaking
 - Prevent Block Under Player Breaking
 - Hotkeys
-- Prevent Note Block Editing
 
 ## Compatibility
 - Other versions and mod loaders:

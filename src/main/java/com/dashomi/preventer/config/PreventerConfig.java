@@ -75,7 +75,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventRenamedBlockPlacing_msg = false;
     public boolean preventRenamedItemEating = false;
     public boolean preventRenamedItemEating_msg = false;
-
+    public boolean preventNoteBlockEditing = false;
+    public boolean preventNoteBlockEditing_msg = false;
     // Configs that don't have a usage msg
     public boolean hideShield = false;
     public boolean hideTotem = false;

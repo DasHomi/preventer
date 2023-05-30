@@ -223,6 +223,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventRenamedItemEating = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventNoteBlockEditing"),
+                                config.preventNoteBlockEditing)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventNoteBlockEditing"))
+                        .setSaveConsumer(value -> config.preventNoteBlockEditing = value)
+                        .build())
+
                 //no usage msg
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.hideShield"),
@@ -450,7 +458,14 @@ public class  CreateModConfig {
                                 config.preventRenamedItemEating_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventRenamedItemEating_msg = value)
-                        .build());
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                        Text.translatable("option.preventer.preventNoteBlockEditing"),
+                        config.preventNoteBlockEditing_msg)
+                .setDefaultValue(false)
+                .setSaveConsumer(value -> config.preventNoteBlockEditing_msg = value)
+                .build());
 
         return builder
                 .setSavingRunnable(PreventerConfig::save)

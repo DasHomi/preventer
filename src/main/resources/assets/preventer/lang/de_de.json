@@ -111,8 +111,12 @@
   "config.preventer.preventToolDropping.text": "§4Werkzeug fallenlassen wurde verhindert§4",
 
   "option.preventer.preventGlassBreaking": "Verhindere Glas Zerstörung",
-  "tooltip.preventer.preventGlassBreaking": "Verhindert das Zerstören von Glasblöcken und Glasscheiben"
+  "tooltip.preventer.preventGlassBreaking": "Verhindert das Zerstören von Glasblöcken und Glasscheiben",
   "config.preventer.preventGlassBreaking.text": "§4Glas zerstören wurde verhindert§4",
+
+  "option.preventer.preventNoteBlockEditing": "Verhindere das Bearbeiten von Notenblöcken",
+  "tooltip.preventer.preventNoteBlockEditing": "Verhindert das Bearbeiten der Noten von Notenblöcken",
+  "config.preventer.preventNoteBlockEditing.text": "§4Noteblock bearbeiten verhindert§4",
 
 
   "option.preventer.hideTotem": "Versteckt das Totem",
