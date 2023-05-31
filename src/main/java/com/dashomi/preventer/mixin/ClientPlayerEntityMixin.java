@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class ClientPlayerEntityMixin {
     @Inject(method = "dropSelectedItem(Z)Z", at = @At(value = "HEAD"), cancellable = true)
     private void stopDropSelectedItem(boolean entireStack, CallbackInfoReturnable<Boolean> cir) {
-        if (!PreventerClient.config.overrideKeyPressed) {
+        if (!PreventerClient.overrideKeyPressed) {
             ClientPlayerEntity clientPlayerEntity = (ClientPlayerEntity) (Object) this;
             ItemStack itemStack = clientPlayerEntity.getMainHandStack();
 

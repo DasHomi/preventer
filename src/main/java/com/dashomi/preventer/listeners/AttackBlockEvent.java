@@ -1,4 +1,4 @@
-package com.dashomi.preventer.modules;
+package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.block.*;
@@ -13,9 +13,9 @@ import net.minecraft.block.GlassBlock;
 
 import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityProtection;
 
-public class BreakBlockModule {
-    public static ActionResult checkBlockBreak(PlayerEntity playerEntity, World world, Hand hand, BlockPos pos, Direction direction) {
-        if (!PreventerClient.config.overrideKeyPressed) {
+public class AttackBlockEvent {
+    public static ActionResult attackBlockListener(PlayerEntity playerEntity, World world, Hand hand, BlockPos pos, Direction direction) {
+        if (!PreventerClient.overrideKeyPressed) {
             Block targetBlock = world.getBlockState(pos).getBlock();
             if (PreventerClient.config.onlyMatureCropHarvest) {
                 if (targetBlock instanceof CropBlock) {

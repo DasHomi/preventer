@@ -1,4 +1,4 @@
-package com.dashomi.preventer.modules;
+package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.entity.Entity;
@@ -17,9 +17,9 @@ import org.jetbrains.annotations.Nullable;
 
 import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityProtection;
 
-public class AttackEntityModule {
-    public static ActionResult checkEntityAttack(PlayerEntity playerEntity, World world, Hand hand, Entity entity, @Nullable EntityHitResult result) {
-        if (!PreventerClient.config.overrideKeyPressed) {
+public class AttackEntityEvent {
+    public static ActionResult attackEntityListener(PlayerEntity playerEntity, World world, Hand hand, Entity entity, @Nullable EntityHitResult result) {
+        if (!PreventerClient.overrideKeyPressed) {
             if (PreventerClient.config.preventVillagerPunch) {
                 if (entity instanceof VillagerEntity) {
                     if (PreventerClient.config.preventVillagerPunch_msg) {

@@ -1,4 +1,4 @@
-package com.dashomi.preventer.modules;
+package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.block.*;
@@ -17,9 +17,9 @@ import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityPr
 import static net.minecraft.block.CaveVines.BERRIES;
 import static net.minecraft.block.SweetBerryBushBlock.AGE;
 
-public class UseBlockModule {
-    public static ActionResult checkBlockUse(PlayerEntity playerEntity, World world, Hand hand, BlockHitResult blockHitResult) {
-        if (!PreventerClient.config.overrideKeyPressed) {
+public class UseBlockEvent {
+    public static ActionResult useBlockListener(PlayerEntity playerEntity, World world, Hand hand, BlockHitResult blockHitResult) {
+        if (!PreventerClient.overrideKeyPressed) {
             BlockState targetBlockState = world.getBlockState(blockHitResult.getBlockPos());
             Block targetBlock = targetBlockState.getBlock();
             Item handItem = playerEntity.getStackInHand(hand).getItem();
