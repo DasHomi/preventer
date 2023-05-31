@@ -11,6 +11,7 @@
   "key.preventer.category": "Preventer",
   "key.preventer.configKey": "Konfigurationsmenü-Taste",
 
+  "text.preventer.welcomeMessage": "Standardmäßig sind keine Preventer Module aktiviert, um die Module zu aktivieren, die du benutzen willst, drücke einfach die I Taste, um das Konfigurationsmenü zu öffnen. Um temporär alle Module zu deaktivieren, drücke einfach die R Taste.\n\nViel Spaß!",
   "text.preventer.moduleUseInfo": "Unten kannst du die Modulbenachrichtigungen einschalten, die angezeigt werden, wenn ein Modul eine Aktion verhindert hat",
   "text.preventer.experimentalFeatures": "§c↓ Experimentelle Module ↓§c",
 

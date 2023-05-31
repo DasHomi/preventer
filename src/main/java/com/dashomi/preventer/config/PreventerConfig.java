@@ -11,6 +11,7 @@ public class PreventerConfig implements ConfigData {
     }
 
     public boolean overrideKeyPressed = false;
+    public boolean welcomeMessage = true;
 
     public static void save() {
         AutoConfig.getConfigHolder(PreventerConfig.class).save();
