@@ -66,7 +66,6 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
 - **_Feature requests welcome_**
 - Prevent Plant Breaking
 - Prevent Block Under Player Breaking
-- Hotkeys
 
 ## Compatibility
 - Other versions and mod loaders:
