@@ -119,6 +119,14 @@
   "tooltip.preventer.preventNoteBlockEditing": "Prevents you from changing the pitch of note blocks",
   "config.preventer.preventNoteBlockEditing.text": "§4Note block editing prevented§4",
 
+  "option.preventer.preventIronGolemAttacking": "Prevent iron golem hitting",
+  "tooltip.preventer.preventIronGolemAttacking": "Prevents you from attacking iron golems",
+  "config.preventer.preventIronGolemAttacking.text": "§4Iron golem hitting prevented§4",
+
+  "option.preventer.preventSnowGolemAttacking": "Prevent snow golem hitting",
+  "tooltip.preventer.preventSnowGolemAttacking": "Prevents you from attacking snow golems",
+  "config.preventer.preventSnowGolemAttacking.text": "§4Snow golem hitting prevented§4",
+
 
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",

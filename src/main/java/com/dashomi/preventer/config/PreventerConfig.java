@@ -76,6 +76,10 @@ public class PreventerConfig implements ConfigData {
     public boolean preventRenamedItemEating_msg = false;
     public boolean preventNoteBlockEditing = false;
     public boolean preventNoteBlockEditing_msg = false;
+    public boolean preventIronGolemAttacking = false;
+    public boolean preventIronGolemAttacking_msg = false;
+    public boolean preventSnowGolemAttacking = false;
+    public boolean preventSnowGolemAttacking_msg = false;
     // Configs that don't have a usage msg
     public boolean hideShield = false;
     public boolean hideTotem = false;

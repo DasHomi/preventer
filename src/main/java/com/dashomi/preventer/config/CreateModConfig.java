@@ -231,6 +231,22 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventNoteBlockEditing = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventIronGolemAttacking"),
+                                config.preventIronGolemAttacking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventIronGolemAttacking"))
+                        .setSaveConsumer(value -> config.preventIronGolemAttacking = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSnowGolemAttacking"),
+                                config.preventSnowGolemAttacking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventSnowGolemAttacking"))
+                        .setSaveConsumer(value -> config.preventSnowGolemAttacking = value)
+                        .build())
+
                 //no usage msg
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.hideShield"),
@@ -465,7 +481,21 @@ public class  CreateModConfig {
                         config.preventNoteBlockEditing_msg)
                 .setDefaultValue(false)
                 .setSaveConsumer(value -> config.preventNoteBlockEditing_msg = value)
-                .build());
+                .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventIronGolemAttacking"),
+                                config.preventIronGolemAttacking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventIronGolemAttacking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSnowGolemAttacking"),
+                                config.preventSnowGolemAttacking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventSnowGolemAttacking_msg = value)
+                        .build());
 
         return builder
                 .setSavingRunnable(PreventerConfig::save)

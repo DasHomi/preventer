@@ -115,9 +115,17 @@
   "tooltip.preventer.preventGlassBreaking": "Verhindert das Zerstören von Glasblöcken und Glasscheiben",
   "config.preventer.preventGlassBreaking.text": "§4Glas zerstören wurde verhindert§4",
 
-  "option.preventer.preventNoteBlockEditing": "Verhindere das Bearbeiten von Notenblöcken",
+  "option.preventer.preventNoteBlockEditing": "Verhindere Notenlock bearbeiten",
   "tooltip.preventer.preventNoteBlockEditing": "Verhindert das Bearbeiten der Noten von Notenblöcken",
   "config.preventer.preventNoteBlockEditing.text": "§4Noteblock bearbeiten verhindert§4",
+
+  "option.preventer.preventIronGolemAttacking": "Verhindere Eisengolem angreifen",
+  "tooltip.preventer.preventIronGolemAttacking": "Verhindert das du Eisengolems angreifst",
+  "config.preventer.preventIronGolemAttacking.text": "§4Eisengolem angreifen verhindert§4",
+
+  "option.preventer.preventSnowGolemAttacking": "Verhindere Schneegolem angreifen",
+  "tooltip.preventer.preventSnowGolemAttacking": "Verhindert das du Schneegolems angreifst",
+  "config.preventer.preventSnowGolemAttacking.text": "§4Schneegolem angreifen verhindert§4",
 
 
   "option.preventer.hideTotem": "Versteckt das Totem",

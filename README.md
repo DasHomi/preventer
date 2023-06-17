@@ -61,6 +61,10 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
   - _Prevents you from eating renamed food items_
 - Prevent note block editing
   - _Prevents you from changing the pitch of note blocks_
+- Prevent iron golem hitting
+  - _Prevents you from attacking iron golems_
+- Prevent snow golem hitting
+  - _Prevents you from attacking snow golems_
 
 ## Planed Features
 - **_Feature requests welcome_**

@@ -65,6 +65,24 @@ public class AttackEntityEvent {
                 }
             }
 
+            if (PreventerClient.config.preventIronGolemAttacking) {
+                if (entity instanceof net.minecraft.entity.passive.IronGolemEntity) {
+                    if (PreventerClient.config.preventIronGolemAttacking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventIronGolemAttacking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventSnowGolemAttacking) {
+                if (entity instanceof net.minecraft.entity.passive.SnowGolemEntity) {
+                    if (PreventerClient.config.preventSnowGolemAttacking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventSnowGolemAttacking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 
