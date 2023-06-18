@@ -127,6 +127,14 @@
   "tooltip.preventer.preventSnowGolemAttacking": "Verhindert das du Schneegolems angreifst",
   "config.preventer.preventSnowGolemAttacking.text": "§4Schneegolem angreifen verhindert§4",
 
+  "option.preventer.preventNamedEntityAttacking": "Verhindere benannte Entitäten angreifen",
+  "tooltip.preventer.preventNamedEntityAttacking": "Verhindert das du Entitäten mit einem Namensschild angreifst",
+  "config.preventer.preventNamedEntityAttacking.text": "§4Benannte Emitäten angreifen verhindert§4",
+
+  "option.preventer.preventTamedEntityAttacking": "Verhindere gezähmte Entitäten angreifen",
+  "tooltip.preventer.preventTamedEntityAttacking": "Verhindert das du Entitäten angreifst die von einem Spieler gezähmt wurden (z.B. Hunde, Katzen, ...)",
+  "config.preventer.preventTamedEntityAttacking.text": "§4Gezähmte Entitäten angreifen verhindert§4",
+
 
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",

@@ -65,6 +65,10 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
   - _Prevents you from attacking iron golems_
 - Prevent snow golem hitting
   - _Prevents you from attacking snow golems_
+- Prevent named entity hitting
+  - _Prevents you from attacking entities with a custom name_
+- Prevent tamed entity hitting
+  - _Prevents you from attacking entities that have been tamed by a player (e.g. dogs, cats, ...)_
 
 ## Planed Features
 - **_Feature requests welcome_**

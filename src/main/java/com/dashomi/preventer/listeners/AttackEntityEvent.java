@@ -6,6 +6,7 @@ import net.minecraft.entity.decoration.EndCrystalEntity;
 import net.minecraft.entity.decoration.ItemFrameEntity;
 import net.minecraft.entity.decoration.painting.PaintingEntity;
 import net.minecraft.entity.mob.ZombifiedPiglinEntity;
+import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
@@ -80,6 +81,26 @@ public class AttackEntityEvent {
                         playerEntity.sendMessage(Text.translatable("config.preventer.preventSnowGolemAttacking.text"), true);
                     }
                     return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventNamedEntityAttacking) {
+                if (entity.hasCustomName()) {
+                    if (PreventerClient.config.preventNamedEntityAttacking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventNamedEntityAttacking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventTamedEntityAttacking) {
+                if (entity instanceof TameableEntity) {
+                    if (((TameableEntity) entity).isTamed()) {
+                        if (PreventerClient.config.preventTamedEntityAttacking_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventTamedEntityAttacking.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
                 }
             }
 

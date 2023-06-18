@@ -247,6 +247,22 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventSnowGolemAttacking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventNamedEntityAttacking"),
+                                config.preventNamedEntityAttacking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventNamedEntityAttacking"))
+                        .setSaveConsumer(value -> config.preventNamedEntityAttacking = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventTamedEntityAttacking"),
+                                config.preventTamedEntityAttacking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventTamedEntityAttacking"))
+                        .setSaveConsumer(value -> config.preventTamedEntityAttacking = value)
+                        .build())
+
                 //no usage msg
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.hideShield"),
@@ -495,7 +511,21 @@ public class  CreateModConfig {
                                 config.preventSnowGolemAttacking_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventSnowGolemAttacking_msg = value)
-                        .build());
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventNamedEntityAttacking"),
+                                config.preventNamedEntityAttacking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventNamedEntityAttacking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                        Text.translatable("option.preventer.preventTamedEntityAttacking"),
+                        config.preventTamedEntityAttacking_msg)
+                .setDefaultValue(false)
+                .setSaveConsumer(value -> config.preventTamedEntityAttacking_msg = value)
+                .build());
 
         return builder
                 .setSavingRunnable(PreventerConfig::save)

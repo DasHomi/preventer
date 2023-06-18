@@ -127,6 +127,14 @@
   "tooltip.preventer.preventSnowGolemAttacking": "Prevents you from attacking snow golems",
   "config.preventer.preventSnowGolemAttacking.text": "§4Snow golem hitting prevented§4",
 
+  "option.preventer.preventNamedEntityAttacking": "Prevent named entity hitting",
+  "tooltip.preventer.preventNamedEntityAttacking": "Prevents you from attacking entities with a custom name",
+  "config.preventer.preventNamedEntityAttacking.text": "§4Named entity hitting prevented§4",
+
+  "option.preventer.preventTamedEntityAttacking": "Prevent tamed entity hitting",
+  "tooltip.preventer.preventTamedEntityAttacking": "Prevents you from attacking entities that have\nbeen tamed by a player (e.g. dogs, cats, ...)",
+  "config.preventer.preventTamedEntityAttacking.text": "§4Tamed entity hitting prevented§4",
+
 
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
