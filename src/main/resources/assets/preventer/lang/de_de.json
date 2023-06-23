@@ -127,13 +127,21 @@
   "tooltip.preventer.preventSnowGolemAttacking": "Verhindert das du Schneegolems angreifst",
   "config.preventer.preventSnowGolemAttacking.text": "§4Schneegolem angreifen verhindert§4",
 
-  "option.preventer.preventNamedEntityAttacking": "Verhindere benannte Entitäten angreifen",
-  "tooltip.preventer.preventNamedEntityAttacking": "Verhindert das du Entitäten mit einem Namensschild angreifst",
-  "config.preventer.preventNamedEntityAttacking.text": "§4Benannte Emitäten angreifen verhindert§4",
+  "option.preventer.preventNamedMobAttacking": "Verhindere benannte Kreaturen angreifen",
+  "tooltip.preventer.preventNamedMobAttacking": "Verhindert das du Kreaturen mit einem Namensschild angreifst",
+  "config.preventer.preventNamedMobAttacking.text": "§4Benannte Kreaturen angreifen verhindert§4",
 
-  "option.preventer.preventTamedEntityAttacking": "Verhindere gezähmte Entitäten angreifen",
-  "tooltip.preventer.preventTamedEntityAttacking": "Verhindert das du Entitäten angreifst die von einem Spieler gezähmt wurden (z.B. Hunde, Katzen, ...)",
-  "config.preventer.preventTamedEntityAttacking.text": "§4Gezähmte Entitäten angreifen verhindert§4",
+  "option.preventer.preventTamedMobAttacking": "Verhindere gezähmte Kreaturen angreifen",
+  "tooltip.preventer.preventTamedMobAttacking": "Verhindert das du Kreaturen angreifst die von einem Spieler gezähmt wurden (z.B. Hunde, Katzen, ...)",
+  "config.preventer.preventTamedMobAttacking.text": "§4Gezähmte Kreaturen angreifen verhindert§4",
+
+  "option.preventer.preventRareMobAttacking": "Verindere wertvolle Kreaturen angreifen",
+  "tooltip.preventer.preventRareMobAttacking": "Verhindert das du seltene und wertvolle Kreaturen angreifst (Papagei, Axolotl, Hilfsgeist)",
+  "config.preventer.preventRareMobAttacking.text": "§4Wertvolle Kreaturen angreifen verhindert§4",
+
+  "option.preventer.preventHorseAttacking": "Verhindere Pferd angreifen",
+  "tooltip.preventer.preventHorseAttacking": "Verhindert das du Pferde und ähnliche Tiere angreifst\n(Pferde (auch Skelett und Zombiepferde), Esel, Maultiere, Lamas, Dromedare)",
+  "config.preventer.preventHorseAttacking.text": "§4Pferd angreifen verhindert§4",
 
 
   "option.preventer.hideTotem": "Versteckt das Totem",

@@ -80,10 +80,14 @@ public class PreventerConfig implements ConfigData {
     public boolean preventIronGolemAttacking_msg = false;
     public boolean preventSnowGolemAttacking = false;
     public boolean preventSnowGolemAttacking_msg = false;
-    public boolean preventNamedEntityAttacking = false;
-    public boolean preventNamedEntityAttacking_msg = false;
-    public boolean preventTamedEntityAttacking = false;
-    public boolean preventTamedEntityAttacking_msg = false;
+    public boolean preventNamedMobAttacking = false;
+    public boolean preventNamedMobAttacking_msg = false;
+    public boolean preventTamedMobAttacking = false;
+    public boolean preventTamedMobAttacking_msg = false;
+    public boolean preventRareMobAttacking = false;
+    public boolean preventRareMobAttacking_msg = false;
+    public boolean preventHorseAttacking = false;
+    public boolean preventHorseAttacking_msg = false;
     // Configs that don't have a usage msg
     public boolean hideShield = false;
     public boolean hideTotem = false;

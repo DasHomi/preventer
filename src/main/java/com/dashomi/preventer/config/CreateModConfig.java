@@ -248,19 +248,35 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventNamedEntityAttacking"),
-                                config.preventNamedEntityAttacking)
+                                Text.translatable("option.preventer.preventNamedMobAttacking"),
+                                config.preventNamedMobAttacking)
                         .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventNamedEntityAttacking"))
-                        .setSaveConsumer(value -> config.preventNamedEntityAttacking = value)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventNamedMobAttacking"))
+                        .setSaveConsumer(value -> config.preventNamedMobAttacking = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventTamedEntityAttacking"),
-                                config.preventTamedEntityAttacking)
+                                Text.translatable("option.preventer.preventTamedMobAttacking"),
+                                config.preventTamedMobAttacking)
                         .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventTamedEntityAttacking"))
-                        .setSaveConsumer(value -> config.preventTamedEntityAttacking = value)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventTamedMobAttacking"))
+                        .setSaveConsumer(value -> config.preventTamedMobAttacking = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventRareMobAttacking"),
+                                config.preventRareMobAttacking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventRareMobAttacking"))
+                        .setSaveConsumer(value -> config.preventRareMobAttacking = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventHorseAttacking"),
+                                config.preventHorseAttacking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventHorseAttacking"))
+                        .setSaveConsumer(value -> config.preventHorseAttacking = value)
                         .build())
 
                 //no usage msg
@@ -514,18 +530,32 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventNamedEntityAttacking"),
-                                config.preventNamedEntityAttacking_msg)
+                                Text.translatable("option.preventer.preventNamedMobAttacking"),
+                                config.preventNamedMobAttacking_msg)
                         .setDefaultValue(false)
-                        .setSaveConsumer(value -> config.preventNamedEntityAttacking_msg = value)
+                        .setSaveConsumer(value -> config.preventNamedMobAttacking_msg = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                        Text.translatable("option.preventer.preventTamedEntityAttacking"),
-                        config.preventTamedEntityAttacking_msg)
-                .setDefaultValue(false)
-                .setSaveConsumer(value -> config.preventTamedEntityAttacking_msg = value)
-                .build());
+                                Text.translatable("option.preventer.preventTamedMobAttacking"),
+                                config.preventTamedMobAttacking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventTamedMobAttacking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventRareMobAttacking"),
+                                config.preventRareMobAttacking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventRareMobAttacking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventHorseAttacking"),
+                                config.preventHorseAttacking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventHorseAttacking_msg = value)
+                        .build());
 
         return builder
                 .setSavingRunnable(PreventerConfig::save)

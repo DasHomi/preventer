@@ -6,8 +6,7 @@ import net.minecraft.entity.decoration.EndCrystalEntity;
 import net.minecraft.entity.decoration.ItemFrameEntity;
 import net.minecraft.entity.decoration.painting.PaintingEntity;
 import net.minecraft.entity.mob.ZombifiedPiglinEntity;
-import net.minecraft.entity.passive.TameableEntity;
-import net.minecraft.entity.passive.VillagerEntity;
+import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -84,23 +83,41 @@ public class AttackEntityEvent {
                 }
             }
 
-            if (PreventerClient.config.preventNamedEntityAttacking) {
+            if (PreventerClient.config.preventNamedMobAttacking) {
                 if (entity.hasCustomName()) {
-                    if (PreventerClient.config.preventNamedEntityAttacking_msg) {
-                        playerEntity.sendMessage(Text.translatable("config.preventer.preventNamedEntityAttacking.text"), true);
+                    if (PreventerClient.config.preventNamedMobAttacking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventNamedMobAttacking.text"), true);
                     }
                     return ActionResult.FAIL;
                 }
             }
 
-            if (PreventerClient.config.preventTamedEntityAttacking) {
+            if (PreventerClient.config.preventTamedMobAttacking) {
                 if (entity instanceof TameableEntity) {
                     if (((TameableEntity) entity).isTamed()) {
-                        if (PreventerClient.config.preventTamedEntityAttacking_msg) {
-                            playerEntity.sendMessage(Text.translatable("config.preventer.preventTamedEntityAttacking.text"), true);
+                        if (PreventerClient.config.preventTamedMobAttacking_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventTamedMobAttacking.text"), true);
                         }
                         return ActionResult.FAIL;
                     }
+                }
+            }
+
+            if (PreventerClient.config.preventRareMobAttacking) {
+                if (entity instanceof AxolotlEntity || entity instanceof ParrotEntity || entity instanceof AllayEntity) {
+                    if (PreventerClient.config.preventRareMobAttacking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventRareMobAttacking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventHorseAttacking) {
+                if (entity instanceof AbstractHorseEntity) {
+                    if (PreventerClient.config.preventHorseAttacking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventHorseAttacking.text"), true);
+                    }
+                    return ActionResult.FAIL;
                 }
             }
 
