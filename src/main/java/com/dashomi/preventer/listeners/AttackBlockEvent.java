@@ -55,6 +55,22 @@ public class AttackBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventSuspiciousBlockBreaking) {
+                if (targetBlock instanceof BrushableBlock) {
+                    if (PreventerClient.config.preventSuspiciousBlockBreaking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventSuspiciousBlockBreaking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                } else if (PreventerClient.config.enhancedSuspiciousBlockBreakingPrevention) {
+                    if (world.getBlockState(pos.offset(Direction.Axis.Y, 1)).getBlock() instanceof BrushableBlock) {
+                        if (PreventerClient.config.preventSuspiciousBlockBreaking_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.enhancedSuspiciousBlockBreakingPrevention.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

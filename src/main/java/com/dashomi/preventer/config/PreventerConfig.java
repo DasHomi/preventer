@@ -89,6 +89,9 @@ public class PreventerConfig implements ConfigData {
     public boolean preventNeutralMobAttacking = false;
     public boolean preventNeutralMobAttacking_msg = false;
     public boolean aggroMobOverride = false;
+    public boolean preventSuspiciousBlockBreaking = false;
+    public boolean preventSuspiciousBlockBreaking_msg = false;
+    public boolean enhancedSuspiciousBlockBreakingPrevention = false;
 
     // Configs that don't have a usage msg
     public boolean hideShield = false;

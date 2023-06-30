@@ -279,6 +279,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventNeutralMobAttacking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSuspiciousBlockBreaking"),
+                                config.preventSuspiciousBlockBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventSuspiciousBlockBreaking"))
+                        .setSaveConsumer(value -> config.preventSuspiciousBlockBreaking = value)
+                        .build())
+
                 //no usage msg
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.hideShield"),
@@ -318,6 +326,14 @@ public class  CreateModConfig {
                                 config.rocketInMainHand)
                         .setDefaultValue(true)
                         .setSaveConsumer(value -> config.rocketInMainHand = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("config.preventer.enhancedSuspiciousBlockBreakingPrevention"),
+                                config.enhancedSuspiciousBlockBreakingPrevention)
+                        .setDefaultValue(true)
+                        .setTooltip(Text.translatable("tooltip.preventer.enhancedSuspiciousBlockBreakingPrevention"))
+                        .setSaveConsumer(value -> config.enhancedSuspiciousBlockBreakingPrevention = value)
                         .build());
 
                 //.addEntry(entryBuilder.startBooleanToggle(
@@ -563,6 +579,13 @@ public class  CreateModConfig {
                                 config.preventNeutralMobAttacking_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventNeutralMobAttacking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSuspiciousBlockBreaking"),
+                                config.preventSuspiciousBlockBreaking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventSuspiciousBlockBreaking_msg = value)
                         .build());
 
         return builder

@@ -61,14 +61,20 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
   - _Prevents you from eating renamed food items_
 - Prevent note block editing
   - _Prevents you from changing the pitch of note blocks_
-- Prevent iron golem hitting
-  - _Prevents you from attacking iron golems_
-- Prevent snow golem hitting
-  - _Prevents you from attacking snow golems_
-- Prevent named entity hitting
-  - _Prevents you from attacking entities with a custom name_
-- Prevent tamed entity hitting
-  - _Prevents you from attacking entities that have been tamed by a player (e.g. dogs, cats, ...)_
+- Prevent golem hitting
+  - _Prevents you from attacking iron & snow golems_
+- Prevent named mob hitting
+  - _Prevents you from attacking mobs with a custom name_
+- Prevent tamed animal hitting
+  - _Prevents you from attacking animals that have been tamed by a player (e.g. dogs, cats, ...)_
+- Prevent rare mob hitting
+  - _Prevents you from attacking rare mobs (parrots, axolotls, allays)_
+- Prevent horse hitting
+  - _Prevents you from attacking horses and similar creatures (Horses (including Skeleton & Zombie Horses), Donkeys, Mules, Llamas, Camels)_
+- Prevent neutral mob hitting
+  - _Prevents you from neutral mobs (as defined in the minecraft wiki)_
+- Prevent suspicious block breaking
+  - _Prevents you from breaking suspicious sand and gravel_
 
 ## Planed Features
 - **_Feature requests welcome_**
