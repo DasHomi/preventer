@@ -119,13 +119,9 @@
   "tooltip.preventer.preventNoteBlockEditing": "Verhindert das Bearbeiten der Noten von Notenblöcken",
   "config.preventer.preventNoteBlockEditing.text": "§4Noteblock bearbeiten verhindert§4",
 
-  "option.preventer.preventIronGolemAttacking": "Verhindere Eisengolem angreifen",
-  "tooltip.preventer.preventIronGolemAttacking": "Verhindert das du Eisengolems angreifst",
-  "config.preventer.preventIronGolemAttacking.text": "§4Eisengolem angreifen verhindert§4",
-
-  "option.preventer.preventSnowGolemAttacking": "Verhindere Schneegolem angreifen",
-  "tooltip.preventer.preventSnowGolemAttacking": "Verhindert das du Schneegolems angreifst",
-  "config.preventer.preventSnowGolemAttacking.text": "§4Schneegolem angreifen verhindert§4",
+  "option.preventer.preventGolemAttacking": "Verhindere Golem angreifen",
+  "tooltip.preventer.preventGolemAttacking": "Verhindert das du Eisen und Schneegolems angreifst",
+  "config.preventer.preventGolemAttacking.text": "§4Golem angreifen verhindert§4",
 
   "option.preventer.preventNamedMobAttacking": "Verhindere benannte Kreaturen angreifen",
   "tooltip.preventer.preventNamedMobAttacking": "Verhindert das du Kreaturen mit einem Namensschild angreifst",
@@ -142,6 +138,10 @@
   "option.preventer.preventHorseAttacking": "Verhindere Pferd angreifen",
   "tooltip.preventer.preventHorseAttacking": "Verhindert das du Pferde und ähnliche Tiere angreifst\n(Pferde (auch Skelett und Zombiepferde), Esel, Maultiere, Lamas, Dromedare)",
   "config.preventer.preventHorseAttacking.text": "§4Pferd angreifen verhindert§4",
+
+  "option.preventer.preventNeutralMobAttacking": "Verhindere neutrale Kreaturen angreifen",
+  "tooltip.preventer.preventNeutralMobAttacking": "Verhinder das du neutrale Kreaturen angreifst (alle laut wiki)",
+  "config.preventer.preventNeutralMobAttacking.text": "§4Neutrale Kreaturen angreifen verhindert§4",
 
 
   "option.preventer.hideTotem": "Versteckt das Totem",

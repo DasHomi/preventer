@@ -76,10 +76,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventRenamedItemEating_msg = false;
     public boolean preventNoteBlockEditing = false;
     public boolean preventNoteBlockEditing_msg = false;
-    public boolean preventIronGolemAttacking = false;
-    public boolean preventIronGolemAttacking_msg = false;
-    public boolean preventSnowGolemAttacking = false;
-    public boolean preventSnowGolemAttacking_msg = false;
+    public boolean preventGolemAttacking = false;
+    public boolean preventGolemAttacking_msg = false;
     public boolean preventNamedMobAttacking = false;
     public boolean preventNamedMobAttacking_msg = false;
     public boolean preventTamedMobAttacking = false;
@@ -88,6 +86,10 @@ public class PreventerConfig implements ConfigData {
     public boolean preventRareMobAttacking_msg = false;
     public boolean preventHorseAttacking = false;
     public boolean preventHorseAttacking_msg = false;
+    public boolean preventNeutralMobAttacking = false;
+    public boolean preventNeutralMobAttacking_msg = false;
+    public boolean aggroMobOverride = false;
+
     // Configs that don't have a usage msg
     public boolean hideShield = false;
     public boolean hideTotem = false;

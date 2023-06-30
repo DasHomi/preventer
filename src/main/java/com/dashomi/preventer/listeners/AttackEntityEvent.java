@@ -5,7 +5,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.decoration.EndCrystalEntity;
 import net.minecraft.entity.decoration.ItemFrameEntity;
 import net.minecraft.entity.decoration.painting.PaintingEntity;
-import net.minecraft.entity.mob.ZombifiedPiglinEntity;
+import net.minecraft.entity.mob.*;
 import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
@@ -35,6 +35,7 @@ public class AttackEntityEvent {
                         playerEntity.sendMessage(Text.translatable("config.preventer.noZombifiedPiglinPunch.text"), true);
                     }
                     return ActionResult.FAIL;
+
                 }
             }
 
@@ -65,19 +66,10 @@ public class AttackEntityEvent {
                 }
             }
 
-            if (PreventerClient.config.preventIronGolemAttacking) {
-                if (entity instanceof net.minecraft.entity.passive.IronGolemEntity) {
-                    if (PreventerClient.config.preventIronGolemAttacking_msg) {
-                        playerEntity.sendMessage(Text.translatable("config.preventer.preventIronGolemAttacking.text"), true);
-                    }
-                    return ActionResult.FAIL;
-                }
-            }
-
-            if (PreventerClient.config.preventSnowGolemAttacking) {
-                if (entity instanceof net.minecraft.entity.passive.SnowGolemEntity) {
-                    if (PreventerClient.config.preventSnowGolemAttacking_msg) {
-                        playerEntity.sendMessage(Text.translatable("config.preventer.preventSnowGolemAttacking.text"), true);
+            if (PreventerClient.config.preventGolemAttacking) {
+                if (entity instanceof GolemEntity) {
+                    if (PreventerClient.config.preventGolemAttacking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventGolemAttacking.text"), true);
                     }
                     return ActionResult.FAIL;
                 }
@@ -121,9 +113,36 @@ public class AttackEntityEvent {
                 }
             }
 
+            if (PreventerClient.config.preventNeutralMobAttacking) {
+                if (isNeutralMob(entity)) {
+                    if (PreventerClient.config.preventNeutralMobAttacking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventNeutralMobAttacking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 
         return ActionResult.PASS;
+    }
+
+    private static boolean isNeutralMob(Entity entity) {
+        return (
+                    entity instanceof BeeEntity ||
+                    entity instanceof SpiderEntity ||
+                    entity instanceof DolphinEntity ||
+                    entity instanceof EndermanEntity ||
+                    entity instanceof GoatEntity ||
+                    entity instanceof IronGolemEntity ||
+                    entity instanceof LlamaEntity ||
+                    entity instanceof PandaEntity ||
+                    entity instanceof PiglinEntity ||
+                    entity instanceof PolarBearEntity ||
+                    entity instanceof WolfEntity ||
+                    entity instanceof ZombifiedPiglinEntity
+                );
     }
 }

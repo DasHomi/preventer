@@ -119,21 +119,17 @@
   "tooltip.preventer.preventNoteBlockEditing": "Prevents you from changing the pitch of note blocks",
   "config.preventer.preventNoteBlockEditing.text": "§4Note block editing prevented§4",
 
-  "option.preventer.preventIronGolemAttacking": "Prevent iron golem hitting",
-  "tooltip.preventer.preventIronGolemAttacking": "Prevents you from attacking iron golems",
-  "config.preventer.preventIronGolemAttacking.text": "§4Iron golem hitting prevented§4",
-
-  "option.preventer.preventSnowGolemAttacking": "Prevent snow golem hitting",
-  "tooltip.preventer.preventSnowGolemAttacking": "Prevents you from attacking snow golems",
-  "config.preventer.preventSnowGolemAttacking.text": "§4Snow golem hitting prevented§4",
+  "option.preventer.preventGolemAttacking": "Prevent golem hitting",
+  "tooltip.preventer.preventGolemAttacking": "Prevents you from attacking iron & snow golems",
+  "config.preventer.preventGolemAttacking.text": "§4Golem hitting prevented§4",
 
   "option.preventer.preventNamedMobAttacking": "Prevent named mob hitting",
   "tooltip.preventer.preventNamedMobAttacking": "Prevents you from attacking mobs with a custom name",
   "config.preventer.preventNamedMobAttacking.text": "§4Named mob hitting prevented§4",
 
-  "option.preventer.preventTamedMobAttacking": "Prevent tamed Animal hitting",
-  "tooltip.preventer.preventTamedMobAttacking": "Prevents you from attacking Animals that have\nbeen tamed by a player (e.g. dogs, cats, ...)",
-  "config.preventer.preventTamedMobAttacking.text": "§4Tamed Animal hitting prevented§4",
+  "option.preventer.preventTamedMobAttacking": "Prevent tamed animal hitting",
+  "tooltip.preventer.preventTamedMobAttacking": "Prevents you from attacking animals that have\nbeen tamed by a player (e.g. dogs, cats, ...)",
+  "config.preventer.preventTamedMobAttacking.text": "§4Tamed animal hitting prevented§4",
 
   "option.preventer.preventRareMobAttacking": "Prevent rare mob hitting",
   "tooltip.preventer.preventRareMobAttacking": "Prevents you from attacking rare mobs (parrots, axolotls, allays)",
@@ -142,6 +138,10 @@
   "option.preventer.preventHorseAttacking": "Prevent horse hitting",
   "tooltip.preventer.preventHorseAttacking": "Prevents you from attacking horses and similar creatures\n(Horses (including Skeleton & Zombie Horses), Donkeys, Mules, Llamas, Camels)",
   "config.preventer.preventHorseAttacking.text": "§4Horse hitting prevented§4",
+
+  "option.preventer.preventNeutralMobAttacking": "Prevent neutral mob hitting",
+  "tooltip.preventer.preventNeutralMobAttacking": "Prevents you from neutral mobs (as defined in the minecraft wiki)",
+  "config.preventer.preventNeutralMobAttacking.text": "§4Neutral mob hitting prevented§4",
 
 
   "option.preventer.hideTotem": "Hide totem",

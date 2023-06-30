@@ -232,19 +232,11 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventIronGolemAttacking"),
-                                config.preventIronGolemAttacking)
+                                Text.translatable("option.preventer.preventGolemAttacking"),
+                                config.preventGolemAttacking)
                         .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventIronGolemAttacking"))
-                        .setSaveConsumer(value -> config.preventIronGolemAttacking = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventSnowGolemAttacking"),
-                                config.preventSnowGolemAttacking)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventSnowGolemAttacking"))
-                        .setSaveConsumer(value -> config.preventSnowGolemAttacking = value)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventGolemAttacking"))
+                        .setSaveConsumer(value -> config.preventGolemAttacking = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
@@ -277,6 +269,14 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.preventHorseAttacking"))
                         .setSaveConsumer(value -> config.preventHorseAttacking = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventNeutralMobAttacking"),
+                                config.preventNeutralMobAttacking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventNeutralMobAttacking"))
+                        .setSaveConsumer(value -> config.preventNeutralMobAttacking = value)
                         .build())
 
                 //no usage msg
@@ -319,6 +319,14 @@ public class  CreateModConfig {
                         .setDefaultValue(true)
                         .setSaveConsumer(value -> config.rocketInMainHand = value)
                         .build());
+
+                //.addEntry(entryBuilder.startBooleanToggle(
+                //                Text.translatable("config.preventer.aggroMobOverride"),
+                //                config.aggroMobOverride)
+                //        .setDefaultValue(true)
+                //        .setTooltip(Text.translatable("tooltip.preventer.aggroMobOverride"))
+                //        .setSaveConsumer(value -> config.aggroMobOverride = value)
+                //        .build());
 
 
         builder.getOrCreateCategory(Text.translatable("category.preventer.moduleUsageInfo"))
@@ -516,17 +524,10 @@ public class  CreateModConfig {
                 .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventIronGolemAttacking"),
-                                config.preventIronGolemAttacking_msg)
+                                Text.translatable("option.preventer.preventGolemAttacking"),
+                                config.preventGolemAttacking_msg)
                         .setDefaultValue(false)
-                        .setSaveConsumer(value -> config.preventIronGolemAttacking_msg = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventSnowGolemAttacking"),
-                                config.preventSnowGolemAttacking_msg)
-                        .setDefaultValue(false)
-                        .setSaveConsumer(value -> config.preventSnowGolemAttacking_msg = value)
+                        .setSaveConsumer(value -> config.preventGolemAttacking_msg = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
@@ -555,6 +556,13 @@ public class  CreateModConfig {
                                 config.preventHorseAttacking_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventHorseAttacking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventNeutralMobAttacking"),
+                                config.preventNeutralMobAttacking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventNeutralMobAttacking_msg = value)
                         .build());
 
         return builder
