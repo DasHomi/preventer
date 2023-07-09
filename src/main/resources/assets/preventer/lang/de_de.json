@@ -14,6 +14,7 @@
   "text.preventer.welcomeMessage": "Standardmäßig sind keine Preventer Module aktiviert, um die Module zu aktivieren, die du benutzen willst, drücke einfach die I Taste, um das Konfigurationsmenü zu öffnen. Um temporär alle Module zu deaktivieren, drücke einfach die R Taste.\n\nViel Spaß!",
   "text.preventer.moduleUseInfo": "Unten kannst du die Modulbenachrichtigungen einschalten, die angezeigt werden, wenn ein Modul eine Aktion verhindert hat",
   "text.preventer.experimentalFeatures": "§c↓ Experimentelle Module ↓§c",
+  "text.preventer.missingFeatures": "Vermissen Sie irgendwelche Funktionen? Schlagen Sie sie auf GitHub vor!",
 
   "option.preventer.noStrip": "Keine Entrindung",
   "tooltip.preventer.noStrip": "Verhindert das entrinden von Bäumen",
@@ -149,6 +150,10 @@
   "config.preventer.enhancedSuspiciousBlockBreakingPrevention": "Verbesserte seltsame Blöcke abbauen Verhinderung",
   "tooltip.preventer.enhancedSuspiciousBlockBreakingPrevention": "Verhindert das Abbauen von Blöcken, wenn ein seltsamer Block darüber ist.\n§cFür manche Benutzer kann diese Option sehr nervig sein.§c",
   "config.preventer.enhancedSuspiciousBlockBreakingPrevention.text": "§4Es ist ein seltsamer Block über diesem Block!§4",
+
+  "option.preventer.preventRenamedItemDropping": "Verhindere umbenannte Gegenstände fallenlassen",
+  "tooltip.preventer.preventRenamedItemDropping": "Verhindert das du umbenannte Gegenstände fallenlässt",
+  "config.preventer.preventRenamedItemDropping.text": "§4Umbenannte Gegenstände fallenlassen verhindert§4",
 
 
   "option.preventer.hideTotem": "Versteckt das Totem",

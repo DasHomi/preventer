@@ -3,7 +3,7 @@
 A client side fabric mod that prevents you from doing dumb things by accident, like breaking blocks you don't want to break, or placing blocks you don't want to place.
 (e.g. accidentally creating stripped logs or breaking budding amethyst)  
 The whole mod is highly configurable, so you can disable any feature you don't want. 
-The config can be reached in game by pressing `I` or via the "Mod menu" mod.
+The config can be reached in game by pressing `I`.
 If you want to temporarily disable the entire mod, use the _Override Key_ (_default keybinding:_ `R`).
 
 ## Modules
@@ -75,24 +75,21 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
   - _Prevents you from neutral mobs (as defined in the minecraft wiki)_
 - Prevent suspicious block breaking
   - _Prevents you from breaking suspicious sand and gravel_
+- Prevent renamed item dropping
+  - _Prevents you from dropping items with a custom name_
 
 ## Planed Features
-- **_Feature requests welcome_**
+- **_Missing any features? Open an [issue](https://github.com/DasHomi/preventer/issues)!_**
 - Prevent Plant Breaking
 - Prevent Block Under Player Breaking
 
 ## Compatibility
-- Other versions and mod loaders:
-  - This mod will mostly only be up-to-date for the latest version of Minecraft.
-  - There will be semiregular updates for older versions of Minecraft.
-  - There are no plans to support Forge or Minecraft versions older than 1.18.
-- Other mods:
-  - This mod should be compatible with most other mods.
+Preventer should be compatible with most other mods, but some modules may not work for items from other mods.
+There also shouldn't be any issues with server compatibility, as this mod is client-side only.
+Only the current and last versions of Minecraft are supported (currently 1.20.x and 1.19.4).
+Currently, there are no plans to support Forge, but this may change in the future.
 
 ## Dependencies
 **Required:**  
 [Cloth Config](https://github.com/shedaniel/cloth-config) (Configuration)  
 [Fabric API](https://github.com/FabricMC/fabric)
-
-**Suggested:**  
-[Mod Menu](https://github.com/TerraformersMC/ModMenu) (In game Config editing)

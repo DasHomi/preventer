@@ -287,6 +287,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventSuspiciousBlockBreaking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventRenamedItemDropping"),
+                                config.preventRenamedItemDropping)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventRenamedItemDropping"))
+                        .setSaveConsumer(value -> config.preventRenamedItemDropping = value)
+                        .build())
+
                 //no usage msg
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.hideShield"),
@@ -302,6 +310,10 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.hideTotem"))
                         .setSaveConsumer(value -> config.hideTotem = value)
+                        .build())
+
+                .addEntry(entryBuilder.startTextDescription(
+                                Text.translatable("text.preventer.missingFeatures"))
                         .build());
 
 
@@ -586,6 +598,13 @@ public class  CreateModConfig {
                                 config.preventSuspiciousBlockBreaking_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventSuspiciousBlockBreaking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventRenamedItemDropping"),
+                                config.preventRenamedItemDropping_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventRenamedItemDropping_msg = value)
                         .build());
 
         return builder

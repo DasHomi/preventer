@@ -26,6 +26,15 @@ public class ClientPlayerEntityMixin {
                     cir.setReturnValue(false);
                 }
             }
+
+            if (PreventerClient.config.preventRenamedItemDropping) {
+                if (itemStack.hasCustomName()) {
+                    if (PreventerClient.config.preventRenamedItemDropping_msg) {
+                        clientPlayerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedItemDropping.text"), true);
+                    }
+                    cir.setReturnValue(false);
+                }
+            }
         }
     }
 }

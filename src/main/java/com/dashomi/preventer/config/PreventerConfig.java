@@ -92,6 +92,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventSuspiciousBlockBreaking = false;
     public boolean preventSuspiciousBlockBreaking_msg = false;
     public boolean enhancedSuspiciousBlockBreakingPrevention = false;
+    public boolean preventRenamedItemDropping = false;
+    public boolean preventRenamedItemDropping_msg = false;
 
     // Configs that don't have a usage msg
     public boolean hideShield = false;

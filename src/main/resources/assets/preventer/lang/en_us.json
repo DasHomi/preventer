@@ -14,6 +14,7 @@
   "text.preventer.welcomeMessage": "Welcome to Preventer! \n\nBy default no, modules are enabled, to enable the modules\nyou want just press the I key. If you want to temporarily\ndisable all modules, press the override key R. \n\nHave fun!",
   "text.preventer.moduleUseInfo": "Below you can toggle Module Notifications, which will be displayed if a module prevented an action",
   "text.preventer.experimentalFeatures": "§c↓ Experimental / Unstable Modules ↓§c",
+  "text.preventer.missingFeatures": "Do you miss any features? Suggest them on GitHub!",
 
   "option.preventer.noStrip": "Prevent log stripping",
   "tooltip.preventer.noStrip": "Prevents you from stripping logs",
@@ -149,6 +150,10 @@
   "config.preventer.enhancedSuspiciousBlockBreakingPrevention": "Enhanced suspicious block breaking prevention",
   "tooltip.preventer.enhancedSuspiciousBlockBreakingPrevention": "Prevents you from breaking a block if there is a suspicious block above it.\n§cThis may be very annoying for some, so use with caution.§c",
   "config.preventer.enhancedSuspiciousBlockBreakingPrevention.text": "§4There is a suspicious block above this one!§4",
+
+  "option.preventer.preventRenamedItemDropping": "Prevent renamed item dropping",
+  "tooltip.preventer.preventRenamedItemDropping": "Prevents you from dropping items with a custom name",
+  "config.preventer.preventRenamedItemDropping.text": "§4Renamed item dropping prevented§4",
 
 
   "option.preventer.hideTotem": "Hide totem",
