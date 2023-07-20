@@ -14,7 +14,7 @@
   "text.preventer.welcomeMessage": "Welcome to Preventer! \n\nBy default no, modules are enabled, to enable the modules\nyou want just press the I key. If you want to temporarily\ndisable all modules, press the override key R. \n\nHave fun!",
   "text.preventer.moduleUseInfo": "Below you can toggle Module Notifications, which will be displayed if a module prevented an action",
   "text.preventer.experimentalFeatures": "§c↓ Experimental / Unstable Modules ↓§c",
-  "text.preventer.missingFeatures": "Do you miss any features? Suggest them on GitHub!",
+  "text.preventer.missingFeatures": "Missing any features? Suggest them on GitHub!",
 
   "option.preventer.noStrip": "Prevent log stripping",
   "tooltip.preventer.noStrip": "Prevents you from stripping logs",
@@ -116,6 +116,14 @@
   "tooltip.preventer.preventGlassBreaking": "Prevents you from breaking glass and glass panes",
   "config.preventer.preventGlassBreaking.text": "§4Glass breaking prevented§4",
 
+  "option.preventer.preventRenamedBlockPlacing": "Prevent renamed block placing",
+  "tooltip.preventer.preventRenamedBlockPlacing": "Prevents you from placing renamed blocks",
+  "config.preventer.preventRenamedBlockPlacing.text": "§4Renamed block placing was prevented§4",
+
+  "option.preventer.preventRenamedItemEating": "Prevent renamed food eating",
+  "tooltip.preventer.preventRenamedItemEating": "Prevents you from eating renamed food",
+  "config.preventer.preventRenamedItemEating.text": "§4Renamed food eating was prevented§4",
+
   "option.preventer.preventNoteBlockEditing": "Prevent note block editing",
   "tooltip.preventer.preventNoteBlockEditing": "Prevents you from changing the pitch of note blocks",
   "config.preventer.preventNoteBlockEditing.text": "§4Note block editing prevented§4",
@@ -160,14 +168,5 @@
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
 
   "option.preventer.hideShield": "Hide shield",
-  "tooltip.preventer.hideShield": "Hides shields in the offhand",
-
-
-  "option.preventer.preventRenamedBlockPlacing": "Prevent renamed block placing",
-  "tooltip.preventer.preventRenamedBlockPlacing": "Prevents you from placing renamed blocks",
-  "config.preventer.preventRenamedBlockPlacing.text": "§4Renamed block placing was prevented§4",
-
-  "option.preventer.preventRenamedItemEating": "Prevent renamed food eating",
-  "tooltip.preventer.preventRenamedItemEating": "Prevents you from eating renamed food",
-  "config.preventer.preventRenamedItemEating.text": "§4Renamed food eating was prevented§4"
+  "tooltip.preventer.hideShield": "Hides shields in the offhand"
 }

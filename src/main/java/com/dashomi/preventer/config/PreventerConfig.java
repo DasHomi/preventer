@@ -25,10 +25,10 @@ public class PreventerConfig implements ConfigData {
     public boolean noPath_msg = false;
     public boolean noFarmland = false;
     public boolean noFarmland_msg = false;
-    public boolean noSweetBerrieHarvest = false;
-    public boolean noSweetBerrieHarvest_msg = false;
     public boolean noGlowBerrieHarvest = false;
     public boolean noGlowBerrieHarvest_msg = false;
+    public boolean noSweetBerrieHarvest = false;
+    public boolean noSweetBerrieHarvest_msg = false;
     public boolean onlyMatureCropHarvest = false;
     public boolean onlyMatureCropHarvest_msg = false;
     public boolean noCake = false;

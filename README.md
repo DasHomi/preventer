@@ -13,10 +13,10 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
   - _Prevents you from creating path blocks_
 - Prevent farmland creation
   - _Prevents you from creating farmland_
-- Prevent sweet berry harvesting
-  - _Prevents you from harvesting Sweet Berries_
 - Prevent glow berry harvesting
   - _Prevents you from harvesting Glow Berries_
+- Prevent sweet berry harvesting
+  - _Prevents you from harvesting Sweet Berries_
 - Prevent non-mature crop harvesting
   - _Prevents you from harvesting (breaking) non-mature crops_
 - Prevent cake eating
@@ -57,8 +57,8 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
   - _Prevents you from breaking glass and glass panes_
 - Prevent renamed block placing
   - _Prevents you from placing renamed blocks_
-- Prevent renamed food item use
-  - _Prevents you from eating renamed food items_
+- Prevent renamed food eating
+  - _Prevents you from eating renamed food_
 - Prevent note block editing
   - _Prevents you from changing the pitch of note blocks_
 - Prevent golem hitting
@@ -82,14 +82,17 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
 - **_Missing any features? Open an [issue](https://github.com/DasHomi/preventer/issues)!_**
 - Prevent Plant Breaking
 - Prevent Block Under Player Breaking
+- Prevent Lava Placing
 
 ## Compatibility
-Preventer should be compatible with most other mods, but some modules may not work for items from other mods.
-There also shouldn't be any issues with server compatibility, as this mod is client-side only.
-Only the current and last versions of Minecraft are supported (currently 1.20.x and 1.19.4).
-Currently, there are no plans to support Forge, but this may change in the future.
+- Compatible with most other mods
+  - Certain modules may not work for items from mods
+- Compatible with most servers
+  - Preventer is 100% client-side
+- Fabric only (for now)
+  - Forge support may be added in the future if it's doable in a reasonable amount of time
 
 ## Dependencies
-**Required:**  
-[Cloth Config](https://github.com/shedaniel/cloth-config) (Configuration)  
-[Fabric API](https://github.com/FabricMC/fabric)
+**Required:**
+- [Cloth Config](https://github.com/shedaniel/cloth-config)
+- [Fabric API](https://github.com/FabricMC/fabric)

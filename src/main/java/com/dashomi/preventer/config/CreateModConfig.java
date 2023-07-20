@@ -40,19 +40,19 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.noSweetBerrieHarvest"),
-                                config.noSweetBerrieHarvest)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.noSweetBerrieHarvest"))
-                        .setSaveConsumer(value -> config.noSweetBerrieHarvest = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.noGlowBerrieHarvest"),
                                 config.noGlowBerrieHarvest)
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.noGlowBerrieHarvest"))
                         .setSaveConsumer(value -> config.noGlowBerrieHarvest = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.noSweetBerrieHarvest"),
+                                config.noSweetBerrieHarvest)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.noSweetBerrieHarvest"))
+                        .setSaveConsumer(value -> config.noSweetBerrieHarvest = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
