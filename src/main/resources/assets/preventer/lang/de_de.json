@@ -15,6 +15,12 @@
   "text.preventer.moduleUseInfo": "Unten kannst du die Modulbenachrichtigungen einschalten, die angezeigt werden, wenn ein Modul eine Aktion verhindert hat",
   "text.preventer.experimentalFeatures": "§c↓ Experimentelle Module ↓§c",
   "text.preventer.missingFeatures": "Vermisst du irgendwelche Module? Schlag sie auf Github vor!",
+  "text.preventer.interactionCategory": "↓ Interagieren ↓",
+  "text.preventer.plantsCategory": "↓ Pflanzen ↓",
+  "text.preventer.breakingCategory": "↓ Zerstören ↓",
+  "text.preventer.placingCategory": "↓ Platzieren ↓",
+  "text.preventer.AttackingCategory": "↓ Angreifen ↓",
+  "text.preventer.otherCategory": "↓ Weiteres ↓",
 
   "option.preventer.noStrip": "Keine Entrindung",
   "tooltip.preventer.noStrip": "Verhindert das entrinden von Bäumen",

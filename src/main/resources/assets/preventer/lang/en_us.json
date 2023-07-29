@@ -15,6 +15,12 @@
   "text.preventer.moduleUseInfo": "Below you can toggle Module Notifications, which will be displayed if a module prevented an action",
   "text.preventer.experimentalFeatures": "§c↓ Experimental / Unstable Modules ↓§c",
   "text.preventer.missingFeatures": "Missing any features? Suggest them on GitHub!",
+  "text.preventer.interactionCategory": "↓ Interactions ↓",
+  "text.preventer.plantsCategory": "↓ Plants ↓",
+  "text.preventer.breakingCategory": "↓ Breaking ↓",
+  "text.preventer.placingCategory": "↓ Placing ↓",
+  "text.preventer.AttackingCategory": "↓ Attacking ↓",
+  "text.preventer.otherCategory": "↓ Other ↓",
 
   "option.preventer.noStrip": "Prevent log stripping",
   "tooltip.preventer.noStrip": "Prevents you from stripping logs",
