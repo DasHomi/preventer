@@ -169,6 +169,10 @@
   "tooltip.preventer.preventRenamedItemDropping": "Prevents you from dropping items with a custom name",
   "config.preventer.preventRenamedItemDropping.text": "§4Renamed item dropping prevented§4",
 
+  "option.preventer.preventEnderChestBreaking": "Prevent ender chest destruction",
+  "tooltip.preventer.preventEnderChestBreaking": "Prevents you from breaking ender chests without a silk touch pickaxe",
+  "config.preventer.preventEnderChestBreaking.text": "§4Ender chest destruction prevented§4",
+
 
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",

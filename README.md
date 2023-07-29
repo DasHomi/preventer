@@ -60,6 +60,8 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
   - _Prevents you from breaking glass and glass panes_
 - Prevent suspicious block breaking
   - _Prevents you from breaking suspicious sand and gravel_
+- Prevent ender chest destruction
+  - _Prevents you from breaking ender chests without a silk touch pickaxe_
 </details>
 
 <details>

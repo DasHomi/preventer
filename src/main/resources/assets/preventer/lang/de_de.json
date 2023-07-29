@@ -169,6 +169,10 @@
   "tooltip.preventer.preventRenamedItemDropping": "Verhindert das du umbenannte Gegenstände fallenlässt",
   "config.preventer.preventRenamedItemDropping.text": "§4Umbenannte Gegenstände fallenlassen verhindert§4",
 
+  "option.preventer.preventEnderChestBreaking": "Verhindere Endertruhen zerstören",
+  "tooltip.preventer.preventEnderChestBreaking": "Verhindert, dass du Endertruhen ohne Behutsamkeit abbaust",
+  "config.preventer.preventEnderChestBreaking.text": "§4Endertruhen zerstören verhindert§4",
+
 
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",

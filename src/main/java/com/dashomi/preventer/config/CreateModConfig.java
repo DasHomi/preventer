@@ -190,6 +190,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventSuspiciousBlockBreaking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventEnderChestBreaking"),
+                                config.preventEnderChestBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventEnderChestBreaking"))
+                        .setSaveConsumer(value -> config.preventEnderChestBreaking = value)
+                        .build())
+
                 // Placing
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.placingCategory"))
@@ -544,6 +552,13 @@ public class  CreateModConfig {
                                 config.preventSuspiciousBlockBreaking_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventSuspiciousBlockBreaking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventEnderChestBreaking"),
+                                config.preventEnderChestBreaking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventEnderChestBreaking_msg = value)
                         .build())
 
                 // Placing
