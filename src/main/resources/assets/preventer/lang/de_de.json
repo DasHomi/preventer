@@ -64,7 +64,7 @@
   "config.preventer.lowDurabilityProtectionRange": "Geringe Haltbarkeits Schwelle",
   "tooltip.preventer.lowDurabilityProtectionRange": "Gibt die niedrigste Haltbarkeit \nvon Werkzeugen & Waffen an",
 
-  "option.preventer.preventVillagerPunch": "Kein Dorfbewohner Schlagen",
+  "option.preventer.preventVillagerPunch": "Keine Dorfbewohner Schlagen",
   "tooltip.preventer.preventVillagerPunch": "Verhindert das Schlagen von Dorfbewohnern",
   "config.preventer.preventVillagerPunch.text": "§4Dorfbewohner schlagen wurde verhindert§4",
 
@@ -83,8 +83,8 @@
   "option.preventer.preventRocketUse": "Verwendung von Feuerwerksraketen verhindern",
   "tooltip.preventer.preventRocketUse": "Verhindert das du Raketen nutzt, während du am Boden bist",
   "config.preventer.preventRocketUse.text": "§4Feuerwerksraketen benutzung verhindert§4",
-  "config.preventer.rocketInOffhand": "Verhindert Feuerwerksraketen Nutzung in der Nebenhand",
-  "config.preventer.rocketInMainHand": "Verhindert Feuerwerksraketen Nutzung in der Haupthand",
+  "config.preventer.rocketInOffhand": "Verhindert Feuerwerksraketen-Nutzung in der Nebenhand",
+  "config.preventer.rocketInMainHand": "Verhindert Feuerwerksraketen-Nutzung in der Haupthand",
 
   "option.preventer.preventEndCrystalHitting": "Verhindert das Schlagen von Enderkristallen",
   "tooltip.preventer.preventEndCrystalHitting": "Verhindert das Schlagen von Enderkristallen",
@@ -135,7 +135,7 @@
   "config.preventer.preventNoteBlockEditing.text": "§4Noteblock bearbeiten verhindert§4",
 
   "option.preventer.preventGolemAttacking": "Verhindere Golem angreifen",
-  "tooltip.preventer.preventGolemAttacking": "Verhindert, dass du Eisen und Schneegolems angreifst",
+  "tooltip.preventer.preventGolemAttacking": "Verhindert, dass du Eisen oder Schneegolems angreifst",
   "config.preventer.preventGolemAttacking.text": "§4Golem angreifen verhindert§4",
 
   "option.preventer.preventNamedMobAttacking": "Verhindere benannte Kreaturen angreifen",
@@ -144,11 +144,11 @@
 
   "option.preventer.preventTamedMobAttacking": "Verhindere gezähmte Kreaturen angreifen",
   "tooltip.preventer.preventTamedMobAttacking": "Verhindert, dass du Kreaturen angreifst, die von einem Spieler gezähmt wurden (z.B. Hunde, Katzen, ...)",
-  "config.preventer.preventTamedMobAttacking.text": "§4Gezähmte Kreaturen angreifen verhindert§4",
+  "config.preventer.preventTamedMobAttacking.text": "§4Diese Kreatur ist gezähmt!§4",
 
   "option.preventer.preventRareMobAttacking": "Verindere wertvolle Kreaturen angreifen",
   "tooltip.preventer.preventRareMobAttacking": "Verhindert das du seltene und wertvolle Kreaturen angreifst (Papagei, Axolotl, Hilfsgeist)",
-  "config.preventer.preventRareMobAttacking.text": "§4Wertvolle Kreaturen angreifen verhindert§4",
+  "config.preventer.preventRareMobAttacking.text": "§4Diese Kreatur ist wertvoll§4",
 
   "option.preventer.preventHorseAttacking": "Verhindere Pferd angreifen",
   "tooltip.preventer.preventHorseAttacking": "Verhindert das du Pferde und ähnliche Tiere angreifst\n(Pferde (auch Skelett und Zombiepferde), Esel, Maultiere, Lamas, Dromedare)",
