@@ -1,10 +1,7 @@
 # Preventer
 
-A client side fabric mod that prevents you from doing dumb things by accident, like breaking blocks you don't want to break, or placing blocks you don't want to place.
-(e.g. accidentally creating stripped logs or breaking budding amethyst)  
-The whole mod is highly configurable, so you can disable any feature you don't want. 
-The config can be reached in game by pressing `I`.
-If you want to temporarily disable the entire mod, use the _Override Key_ (_default keybinding:_ `R`).
+Preventer is a collection of **over thirty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs). 
+Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (press `R`) .
 
 ## Modules
 <details open>
@@ -73,6 +70,8 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
   - _Prevents you from placing water in the nether_
 - Prevent renamed block placing
   - _Prevents you from placing renamed blocks_
+- Prevent lava placing
+  - _Prevents you from placing lava_
 </details>
 
 <details>
@@ -121,7 +120,7 @@ If you want to temporarily disable the entire mod, use the _Override Key_ (_defa
 - Compatible with most servers
   - Preventer is 100% client-side
 - Fabric only (for now)
-  - Forge support may be added in the future if it's doable in a reasonable amount of time
+  - Forge support may be added in the future.
 
 ## Dependencies
 **Required:**

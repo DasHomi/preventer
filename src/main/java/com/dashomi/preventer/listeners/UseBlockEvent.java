@@ -210,6 +210,17 @@ public class UseBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventLavaPlacing) {
+                if (handItem.equals(Items.LAVA_BUCKET)) {
+                    if(canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
+                        if (PreventerClient.config.preventLavaPlacing_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventLavaPlacing.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

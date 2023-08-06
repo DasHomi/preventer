@@ -77,6 +77,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventWaterPlace_msg = false;
     public boolean preventRenamedBlockPlacing = false;
     public boolean preventRenamedBlockPlacing_msg = false;
+    public boolean preventLavaPlacing = false;
+    public boolean preventLavaPlacing_msg = false;
 
     // Attacking
     public boolean preventVillagerPunch = false;
@@ -97,7 +99,6 @@ public class PreventerConfig implements ConfigData {
     public boolean preventHorseAttacking_msg = false;
     public boolean preventNeutralMobAttacking = false;
     public boolean preventNeutralMobAttacking_msg = false;
-    public boolean aggroMobOverride = false;
 
     // Other
     public boolean lowDurabilityProtection = false;

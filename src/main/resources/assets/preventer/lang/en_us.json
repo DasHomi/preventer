@@ -173,6 +173,10 @@
   "tooltip.preventer.preventEnderChestBreaking": "Prevents you from breaking ender chests without a silk touch pickaxe",
   "config.preventer.preventEnderChestBreaking.text": "§4Ender chest destruction prevented§4",
 
+  "option.preventer.preventLavaPlacing": "Prevent lava placing",
+  "tooltip.preventer.preventLavaPlacing": "Prevents you from placing lava",
+  "config.preventer.preventLavaPlacing.text": "§4Lava placing prevented§4",
+
 
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",

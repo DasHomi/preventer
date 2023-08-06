@@ -227,6 +227,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventRenamedBlockPlacing = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventLavaPlacing"),
+                                config.preventLavaPlacing)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventLavaPlacing"))
+                        .setSaveConsumer(value -> config.preventLavaPlacing = value)
+                        .build())
+
                 // Attacking
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.AttackingCategory"))
@@ -384,14 +392,6 @@ public class  CreateModConfig {
                         .setTooltip(Text.translatable("tooltip.preventer.enhancedSuspiciousBlockBreakingPrevention"))
                         .setSaveConsumer(value -> config.enhancedSuspiciousBlockBreakingPrevention = value)
                         .build());
-
-                //.addEntry(entryBuilder.startBooleanToggle(
-                //                Text.translatable("config.preventer.aggroMobOverride"),
-                //                config.aggroMobOverride)
-                //        .setDefaultValue(true)
-                //        .setTooltip(Text.translatable("tooltip.preventer.aggroMobOverride"))
-                //        .setSaveConsumer(value -> config.aggroMobOverride = value)
-                //        .build());
 
 
         builder.getOrCreateCategory(Text.translatable("category.preventer.moduleUsageInfo"))
@@ -585,6 +585,13 @@ public class  CreateModConfig {
                                 config.preventRenamedBlockPlacing_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventRenamedBlockPlacing_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventLavaPlacing"),
+                                config.preventLavaPlacing_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventLavaPlacing_msg = value)
                         .build())
 
                 // Attacking

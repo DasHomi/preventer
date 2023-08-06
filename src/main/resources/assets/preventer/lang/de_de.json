@@ -173,6 +173,10 @@
   "tooltip.preventer.preventEnderChestBreaking": "Verhindert, dass du Endertruhen ohne Behutsamkeit abbaust",
   "config.preventer.preventEnderChestBreaking.text": "§4Endertruhen zerstören verhindert§4",
 
+  "option.preventer.preventLavaPlacing": "Verhindere Lava platzieren",
+  "tooltip.preventer.preventLavaPlacing": "Verhindert das du Lava platzierst",
+  "config.preventer.preventLavaPlacing.text": "§4Lava platzieren verhindert§4",
+
 
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",
