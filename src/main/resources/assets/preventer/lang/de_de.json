@@ -11,8 +11,16 @@
   "key.preventer.category": "Preventer",
   "key.preventer.configKey": "Konfigurationsmenü-Taste",
 
+  "text.preventer.welcomeMessage": "Standardmäßig sind keine Preventer Module aktiviert, um die Module zu aktivieren, die du benutzen willst, drücke einfach die I Taste, um das Konfigurationsmenü zu öffnen. Um temporär alle Module zu deaktivieren, drücke einfach die R Taste.\n\nViel Spaß!",
   "text.preventer.moduleUseInfo": "Unten kannst du die Modulbenachrichtigungen einschalten, die angezeigt werden, wenn ein Modul eine Aktion verhindert hat",
   "text.preventer.experimentalFeatures": "§c↓ Experimentelle Module ↓§c",
+  "text.preventer.missingFeatures": "Vermisst du irgendwelche Module? Schlag sie auf Github vor!",
+  "text.preventer.interactionCategory": "↓ Interagieren ↓",
+  "text.preventer.plantsCategory": "↓ Pflanzen ↓",
+  "text.preventer.breakingCategory": "↓ Zerstören ↓",
+  "text.preventer.placingCategory": "↓ Platzieren ↓",
+  "text.preventer.AttackingCategory": "↓ Angreifen ↓",
+  "text.preventer.otherCategory": "↓ Weiteres ↓",
 
   "option.preventer.noStrip": "Keine Entrindung",
   "tooltip.preventer.noStrip": "Verhindert das entrinden von Bäumen",
@@ -56,7 +64,7 @@
   "config.preventer.lowDurabilityProtectionRange": "Geringe Haltbarkeits Schwelle",
   "tooltip.preventer.lowDurabilityProtectionRange": "Gibt die niedrigste Haltbarkeit \nvon Werkzeugen & Waffen an",
 
-  "option.preventer.preventVillagerPunch": "Kein Dorfbewohner Schlagen",
+  "option.preventer.preventVillagerPunch": "Keine Dorfbewohner Schlagen",
   "tooltip.preventer.preventVillagerPunch": "Verhindert das Schlagen von Dorfbewohnern",
   "config.preventer.preventVillagerPunch.text": "§4Dorfbewohner schlagen wurde verhindert§4",
 
@@ -75,8 +83,8 @@
   "option.preventer.preventRocketUse": "Verwendung von Feuerwerksraketen verhindern",
   "tooltip.preventer.preventRocketUse": "Verhindert das du Raketen nutzt, während du am Boden bist",
   "config.preventer.preventRocketUse.text": "§4Feuerwerksraketen benutzung verhindert§4",
-  "config.preventer.rocketInOffhand": "Verhindert Feuerwerksraketen Nutzung in der Nebenhand",
-  "config.preventer.rocketInMainHand": "Verhindert Feuerwerksraketen Nutzung in der Haupthand",
+  "config.preventer.rocketInOffhand": "Verhindert Feuerwerksraketen-Nutzung in der Nebenhand",
+  "config.preventer.rocketInMainHand": "Verhindert Feuerwerksraketen-Nutzung in der Haupthand",
 
   "option.preventer.preventEndCrystalHitting": "Verhindert das Schlagen von Enderkristallen",
   "tooltip.preventer.preventEndCrystalHitting": "Verhindert das Schlagen von Enderkristallen",
@@ -111,16 +119,8 @@
   "config.preventer.preventToolDropping.text": "§4Werkzeug fallenlassen wurde verhindert§4",
 
   "option.preventer.preventGlassBreaking": "Verhindere Glas Zerstörung",
-  "tooltip.preventer.preventGlassBreaking": "Verhindert das Zerstören von Glasblöcken und Glasscheiben"
+  "tooltip.preventer.preventGlassBreaking": "Verhindert das Zerstören von Glasblöcken und Glasscheiben",
   "config.preventer.preventGlassBreaking.text": "§4Glas zerstören wurde verhindert§4",
-
-
-  "option.preventer.hideTotem": "Versteckt das Totem",
-  "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",
-
-  "option.preventer.hideShield": "Versteckt das Schild",
-  "tooltip.preventer.hideShield": "Versteckt das Schild in der Nebenhand",
-
 
   "option.preventer.preventRenamedBlockPlacing": "Platzieren umbenannter Blöcke verhindern",
   "tooltip.preventer.preventRenamedBlockPlacing": "Verhindert, dass du umbenannte Blöcke platzierst",
@@ -128,5 +128,52 @@
 
   "option.preventer.preventRenamedItemEating": "Umbenannte Nahrung essen verhindern",
   "tooltip.preventer.preventRenamedItemEating": "Verhindert das du umbenannte Nahrung isst",
-  "config.preventer.preventRenamedItemEating.text": "§4Diese Umbenannte Nahrung willst du nicht essen§4"
+  "config.preventer.preventRenamedItemEating.text": "§4Diese Umbenannte Nahrung willst du nicht essen§4",
+
+  "option.preventer.preventNoteBlockEditing": "Verhindere Notenlock bearbeiten",
+  "tooltip.preventer.preventNoteBlockEditing": "Verhindert das Bearbeiten der Noten von Notenblöcken",
+  "config.preventer.preventNoteBlockEditing.text": "§4Noteblock bearbeiten verhindert§4",
+
+  "option.preventer.preventGolemAttacking": "Verhindere Golem angreifen",
+  "tooltip.preventer.preventGolemAttacking": "Verhindert, dass du Eisen oder Schneegolems angreifst",
+  "config.preventer.preventGolemAttacking.text": "§4Golem angreifen verhindert§4",
+
+  "option.preventer.preventNamedMobAttacking": "Verhindere benannte Kreaturen angreifen",
+  "tooltip.preventer.preventNamedMobAttacking": "Verhindert, dass du Kreaturen mit einem Namensschild angreifst",
+  "config.preventer.preventNamedMobAttacking.text": "§4Benannte Kreaturen angreifen verhindert§4",
+
+  "option.preventer.preventTamedMobAttacking": "Verhindere gezähmte Kreaturen angreifen",
+  "tooltip.preventer.preventTamedMobAttacking": "Verhindert, dass du Kreaturen angreifst, die von einem Spieler gezähmt wurden (z.B. Hunde, Katzen, ...)",
+  "config.preventer.preventTamedMobAttacking.text": "§4Diese Kreatur ist gezähmt!§4",
+
+  "option.preventer.preventRareMobAttacking": "Verindere wertvolle Kreaturen angreifen",
+  "tooltip.preventer.preventRareMobAttacking": "Verhindert das du seltene und wertvolle Kreaturen angreifst (Papagei, Axolotl, Hilfsgeist)",
+  "config.preventer.preventRareMobAttacking.text": "§4Diese Kreatur ist wertvoll§4",
+
+  "option.preventer.preventHorseAttacking": "Verhindere Pferd angreifen",
+  "tooltip.preventer.preventHorseAttacking": "Verhindert das du Pferde und ähnliche Tiere angreifst\n(Pferde (auch Skelett und Zombiepferde), Esel, Maultiere, Lamas, Dromedare)",
+  "config.preventer.preventHorseAttacking.text": "§4Pferd angreifen verhindert§4",
+
+  "option.preventer.preventNeutralMobAttacking": "Verhindere neutrale Kreaturen angreifen",
+  "tooltip.preventer.preventNeutralMobAttacking": "Verhindert, dass du neutrale Kreaturen angreifst (alle laut Wiki)",
+  "config.preventer.preventNeutralMobAttacking.text": "§4Neutrale Kreaturen angreifen verhindert§4",
+
+  "option.preventer.preventRenamedItemDropping": "Verhindere umbenannte Gegenstände fallenlassen",
+  "tooltip.preventer.preventRenamedItemDropping": "Verhindert das du umbenannte Gegenstände fallenlässt",
+  "config.preventer.preventRenamedItemDropping.text": "§4Umbenannte Gegenstände fallenlassen verhindert§4",
+
+  "option.preventer.preventEnderChestBreaking": "Verhindere Endertruhen zerstören",
+  "tooltip.preventer.preventEnderChestBreaking": "Verhindert, dass du Endertruhen ohne Behutsamkeit abbaust",
+  "config.preventer.preventEnderChestBreaking.text": "§4Endertruhen zerstören verhindert§4",
+
+  "option.preventer.preventLavaPlacing": "Verhindere Lava platzieren",
+  "tooltip.preventer.preventLavaPlacing": "Verhindert das du Lava platzierst",
+  "config.preventer.preventLavaPlacing.text": "§4Lava platzieren verhindert§4",
+
+
+  "option.preventer.hideTotem": "Versteckt das Totem",
+  "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",
+
+  "option.preventer.hideShield": "Versteckt das Schild",
+  "tooltip.preventer.hideShield": "Versteckt das Schild in der Nebenhand"
 }

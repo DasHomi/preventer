@@ -27,7 +27,7 @@ public class RegisterKeyBindings {
                 assert MinecraftClient.getInstance().player != null;
                 MinecraftClient.getInstance().player.sendMessage(Text.translatable("key.preventer.overrideKey.text"), true);
             }
-            PreventerClient.config.overrideKeyPressed = overrideKey.isPressed();
+            PreventerClient.overrideKeyPressed = overrideKey.isPressed();
         });
     }
 

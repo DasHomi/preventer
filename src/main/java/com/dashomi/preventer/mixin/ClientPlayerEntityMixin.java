@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class ClientPlayerEntityMixin {
     @Inject(method = "dropSelectedItem(Z)Z", at = @At(value = "HEAD"), cancellable = true)
     private void stopDropSelectedItem(boolean entireStack, CallbackInfoReturnable<Boolean> cir) {
-        if (!PreventerClient.config.overrideKeyPressed) {
+        if (!PreventerClient.overrideKeyPressed) {
             ClientPlayerEntity clientPlayerEntity = (ClientPlayerEntity) (Object) this;
             ItemStack itemStack = clientPlayerEntity.getMainHandStack();
 
@@ -22,6 +22,15 @@ public class ClientPlayerEntityMixin {
                 if (itemStack.getItem() instanceof ToolItem) {
                     if (PreventerClient.config.preventToolDropping_msg) {
                         clientPlayerEntity.sendMessage(Text.translatable("config.preventer.preventToolDropping.text"), true);
+                    }
+                    cir.setReturnValue(false);
+                }
+            }
+
+            if (PreventerClient.config.preventRenamedItemDropping) {
+                if (itemStack.hasCustomName()) {
+                    if (PreventerClient.config.preventRenamedItemDropping_msg) {
+                        clientPlayerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedItemDropping.text"), true);
                     }
                     cir.setReturnValue(false);
                 }

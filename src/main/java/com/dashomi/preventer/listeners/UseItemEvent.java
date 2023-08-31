@@ -1,4 +1,4 @@
-package com.dashomi.preventer.modules;
+package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.entity.player.PlayerEntity;
@@ -8,9 +8,9 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class UseItemModule {
-    public static TypedActionResult<ItemStack> checkItemUse(PlayerEntity player, World world, Hand hand) {
-        if (!PreventerClient.config.overrideKeyPressed) {
+public class UseItemEvent {
+    public static TypedActionResult<ItemStack> useItemListener(PlayerEntity player, World world, Hand hand) {
+        if (!PreventerClient.overrideKeyPressed) {
             if (PreventerClient.config.preventRenamedItemEating) {
                 if (player.getStackInHand(hand).isFood()) {
                     if (player.getStackInHand(hand).hasCustomName()) {

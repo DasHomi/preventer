@@ -1,6 +1,6 @@
 {
   "text.preventer.configTitle": "Preventer Config",
-  "modmenu.descriptionTranslation.preventer": "A mod that prevents you from doing dumb things by accident",
+  "modmenu.descriptionTranslation.preventer": "A mod that prevents you from doing dumb things by accident!",
   "category.preventer.default": "Modules",
   "category.preventer.moduleConfig": "Module Configs",
   "category.preventer.moduleUsageInfo": "Module Usage Messages",
@@ -11,8 +11,16 @@
   "key.preventer.category": "Preventer",
   "key.preventer.configKey": "Open-Config Key",
 
+  "text.preventer.welcomeMessage": "Welcome to Preventer! \n\nBy default no, modules are enabled, to enable the modules\nyou want just press the I key. If you want to temporarily\ndisable all modules, press the override key R. \n\nHave fun!",
   "text.preventer.moduleUseInfo": "Below you can toggle Module Notifications, which will be displayed if a module prevented an action",
   "text.preventer.experimentalFeatures": "§c↓ Experimental / Unstable Modules ↓§c",
+  "text.preventer.missingFeatures": "Missing any features? Suggest them on GitHub!",
+  "text.preventer.interactionCategory": "↓ Interactions ↓",
+  "text.preventer.plantsCategory": "↓ Plants ↓",
+  "text.preventer.breakingCategory": "↓ Breaking ↓",
+  "text.preventer.placingCategory": "↓ Placing ↓",
+  "text.preventer.AttackingCategory": "↓ Attacking ↓",
+  "text.preventer.otherCategory": "↓ Other ↓",
 
   "option.preventer.noStrip": "Prevent log stripping",
   "tooltip.preventer.noStrip": "Prevents you from stripping logs",
@@ -114,19 +122,58 @@
   "tooltip.preventer.preventGlassBreaking": "Prevents you from breaking glass and glass panes",
   "config.preventer.preventGlassBreaking.text": "§4Glass breaking prevented§4",
 
-
-  "option.preventer.hideTotem": "Hide totem",
-  "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
-
-  "option.preventer.hideShield": "Hide shield",
-  "tooltip.preventer.hideShield": "Hides shields in the offhand",
-
-
   "option.preventer.preventRenamedBlockPlacing": "Prevent renamed block placing",
   "tooltip.preventer.preventRenamedBlockPlacing": "Prevents you from placing renamed blocks",
   "config.preventer.preventRenamedBlockPlacing.text": "§4Renamed block placing was prevented§4",
 
   "option.preventer.preventRenamedItemEating": "Prevent renamed food eating",
   "tooltip.preventer.preventRenamedItemEating": "Prevents you from eating renamed food",
-  "config.preventer.preventRenamedItemEating.text": "§4Renamed food eating was prevented§4"
+  "config.preventer.preventRenamedItemEating.text": "§4Renamed food eating was prevented§4",
+
+  "option.preventer.preventNoteBlockEditing": "Prevent note block editing",
+  "tooltip.preventer.preventNoteBlockEditing": "Prevents you from changing the pitch of note blocks",
+  "config.preventer.preventNoteBlockEditing.text": "§4Note block editing prevented§4",
+
+  "option.preventer.preventGolemAttacking": "Prevent golem hitting",
+  "tooltip.preventer.preventGolemAttacking": "Prevents you from attacking iron & snow golems",
+  "config.preventer.preventGolemAttacking.text": "§4Golem hitting prevented§4",
+
+  "option.preventer.preventNamedMobAttacking": "Prevent named mob hitting",
+  "tooltip.preventer.preventNamedMobAttacking": "Prevents you from attacking mobs with a custom name",
+  "config.preventer.preventNamedMobAttacking.text": "§4Named mob hitting prevented§4",
+
+  "option.preventer.preventTamedMobAttacking": "Prevent tamed animal hitting",
+  "tooltip.preventer.preventTamedMobAttacking": "Prevents you from attacking animals that have\nbeen tamed by a player (e.g. dogs, cats, ...)",
+  "config.preventer.preventTamedMobAttacking.text": "§4Tamed animal hitting prevented§4",
+
+  "option.preventer.preventRareMobAttacking": "Prevent rare mob hitting",
+  "tooltip.preventer.preventRareMobAttacking": "Prevents you from attacking rare mobs (parrots, axolotls, allays)",
+  "config.preventer.preventRareMobAttacking.text": "§4Rare mob hitting prevented§4",
+
+  "option.preventer.preventHorseAttacking": "Prevent horse hitting",
+  "tooltip.preventer.preventHorseAttacking": "Prevents you from attacking horses and similar creatures\n(Horses (including Skeleton & Zombie Horses), Donkeys, Mules, Llamas, Camels)",
+  "config.preventer.preventHorseAttacking.text": "§4Horse hitting prevented§4",
+
+  "option.preventer.preventNeutralMobAttacking": "Prevent neutral mob hitting",
+  "tooltip.preventer.preventNeutralMobAttacking": "Prevents you from neutral mobs (as defined in the minecraft wiki)",
+  "config.preventer.preventNeutralMobAttacking.text": "§4Neutral mob hitting prevented§4",
+
+  "option.preventer.preventRenamedItemDropping": "Prevent renamed item dropping",
+  "tooltip.preventer.preventRenamedItemDropping": "Prevents you from dropping items with a custom name",
+  "config.preventer.preventRenamedItemDropping.text": "§4Renamed item dropping prevented§4",
+
+  "option.preventer.preventEnderChestBreaking": "Prevent ender chest destruction",
+  "tooltip.preventer.preventEnderChestBreaking": "Prevents you from breaking ender chests without a silk touch pickaxe",
+  "config.preventer.preventEnderChestBreaking.text": "§4Ender chest destruction prevented§4",
+
+  "option.preventer.preventLavaPlacing": "Prevent lava placing",
+  "tooltip.preventer.preventLavaPlacing": "Prevents you from placing lava",
+  "config.preventer.preventLavaPlacing.text": "§4Lava placing prevented§4",
+
+
+  "option.preventer.hideTotem": "Hide totem",
+  "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
+
+  "option.preventer.hideShield": "Hide shield",
+  "tooltip.preventer.hideShield": "Hides shields in the offhand"
 }

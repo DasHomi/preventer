@@ -1,8 +1,11 @@
-package com.dashomi.preventer.modules;
+package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.block.*;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -13,9 +16,9 @@ import net.minecraft.block.GlassBlock;
 
 import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityProtection;
 
-public class BreakBlockModule {
-    public static ActionResult checkBlockBreak(PlayerEntity playerEntity, World world, Hand hand, BlockPos pos, Direction direction) {
-        if (!PreventerClient.config.overrideKeyPressed) {
+public class AttackBlockEvent {
+    public static ActionResult attackBlockListener(PlayerEntity playerEntity, World world, Hand hand, BlockPos pos, Direction direction) {
+        if (!PreventerClient.overrideKeyPressed) {
             Block targetBlock = world.getBlockState(pos).getBlock();
             if (PreventerClient.config.onlyMatureCropHarvest) {
                 if (targetBlock instanceof CropBlock) {
@@ -52,6 +55,19 @@ public class BreakBlockModule {
                         playerEntity.sendMessage(Text.translatable("config.preventer.preventGlassBreaking.text"), true);
                     }
                     return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventEnderChestBreaking) {
+                if (targetBlock instanceof EnderChestBlock) {
+                    if (playerEntity.getMainHandStack().getItem() instanceof PickaxeItem) {
+                        if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, playerEntity.getMainHandStack()) == 0) {
+                            if (PreventerClient.config.preventEnderChestBreaking_msg) {
+                                playerEntity.sendMessage(Text.translatable("config.preventer.preventEnderChestBreaking.text"), true);
+                            }
+                            return ActionResult.FAIL;
+                        }
+                    }
                 }
             }
 

@@ -1,4 +1,4 @@
-package com.dashomi.preventer.modules;
+package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.block.*;
@@ -17,9 +17,9 @@ import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityPr
 import static net.minecraft.block.CaveVines.BERRIES;
 import static net.minecraft.block.SweetBerryBushBlock.AGE;
 
-public class UseBlockModule {
-    public static ActionResult checkBlockUse(PlayerEntity playerEntity, World world, Hand hand, BlockHitResult blockHitResult) {
-        if (!PreventerClient.config.overrideKeyPressed) {
+public class UseBlockEvent {
+    public static ActionResult useBlockListener(PlayerEntity playerEntity, World world, Hand hand, BlockHitResult blockHitResult) {
+        if (!PreventerClient.overrideKeyPressed) {
             BlockState targetBlockState = world.getBlockState(blockHitResult.getBlockPos());
             Block targetBlock = targetBlockState.getBlock();
             Item handItem = playerEntity.getStackInHand(hand).getItem();
@@ -168,7 +168,7 @@ public class UseBlockModule {
             }
 
             if (PreventerClient.config.preventRocketUse && !playerEntity.isSpectator()) {
-                if (!playerEntity.isFallFlying() && handItem instanceof FireworkRocketItem && playerEntity.world.isClient) {
+                if (!playerEntity.isFallFlying() && handItem instanceof FireworkRocketItem && playerEntity.getWorld().isClient) {
                     if(canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
                         if (PreventerClient.config.rocketInOffhand && Hand.OFF_HAND == hand) {
                             if (PreventerClient.config.preventRocketUse_msg) {
@@ -201,6 +201,26 @@ public class UseBlockModule {
                 }
             }
 
+            if (PreventerClient.config.preventNoteBlockEditing) {
+                if (targetBlock instanceof NoteBlock) {
+                    if(PreventerClient.config.preventNoteBlockEditing_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventNoteBlockEditing.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventLavaPlacing) {
+                if (handItem.equals(Items.LAVA_BUCKET)) {
+                    if(canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
+                        if (PreventerClient.config.preventLavaPlacing_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventLavaPlacing.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 
@@ -214,7 +234,7 @@ public class UseBlockModule {
                 block.isOf(Blocks.COMPARATOR)) {
             return false;
         }
-        ActionResult actionResult = block.onUse(playerEntity.world, playerEntity, hand, blockHitResult);
+        ActionResult actionResult = block.onUse(playerEntity.getWorld(), playerEntity, hand, blockHitResult);
         return !actionResult.isAccepted();
     }
 }
