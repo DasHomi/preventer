@@ -25,13 +25,13 @@
   ],
   "depends": {
     "fabricloader": ">=0.14.8",
-    "minecraft": "1.19.4",
+    "minecraft": "1.19.x",
     "java": ">=17",
-    "fabric": ">=0.76.0",
-    "cloth-config": ">=10.0.0"
+    "fabric": ">=0.55.1",
+    "cloth-config": ">=7.0.69"
   },
   "suggests": {
-    "modmenu": ">=5.0.0"
+    "modmenu": ">=4.0.0"
   },
   "accessWidener": "preventer.accesswidener",
   "custom": {
