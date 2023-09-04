@@ -44,6 +44,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventRenamedItemEating_msg = false;
     public boolean preventNoteBlockEditing = false;
     public boolean preventNoteBlockEditing_msg = false;
+    public boolean preventRespawnAnchorUse = false;
+    public boolean preventRespawnAnchorUse_msg = false;
 
     // Plants
     public boolean noGlowBerrieHarvest = false;

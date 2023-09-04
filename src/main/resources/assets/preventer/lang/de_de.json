@@ -181,6 +181,10 @@
   "tooltip.preventer.preventSpawnerBreaking": "Verhindert das du Monster Spawner zerstörst",
   "config.preventer.preventSpawnerBreaking.text": "§4Spawner zerstören verhindert§4",
 
+  "option.preventer.preventRespawnAnchorUse": "Verhindere Seelenanker benutzen",
+  "tooltip.preventer.preventRespawnAnchorUse": "Verhindert das benuzten von Seelenanker \nin der Oberwelt oder End Dimension",
+  "config.preventer.preventRespawnAnchorUse.text": "§4Seelenanker benutzen verhindert§4",
+
 
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",

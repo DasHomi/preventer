@@ -29,6 +29,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from eating renamed food_
 - Prevent note block editing
   - _Prevents you from changing the pitch of note blocks_
+- Prevent respawn anchor use
+  - _Prevents you from using respawn anchors in the overworld and the end_
 </details>
 
 <details>

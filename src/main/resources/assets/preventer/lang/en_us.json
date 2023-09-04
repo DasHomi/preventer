@@ -181,6 +181,10 @@
   "tooltip.preventer.preventSpawnerBreaking": "Prevents you from breaking monster spawners",
   "config.preventer.preventSpawnerBreaking.text": "§4Spawner breaking prevented§4",
 
+  "option.preventer.preventRespawnAnchorUse": "Prevent respawn anchor use",
+  "tooltip.preventer.preventRespawnAnchorUse": "Prevents you from using respawn anchors in the overworld and the end",
+  "config.preventer.preventRespawnAnchorUse.text": "§4Respawn anchor using prevented§4",
+
 
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",

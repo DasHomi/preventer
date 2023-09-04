@@ -140,7 +140,7 @@ public class UseBlockEvent {
             if (PreventerClient.config.preventWaterPlace) {
                 if (handItem.equals(Items.WATER_BUCKET)) {
                     if (world.getDimension().ultrawarm()) {
-                        if(canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
+                        if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
                             if (PreventerClient.config.preventWaterPlace_msg) {
                                 playerEntity.sendMessage(Text.translatable("config.preventer.preventWaterPlace.text"), true);
                             }
@@ -155,7 +155,7 @@ public class UseBlockEvent {
                     Block handItemBlock = ((BlockItem) handItem).getBlock();
                     if (handItemBlock instanceof CoralBlock || handItemBlock instanceof CoralBlockBlock || handItemBlock instanceof CoralFanBlock) {
                         Block targetBlock2 = world.getBlockState(blockHitResult.getBlockPos().offset(blockHitResult.getSide(), 1)).getBlock();
-                        if(canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
+                        if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
                             if (!targetBlock2.equals(Blocks.WATER)) {
                                 if (PreventerClient.config.preventCoralPlace_msg) {
                                     playerEntity.sendMessage(Text.translatable("config.preventer.preventCoralPlace.text"), true);
@@ -169,7 +169,7 @@ public class UseBlockEvent {
 
             if (PreventerClient.config.preventRocketUse && !playerEntity.isSpectator()) {
                 if (!playerEntity.isFallFlying() && handItem instanceof FireworkRocketItem && playerEntity.getWorld().isClient) {
-                    if(canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
+                    if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
                         if (PreventerClient.config.rocketInOffhand && Hand.OFF_HAND == hand) {
                             if (PreventerClient.config.preventRocketUse_msg) {
                                 playerEntity.sendMessage(Text.translatable("config.preventer.preventRocketUse.text"), true);
@@ -190,7 +190,7 @@ public class UseBlockEvent {
                 if (handItem instanceof BlockItem) {
                     if (!handItem.isFood()) {
                         if (!playerEntity.getStackInHand(hand).getName().getString().equals(handItem.getName().getString())) {
-                            if(canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
+                            if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
                                 if (PreventerClient.config.preventRenamedBlockPlacing_msg) {
                                     playerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedBlockPlacing.text"), true);
                                 }
@@ -203,7 +203,7 @@ public class UseBlockEvent {
 
             if (PreventerClient.config.preventNoteBlockEditing) {
                 if (targetBlock instanceof NoteBlock) {
-                    if(PreventerClient.config.preventNoteBlockEditing_msg) {
+                    if (PreventerClient.config.preventNoteBlockEditing_msg) {
                         playerEntity.sendMessage(Text.translatable("config.preventer.preventNoteBlockEditing.text"), true);
                     }
                     return ActionResult.FAIL;
@@ -212,9 +212,20 @@ public class UseBlockEvent {
 
             if (PreventerClient.config.preventLavaPlacing) {
                 if (handItem.equals(Items.LAVA_BUCKET)) {
-                    if(canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
+                    if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
                         if (PreventerClient.config.preventLavaPlacing_msg) {
                             playerEntity.sendMessage(Text.translatable("config.preventer.preventLavaPlacing.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
+            if (PreventerClient.config.preventRespawnAnchorUse) {
+                if(targetBlock instanceof RespawnAnchorBlock) {
+                    if (!world.getDimension().respawnAnchorWorks()) {
+                        if (PreventerClient.config.preventRespawnAnchorUse_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventRespawnAnchorUse.text"), true);
                         }
                         return ActionResult.FAIL;
                     }
@@ -228,7 +239,7 @@ public class UseBlockEvent {
     }
 
     private static boolean canNotInteractWithBlock(BlockState block, PlayerEntity playerEntity, Hand hand, BlockHitResult blockHitResult) {
-        if(block.isIn(BlockTags.CANDLE_CAKES) ||
+        if (block.isIn(BlockTags.CANDLE_CAKES) ||
                 block.isOf(Blocks.CAKE) ||
                 block.isOf(Blocks.REPEATER) ||
                 block.isOf(Blocks.COMPARATOR)) {

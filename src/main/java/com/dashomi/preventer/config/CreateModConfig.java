@@ -108,6 +108,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventNoteBlockEditing = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventRespawnAnchorUse"),
+                                config.preventRespawnAnchorUse)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventRespawnAnchorUse"))
+                        .setSaveConsumer(value -> config.preventRespawnAnchorUse = value)
+                        .build())
+
                 // Plants
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.plantsCategory"))
@@ -487,6 +495,13 @@ public class  CreateModConfig {
                                 config.preventNoteBlockEditing_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventNoteBlockEditing_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventRespawnAnchorUse"),
+                                config.preventRespawnAnchorUse_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventRespawnAnchorUse_msg = value)
                         .build())
 
                 // Plants
