@@ -69,6 +69,8 @@ public class PreventerConfig implements ConfigData {
     public boolean enhancedSuspiciousBlockBreakingPrevention = false;
     public boolean preventEnderChestBreaking = false;
     public boolean preventEnderChestBreaking_msg = false;
+    public boolean preventSpawnerBreaking = false;
+    public boolean preventSpawnerBreaking_msg = false;
 
     // Placing
     public boolean preventCoralPlace = false;

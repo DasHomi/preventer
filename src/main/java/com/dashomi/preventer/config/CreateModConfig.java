@@ -198,6 +198,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventEnderChestBreaking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSpawnerBreaking"),
+                                config.preventSpawnerBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventSpawnerBreaking"))
+                        .setSaveConsumer(value -> config.preventSpawnerBreaking = value)
+                        .build())
+
                 // Placing
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.placingCategory"))
@@ -559,6 +567,13 @@ public class  CreateModConfig {
                                 config.preventEnderChestBreaking_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventEnderChestBreaking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSpawnerBreaking"),
+                                config.preventSpawnerBreaking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventSpawnerBreaking_msg = value)
                         .build())
 
                 // Placing

@@ -87,6 +87,15 @@ public class AttackBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventSpawnerBreaking) {
+                if (targetBlock instanceof SpawnerBlock) {
+                    if (PreventerClient.config.preventSpawnerBreaking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventSpawnerBreaking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

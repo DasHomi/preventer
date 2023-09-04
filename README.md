@@ -59,6 +59,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from breaking suspicious sand and gravel_
 - Prevent ender chest destruction
   - _Prevents you from breaking ender chests without a silk touch pickaxe_
+- Prevent spawner breaking
+  - _Prevents you from breaking monster spawners_
 </details>
 
 <details>
