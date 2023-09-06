@@ -1,7 +1,7 @@
 # Preventer
 
 Preventer is a collection of **over thirty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs). 
-Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (press `R`) .
+Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
 
 ## Modules
 <details open>

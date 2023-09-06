@@ -11,7 +11,7 @@
   "key.preventer.category": "Preventer",
   "key.preventer.configKey": "Open-Config Key",
 
-  "text.preventer.welcomeMessage": "Welcome to Preventer! \n\nBy default no, modules are enabled, to enable the modules\nyou want just press the I key. If you want to temporarily\ndisable all modules, press the override key R. \n\nHave fun!",
+  "text.preventer.welcomeMessage": "Welcome to Preventer! \n\nBy default no, modules are enabled, to enable the modules\nyou want just press the I key. If you want to temporarily\ndisable all modules, hold the override key R. \n\nHave fun!",
   "text.preventer.moduleUseInfo": "Below you can toggle Module Notifications, which will be displayed if a module prevented an action",
   "text.preventer.experimentalFeatures": "§c↓ Experimental / Unstable Modules ↓§c",
   "text.preventer.missingFeatures": "Missing any features? Suggest them on GitHub!",
