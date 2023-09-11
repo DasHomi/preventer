@@ -185,6 +185,10 @@
   "tooltip.preventer.preventRespawnAnchorUse": "Prevents you from using respawn anchors in the overworld and the end",
   "config.preventer.preventRespawnAnchorUse.text": "§4Respawn anchor using prevented§4",
 
+  "option.preventer.preventSugarCaneBreaking": "Prevent sugar cane breaking",
+  "tooltip.preventer.preventSugarCaneBreaking": "Prevents you from breaking the lowest\nblock of sugar cane/bamboo/cactus",
+  "config.preventer.preventSugarCaneBreaking.text": "§4Sugar cane breaking prevented§4",
+
 
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",

@@ -96,6 +96,18 @@ public class AttackBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventSugarCaneBreaking) {
+                if (targetBlock instanceof SugarCaneBlock || targetBlock instanceof BambooBlock || targetBlock instanceof CactusBlock) {
+                    Block block = world.getBlockState(pos.offset(Direction.Axis.Y, -1)).getBlock();
+                    if (!(block instanceof SugarCaneBlock) && !(block instanceof BambooBlock) && !(block instanceof CactusBlock)) {
+                        if (PreventerClient.config.preventSugarCaneBreaking_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventSugarCaneBreaking.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

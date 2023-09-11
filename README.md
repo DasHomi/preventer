@@ -3,7 +3,7 @@
 Preventer is a collection of **over thirty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs). 
 Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
 
-## Modules
+## Modules (in version 1.20.x 1.0)
 <details open>
 <summary><b> Interactions </b></summary>
 
@@ -44,6 +44,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from harvesting (breaking) non-mature crops_
 - Prevent stem breaking
   - _Prevents you from breaking pumpkin/melon stems_
+- Prevent sugar cane breaking
+  - _Prevents you from breaking the lowest block of sugar cane/bamboo/cactus_
 </details>
 
 <details>

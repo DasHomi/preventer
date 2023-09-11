@@ -56,6 +56,8 @@ public class PreventerConfig implements ConfigData {
     public boolean onlyMatureCropHarvest_msg = false;
     public boolean preventStemBreaking = false;
     public boolean preventStemBreaking_msg = false;
+    public boolean preventSugarCaneBreaking = false;
+    public boolean preventSugarCaneBreaking_msg = false;
 
     // Breaking
     public boolean preventBuddingAmethystBreaking = false;

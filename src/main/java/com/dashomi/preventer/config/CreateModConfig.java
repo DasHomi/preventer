@@ -153,6 +153,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventStemBreaking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSugarCaneBreaking"),
+                                config.preventSugarCaneBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventSugarCaneBreaking"))
+                        .setSaveConsumer(value -> config.preventSugarCaneBreaking = value)
+                        .build())
+
                 // Breaking
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.breakingCategory"))
@@ -535,6 +543,13 @@ public class  CreateModConfig {
                                 config.preventStemBreaking_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventStemBreaking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSugarCaneBreaking"),
+                                config.preventSugarCaneBreaking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventSugarCaneBreaking_msg = value)
                         .build())
 
                 // Breaking
