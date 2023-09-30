@@ -3,7 +3,7 @@
 Preventer is a collection of **over thirty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs). 
 Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
 
-## Modules (in version 1.20.x 1.0)
+## Modules (in version 1.20.x 1.0.5)
 <details open>
 <summary><b> Interactions </b></summary>
 
@@ -65,6 +65,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from breaking ender chests without a silk touch pickaxe_
 - Prevent spawner breaking
   - _Prevents you from breaking monster spawners_
+- Prevent chest breaking
+  - _Prevents you from breaking chests with an axe_
 </details>
 
 <details>

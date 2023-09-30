@@ -189,6 +189,10 @@
   "tooltip.preventer.preventSugarCaneBreaking": "Verhindert das du den untersten Block\nZuckerrohr/Bambus/Kaktus zerstörst",
   "config.preventer.preventSugarCaneBreaking.text": "§4Zuckerrohr zerstören verhindert§4",
 
+  "option.preventer.preventChestBreaking": "Verhindere Truhen zerstören",
+  "tooltip.preventer.preventChestBreaking": "Verhindert das du Truhen mit einer Axt zerstörst",
+  "config.preventer.preventChestBreaking.text": "§4Truhen zerstören verhindert§4",
+
 
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",

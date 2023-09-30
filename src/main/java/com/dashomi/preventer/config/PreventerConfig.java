@@ -75,6 +75,10 @@ public class PreventerConfig implements ConfigData {
     public boolean preventEnderChestBreaking_msg = false;
     public boolean preventSpawnerBreaking = false;
     public boolean preventSpawnerBreaking_msg = false;
+    public boolean preventChestBreaking = false;
+    public boolean preventChestBreaking_msg = false;
+    public boolean preventRocketSpamming = false;
+    public boolean preventRocketSpamming_msg = false;
 
     // Placing
     public boolean preventCoralPlace = false;

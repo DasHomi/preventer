@@ -5,6 +5,7 @@ import net.minecraft.block.*;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -102,6 +103,17 @@ public class AttackBlockEvent {
                     if (!(block instanceof SugarCaneBlock) && !(block instanceof BambooBlock) && !(block instanceof CactusBlock)) {
                         if (PreventerClient.config.preventSugarCaneBreaking_msg) {
                             playerEntity.sendMessage(Text.translatable("config.preventer.preventSugarCaneBreaking.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
+            if (PreventerClient.config.preventChestBreaking) {
+                if (targetBlock instanceof ChestBlock) {
+                    if (playerEntity.getMainHandStack().getItem() instanceof AxeItem) {
+                        if (PreventerClient.config.preventChestBreaking_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventChestBreaking.text"), true);
                         }
                         return ActionResult.FAIL;
                     }

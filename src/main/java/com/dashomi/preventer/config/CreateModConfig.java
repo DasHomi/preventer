@@ -116,6 +116,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventRespawnAnchorUse = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventRocketSpamming"),
+                                config.preventRocketSpamming)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventRocketSpamming"))
+                        .setSaveConsumer(value -> config.preventRocketSpamming = value)
+                        .build())
+
                 // Plants
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.plantsCategory"))
@@ -220,6 +228,14 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.preventSpawnerBreaking"))
                         .setSaveConsumer(value -> config.preventSpawnerBreaking = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventChestBreaking"),
+                                config.preventChestBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventChestBreaking"))
+                        .setSaveConsumer(value -> config.preventChestBreaking = value)
                         .build())
 
                 // Placing
@@ -512,6 +528,13 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventRespawnAnchorUse_msg = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventRocketSpamming"),
+                                config.preventRocketSpamming_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventRocketSpamming_msg = value)
+                        .build())
+
                 // Plants
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.plantsCategory"))
@@ -604,6 +627,13 @@ public class  CreateModConfig {
                                 config.preventSpawnerBreaking_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventSpawnerBreaking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventChestBreaking"),
+                                config.preventChestBreaking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventChestBreaking_msg = value)
                         .build())
 
                 // Placing

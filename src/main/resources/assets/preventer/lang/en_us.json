@@ -189,6 +189,10 @@
   "tooltip.preventer.preventSugarCaneBreaking": "Prevents you from breaking the lowest\nblock of sugar cane/bamboo/cactus",
   "config.preventer.preventSugarCaneBreaking.text": "§4Sugar cane breaking prevented§4",
 
+  "option.preventer.preventChestBreaking": "Prevent chest breaking",
+  "tooltip.preventer.preventChestBreaking": "Prevents you from breaking chests with an axe",
+  "config.preventer.preventChestBreaking.text": "§4Chest breaking prevented§4",
+
 
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
