@@ -120,6 +120,15 @@ public class AttackBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventDragonEggTeleport) {
+                if (targetBlock instanceof DragonEggBlock) {
+                    if (PreventerClient.config.preventDragonEggTeleport_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventDragonEggTeleport.text"));
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

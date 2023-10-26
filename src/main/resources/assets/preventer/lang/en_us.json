@@ -94,6 +94,10 @@
   "tooltip.preventer.preventBedUse": "Prevents you using beds in the End or Nether dimension",
   "config.preventer.preventBedUse.text": "§4Bed using was prevented§4",
 
+  "option.preventer.preventDragonEggTeleport": "Prevent teleporting the dragon egg",
+  "tooltip.preventer.preventDragonEggTeleport": "Prevents you from teleporting the dragon egg by using it",
+  "config.preventer.preventDragonEggTeleport.text": "§4Dragon egg teleportation was prevented§4",
+
   "option.preventer.preventCoralPlace": "Prevent coral placing",
   "tooltip.preventer.preventCoralPlace": "Prevents you from placing corals out of water",
   "config.preventer.preventCoralPlace.text": "§4Out of water coral placing was prevented§4",
