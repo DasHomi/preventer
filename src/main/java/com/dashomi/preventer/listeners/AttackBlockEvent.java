@@ -30,6 +30,14 @@ public class AttackBlockEvent {
                         return ActionResult.FAIL;
                     }
                 }
+                if (targetBlock instanceof NetherWartBlock) {
+                    if (world.getBlockState(pos).get(NetherWartBlock.AGE) < 3) {
+                        if (PreventerClient.config.onlyMatureCropHarvest_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.onlyMatureCropHarvest.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
             }
 
             if (PreventerClient.config.preventBuddingAmethystBreaking) {
