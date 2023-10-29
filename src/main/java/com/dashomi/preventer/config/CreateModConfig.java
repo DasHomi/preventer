@@ -93,6 +93,14 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventDragonEggTeleport"),
+                                config.preventDragonEggTeleport)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventDragonEggTeleport"))
+                        .setSaveConsumer(value -> config.preventDragonEggTeleport = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventRenamedItemEating"),
                                 config.preventRenamedItemEating)
                         .setDefaultValue(false)
@@ -505,6 +513,13 @@ public class  CreateModConfig {
                                 config.preventBedUse_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventBedUse_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventDragonEggTeleport"),
+                                config.preventDragonEggTeleport_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventDragonEggTeleport_msg = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(

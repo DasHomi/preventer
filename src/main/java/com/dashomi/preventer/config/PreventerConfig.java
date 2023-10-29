@@ -40,6 +40,8 @@ public class PreventerConfig implements ConfigData {
     public boolean rocketInMainHand = false;
     public boolean preventBedUse = false;
     public boolean preventBedUse_msg = false;
+    public boolean preventDragonEggTeleport = false;
+    public boolean preventDragonEggTeleport_msg = false;
     public boolean preventRenamedItemEating = false;
     public boolean preventRenamedItemEating_msg = false;
     public boolean preventNoteBlockEditing = false;

@@ -94,6 +94,10 @@
   "tooltip.preventer.preventBedUse": "Verhindert das Benutzen eines Bettes\nin der Nether oder End Dimension",
   "config.preventer.preventBedUse.text": "§4Bett benutzen verhindert§4",
 
+  "option.preventer.preventDragonEggTeleport": "Verhindern Sie, dass das Drachenei teleportiert wird",
+  "tooltip.preventer.preventDragonEggTeleport": "Verhindert, dass du das Drachenei teleportierst, indem du es verwendest",
+  "config.preventer.preventDragonEggTeleport.text": "§4Die Teleportation von Dracheneiern wurde verhindert§4",
+
   "option.preventer.preventCoralPlace": "Verhindere Korallen Platzieren",
   "tooltip.preventer.preventCoralPlace": "Verhindert das Platzieren von\nKorallen außerhalb von Wasser",
   "config.preventer.preventCoralPlace.text": "§4Du kannst Korallen nur im Wasser platzieren§4",
