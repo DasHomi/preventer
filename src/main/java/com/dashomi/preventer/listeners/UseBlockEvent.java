@@ -189,12 +189,14 @@ public class UseBlockEvent {
             if (PreventerClient.config.preventRenamedBlockPlacing) {
                 if (handItem instanceof BlockItem) {
                     if (!handItem.isFood()) {
-                        if (!playerEntity.getStackInHand(hand).getName().getString().equals(handItem.getName().getString())) {
-                            if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
-                                if (PreventerClient.config.preventRenamedBlockPlacing_msg) {
-                                    playerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedBlockPlacing.text"), true);
+                        if (!(((BlockItem) handItem).getBlock() instanceof ShulkerBoxBlock)) {
+                            if (!playerEntity.getStackInHand(hand).getName().getString().equals(handItem.getName().getString())) {
+                                if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
+                                    if (PreventerClient.config.preventRenamedBlockPlacing_msg) {
+                                        playerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedBlockPlacing.text"), true);
+                                    }
+                                    return ActionResult.FAIL;
                                 }
-                                return ActionResult.FAIL;
                             }
                         }
                     }
