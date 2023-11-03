@@ -3,7 +3,7 @@
 Preventer is a collection of **over thirty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs). 
 Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
 
-## Modules (Preventer 1.0.5)
+## Modules (Preventer 1.0.7)
 <details open>
 <summary><b> Interactions </b></summary>
 
@@ -25,12 +25,14 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from using firework rockets while not flying_
 - Prevent bed use
   - _Prevents you using beds in the End or Nether dimension_
-- Prevent renamed food eating
-  - _Prevents you from eating renamed food_
+- Prevent renamed item using
+  - _Prevents you from placing, eating, using, ... items with a custom name (except tools, weapons, and armor)_
 - Prevent note block editing
   - _Prevents you from changing the pitch of note blocks_
 - Prevent respawn anchor use
   - _Prevents you from using respawn anchors in the overworld and the end_
+- Prevent dragon egg teleporting
+  - _Prevents you from teleporting the dragon egg by using it_
 </details>
 
 <details>
@@ -76,8 +78,6 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from placing corals out of water_
 - Prevent water placing
   - _Prevents you from placing water in the nether_
-- Prevent renamed block placing
-  - _Prevents you from placing renamed blocks_
 - Prevent lava placing
   - _Prevents you from placing lava_
 </details>

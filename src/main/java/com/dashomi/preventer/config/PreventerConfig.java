@@ -42,8 +42,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventBedUse_msg = false;
     public boolean preventDragonEggTeleport = false;
     public boolean preventDragonEggTeleport_msg = false;
-    public boolean preventRenamedItemEating = false;
-    public boolean preventRenamedItemEating_msg = false;
+    public boolean preventRenamedItemUsing = false;
+    public boolean preventRenamedItemUsing_msg = false;
     public boolean preventNoteBlockEditing = false;
     public boolean preventNoteBlockEditing_msg = false;
     public boolean preventRespawnAnchorUse = false;
@@ -87,8 +87,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventCoralPlace_msg = false;
     public boolean preventWaterPlace = false;
     public boolean preventWaterPlace_msg = false;
-    public boolean preventRenamedBlockPlacing = false;
-    public boolean preventRenamedBlockPlacing_msg = false;
+    //public boolean preventRenamedBlockPlacing = false;
+    //public boolean preventRenamedBlockPlacing_msg = false;
     public boolean preventLavaPlacing = false;
     public boolean preventLavaPlacing_msg = false;
 

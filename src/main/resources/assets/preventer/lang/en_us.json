@@ -94,7 +94,7 @@
   "tooltip.preventer.preventBedUse": "Prevents you using beds in the End or Nether dimension",
   "config.preventer.preventBedUse.text": "§4Bed using was prevented§4",
 
-  "option.preventer.preventDragonEggTeleport": "Prevent teleporting the dragon egg",
+  "option.preventer.preventDragonEggTeleport": "Prevent dragon egg teleporting",
   "tooltip.preventer.preventDragonEggTeleport": "Prevents you from teleporting the dragon egg by using it",
   "config.preventer.preventDragonEggTeleport.text": "§4Dragon egg teleportation was prevented§4",
 
@@ -126,13 +126,9 @@
   "tooltip.preventer.preventGlassBreaking": "Prevents you from breaking glass and glass panes",
   "config.preventer.preventGlassBreaking.text": "§4Glass breaking prevented§4",
 
-  "option.preventer.preventRenamedBlockPlacing": "Prevent renamed block placing",
-  "tooltip.preventer.preventRenamedBlockPlacing": "Prevents you from placing renamed blocks",
-  "config.preventer.preventRenamedBlockPlacing.text": "§4Renamed block placing was prevented§4",
-
-  "option.preventer.preventRenamedItemEating": "Prevent renamed food eating",
-  "tooltip.preventer.preventRenamedItemEating": "Prevents you from eating renamed food",
-  "config.preventer.preventRenamedItemEating.text": "§4Renamed food eating was prevented§4",
+  "option.preventer.preventRenamedItemUsing": "Prevent renamed item using",
+  "tooltip.preventer.preventRenamedItemUsing": "Prevents you from placing, eating, using, ... items\nwith a custom name (except tools, weapons, and armor)",
+  "config.preventer.preventRenamedItemUsing.text": "§4Renamed item using prevented§4",
 
   "option.preventer.preventNoteBlockEditing": "Prevent note block editing",
   "tooltip.preventer.preventNoteBlockEditing": "Prevents you from changing the pitch of note blocks",

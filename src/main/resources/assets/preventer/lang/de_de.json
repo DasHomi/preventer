@@ -94,9 +94,9 @@
   "tooltip.preventer.preventBedUse": "Verhindert das Benutzen eines Bettes\nin der Nether oder End Dimension",
   "config.preventer.preventBedUse.text": "§4Bett benutzen verhindert§4",
 
-  "option.preventer.preventDragonEggTeleport": "Verhindern Sie, dass das Drachenei teleportiert wird",
-  "tooltip.preventer.preventDragonEggTeleport": "Verhindert, dass du das Drachenei teleportierst, indem du es verwendest",
-  "config.preventer.preventDragonEggTeleport.text": "§4Die Teleportation von Dracheneiern wurde verhindert§4",
+  "option.preventer.preventDragonEggTeleport": "Verhindere Drachenei Teleportieren",
+  "tooltip.preventer.preventDragonEggTeleport": "Hindert dich daran, das Drachenei zu teleportieren, wenn du es anklickst",
+  "config.preventer.preventDragonEggTeleport.text": "§4Die Teleportation vom Drachenei wurde verhindert§4",
 
   "option.preventer.preventCoralPlace": "Verhindere Korallen Platzieren",
   "tooltip.preventer.preventCoralPlace": "Verhindert das Platzieren von\nKorallen außerhalb von Wasser",
@@ -126,13 +126,9 @@
   "tooltip.preventer.preventGlassBreaking": "Verhindert das Zerstören von Glasblöcken und Glasscheiben",
   "config.preventer.preventGlassBreaking.text": "§4Glas zerstören wurde verhindert§4",
 
-  "option.preventer.preventRenamedBlockPlacing": "Platzieren umbenannter Blöcke verhindern",
-  "tooltip.preventer.preventRenamedBlockPlacing": "Verhindert, dass du umbenannte Blöcke platzierst",
-  "config.preventer.preventRenamedBlockPlacing.text": "§4Es wurde verhindert, dass du einen umbenannten Block platzierst§4",
-
-  "option.preventer.preventRenamedItemEating": "Umbenannte Nahrung essen verhindern",
-  "tooltip.preventer.preventRenamedItemEating": "Verhindert das du umbenannte Nahrung isst",
-  "config.preventer.preventRenamedItemEating.text": "§4Diese Umbenannte Nahrung willst du nicht essen§4",
+  "option.preventer.preventRenamedItemUsing": "Verhindere umbenannte Gegenstände benutzen",
+  "tooltip.preventer.preventRenamedItemUsing": "Verhindert das platzieren, essen, benutzen, ... von\numbenannten Items (außer Werkzeugen, Waffen, Rüstung)",
+  "config.preventer.preventRenamedItemUsing.text": "§4Umbenannte gegenstände benutzen verhindert§4",
 
   "option.preventer.preventNoteBlockEditing": "Verhindere Notenlock bearbeiten",
   "tooltip.preventer.preventNoteBlockEditing": "Verhindert das Bearbeiten der Noten von Notenblöcken",

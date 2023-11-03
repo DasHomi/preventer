@@ -186,13 +186,18 @@ public class UseBlockEvent {
                 }
             }
 
-            if (PreventerClient.config.preventRenamedBlockPlacing) {
-                if (handItem instanceof BlockItem) {
-                    if (!handItem.isFood()) {
-                        if (!playerEntity.getStackInHand(hand).getName().getString().equals(handItem.getName().getString())) {
+            if (PreventerClient.config.preventRenamedItemUsing) {
+                if (!(handItem.isDamageable())) {
+                    if (!playerEntity.getStackInHand(hand).getName().getString().equals(handItem.getName().getString())) {
+                        if (targetBlock instanceof CakeBlock || targetBlock instanceof ComposterBlock || targetBlock instanceof CampfireBlock) {
+                            if (PreventerClient.config.preventRenamedItemUsing_msg) {
+                                playerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedItemUsing.text"), true);
+                            }
+                            return ActionResult.FAIL;
+                        } else {
                             if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
-                                if (PreventerClient.config.preventRenamedBlockPlacing_msg) {
-                                    playerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedBlockPlacing.text"), true);
+                                if (PreventerClient.config.preventRenamedItemUsing_msg) {
+                                    playerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedItemUsing.text"), true);
                                 }
                                 return ActionResult.FAIL;
                             }
@@ -229,6 +234,15 @@ public class UseBlockEvent {
                         }
                         return ActionResult.FAIL;
                     }
+                }
+            }
+
+            if (PreventerClient.config.preventDragonEggTeleport) {
+                if (targetBlock instanceof DragonEggBlock) {
+                    if (PreventerClient.config.preventDragonEggTeleport_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventDragonEggTeleport.text"), true);
+                    }
+                    return ActionResult.FAIL;
                 }
             }
 

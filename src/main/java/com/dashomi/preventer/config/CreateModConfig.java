@@ -101,11 +101,11 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRenamedItemEating"),
-                                config.preventRenamedItemEating)
+                                Text.translatable("option.preventer.preventRenamedItemUsing"),
+                                config.preventRenamedItemUsing)
                         .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventRenamedItemEating"))
-                        .setSaveConsumer(value -> config.preventRenamedItemEating = value)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventRenamedItemUsing"))
+                        .setSaveConsumer(value -> config.preventRenamedItemUsing = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
@@ -267,13 +267,13 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventWaterPlace = value)
                         .build())
 
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRenamedBlockPlacing"),
-                                config.preventRenamedBlockPlacing)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventRenamedBlockPlacing"))
-                        .setSaveConsumer(value -> config.preventRenamedBlockPlacing = value)
-                        .build())
+                //.addEntry(entryBuilder.startBooleanToggle(
+                //                Text.translatable("option.preventer.preventRenamedBlockPlacing"),
+                //                config.preventRenamedBlockPlacing)
+                //        .setDefaultValue(false)
+                //        .setTooltip(Text.translatable("tooltip.preventer.preventRenamedBlockPlacing"))
+                //        .setSaveConsumer(value -> config.preventRenamedBlockPlacing = value)
+                //        .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventLavaPlacing"),
@@ -523,10 +523,10 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRenamedItemEating"),
-                                config.preventRenamedItemEating_msg)
+                                Text.translatable("option.preventer.preventRenamedItemUsing"),
+                                config.preventRenamedItemUsing_msg)
                         .setDefaultValue(false)
-                        .setSaveConsumer(value -> config.preventRenamedItemEating_msg = value)
+                        .setSaveConsumer(value -> config.preventRenamedItemUsing_msg = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
@@ -670,12 +670,12 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventWaterPlace_msg = value)
                         .build())
 
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRenamedBlockPlacing"),
-                                config.preventRenamedBlockPlacing_msg)
-                        .setDefaultValue(false)
-                        .setSaveConsumer(value -> config.preventRenamedBlockPlacing_msg = value)
-                        .build())
+                //.addEntry(entryBuilder.startBooleanToggle(
+                //                Text.translatable("option.preventer.preventRenamedBlockPlacing"),
+                //                config.preventRenamedBlockPlacing_msg)
+                //        .setDefaultValue(false)
+                //        .setSaveConsumer(value -> config.preventRenamedBlockPlacing_msg = value)
+                //        .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventLavaPlacing"),
