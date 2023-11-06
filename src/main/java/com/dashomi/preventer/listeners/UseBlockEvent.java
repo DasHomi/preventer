@@ -188,18 +188,20 @@ public class UseBlockEvent {
 
             if (PreventerClient.config.preventRenamedItemUsing) {
                 if (!(handItem.isDamageable())) {
-                    if (!playerEntity.getStackInHand(hand).getName().getString().equals(handItem.getName().getString())) {
-                        if (targetBlock instanceof CakeBlock || targetBlock instanceof ComposterBlock || targetBlock instanceof CampfireBlock) {
-                            if (PreventerClient.config.preventRenamedItemUsing_msg) {
-                                playerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedItemUsing.text"), true);
-                            }
-                            return ActionResult.FAIL;
-                        } else {
-                            if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
+                    if (!isShulkerBox(handItem)) {
+                        if (!playerEntity.getStackInHand(hand).getName().getString().equals(handItem.getName().getString())) {
+                            if (targetBlock instanceof CakeBlock || targetBlock instanceof ComposterBlock || targetBlock instanceof CampfireBlock) {
                                 if (PreventerClient.config.preventRenamedItemUsing_msg) {
                                     playerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedItemUsing.text"), true);
                                 }
                                 return ActionResult.FAIL;
+                            } else {
+                                if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
+                                    if (PreventerClient.config.preventRenamedItemUsing_msg) {
+                                        playerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedItemUsing.text"), true);
+                                    }
+                                    return ActionResult.FAIL;
+                                }
                             }
                         }
                     }
@@ -261,5 +263,12 @@ public class UseBlockEvent {
         }
         ActionResult actionResult = block.onUse(playerEntity.getWorld(), playerEntity, hand, blockHitResult);
         return !actionResult.isAccepted();
+    }
+
+    private static boolean isShulkerBox(Item handItem) {
+        if (handItem instanceof BlockItem) {
+            return ((BlockItem) handItem).getBlock() instanceof ShulkerBoxBlock;
+        }
+        return false;
     }
 }

@@ -155,8 +155,10 @@
   "config.preventer.preventHorseAttacking.text": "§4Horse hitting prevented§4",
 
   "option.preventer.preventNeutralMobAttacking": "Prevent neutral mob hitting",
-  "tooltip.preventer.preventNeutralMobAttacking": "Prevents you from neutral mobs (as defined in the minecraft wiki)",
+  "tooltip.preventer.preventNeutralMobAttacking": "Prevents you from neutral mobs (as defined in the\nminecraft wiki, except Spiders and Endermen)",
   "config.preventer.preventNeutralMobAttacking.text": "§4Neutral mob hitting prevented§4",
+  "config.preventer.fullNeutralMobAttackingPrevention": "Full neutral mob hitting prevention",
+  "tooltip.preventer.fullNeutralMobAttackingPrevention": "additionally prevents you from attacking spiders and endermen",
 
   "option.preventer.preventSuspiciousBlockBreaking": "Prevent suspicious block breaking",
   "tooltip.preventer.preventSuspiciousBlockBreaking": "Prevents you from breaking suspicious sand and gravel",

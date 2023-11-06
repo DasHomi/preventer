@@ -436,9 +436,17 @@ public class  CreateModConfig {
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("config.preventer.enhancedSuspiciousBlockBreakingPrevention"),
                                 config.enhancedSuspiciousBlockBreakingPrevention)
-                        .setDefaultValue(true)
+                        .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.enhancedSuspiciousBlockBreakingPrevention"))
                         .setSaveConsumer(value -> config.enhancedSuspiciousBlockBreakingPrevention = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("config.preventer.fullNeutralMobAttackingPrevention"),
+                                config.fullNeutralMobAttackingPrevention)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.fullNeutralMobAttackingPrevention"))
+                        .setSaveConsumer(value -> config.fullNeutralMobAttackingPrevention = value)
                         .build());
 
 

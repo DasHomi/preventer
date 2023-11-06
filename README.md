@@ -3,7 +3,7 @@
 Preventer is a collection of **over thirty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs). 
 Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
 
-## Modules (Preventer 1.0.7)
+## Modules (Preventer 1.0.8)
 <details open>
 <summary><b> Interactions </b></summary>
 
@@ -102,7 +102,7 @@ Each module can be enabled or disabled individually in game via a config screen 
 - Prevent horse hitting
   - _Prevents you from attacking horses and similar creatures (Horses (including Skeleton & Zombie Horses), Donkeys, Mules, Llamas, Camels)_
 - Prevent neutral mob hitting
-  - _Prevents you from neutral mobs (as listed in the minecraft wiki)_
+  - _Prevents you from neutral mobs (as defined in the minecraft wiki, except Spiders and Endermen)_
 </details>
 
 <details>

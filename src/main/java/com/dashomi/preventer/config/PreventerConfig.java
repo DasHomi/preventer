@@ -111,6 +111,7 @@ public class PreventerConfig implements ConfigData {
     public boolean preventHorseAttacking_msg = false;
     public boolean preventNeutralMobAttacking = false;
     public boolean preventNeutralMobAttacking_msg = false;
+    public boolean fullNeutralMobAttackingPrevention = false;
 
     // Other
     public boolean lowDurabilityProtection = false;

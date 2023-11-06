@@ -155,8 +155,10 @@
   "config.preventer.preventHorseAttacking.text": "§4Pferd angreifen verhindert§4",
 
   "option.preventer.preventNeutralMobAttacking": "Verhindere neutrale Kreaturen angreifen",
-  "tooltip.preventer.preventNeutralMobAttacking": "Verhindert, dass du neutrale Kreaturen angreifst (alle laut Wiki)",
+  "tooltip.preventer.preventNeutralMobAttacking": "Verhindert, dass du neutrale Kreaturen angreifst (alle laut Wiki außer Spinnen und Enderman)",
   "config.preventer.preventNeutralMobAttacking.text": "§4Neutrale Kreaturen angreifen verhindert§4",
+  "config.preventer.fullNeutralMobAttackingPrevention": "Vollständige neutrale Kreaturen angreifen Verhinderung",
+  "tooltip.preventer.fullNeutralMobAttackingPrevention": "verhindert zusätzlich das du Spinnen und Enderman angreifst",
 
   "option.preventer.preventSuspiciousBlockBreaking": "Verhindere seltsame Blöcke abbauen",
   "tooltip.preventer.preventSuspiciousBlockBreaking": "Verhindert das Abbauen von seltsamen Blöcken",
