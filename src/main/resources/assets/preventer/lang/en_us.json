@@ -195,6 +195,10 @@
   "tooltip.preventer.preventChestBreaking": "Prevents you from breaking chests with an axe",
   "config.preventer.preventChestBreaking.text": "§4Chest breaking prevented§4",
 
+  "option.preventer.preventOffhandPlacing": "Prevent off-hand placing",
+  "tooltip.preventer.preventOffhandPlacing": "Prevents you from placing blocks in your off-hand",
+  "config.preventer.preventOffhandPlacing.text": "§4Off-hand placing prevented§4",
+
 
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",

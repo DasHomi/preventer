@@ -91,6 +91,8 @@ public class PreventerConfig implements ConfigData {
     //public boolean preventRenamedBlockPlacing_msg = false;
     public boolean preventLavaPlacing = false;
     public boolean preventLavaPlacing_msg = false;
+    public boolean preventOffhandPlacing = false;
+    public boolean preventOffhandPlacing_msg = false;
 
     // Attacking
     public boolean preventVillagerPunch = false;

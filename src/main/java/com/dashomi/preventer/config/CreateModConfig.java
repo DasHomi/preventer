@@ -283,6 +283,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventLavaPlacing = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventOffhandPlacing"),
+                                config.preventOffhandPlacing)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventOffhandPlacing"))
+                        .setSaveConsumer(value -> config.preventOffhandPlacing = value)
+                        .build())
+
                 // Attacking
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.AttackingCategory"))
@@ -690,6 +698,13 @@ public class  CreateModConfig {
                                 config.preventLavaPlacing_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventLavaPlacing_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventOffhandPlacing"),
+                                config.preventOffhandPlacing_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventOffhandPlacing_msg = value)
                         .build())
 
                 // Attacking

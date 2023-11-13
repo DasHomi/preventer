@@ -248,6 +248,17 @@ public class UseBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventOffhandPlacing) {
+                if (hand == Hand.OFF_HAND && handItem != Items.AIR) {
+                    if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
+                        if (PreventerClient.config.preventOffhandPlacing_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventOffhandPlacing.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

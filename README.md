@@ -3,7 +3,7 @@
 Preventer is a collection of **over thirty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs). 
 Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
 
-## Modules (Preventer 1.0.9)
+## Modules (Preventer 1.0.10)
 <details open>
 <summary><b> Interactions </b></summary>
 
@@ -80,6 +80,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from placing water in the nether_
 - Prevent lava placing
   - _Prevents you from placing lava_
+- Prevent off-hand placing
+  - _Prevents you from placing blocks in your off-hand_
 </details>
 
 <details>
@@ -126,12 +128,12 @@ Each module can be enabled or disabled individually in game via a config screen 
 - Compatible with most other client-side mods
 - Compatible with most servers
 
-| Minecraft version | Latest compatible preventer version |
-|-------------------|-------------------------------------|
-| Fabric 1.20.x     | 1.0                                 |
-| Fabric 1.19.4🚩   | 1.0                                 |
-| Fabric 1.19.x🚩   | 1.0                                 |
-| Fabric 1.18.x🚩   | 0.9                                 |
+| Minecraft version | Latest preventer version |
+|-------------------|--------------------------|
+| Fabric 1.20.x     | 1.1                      |
+| Fabric 1.19.4🚩   | 1.0                      |
+| Fabric 1.19.x🚩   | 1.0                      |
+| Fabric 1.18.x🚩   | 0.9                      |
 🚩= Won't receive updates to newer Preventer versions
 
 ## Dependencies

@@ -147,11 +147,11 @@
   "config.preventer.preventTamedMobAttacking.text": "§4Diese Kreatur ist gezähmt!§4",
 
   "option.preventer.preventRareMobAttacking": "Verindere wertvolle Kreaturen angreifen",
-  "tooltip.preventer.preventRareMobAttacking": "Verhindert das du seltene und wertvolle Kreaturen angreifst (Papagei, Axolotl, Hilfsgeist)",
+  "tooltip.preventer.preventRareMobAttacking": "Verhindert, dass du seltene und wertvolle Kreaturen angreifst (Papagei, Axolotl, Hilfsgeist)",
   "config.preventer.preventRareMobAttacking.text": "§4Diese Kreatur ist wertvoll§4",
 
   "option.preventer.preventHorseAttacking": "Verhindere Pferd angreifen",
-  "tooltip.preventer.preventHorseAttacking": "Verhindert das du Pferde und ähnliche Tiere angreifst\n(Pferde (auch Skelett und Zombiepferde), Esel, Maultiere, Lamas, Dromedare)",
+  "tooltip.preventer.preventHorseAttacking": "Verhindert, dass du Pferde und ähnliche Tiere angreifst\n(Pferde (auch Skelett und Zombiepferde), Esel, Maultiere, Lamas, Dromedare)",
   "config.preventer.preventHorseAttacking.text": "§4Pferd angreifen verhindert§4",
 
   "option.preventer.preventNeutralMobAttacking": "Verhindere neutrale Kreaturen angreifen",
@@ -168,7 +168,7 @@
   "config.preventer.enhancedSuspiciousBlockBreakingPrevention.text": "§4Es ist ein seltsamer Block über diesem Block!§4",
 
   "option.preventer.preventRenamedItemDropping": "Verhindere umbenannte Gegenstände fallenlassen",
-  "tooltip.preventer.preventRenamedItemDropping": "Verhindert das du umbenannte Gegenstände fallenlässt",
+  "tooltip.preventer.preventRenamedItemDropping": "Verhindert, dass du umbenannte Gegenstände fallenlässt",
   "config.preventer.preventRenamedItemDropping.text": "§4Umbenannte Gegenstände fallenlassen verhindert§4",
 
   "option.preventer.preventEnderChestBreaking": "Verhindere Endertruhen zerstören",
@@ -176,24 +176,28 @@
   "config.preventer.preventEnderChestBreaking.text": "§4Endertruhen zerstören verhindert§4",
 
   "option.preventer.preventLavaPlacing": "Verhindere Lava platzieren",
-  "tooltip.preventer.preventLavaPlacing": "Verhindert das du Lava platzierst",
+  "tooltip.preventer.preventLavaPlacing": "Verhindert, dass du Lava platzierst",
   "config.preventer.preventLavaPlacing.text": "§4Lava platzieren verhindert§4",
 
   "option.preventer.preventSpawnerBreaking": "Verhindere Spawner zerstören",
-  "tooltip.preventer.preventSpawnerBreaking": "Verhindert das du Monster Spawner zerstörst",
+  "tooltip.preventer.preventSpawnerBreaking": "Verhindert, dass du Monster Spawner zerstörst",
   "config.preventer.preventSpawnerBreaking.text": "§4Spawner zerstören verhindert§4",
 
   "option.preventer.preventRespawnAnchorUse": "Verhindere Seelenanker benutzen",
-  "tooltip.preventer.preventRespawnAnchorUse": "Verhindert das benuzten von Seelenanker \nin der Oberwelt oder End Dimension",
+  "tooltip.preventer.preventRespawnAnchorUse": "Verhindert, dass benutzen von Seelenanker \nin der Oberwelt oder End Dimension",
   "config.preventer.preventRespawnAnchorUse.text": "§4Seelenanker benutzen verhindert§4",
 
   "option.preventer.preventSugarCaneBreaking": "Verhindere Zuckerrohr zerstören",
-  "tooltip.preventer.preventSugarCaneBreaking": "Verhindert das du den untersten Block\nZuckerrohr/Bambus/Kaktus zerstörst",
+  "tooltip.preventer.preventSugarCaneBreaking": "Verhindert, dass du den untersten Block\nZuckerrohr/Bambus/Kaktus zerstörst",
   "config.preventer.preventSugarCaneBreaking.text": "§4Zuckerrohr zerstören verhindert§4",
 
   "option.preventer.preventChestBreaking": "Verhindere Truhen zerstören",
-  "tooltip.preventer.preventChestBreaking": "Verhindert das du Truhen mit einer Axt zerstörst",
+  "tooltip.preventer.preventChestBreaking": "Verhindert, dass du Truhen mit einer Axt zerstörst",
   "config.preventer.preventChestBreaking.text": "§4Truhen zerstören verhindert§4",
+
+  "option.preventer.preventOffhandPlacing": "Verhindere Platzieren aus der off-hand",
+  "tooltip.preventer.preventOffhandPlacing": "Verhindert, dass du Blöcke in deiner off-hand platzierst",
+  "config.preventer.preventOffhandPlacing.text": "§4Off-hand platzieren verhindert§4",
 
 
   "option.preventer.hideTotem": "Versteckt das Totem",
