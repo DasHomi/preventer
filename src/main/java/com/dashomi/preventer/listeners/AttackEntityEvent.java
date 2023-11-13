@@ -68,10 +68,12 @@ public class AttackEntityEvent {
 
             if (PreventerClient.config.preventGolemAttacking) {
                 if (entity instanceof GolemEntity) {
-                    if (PreventerClient.config.preventGolemAttacking_msg) {
-                        playerEntity.sendMessage(Text.translatable("config.preventer.preventGolemAttacking.text"), true);
+                    if (!(entity instanceof ShulkerEntity)) {
+                        if (PreventerClient.config.preventGolemAttacking_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventGolemAttacking.text"), true);
+                        }
+                        return ActionResult.FAIL;
                     }
-                    return ActionResult.FAIL;
                 }
             }
 
