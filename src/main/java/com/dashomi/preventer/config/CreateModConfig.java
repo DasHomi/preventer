@@ -124,14 +124,6 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventRespawnAnchorUse = value)
                         .build())
 
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRocketSpamming"),
-                                config.preventRocketSpamming)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventRocketSpamming"))
-                        .setSaveConsumer(value -> config.preventRocketSpamming = value)
-                        .build())
-
                 // Plants
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.plantsCategory"))
@@ -246,6 +238,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventChestBreaking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventCarpetBreaking"),
+                                config.preventCarpetBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventCarpetBreaking"))
+                        .setSaveConsumer(value -> config.preventCarpetBreaking = value)
+                        .build())
+
                 // Placing
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.placingCategory"))
@@ -266,14 +266,6 @@ public class  CreateModConfig {
                         .setTooltip(Text.translatable("tooltip.preventer.preventWaterPlace"))
                         .setSaveConsumer(value -> config.preventWaterPlace = value)
                         .build())
-
-                //.addEntry(entryBuilder.startBooleanToggle(
-                //                Text.translatable("option.preventer.preventRenamedBlockPlacing"),
-                //                config.preventRenamedBlockPlacing)
-                //        .setDefaultValue(false)
-                //        .setTooltip(Text.translatable("tooltip.preventer.preventRenamedBlockPlacing"))
-                //        .setSaveConsumer(value -> config.preventRenamedBlockPlacing = value)
-                //        .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventLavaPlacing"),
@@ -559,13 +551,6 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventRespawnAnchorUse_msg = value)
                         .build())
 
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRocketSpamming"),
-                                config.preventRocketSpamming_msg)
-                        .setDefaultValue(false)
-                        .setSaveConsumer(value -> config.preventRocketSpamming_msg = value)
-                        .build())
-
                 // Plants
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.plantsCategory"))
@@ -667,6 +652,13 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventChestBreaking_msg = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventCarpetBreaking"),
+                                config.preventCarpetBreaking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventCarpetBreaking_msg = value)
+                        .build())
+
                 // Placing
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.placingCategory"))
@@ -685,13 +677,6 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventWaterPlace_msg = value)
                         .build())
-
-                //.addEntry(entryBuilder.startBooleanToggle(
-                //                Text.translatable("option.preventer.preventRenamedBlockPlacing"),
-                //                config.preventRenamedBlockPlacing_msg)
-                //        .setDefaultValue(false)
-                //        .setSaveConsumer(value -> config.preventRenamedBlockPlacing_msg = value)
-                //        .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventLavaPlacing"),

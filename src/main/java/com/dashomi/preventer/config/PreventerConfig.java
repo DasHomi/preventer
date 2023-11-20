@@ -79,16 +79,14 @@ public class PreventerConfig implements ConfigData {
     public boolean preventSpawnerBreaking_msg = false;
     public boolean preventChestBreaking = false;
     public boolean preventChestBreaking_msg = false;
-    public boolean preventRocketSpamming = false;
-    public boolean preventRocketSpamming_msg = false;
+    public boolean preventCarpetBreaking = false;
+    public boolean preventCarpetBreaking_msg = false;
 
     // Placing
     public boolean preventCoralPlace = false;
     public boolean preventCoralPlace_msg = false;
     public boolean preventWaterPlace = false;
     public boolean preventWaterPlace_msg = false;
-    //public boolean preventRenamedBlockPlacing = false;
-    //public boolean preventRenamedBlockPlacing_msg = false;
     public boolean preventLavaPlacing = false;
     public boolean preventLavaPlacing_msg = false;
     public boolean preventOffhandPlacing = false;

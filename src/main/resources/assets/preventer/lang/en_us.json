@@ -81,7 +81,7 @@
   "config.preventer.preventBuddingAmethystBreaking.text": "§4Budding amethyst block breaking prevented§4",
 
   "option.preventer.preventRocketUse": "Prevent firework rocket use",
-  "tooltip.preventer.preventRocketUse": "Prevents you from using firework\nrockets while not flying",
+  "tooltip.preventer.preventRocketUse": "Prevents you from using firework\nrockets while not flying.\n§eHand can be configured under Module Configs§e",
   "config.preventer.preventRocketUse.text": "§4Firework rocket use prevented§4",
   "config.preventer.rocketInOffhand": "Prevent rocket use in offhand",
   "config.preventer.rocketInMainHand": "Prevent rocket use in main hand",
@@ -198,6 +198,10 @@
   "option.preventer.preventOffhandPlacing": "Prevent off-hand placing",
   "tooltip.preventer.preventOffhandPlacing": "Prevents you from placing blocks in your off-hand",
   "config.preventer.preventOffhandPlacing.text": "§4Off-hand placing prevented§4",
+
+  "option.preventer.preventCarpetBreaking": "Prevent carpet breaking",
+  "tooltip.preventer.preventCarpetBreaking": "Prevents you from breaking carpets,\nincluding moss carpets",
+  "config.preventer.preventCarpetBreaking.text": "§4Carpet breaking prevented§4",
 
 
   "option.preventer.hideTotem": "Hide totem",

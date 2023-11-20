@@ -81,7 +81,7 @@
   "config.preventer.preventBuddingAmethystBreaking.text": "§4Amethystknospenblock zerstören verhindert§4",
 
   "option.preventer.preventRocketUse": "Verwendung von Feuerwerksraketen verhindern",
-  "tooltip.preventer.preventRocketUse": "Verhindert das du Raketen nutzt, während du am Boden bist",
+  "tooltip.preventer.preventRocketUse": "Verhindert, dass du Raketen nutzt, während du am Boden bist\n§eHand kann unter Konfiguration eingestellt werden§e",
   "config.preventer.preventRocketUse.text": "§4Feuerwerksraketen benutzung verhindert§4",
   "config.preventer.rocketInOffhand": "Verhindert Feuerwerksraketen-Nutzung in der Nebenhand",
   "config.preventer.rocketInMainHand": "Verhindert Feuerwerksraketen-Nutzung in der Haupthand",
@@ -198,6 +198,10 @@
   "option.preventer.preventOffhandPlacing": "Verhindere Platzieren aus der off-hand",
   "tooltip.preventer.preventOffhandPlacing": "Verhindert, dass du Blöcke in deiner off-hand platzierst",
   "config.preventer.preventOffhandPlacing.text": "§4Off-hand platzieren verhindert§4",
+
+  "option.preventer.preventCarpetBreaking": "Verhindere Teppich zerstören",
+  "tooltip.preventer.preventCarpetBreaking": "Verhindert, dass du Teppiche zerstörst, auch Moosteppich",
+  "config.preventer.preventCarpetBreaking.text": "§4Teppich zerstören verhindert§4",
 
 
   "option.preventer.hideTotem": "Versteckt das Totem",
