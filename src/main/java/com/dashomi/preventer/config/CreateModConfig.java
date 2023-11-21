@@ -124,6 +124,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventRespawnAnchorUse = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventGrassBonemeal"),
+                                config.preventGrassBonemeal)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventGrassBonemeal"))
+                        .setSaveConsumer(value -> config.preventGrassBonemeal = value)
+                        .build())
+
                 // Plants
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.plantsCategory"))
@@ -549,6 +557,13 @@ public class  CreateModConfig {
                                 config.preventRespawnAnchorUse_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventRespawnAnchorUse_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventGrassBonemeal"),
+                                config.preventGrassBonemeal_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventGrassBonemeal_msg = value)
                         .build())
 
                 // Plants

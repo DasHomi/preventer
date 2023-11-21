@@ -203,6 +203,10 @@
   "tooltip.preventer.preventCarpetBreaking": "Verhindert, dass du Teppiche zerstörst, auch Moosteppich",
   "config.preventer.preventCarpetBreaking.text": "§4Teppich zerstören verhindert§4",
 
+  "option.preventer.preventGrassBonemeal": "Verhindere gras düngen",
+  "tooltip.preventer.preventGrassBonemeal": "Verhindert, dass du Gras Blöcke mit Knochenmehl düngst",
+  "config.preventer.preventGrassBonemeal.text": "§4Gras düngen verhindert§4",
+
 
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",

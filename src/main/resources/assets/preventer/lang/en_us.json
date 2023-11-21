@@ -203,6 +203,10 @@
   "tooltip.preventer.preventCarpetBreaking": "Prevents you from breaking carpets,\nincluding moss carpets",
   "config.preventer.preventCarpetBreaking.text": "§4Carpet breaking prevented§4",
 
+  "option.preventer.preventGrassBonemeal": "Prevent grass block bone mealing",
+  "tooltip.preventer.preventGrassBonemeal": "Prevents you from using bone meal on grass blocks",
+  "config.preventer.preventGrassBonemeal.text": "§4Grass block bone mealing prevented§4",
+
 
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",

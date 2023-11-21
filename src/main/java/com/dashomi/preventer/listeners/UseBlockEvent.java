@@ -259,6 +259,17 @@ public class UseBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventGrassBonemeal) {
+                if (handItem.equals(Items.BONE_MEAL)) {
+                    if (targetBlock instanceof GrassBlock) {
+                        if (PreventerClient.config.preventGrassBonemeal_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventGrassBonemeal.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

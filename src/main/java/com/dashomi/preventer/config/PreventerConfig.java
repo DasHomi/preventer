@@ -48,6 +48,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventNoteBlockEditing_msg = false;
     public boolean preventRespawnAnchorUse = false;
     public boolean preventRespawnAnchorUse_msg = false;
+    public boolean preventGrassBonemeal = false;
+    public boolean preventGrassBonemeal_msg = false;
 
     // Plants
     public boolean noGlowBerrieHarvest = false;
