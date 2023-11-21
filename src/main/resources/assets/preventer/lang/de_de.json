@@ -81,7 +81,7 @@
   "config.preventer.preventBuddingAmethystBreaking.text": "§4Amethystknospenblock zerstören verhindert§4",
 
   "option.preventer.preventRocketUse": "Verwendung von Feuerwerksraketen verhindern",
-  "tooltip.preventer.preventRocketUse": "Verhindert das du Raketen nutzt, während du am Boden bist",
+  "tooltip.preventer.preventRocketUse": "Verhindert, dass du Raketen nutzt, während du am Boden bist\n§eHand kann unter Konfiguration eingestellt werden§e",
   "config.preventer.preventRocketUse.text": "§4Feuerwerksraketen benutzung verhindert§4",
   "config.preventer.rocketInOffhand": "Verhindert Feuerwerksraketen-Nutzung in der Nebenhand",
   "config.preventer.rocketInMainHand": "Verhindert Feuerwerksraketen-Nutzung in der Haupthand",
@@ -93,6 +93,10 @@
   "option.preventer.preventBedUse": "Verhindere Bett Benutzung",
   "tooltip.preventer.preventBedUse": "Verhindert das Benutzen eines Bettes\nin der Nether oder End Dimension",
   "config.preventer.preventBedUse.text": "§4Bett benutzen verhindert§4",
+
+  "option.preventer.preventDragonEggTeleport": "Verhindere Drachenei Teleportieren",
+  "tooltip.preventer.preventDragonEggTeleport": "Hindert dich daran, das Drachenei zu teleportieren, wenn du es anklickst",
+  "config.preventer.preventDragonEggTeleport.text": "§4Die Teleportation vom Drachenei wurde verhindert§4",
 
   "option.preventer.preventCoralPlace": "Verhindere Korallen Platzieren",
   "tooltip.preventer.preventCoralPlace": "Verhindert das Platzieren von\nKorallen außerhalb von Wasser",
@@ -122,13 +126,9 @@
   "tooltip.preventer.preventGlassBreaking": "Verhindert das Zerstören von Glasblöcken und Glasscheiben",
   "config.preventer.preventGlassBreaking.text": "§4Glas zerstören wurde verhindert§4",
 
-  "option.preventer.preventRenamedBlockPlacing": "Platzieren umbenannter Blöcke verhindern",
-  "tooltip.preventer.preventRenamedBlockPlacing": "Verhindert, dass du umbenannte Blöcke platzierst",
-  "config.preventer.preventRenamedBlockPlacing.text": "§4Es wurde verhindert, dass du einen umbenannten Block platzierst§4",
-
-  "option.preventer.preventRenamedItemEating": "Umbenannte Nahrung essen verhindern",
-  "tooltip.preventer.preventRenamedItemEating": "Verhindert das du umbenannte Nahrung isst",
-  "config.preventer.preventRenamedItemEating.text": "§4Diese Umbenannte Nahrung willst du nicht essen§4",
+  "option.preventer.preventRenamedItemUsing": "Verhindere umbenannte Gegenstände benutzen",
+  "tooltip.preventer.preventRenamedItemUsing": "Verhindert das platzieren, essen, benutzen, ... von\numbenannten Items (außer Werkzeugen, Waffen, Rüstung)",
+  "config.preventer.preventRenamedItemUsing.text": "§4Umbenannte gegenstände benutzen verhindert§4",
 
   "option.preventer.preventNoteBlockEditing": "Verhindere Notenlock bearbeiten",
   "tooltip.preventer.preventNoteBlockEditing": "Verhindert das Bearbeiten der Noten von Notenblöcken",
@@ -147,16 +147,18 @@
   "config.preventer.preventTamedMobAttacking.text": "§4Diese Kreatur ist gezähmt!§4",
 
   "option.preventer.preventRareMobAttacking": "Verindere wertvolle Kreaturen angreifen",
-  "tooltip.preventer.preventRareMobAttacking": "Verhindert das du seltene und wertvolle Kreaturen angreifst (Papagei, Axolotl, Hilfsgeist)",
+  "tooltip.preventer.preventRareMobAttacking": "Verhindert, dass du seltene und wertvolle Kreaturen angreifst (Papagei, Axolotl, Hilfsgeist)",
   "config.preventer.preventRareMobAttacking.text": "§4Diese Kreatur ist wertvoll§4",
 
   "option.preventer.preventHorseAttacking": "Verhindere Pferd angreifen",
-  "tooltip.preventer.preventHorseAttacking": "Verhindert das du Pferde und ähnliche Tiere angreifst\n(Pferde (auch Skelett und Zombiepferde), Esel, Maultiere, Lamas, Dromedare)",
+  "tooltip.preventer.preventHorseAttacking": "Verhindert, dass du Pferde und ähnliche Tiere angreifst\n(Pferde (auch Skelett und Zombiepferde), Esel, Maultiere, Lamas, Dromedare)",
   "config.preventer.preventHorseAttacking.text": "§4Pferd angreifen verhindert§4",
 
   "option.preventer.preventNeutralMobAttacking": "Verhindere neutrale Kreaturen angreifen",
-  "tooltip.preventer.preventNeutralMobAttacking": "Verhindert, dass du neutrale Kreaturen angreifst (alle laut Wiki)",
+  "tooltip.preventer.preventNeutralMobAttacking": "Verhindert, dass du neutrale Kreaturen angreifst (alle laut Wiki außer Spinnen und Enderman)",
   "config.preventer.preventNeutralMobAttacking.text": "§4Neutrale Kreaturen angreifen verhindert§4",
+  "config.preventer.fullNeutralMobAttackingPrevention": "Vollständige neutrale Kreaturen angreifen Verhinderung",
+  "tooltip.preventer.fullNeutralMobAttackingPrevention": "verhindert zusätzlich das du Spinnen und Enderman angreifst",
 
   "option.preventer.preventSuspiciousBlockBreaking": "Verhindere seltsame Blöcke abbauen",
   "tooltip.preventer.preventSuspiciousBlockBreaking": "Verhindert das Abbauen von seltsamen Blöcken",
@@ -166,7 +168,7 @@
   "config.preventer.enhancedSuspiciousBlockBreakingPrevention.text": "§4Es ist ein seltsamer Block über diesem Block!§4",
 
   "option.preventer.preventRenamedItemDropping": "Verhindere umbenannte Gegenstände fallenlassen",
-  "tooltip.preventer.preventRenamedItemDropping": "Verhindert das du umbenannte Gegenstände fallenlässt",
+  "tooltip.preventer.preventRenamedItemDropping": "Verhindert, dass du umbenannte Gegenstände fallenlässt",
   "config.preventer.preventRenamedItemDropping.text": "§4Umbenannte Gegenstände fallenlassen verhindert§4",
 
   "option.preventer.preventEnderChestBreaking": "Verhindere Endertruhen zerstören",
@@ -174,24 +176,36 @@
   "config.preventer.preventEnderChestBreaking.text": "§4Endertruhen zerstören verhindert§4",
 
   "option.preventer.preventLavaPlacing": "Verhindere Lava platzieren",
-  "tooltip.preventer.preventLavaPlacing": "Verhindert das du Lava platzierst",
+  "tooltip.preventer.preventLavaPlacing": "Verhindert, dass du Lava platzierst",
   "config.preventer.preventLavaPlacing.text": "§4Lava platzieren verhindert§4",
 
   "option.preventer.preventSpawnerBreaking": "Verhindere Spawner zerstören",
-  "tooltip.preventer.preventSpawnerBreaking": "Verhindert das du Monster Spawner zerstörst",
+  "tooltip.preventer.preventSpawnerBreaking": "Verhindert, dass du Monster Spawner zerstörst",
   "config.preventer.preventSpawnerBreaking.text": "§4Spawner zerstören verhindert§4",
 
   "option.preventer.preventRespawnAnchorUse": "Verhindere Seelenanker benutzen",
-  "tooltip.preventer.preventRespawnAnchorUse": "Verhindert das benuzten von Seelenanker \nin der Oberwelt oder End Dimension",
+  "tooltip.preventer.preventRespawnAnchorUse": "Verhindert, dass benutzen von Seelenanker \nin der Oberwelt oder End Dimension",
   "config.preventer.preventRespawnAnchorUse.text": "§4Seelenanker benutzen verhindert§4",
 
   "option.preventer.preventSugarCaneBreaking": "Verhindere Zuckerrohr zerstören",
-  "tooltip.preventer.preventSugarCaneBreaking": "Verhindert das du den untersten Block\nZuckerrohr/Bambus/Kaktus zerstörst",
+  "tooltip.preventer.preventSugarCaneBreaking": "Verhindert, dass du den untersten Block\nZuckerrohr/Bambus/Kaktus zerstörst",
   "config.preventer.preventSugarCaneBreaking.text": "§4Zuckerrohr zerstören verhindert§4",
 
   "option.preventer.preventChestBreaking": "Verhindere Truhen zerstören",
-  "tooltip.preventer.preventChestBreaking": "Verhindert das du Truhen mit einer Axt zerstörst",
+  "tooltip.preventer.preventChestBreaking": "Verhindert, dass du Truhen mit einer Axt zerstörst",
   "config.preventer.preventChestBreaking.text": "§4Truhen zerstören verhindert§4",
+
+  "option.preventer.preventOffhandPlacing": "Verhindere Platzieren aus der off-hand",
+  "tooltip.preventer.preventOffhandPlacing": "Verhindert, dass du Blöcke in deiner off-hand platzierst",
+  "config.preventer.preventOffhandPlacing.text": "§4Off-hand platzieren verhindert§4",
+
+  "option.preventer.preventCarpetBreaking": "Verhindere Teppich zerstören",
+  "tooltip.preventer.preventCarpetBreaking": "Verhindert, dass du Teppiche zerstörst, auch Moosteppich",
+  "config.preventer.preventCarpetBreaking.text": "§4Teppich zerstören verhindert§4",
+
+  "option.preventer.preventGrassBonemeal": "Verhindere gras düngen",
+  "tooltip.preventer.preventGrassBonemeal": "Verhindert, dass du Gras Blöcke mit Knochenmehl düngst",
+  "config.preventer.preventGrassBonemeal.text": "§4Gras düngen verhindert§4",
 
 
   "option.preventer.hideTotem": "Versteckt das Totem",

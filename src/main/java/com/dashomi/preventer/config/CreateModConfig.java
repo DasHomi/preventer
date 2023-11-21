@@ -93,11 +93,19 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRenamedItemEating"),
-                                config.preventRenamedItemEating)
+                                Text.translatable("option.preventer.preventDragonEggTeleport"),
+                                config.preventDragonEggTeleport)
                         .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventRenamedItemEating"))
-                        .setSaveConsumer(value -> config.preventRenamedItemEating = value)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventDragonEggTeleport"))
+                        .setSaveConsumer(value -> config.preventDragonEggTeleport = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventRenamedItemUsing"),
+                                config.preventRenamedItemUsing)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventRenamedItemUsing"))
+                        .setSaveConsumer(value -> config.preventRenamedItemUsing = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
@@ -117,11 +125,11 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRocketSpamming"),
-                                config.preventRocketSpamming)
+                                Text.translatable("option.preventer.preventGrassBonemeal"),
+                                config.preventGrassBonemeal)
                         .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventRocketSpamming"))
-                        .setSaveConsumer(value -> config.preventRocketSpamming = value)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventGrassBonemeal"))
+                        .setSaveConsumer(value -> config.preventGrassBonemeal = value)
                         .build())
 
                 // Plants
@@ -238,6 +246,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventChestBreaking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventCarpetBreaking"),
+                                config.preventCarpetBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventCarpetBreaking"))
+                        .setSaveConsumer(value -> config.preventCarpetBreaking = value)
+                        .build())
+
                 // Placing
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.placingCategory"))
@@ -260,19 +276,19 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRenamedBlockPlacing"),
-                                config.preventRenamedBlockPlacing)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventRenamedBlockPlacing"))
-                        .setSaveConsumer(value -> config.preventRenamedBlockPlacing = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventLavaPlacing"),
                                 config.preventLavaPlacing)
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.preventLavaPlacing"))
                         .setSaveConsumer(value -> config.preventLavaPlacing = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventOffhandPlacing"),
+                                config.preventOffhandPlacing)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventOffhandPlacing"))
+                        .setSaveConsumer(value -> config.preventOffhandPlacing = value)
                         .build())
 
                 // Attacking
@@ -428,9 +444,17 @@ public class  CreateModConfig {
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("config.preventer.enhancedSuspiciousBlockBreakingPrevention"),
                                 config.enhancedSuspiciousBlockBreakingPrevention)
-                        .setDefaultValue(true)
+                        .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.enhancedSuspiciousBlockBreakingPrevention"))
                         .setSaveConsumer(value -> config.enhancedSuspiciousBlockBreakingPrevention = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("config.preventer.fullNeutralMobAttackingPrevention"),
+                                config.fullNeutralMobAttackingPrevention)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.fullNeutralMobAttackingPrevention"))
+                        .setSaveConsumer(value -> config.fullNeutralMobAttackingPrevention = value)
                         .build());
 
 
@@ -508,10 +532,17 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRenamedItemEating"),
-                                config.preventRenamedItemEating_msg)
+                                Text.translatable("option.preventer.preventDragonEggTeleport"),
+                                config.preventDragonEggTeleport_msg)
                         .setDefaultValue(false)
-                        .setSaveConsumer(value -> config.preventRenamedItemEating_msg = value)
+                        .setSaveConsumer(value -> config.preventDragonEggTeleport_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventRenamedItemUsing"),
+                                config.preventRenamedItemUsing_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventRenamedItemUsing_msg = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
@@ -529,10 +560,10 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRocketSpamming"),
-                                config.preventRocketSpamming_msg)
+                                Text.translatable("option.preventer.preventGrassBonemeal"),
+                                config.preventGrassBonemeal_msg)
                         .setDefaultValue(false)
-                        .setSaveConsumer(value -> config.preventRocketSpamming_msg = value)
+                        .setSaveConsumer(value -> config.preventGrassBonemeal_msg = value)
                         .build())
 
                 // Plants
@@ -636,6 +667,13 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventChestBreaking_msg = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventCarpetBreaking"),
+                                config.preventCarpetBreaking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventCarpetBreaking_msg = value)
+                        .build())
+
                 // Placing
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.placingCategory"))
@@ -656,17 +694,17 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRenamedBlockPlacing"),
-                                config.preventRenamedBlockPlacing_msg)
-                        .setDefaultValue(false)
-                        .setSaveConsumer(value -> config.preventRenamedBlockPlacing_msg = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventLavaPlacing"),
                                 config.preventLavaPlacing_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventLavaPlacing_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventOffhandPlacing"),
+                                config.preventOffhandPlacing_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventOffhandPlacing_msg = value)
                         .build())
 
                 // Attacking

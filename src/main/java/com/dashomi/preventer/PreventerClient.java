@@ -12,6 +12,7 @@ import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.event.player.UseItemCallback;
+import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,6 +33,7 @@ public class PreventerClient implements ClientModInitializer {
         ClientPlayConnectionEvents.JOIN.register(PlayerJoinEvent::playerJoinListener);
         UseBlockCallback.EVENT.register(UseBlockEvent::useBlockListener);
         UseItemCallback.EVENT.register(UseItemEvent::useItemListener);
+        UseEntityCallback.EVENT.register(UseEntityEvent::useEntityListener);
 
         RegisterKeyBindings.register();
     }

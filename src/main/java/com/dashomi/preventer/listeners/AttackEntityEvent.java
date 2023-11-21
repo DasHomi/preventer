@@ -68,10 +68,12 @@ public class AttackEntityEvent {
 
             if (PreventerClient.config.preventGolemAttacking) {
                 if (entity instanceof GolemEntity) {
-                    if (PreventerClient.config.preventGolemAttacking_msg) {
-                        playerEntity.sendMessage(Text.translatable("config.preventer.preventGolemAttacking.text"), true);
+                    if (!(entity instanceof ShulkerEntity)) {
+                        if (PreventerClient.config.preventGolemAttacking_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventGolemAttacking.text"), true);
+                        }
+                        return ActionResult.FAIL;
                     }
-                    return ActionResult.FAIL;
                 }
             }
 
@@ -114,13 +116,21 @@ public class AttackEntityEvent {
             }
 
             if (PreventerClient.config.preventNeutralMobAttacking) {
-                if (isNeutralMob(entity)) {
-                    if (PreventerClient.config.preventNeutralMobAttacking_msg) {
-                        playerEntity.sendMessage(Text.translatable("config.preventer.preventNeutralMobAttacking.text"), true);
+                if (PreventerClient.config.fullNeutralMobAttackingPrevention) {
+                    if (isNeutralMob(entity) || entity instanceof SpiderEntity || entity instanceof EndermanEntity) {
+                        if (PreventerClient.config.preventNeutralMobAttacking_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventNeutralMobAttacking.text"), true);
+                        }
+                        return ActionResult.FAIL;
                     }
-                    return ActionResult.FAIL;
+                } else {
+                    if (isNeutralMob(entity)) {
+                        if (PreventerClient.config.preventNeutralMobAttacking_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventNeutralMobAttacking.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
                 }
-
             }
 
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
@@ -132,9 +142,7 @@ public class AttackEntityEvent {
     private static boolean isNeutralMob(Entity entity) {
         return (
                     entity instanceof BeeEntity ||
-                    entity instanceof SpiderEntity ||
                     entity instanceof DolphinEntity ||
-                    entity instanceof EndermanEntity ||
                     entity instanceof GoatEntity ||
                     entity instanceof IronGolemEntity ||
                     entity instanceof LlamaEntity ||

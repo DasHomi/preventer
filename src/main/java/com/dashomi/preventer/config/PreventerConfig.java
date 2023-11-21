@@ -40,12 +40,16 @@ public class PreventerConfig implements ConfigData {
     public boolean rocketInMainHand = false;
     public boolean preventBedUse = false;
     public boolean preventBedUse_msg = false;
-    public boolean preventRenamedItemEating = false;
-    public boolean preventRenamedItemEating_msg = false;
+    public boolean preventDragonEggTeleport = false;
+    public boolean preventDragonEggTeleport_msg = false;
+    public boolean preventRenamedItemUsing = false;
+    public boolean preventRenamedItemUsing_msg = false;
     public boolean preventNoteBlockEditing = false;
     public boolean preventNoteBlockEditing_msg = false;
     public boolean preventRespawnAnchorUse = false;
     public boolean preventRespawnAnchorUse_msg = false;
+    public boolean preventGrassBonemeal = false;
+    public boolean preventGrassBonemeal_msg = false;
 
     // Plants
     public boolean noGlowBerrieHarvest = false;
@@ -77,18 +81,18 @@ public class PreventerConfig implements ConfigData {
     public boolean preventSpawnerBreaking_msg = false;
     public boolean preventChestBreaking = false;
     public boolean preventChestBreaking_msg = false;
-    public boolean preventRocketSpamming = false;
-    public boolean preventRocketSpamming_msg = false;
+    public boolean preventCarpetBreaking = false;
+    public boolean preventCarpetBreaking_msg = false;
 
     // Placing
     public boolean preventCoralPlace = false;
     public boolean preventCoralPlace_msg = false;
     public boolean preventWaterPlace = false;
     public boolean preventWaterPlace_msg = false;
-    public boolean preventRenamedBlockPlacing = false;
-    public boolean preventRenamedBlockPlacing_msg = false;
     public boolean preventLavaPlacing = false;
     public boolean preventLavaPlacing_msg = false;
+    public boolean preventOffhandPlacing = false;
+    public boolean preventOffhandPlacing_msg = false;
 
     // Attacking
     public boolean preventVillagerPunch = false;
@@ -109,6 +113,7 @@ public class PreventerConfig implements ConfigData {
     public boolean preventHorseAttacking_msg = false;
     public boolean preventNeutralMobAttacking = false;
     public boolean preventNeutralMobAttacking_msg = false;
+    public boolean fullNeutralMobAttackingPrevention = false;
 
     // Other
     public boolean lowDurabilityProtection = false;
