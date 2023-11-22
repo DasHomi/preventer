@@ -1,6 +1,6 @@
 # Preventer
 
-Preventer is a collection of **over forty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs). 
+Preventer is a collection of **over forty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs).
 Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
 
 ## Modules (Preventer 1.1.0)
@@ -122,15 +122,12 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from dropping items with a custom name_
 </details>
 
-## Planed Features
-- **_Missing any features? Open an [issue](https://github.com/DasHomi/preventer/issues)!_**
-- Prevent Plant Breaking
-- Prevent Block Under Player Breaking
-- Forge Support
+**_Missing any features? Open an [issue](https://github.com/DasHomi/preventer/issues)!_**
 
 ## Compatibility
 - Compatible with most other client-side mods
 - Compatible with most servers
+- Forge support is planned
 
 | Minecraft version | Latest preventer version |
 |-------------------|--------------------------|
