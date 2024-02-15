@@ -3,7 +3,7 @@
 Preventer is a collection of **over forty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs).
 Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
 
-## Modules (Preventer 1.1.0)
+## Modules (Preventer 1.1.1)
 <details open>
 <summary><b> Interactions </b></summary>
 
@@ -131,7 +131,7 @@ Each module can be enabled or disabled individually in game via a config screen 
 
 | Minecraft version | Latest preventer version |
 |-------------------|--------------------------|
-| Fabric 1.20.x     | 1.1                      |
+| Fabric 1.20.x     | 1.1.5                    |
 | Fabric 1.19.4🚩   | 1.0                      |
 | Fabric 1.19.x🚩   | 1.0                      |
 | Fabric 1.18.x🚩   | 0.9                      |
