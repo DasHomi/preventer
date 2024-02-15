@@ -132,6 +132,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventGrassBonemeal = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSignEditing"),
+                                config.preventSignEditing)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventSignEditing"))
+                        .setSaveConsumer(value -> config.preventSignEditing = value)
+                        .build())
+
                 // Plants
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.plantsCategory"))
@@ -398,6 +406,14 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventEnchantedItemBurning"),
+                                config.preventEnchantedItemBurning)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventEnchantedItemBurning"))
+                        .setSaveConsumer(value -> config.preventEnchantedItemBurning = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.hideShield"),
                                 config.hideShield)
                         .setDefaultValue(false)
@@ -455,6 +471,14 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.fullNeutralMobAttackingPrevention"))
                         .setSaveConsumer(value -> config.fullNeutralMobAttackingPrevention = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("config.preventer.preventChestSignEditing"),
+                                config.preventChestSignEditing)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventChestSignEditing"))
+                        .setSaveConsumer(value -> config.preventChestSignEditing = value)
                         .build());
 
 
@@ -564,6 +588,13 @@ public class  CreateModConfig {
                                 config.preventGrassBonemeal_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventGrassBonemeal_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSignEditing"),
+                                config.preventSignEditing_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventSignEditing_msg = value)
                         .build())
 
                 // Plants
@@ -799,6 +830,13 @@ public class  CreateModConfig {
                                 config.preventRenamedItemDropping_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventRenamedItemDropping_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventEnchantedItemBurning"),
+                                config.preventEnchantedItemBurning_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventEnchantedItemBurning_msg = value)
                         .build());
 
         return builder
