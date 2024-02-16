@@ -270,6 +270,27 @@ public class UseBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventSignEditing) {
+                if (targetBlock instanceof AbstractSignBlock) {
+                    if (!PreventerClient.config.preventChestSignEditing) {
+                        if (PreventerClient.config.preventSignEditing_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventSignEditing.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    } else {
+                        if (targetBlock instanceof WallSignBlock) {
+                            Block blockBehindTargetBlock = world.getBlockState(blockHitResult.getBlockPos().offset(targetBlockState.get(HorizontalFacingBlock.FACING), -1)).getBlock();
+                            if (blockBehindTargetBlock instanceof AbstractChestBlock) {
+                                if (PreventerClient.config.preventSignEditing_msg) {
+                                    playerEntity.sendMessage(Text.translatable("config.preventer.preventSignEditing.text"), true);
+                                }
+                                return ActionResult.FAIL;
+                            }
+                        }
+                    }
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 
