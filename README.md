@@ -108,7 +108,7 @@ Each module can be enabled or disabled individually in game via a config screen 
 - Prevent horse hitting
   - _Prevents you from attacking horses and similar creatures (Horses (including Skeleton & Zombie Horses), Donkeys, Mules, Llamas, Camels)_
 - Prevent neutral mob hitting
-  - _Prevents you from neutral mobs (as defined in the minecraft wiki, except Spiders and Endermen)_
+  - _Prevents you from hitting neutral mobs (as defined in the minecraft wiki, except Spiders and Endermen)_
 </details>
 
 <details>
@@ -131,7 +131,8 @@ Each module can be enabled or disabled individually in game via a config screen 
 
 | Minecraft version | Latest preventer version |
 |-------------------|--------------------------|
-| Fabric 1.20.x     | 1.1                      |
+| Fabric 1.20.[3-4] | 1.1                      |
+| Fabric 1.20.[0-2] | 1.1                      |
 | Fabric 1.19.4🚩   | 1.0                      |
 | Fabric 1.19.x🚩   | 1.0                      |
 | Fabric 1.18.x🚩   | 0.9                      |

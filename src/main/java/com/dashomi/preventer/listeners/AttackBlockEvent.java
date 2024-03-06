@@ -13,7 +13,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
-import net.minecraft.block.GlassBlock;
 
 import java.util.Objects;
 
@@ -61,7 +60,7 @@ public class AttackBlockEvent {
             }
 
             if (PreventerClient.config.preventGlassBreaking) {
-                if (targetBlock instanceof GlassBlock || targetBlock instanceof StainedGlassBlock || targetBlock instanceof PaneBlock || targetBlock instanceof TintedGlassBlock) {
+                if (targetBlock instanceof TransparentBlock || targetBlock instanceof PaneBlock) {
                     if (!Objects.equals(targetBlock.getTranslationKey(), "block.minecraft.iron_bars")) {
                         if (PreventerClient.config.preventGlassBreaking_msg) {
                             playerEntity.sendMessage(Text.translatable("config.preventer.preventGlassBreaking.text"), true);
