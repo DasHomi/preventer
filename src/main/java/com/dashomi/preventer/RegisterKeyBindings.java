@@ -3,7 +3,6 @@ package com.dashomi.preventer;
 import com.dashomi.preventer.config.CreateModConfig;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
@@ -23,15 +22,13 @@ public class RegisterKeyBindings {
         KeyBindingHelper.registerKeyBinding(overrideKey);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (client.player == null) return;
 
             if (overrideKey.isPressed()) {
-                assert MinecraftClient.getInstance().player != null;
-                MinecraftClient.getInstance().player.sendMessage(Text.translatable("key.preventer.overrideKey.text"), true);
+                client.player.sendMessage(Text.translatable("key.preventer.overrideKey.text"), true);
             } else {
-                if (MinecraftClient.getInstance().player != null) {
-                    if (PreventerClient.overrideKeyPressed) {
-                        MinecraftClient.getInstance().player.sendMessage(Text.of(""), true);
-                    }
+                if (PreventerClient.overrideKeyPressed) {
+                    client.player.sendMessage(Text.of(""), true);
                 }
             }
             PreventerClient.overrideKeyPressed = overrideKey.isPressed();
@@ -44,7 +41,7 @@ public class RegisterKeyBindings {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (configKey.wasPressed()) {
-                MinecraftClient.getInstance().setScreenAndRender(CreateModConfig.createConfigScreen(MinecraftClient.getInstance().currentScreen));
+                client.setScreenAndRender(CreateModConfig.createConfigScreen(client.currentScreen));
             }
         });
     }
@@ -54,13 +51,14 @@ public class RegisterKeyBindings {
         KeyBindingHelper.registerKeyBinding(toggleKey);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (client.player == null) return;
+            
             while (toggleKey.wasPressed()) {
-                assert MinecraftClient.getInstance().player != null;
                 PreventerClient.overrideToggleOff = !PreventerClient.overrideToggleOff;
                 if (PreventerClient.overrideToggleOff) {
-                    MinecraftClient.getInstance().player.sendMessage(Text.translatable("key.preventer.toggleKey.offText"), true);
+                    client.player.sendMessage(Text.translatable("key.preventer.toggleKey.offText"), true);
                 } else {
-                    MinecraftClient.getInstance().player.sendMessage(Text.translatable("key.preventer.toggleKey.onText"), true);
+                    client.player.sendMessage(Text.translatable("key.preventer.toggleKey.onText"), true);
                 }
             }
         });
