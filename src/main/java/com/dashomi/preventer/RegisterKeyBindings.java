@@ -15,6 +15,7 @@ public class RegisterKeyBindings {
     public static void register() {
         registerOverrideKey();
         registerConfigKey();
+        registerToggleKey();
     }
 
     private static void registerOverrideKey() {
@@ -44,6 +45,23 @@ public class RegisterKeyBindings {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (configKey.wasPressed()) {
                 MinecraftClient.getInstance().setScreenAndRender(CreateModConfig.createConfigScreen(MinecraftClient.getInstance().currentScreen));
+            }
+        });
+    }
+
+    private static void registerToggleKey() {
+        KeyBinding toggleKey = new KeyBinding("key.preventer.toggleKey", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_BACKSPACE, CATEGORY);
+        KeyBindingHelper.registerKeyBinding(toggleKey);
+
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            while (toggleKey.wasPressed()) {
+                assert MinecraftClient.getInstance().player != null;
+                PreventerClient.overrideToggleOff = !PreventerClient.overrideToggleOff;
+                if (PreventerClient.overrideToggleOff) {
+                    MinecraftClient.getInstance().player.sendMessage(Text.translatable("key.preventer.toggleKey.offText"), true);
+                } else {
+                    MinecraftClient.getInstance().player.sendMessage(Text.translatable("key.preventer.toggleKey.onText"), true);
+                }
             }
         });
     }

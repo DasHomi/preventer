@@ -22,6 +22,15 @@ public class PreventerClient implements ClientModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static PreventerConfig config;
     public static boolean overrideKeyPressed = false;
+    public static boolean overrideToggleOff = false;
+
+    // public static boolean getIgnore() {
+    //     return (overrideToggleOff || overrideKeyPressed);
+    // }
+    public static boolean getPrevent() {
+        // return !getIgnore();
+        return !(overrideToggleOff || overrideKeyPressed);
+    }
 
     @Override
     public void onInitializeClient() {

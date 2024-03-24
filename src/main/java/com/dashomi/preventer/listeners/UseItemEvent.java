@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 
 public class UseItemEvent {
     public static TypedActionResult<ItemStack> useItemListener(PlayerEntity player, World world, Hand hand) {
-        if (!PreventerClient.overrideKeyPressed) {
+        if (PreventerClient.getPrevent()) {
             Item handItem = player.getStackInHand(hand).getItem();
 
             if (PreventerClient.config.preventRenamedItemUsing) {
