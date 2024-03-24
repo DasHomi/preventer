@@ -24,13 +24,21 @@ public class RegisterKeyBindings {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (client.player == null) return;
 
-            if (overrideKey.isPressed()) {
-                client.player.sendMessage(Text.translatable("key.preventer.overrideKey.text"), true);
-            } else {
-                if (PreventerClient.overrideKeyPressed) {
-                    client.player.sendMessage(Text.of(""), true);
+            if (!PreventerClient.overrideToggleOff || PreventerClient.config.notifyToggledOff) {
+                if (overrideKey.isPressed()) {
+                    client.player.sendMessage(Text.translatable(
+                        PreventerClient.overrideToggleOff
+                        ? "key.preventer.overrideKey.notifyToggledOff"
+                        : "key.preventer.overrideKey.text"
+                        ), true);
+                } else {
+                    if (PreventerClient.overrideKeyPressed) {
+                        if (PreventerClient.config.notifyToggledOff)
+                        client.player.sendMessage(Text.of(""), true);
+                    }
                 }
             }
+
             PreventerClient.overrideKeyPressed = overrideKey.isPressed();
         });
     }
@@ -52,7 +60,7 @@ public class RegisterKeyBindings {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (client.player == null) return;
-            
+
             while (toggleKey.wasPressed()) {
                 PreventerClient.overrideToggleOff = !PreventerClient.overrideToggleOff;
                 if (PreventerClient.overrideToggleOff) {

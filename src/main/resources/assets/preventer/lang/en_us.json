@@ -8,11 +8,14 @@
 
   "key.preventer.overrideKey": "Override Key",
   "key.preventer.overrideKey.text": "Override Active",
+  "key.preventer.overrideKey.notifyToggledOff": "§4Preventer is toggled off§4",
   "key.preventer.category": "Preventer",
   "key.preventer.configKey": "Open-Config Key",
-  "key.preventer.toggleKey": "Toggle Key",
+  "key.preventer.toggleKey": "Global Toggle Key",
   "key.preventer.toggleKey.onText": "Preventer has been toggled §2on§2",
   "key.preventer.toggleKey.offText": "Preventer has been toggled §4off§4",
+  "option.preventer.notifyToggledOff": "Notify on Global Toggle off",
+  "tooltip.preventer.notifyToggledOff": "Displays an info message when the override key is pressed while Preventer is toggled off",
 
   "text.preventer.welcomeMessage": "Welcome to Preventer! \n\nBy default no, modules are enabled, to enable the modules\nyou want just press the I key. If you want to temporarily\ndisable all modules, hold the override key R. \n\nHave fun!",
   "text.preventer.moduleUseInfo": "Below you can toggle Module Notifications, which will be displayed if a module prevented an action",
