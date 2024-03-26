@@ -125,4 +125,5 @@ public class PreventerConfig implements ConfigData {
     public boolean preventRenamedItemDropping_msg = false;
     public boolean hideShield = false;
     public boolean hideTotem = false;
+    public boolean notifyToggledOff = true;
 }

@@ -19,7 +19,7 @@ import static net.minecraft.block.SweetBerryBushBlock.AGE;
 
 public class UseBlockEvent {
     public static ActionResult useBlockListener(PlayerEntity playerEntity, World world, Hand hand, BlockHitResult blockHitResult) {
-        if (!PreventerClient.overrideKeyPressed) {
+        if (PreventerClient.getPrevent()) {
             BlockState targetBlockState = world.getBlockState(blockHitResult.getBlockPos());
             Block targetBlock = targetBlockState.getBlock();
             Item handItem = playerEntity.getStackInHand(hand).getItem();

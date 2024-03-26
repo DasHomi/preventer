@@ -20,7 +20,7 @@ import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityPr
 
 public class AttackBlockEvent {
     public static ActionResult attackBlockListener(PlayerEntity playerEntity, World world, Hand hand, BlockPos pos, Direction direction) {
-        if (!PreventerClient.overrideKeyPressed) {
+        if (PreventerClient.getPrevent()) {
             Block targetBlock = world.getBlockState(pos).getBlock();
             if (PreventerClient.config.onlyMatureCropHarvest) {
                 if (targetBlock instanceof CropBlock) {
