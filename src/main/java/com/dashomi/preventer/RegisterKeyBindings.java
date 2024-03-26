@@ -31,11 +31,8 @@ public class RegisterKeyBindings {
                         ? "key.preventer.overrideKey.notifyToggledOff"
                         : "key.preventer.overrideKey.text"
                         ), true);
-                } else {
-                    if (PreventerClient.overrideKeyPressed) {
-                        if (PreventerClient.config.notifyToggledOff)
-                        client.player.sendMessage(Text.of(""), true);
-                    }
+                } else if (PreventerClient.overrideKeyPressed) { // still haven't updated the status from last tick
+                    client.player.sendMessage(Text.of(""), true);
                 }
             }
 
