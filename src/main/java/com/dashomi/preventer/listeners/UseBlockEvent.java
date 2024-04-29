@@ -187,7 +187,7 @@ public class UseBlockEvent {
             }
 
             if (PreventerClient.config.preventRenamedItemUsing) {
-                if (!(handItem.isDamageable())) {
+                if (!(handItem.getDefaultStack().isDamageable())) {
                     if (!isShulkerBox(handItem)) {
                         if (!playerEntity.getStackInHand(hand).getName().getString().equals(handItem.getName().getString())) {
                             if (targetBlock instanceof CakeBlock || targetBlock instanceof ComposterBlock || targetBlock instanceof CampfireBlock) {
@@ -283,7 +283,7 @@ public class UseBlockEvent {
                 block.isOf(Blocks.COMPARATOR)) {
             return false;
         }
-        ActionResult actionResult = block.onUse(playerEntity.getWorld(), playerEntity, hand, blockHitResult);
+        ActionResult actionResult = block.onUse(playerEntity.getWorld(), playerEntity, blockHitResult);
         return !actionResult.isAccepted();
     }
 

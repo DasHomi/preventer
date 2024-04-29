@@ -2,6 +2,7 @@ package com.dashomi.preventer.mixin;
 
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
 import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
@@ -18,7 +19,7 @@ public class ClientPlayerEntityMixin {
             ItemStack itemStack = clientPlayerEntity.getMainHandStack();
 
             if (PreventerClient.config.preventToolDropping) {
-                if (itemStack.getItem().isDamageable()) {
+                if (itemStack.get(DataComponentTypes.TOOL) != null) {
                     if (PreventerClient.config.preventToolDropping_msg) {
                         clientPlayerEntity.sendMessage(Text.translatable("config.preventer.preventToolDropping.text"), true);
                     }
@@ -27,7 +28,7 @@ public class ClientPlayerEntityMixin {
             }
 
             if (PreventerClient.config.preventRenamedItemDropping) {
-                if (itemStack.hasCustomName()) {
+                if (itemStack.get(DataComponentTypes.CUSTOM_NAME) != null) {
                     if (PreventerClient.config.preventRenamedItemDropping_msg) {
                         clientPlayerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedItemDropping.text"), true);
                     }

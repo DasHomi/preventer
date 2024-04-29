@@ -131,6 +131,7 @@ Each module can be enabled or disabled individually in game via a config screen 
 
 | Minecraft version | Latest preventer version |
 |-------------------|--------------------------|
+| Fabric 1.20.[5-6] | 1.1                      |
 | Fabric 1.20.[3-4] | 1.1                      |
 | Fabric 1.20.[0-2] | 1.1                      |
 | Fabric 1.19.4🚩   | 1.0                      |

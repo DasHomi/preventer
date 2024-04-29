@@ -1,6 +1,7 @@
 package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -12,11 +13,9 @@ import net.minecraft.world.World;
 public class UseItemEvent {
     public static TypedActionResult<ItemStack> useItemListener(PlayerEntity player, World world, Hand hand) {
         if (!PreventerClient.overrideKeyPressed) {
-            Item handItem = player.getStackInHand(hand).getItem();
-
             if (PreventerClient.config.preventRenamedItemUsing) {
-                if (handItem.isFood()) {
-                    if (player.getStackInHand(hand).hasCustomName()) {
+                if (player.getStackInHand(hand).get(DataComponentTypes.FOOD) != null ) {
+                    if (player.getStackInHand(hand).get(DataComponentTypes.CUSTOM_NAME) != null) {
                         if (PreventerClient.config.preventRenamedItemUsing_msg) {
                             player.sendMessage(Text.translatable("config.preventer.preventRenamedItemUsing.text"), true);
                         }
