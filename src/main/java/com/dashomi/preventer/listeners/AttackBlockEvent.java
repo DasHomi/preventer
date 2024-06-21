@@ -3,10 +3,10 @@ package com.dashomi.preventer.listeners;
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.block.*;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.PickaxeItem;
+import net.minecraft.registry.tag.EnchantmentTags;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -89,7 +89,7 @@ public class AttackBlockEvent {
             if (PreventerClient.config.preventEnderChestBreaking) {
                 if (targetBlock instanceof EnderChestBlock) {
                     if (playerEntity.getMainHandStack().getItem() instanceof PickaxeItem) {
-                        if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, playerEntity.getMainHandStack()) == 0) {
+                        if (!EnchantmentHelper.hasAnyEnchantmentsIn(playerEntity.getMainHandStack(), EnchantmentTags.PREVENTS_BEE_SPAWNS_WHEN_MINING)) {
                             if (PreventerClient.config.preventEnderChestBreaking_msg) {
                                 playerEntity.sendMessage(Text.translatable("config.preventer.preventEnderChestBreaking.text"), true);
                             }
