@@ -307,6 +307,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventOffhandPlacing = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventBerriePlanting"),
+                                config.preventBerriePlanting)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventBerriePlanting"))
+                        .setSaveConsumer(value -> config.preventBerriePlanting = value)
+                        .build())
+
                 // Attacking
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.AttackingCategory"))
@@ -751,6 +759,13 @@ public class  CreateModConfig {
                                 config.preventOffhandPlacing_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventOffhandPlacing_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventBerriePlanting"),
+                                config.preventBerriePlanting_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventBerriePlanting_msg = value)
                         .build())
 
                 // Attacking

@@ -53,7 +53,7 @@ Each module can be enabled or disabled individually in game via a config screen 
 - Prevent sugar cane breaking
   - _Prevents you from breaking the lowest block of sugar cane/bamboo/cactus_
 - Prevent farmland jumping
-  - _Prevents you from destroying farmland by accidentally jumping on it_
+  - _Prevents you from jumping when on farmland. Note: Due to limitations this does not work when jumping from a non-farmland block to a farmland block_
 </details>
 
 <details>
@@ -90,6 +90,9 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from placing lava_
 - Prevent off-hand placing
   - _Prevents you from placing blocks in your off-hand_
+- Prevent berrie planting
+  - _Prevents you from planting berries while trying to eat them (Sweet Berries & Glow Berries)_
+
 </details>
 
 <details>

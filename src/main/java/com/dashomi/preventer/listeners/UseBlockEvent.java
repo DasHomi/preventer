@@ -291,6 +291,17 @@ public class UseBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventBerriePlanting) {
+                if (handItem.equals(Items.SWEET_BERRIES) || handItem.equals(Items.GLOW_BERRIES)) {
+                    if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
+                        if (PreventerClient.config.preventBerriePlanting_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventBerriePlanting.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

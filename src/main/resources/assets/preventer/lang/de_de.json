@@ -217,6 +217,10 @@
   "tooltip.preventer.preventFarmlandJumping": "Verhindert, dass du auf Ackerboden springst. \nInfo: Aufgrund von Limitierungen funktioniert dies nicht, wenn du von einem anderen Block auf den Ackerboden springst.",
   "config.preventer.preventFarmlandJumping.text": "§4Springen auf Ackerboden ist deaktiviert§4",
 
+  "option.preventer.preventBerriePlanting": "Verhindere Beeren pflanzen",
+  "tooltip.preventer.preventBerriePlanting": "Verhindert, dass du Beeren beim essen pflanzt (Glühbeeren, Süßbeeren)",
+  "config.preventer.preventBerriePlanting.text": "§4Beeren pflanzen verhindert§4",
+
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",
 

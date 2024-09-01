@@ -217,6 +217,10 @@
   "tooltip.preventer.preventFarmlandJumping": "Prevents you from jumping when on farmland. \nNote: Due to limitations this does not work when jumping from a non-farmland block to a farmland block",
   "config.preventer.preventFarmlandJumping.text": "§4Farmland jumping is disabled§4",
 
+  "option.preventer.preventBerriePlanting": "Prevent berrie planting",
+  "tooltip.preventer.preventBerriePlanting": "Prevents you from planting berries while trying to eat them (Sweet Berries & Glow Berries)",
+  "config.preventer.preventBerriePlanting.text": "§4Berrie planting prevented§4",
+
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
 
