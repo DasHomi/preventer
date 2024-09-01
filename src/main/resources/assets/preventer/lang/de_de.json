@@ -203,10 +203,15 @@
   "tooltip.preventer.preventCarpetBreaking": "Verhindert, dass du Teppiche zerstörst, auch Moosteppich",
   "config.preventer.preventCarpetBreaking.text": "§4Teppich zerstören verhindert§4",
 
-  "option.preventer.preventGrassBonemeal": "Verhindere gras düngen",
+  "option.preventer.preventGrassBonemeal": "Verhindere Gras düngen",
   "tooltip.preventer.preventGrassBonemeal": "Verhindert, dass du Gras Blöcke mit Knochenmehl düngst",
   "config.preventer.preventGrassBonemeal.text": "§4Gras düngen verhindert§4",
 
+  "option.preventer.preventSignEditing": "Verhindere Schild bearbeiten",
+  "tooltip.preventer.preventSignEditing": "Verhindert, dass du Schilder bearbeitest",
+  "config.preventer.preventSignEditing.text": "§4Schild bearbeiten verhindert§4",
+  "config.preventer.preventChestSignEditing": "Verhindere Truhen Schilder bearbeiten",
+  "tooltip.preventer.preventChestSignEditing": "Verhindert nur das Bearbeiten von Schildern, die an Kisten platziert sind;\nnormale Schilder können weiterhin bearbeitet werden.",
 
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",

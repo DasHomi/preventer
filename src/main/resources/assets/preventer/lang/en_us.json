@@ -207,6 +207,11 @@
   "tooltip.preventer.preventGrassBonemeal": "Prevents you from using bone meal on grass blocks",
   "config.preventer.preventGrassBonemeal.text": "§4Grass block bone mealing prevented§4",
 
+  "option.preventer.preventSignEditing": "Prevent sign editing",
+  "tooltip.preventer.preventSignEditing": "Prevents you from editing signs",
+  "config.preventer.preventSignEditing.text": "§4Sign editing prevented§4",
+  "config.preventer.preventChestSignEditing": "Prevent chest sign editing",
+  "tooltip.preventer.preventChestSignEditing": "Prevents you only from editing signs on chests,\nnormal sign editing is still enabled",
 
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",

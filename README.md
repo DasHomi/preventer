@@ -3,7 +3,7 @@
 Preventer is a collection of **over forty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs).
 Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
 
-## Modules (Preventer 1.1.0)
+## Modules (Preventer 1.2.0)
 <details open>
 <summary><b> Interactions </b></summary>
 
@@ -35,6 +35,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from teleporting the dragon egg by using it_
 - Prevent grass block bone mealing
   - _Prevents you from using bone meal on grass blocks_
+- Prevent sign editing
+  - _Prevents you from editing signs_
 </details>
 
 <details>
@@ -129,15 +131,15 @@ Each module can be enabled or disabled individually in game via a config screen 
 - Compatible with most servers
 - Forge support is planned
 
-| Minecraft version | Latest preventer version |
-|-------------------|--------------------------|
-| Fabric 1.21       | 1.1                      |
-| Fabric 1.20.[5-6] | 1.1                      |
-| Fabric 1.20.[3-4] | 1.1                      |
-| Fabric 1.20.[0-2] | 1.1                      |
-| Fabric 1.19.4🚩   | 1.0                      |
-| Fabric 1.19.x🚩   | 1.0                      |
-| Fabric 1.18.x🚩   | 0.9                      |
+| Minecraft version   | Latest preventer version |
+|---------------------|--------------------------|
+| Fabric 1.21.x       | 1.1                      |
+| Fabric 1.20.[5-6]   | 1.1                      |
+| Fabric 1.20.[3-4]🚩 | 1.1                      |
+| Fabric 1.20.[0-2]🚩 | 1.1                      |
+| Fabric 1.19.4🚩     | 1.0                      |
+| Fabric 1.19.x🚩     | 1.0                      |
+| Fabric 1.18.x🚩     | 0.9                      |
 🚩= Won't receive updates to newer Preventer versions
 
 ## Dependencies

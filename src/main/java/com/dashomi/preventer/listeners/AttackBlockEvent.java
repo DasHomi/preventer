@@ -39,6 +39,14 @@ public class AttackBlockEvent {
                         return ActionResult.FAIL;
                     }
                 }
+                if (targetBlock instanceof CocoaBlock) {
+                    if (world.getBlockState(pos).get(CocoaBlock.AGE) < 2) {
+                        if (PreventerClient.config.onlyMatureCropHarvest_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.onlyMatureCropHarvest.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
             }
 
             if (PreventerClient.config.preventBuddingAmethystBreaking) {
