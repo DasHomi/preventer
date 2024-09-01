@@ -213,6 +213,10 @@
   "config.preventer.preventChestSignEditing": "Prevent chest sign editing",
   "tooltip.preventer.preventChestSignEditing": "Prevents you only from editing signs on chests,\nnormal sign editing is still enabled",
 
+  "option.preventer.preventFarmlandJumping": "Prevent farmland jumping",
+  "tooltip.preventer.preventFarmlandJumping": "Prevents you from jumping when on farmland. \nNote: Due to limitations this does not work when jumping from a non-farmland block to a farmland block",
+  "config.preventer.preventFarmlandJumping.text": "§4Farmland jumping is disabled§4",
+
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
 

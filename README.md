@@ -52,6 +52,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from breaking pumpkin/melon stems_
 - Prevent sugar cane breaking
   - _Prevents you from breaking the lowest block of sugar cane/bamboo/cactus_
+- Prevent farmland jumping
+  - _Prevents you from destroying farmland by accidentally jumping on it_
 </details>
 
 <details>

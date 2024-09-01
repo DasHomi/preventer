@@ -185,6 +185,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventSugarCaneBreaking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventFarmlandJumping"),
+                                config.preventFarmlandJumping)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventFarmlandJumping"))
+                        .setSaveConsumer(value -> config.preventFarmlandJumping = value)
+                        .build())
+
                 // Breaking
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.breakingCategory"))
@@ -635,6 +643,13 @@ public class  CreateModConfig {
                                 config.preventSugarCaneBreaking_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventSugarCaneBreaking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventFarmlandJumping"),
+                                config.preventFarmlandJumping_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventFarmlandJumping_msg = value)
                         .build())
 
                 // Breaking

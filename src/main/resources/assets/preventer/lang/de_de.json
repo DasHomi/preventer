@@ -213,6 +213,10 @@
   "config.preventer.preventChestSignEditing": "Verhindere Truhen Schilder bearbeiten",
   "tooltip.preventer.preventChestSignEditing": "Verhindert nur das Bearbeiten von Schildern, die an Kisten platziert sind;\nnormale Schilder können weiterhin bearbeitet werden.",
 
+  "option.preventer.preventFarmlandJumping": "Verhindere auf Ackerboden springen",
+  "tooltip.preventer.preventFarmlandJumping": "Verhindert, dass du auf Ackerboden springst. \nInfo: Aufgrund von Limitierungen funktioniert dies nicht, wenn du von einem anderen Block auf den Ackerboden springst.",
+  "config.preventer.preventFarmlandJumping.text": "§4Springen auf Ackerboden ist deaktiviert§4",
+
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",
 

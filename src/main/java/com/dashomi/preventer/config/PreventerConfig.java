@@ -65,6 +65,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventStemBreaking_msg = false;
     public boolean preventSugarCaneBreaking = false;
     public boolean preventSugarCaneBreaking_msg = false;
+    public boolean preventFarmlandJumping = false;
+    public boolean preventFarmlandJumping_msg = false;
 
     // Breaking
     public boolean preventBuddingAmethystBreaking = false;

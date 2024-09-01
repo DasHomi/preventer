@@ -1,13 +1,17 @@
 package com.dashomi.preventer.mixin;
 
 import com.dashomi.preventer.PreventerClient;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
 import net.minecraft.text.Text;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ClientPlayerEntity.class)
@@ -33,6 +37,26 @@ public class ClientPlayerEntityMixin {
                         clientPlayerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedItemDropping.text"), true);
                     }
                     cir.setReturnValue(false);
+                }
+            }
+        }
+    }
+
+    @Inject(method = "tickMovement", at = @At(value = "HEAD"))
+    private void onTickMovement(CallbackInfo ci) {
+        if (!PreventerClient.overrideKeyPressed) {
+            ClientPlayerEntity player = (ClientPlayerEntity) (Object) this;
+            World world = player.getWorld();
+            BlockPos pos = player.getBlockPos();
+
+
+            if (PreventerClient.config.preventFarmlandJumping) {
+                if (world.getBlockState(pos).isOf(Blocks.FARMLAND)) {
+                    if (PreventerClient.config.preventFarmlandJumping_msg) {
+                        player.sendMessage(Text.translatable("config.preventer.preventFarmlandJumping.text"), true);
+                    }
+                    PreventerClient.LOGGER.info(String.valueOf(player.getVelocity().y));
+                    player.setOnGround(false);
                 }
             }
         }
