@@ -392,6 +392,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventNeutralMobAttacking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventDolphinAttacking"),
+                                config.preventDolphinAttacking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventDolphinAttacking"))
+                        .setSaveConsumer(value -> config.preventDolphinAttacking = value)
+                        .build())
+
                 // Other
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.otherCategory"))
@@ -834,6 +842,13 @@ public class  CreateModConfig {
                                 config.preventNeutralMobAttacking_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventNeutralMobAttacking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventDolphinAttacking"),
+                                config.preventDolphinAttacking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventDolphinAttacking_msg = value)
                         .build())
 
                 // Other

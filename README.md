@@ -116,6 +116,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from attacking horses and similar creatures (Horses (including Skeleton & Zombie Horses), Donkeys, Mules, Llamas, Camels)_
 - Prevent neutral mob hitting
   - _Prevents you from hitting neutral mobs (as defined in the minecraft wiki, except Spiders and Endermen)_
+- Prevent dolphin attacking
+  - _Prevents you from attacking dolphins_
 </details>
 
 <details>

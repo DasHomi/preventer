@@ -221,6 +221,10 @@
   "tooltip.preventer.preventBerriePlanting": "Prevents you from planting berries while trying to eat them (Sweet Berries & Glow Berries)",
   "config.preventer.preventBerriePlanting.text": "§4Berrie planting prevented§4",
 
+  "option.preventer.preventDolphinAttacking": "Prevent dolphin attacking",
+  "tooltip.preventer.preventDolphinAttacking": "Prevents you from attacking dolphins",
+  "config.preventer.preventDolphinAttacking.text": "§4Dolphin attacking prevented§4",
+
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
 
