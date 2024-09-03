@@ -453,13 +453,13 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventRenamedItemDropping = value)
                         .build())
 
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventEnchantedItemBurning"),
-                                config.preventEnchantedItemBurning)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventEnchantedItemBurning"))
-                        .setSaveConsumer(value -> config.preventEnchantedItemBurning = value)
-                        .build())
+                //.addEntry(entryBuilder.startBooleanToggle(
+                //                Text.translatable("option.preventer.preventEnchantedItemBurning"),
+                //                config.preventEnchantedItemBurning)
+                //        .setDefaultValue(false)
+                //        .setTooltip(Text.translatable("tooltip.preventer.preventEnchantedItemBurning"))
+                //        .setSaveConsumer(value -> config.preventEnchantedItemBurning = value)
+                //        .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.hideShield"),
@@ -920,14 +920,14 @@ public class  CreateModConfig {
                                 config.preventRenamedItemDropping_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventRenamedItemDropping_msg = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventEnchantedItemBurning"),
-                                config.preventEnchantedItemBurning_msg)
-                        .setDefaultValue(false)
-                        .setSaveConsumer(value -> config.preventEnchantedItemBurning_msg = value)
                         .build());
+
+                //.addEntry(entryBuilder.startBooleanToggle(
+                //                Text.translatable("option.preventer.preventEnchantedItemBurning"),
+                //                config.preventEnchantedItemBurning_msg)
+                //        .setDefaultValue(false)
+                //        .setSaveConsumer(value -> config.preventEnchantedItemBurning_msg = value)
+                //        .build());
 
         return builder
                 .setSavingRunnable(PreventerConfig::save)

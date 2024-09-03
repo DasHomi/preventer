@@ -138,8 +138,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventToolDropping_msg = false;
     public boolean preventRenamedItemDropping = false;
     public boolean preventRenamedItemDropping_msg = false;
-    public boolean preventEnchantedItemBurning = false;
-    public boolean preventEnchantedItemBurning_msg = false;
+    //public boolean preventEnchantedItemBurning = false;
+    //public boolean preventEnchantedItemBurning_msg = false;
     public boolean hideShield = false;
     public boolean hideTotem = false;
 }
