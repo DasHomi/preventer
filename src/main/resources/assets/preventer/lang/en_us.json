@@ -225,6 +225,10 @@
   "tooltip.preventer.preventDolphinAttacking": "Prevents you from attacking dolphins",
   "config.preventer.preventDolphinAttacking.text": "§4Dolphin attacking prevented§4",
 
+  "option.preventer.preventChiseledBookshelfInteracting": "Prevent chiseled bookshelf interacting",
+  "tooltip.preventer.preventChiseledBookshelfInteracting": "Prevents you from accidentally placing books in chiseled bookshelves or removing them",
+  "config.preventer.preventChiseledBookshelfInteracting.text": "§4Chiseled bookshelf interaction prevented§4",
+
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
 

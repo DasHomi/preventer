@@ -140,6 +140,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventSignEditing = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventChiseledBookshelfInteracting"),
+                                config.preventChiseledBookshelfInteracting)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventChiseledBookshelfInteracting"))
+                        .setSaveConsumer(value -> config.preventChiseledBookshelfInteracting = value)
+                        .build())
+
                 // Plants
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.plantsCategory"))
@@ -619,6 +627,13 @@ public class  CreateModConfig {
                                 config.preventSignEditing_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventSignEditing_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventChiseledBookshelfInteracting"),
+                                config.preventChiseledBookshelfInteracting_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventChiseledBookshelfInteracting_msg = value)
                         .build())
 
                 // Plants

@@ -53,6 +53,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventSignEditing = false;
     public boolean preventSignEditing_msg = false;
     public boolean preventChestSignEditing = false;
+    public boolean preventChiseledBookshelfInteracting = false;
+    public boolean preventChiseledBookshelfInteracting_msg = false;
 
     // Plants
     public boolean noGlowBerrieHarvest = false;

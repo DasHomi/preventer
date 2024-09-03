@@ -302,6 +302,15 @@ public class UseBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventChiseledBookshelfInteracting) {
+                if (targetBlock instanceof ChiseledBookshelfBlock) {
+                    if (PreventerClient.config.preventChiseledBookshelfInteracting_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventChiseledBookshelfInteracting.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

@@ -225,6 +225,10 @@
   "tooltip.preventer.preventDolphinAttacking": "Verhindert, dass du Delfine angreifst",
   "config.preventer.preventDolphinAttacking.text": "§4Delfin angreifen verhindert§4",
 
+  "option.preventer.preventChiseledBookshelfInteracting": "Verhindere gearbeitete Bücherregal interagieren",
+  "tooltip.preventer.preventChiseledBookshelfInteracting": "Verhindert, dass du Bücher aus einem gearbeiteten Bücherregal nimmst, oder hineinlegst",
+  "config.preventer.preventChiseledBookshelfInteracting.text": "§4Gearbeitetes Bücherregal interagieren verhindert§4",
+
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",
 
