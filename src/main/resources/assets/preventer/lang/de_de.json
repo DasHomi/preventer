@@ -229,6 +229,10 @@
   "tooltip.preventer.preventChiseledBookshelfInteracting": "Verhindert, dass du Bücher aus einem gearbeiteten Bücherregal nimmst, oder hineinlegst",
   "config.preventer.preventChiseledBookshelfInteracting.text": "§4Gearbeitetes Bücherregal interagieren verhindert§4",
 
+  "option.preventer.preventSaplingBreaking": "Verhindere Setzling zerstören",
+  "tooltip.preventer.preventSaplingBreaking": "Verhindert, dass du Setzlinge zerstörst",
+  "config.preventer.preventSaplingBreaking.text": "§4Setzling zerstören verhindert§4",
+
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",
 

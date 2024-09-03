@@ -57,7 +57,7 @@ Each module can be enabled or disabled individually in game via a config screen 
 - Prevent farmland jumping
   - _Prevents you from jumping when on farmland. Note: Due to limitations this does not work when jumping from a non-farmland block to a farmland block_
 </details>
-
+ 
 <details>
 <summary><b> Breaking </b></summary>
 
@@ -79,6 +79,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from breaking chests with an axe_
 - Prevent carpet breaking
   - _Prevents you from breaking carpets, including moss carpets_
+- Prevent sapling breaking
+  - _Prevents you from breaking saplings_
 </details>
 
 <details>

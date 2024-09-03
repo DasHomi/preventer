@@ -278,6 +278,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventCarpetBreaking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSaplingBreaking"),
+                                config.preventSaplingBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventSaplingBreaking"))
+                        .setSaveConsumer(value -> config.preventSaplingBreaking = value)
+                        .build())
+
                 // Placing
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.placingCategory"))
@@ -749,6 +757,13 @@ public class  CreateModConfig {
                                 config.preventCarpetBreaking_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventCarpetBreaking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSaplingBreaking"),
+                                config.preventSaplingBreaking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventSaplingBreaking_msg = value)
                         .build())
 
                 // Placing

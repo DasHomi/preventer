@@ -148,6 +148,15 @@ public class AttackBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventSaplingBreaking) {
+                if (targetBlock instanceof SaplingBlock) {
+                    if (PreventerClient.config.preventSaplingBreaking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventSaplingBreaking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

@@ -229,6 +229,10 @@
   "tooltip.preventer.preventChiseledBookshelfInteracting": "Prevents you from accidentally placing books in chiseled bookshelves or removing them",
   "config.preventer.preventChiseledBookshelfInteracting.text": "§4Chiseled bookshelf interaction prevented§4",
 
+  "option.preventer.preventSaplingBreaking": "Prevent sapling breaking",
+  "tooltip.preventer.preventSaplingBreaking": "Prevents you from breaking saplings",
+  "config.preventer.preventSaplingBreaking.text": "§4Sapling breaking prevented§4",
+
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
 
