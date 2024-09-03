@@ -286,6 +286,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventSaplingBreaking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventImmatureAmethystBreaking"),
+                                config.preventImmatureAmethystBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventImmatureAmethystBreaking"))
+                        .setSaveConsumer(value -> config.preventImmatureAmethystBreaking = value)
+                        .build())
+
                 // Placing
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.placingCategory"))
@@ -764,6 +772,13 @@ public class  CreateModConfig {
                                 config.preventSaplingBreaking_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventSaplingBreaking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventImmatureAmethystBreaking"),
+                                config.preventImmatureAmethystBreaking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventImmatureAmethystBreaking_msg = value)
                         .build())
 
                 // Placing

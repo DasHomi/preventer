@@ -159,6 +159,17 @@ public class AttackBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventImmatureAmethystBreaking) {
+                if (targetBlock instanceof AmethystClusterBlock) {
+                    if (!targetBlock.getTranslationKey().equals("block.minecraft.amethyst_cluster")) {
+                        if (PreventerClient.config.preventImmatureAmethystBreaking_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventImmatureAmethystBreaking.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

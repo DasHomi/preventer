@@ -233,6 +233,10 @@
   "tooltip.preventer.preventSaplingBreaking": "Verhindert, dass du Setzlinge zerstörst",
   "config.preventer.preventSaplingBreaking.text": "§4Setzling zerstören verhindert§4",
 
+  "option.preventer.preventImmatureAmethystBreaking": "Verhindere unreife Amethysten zerstören",
+  "tooltip.preventer.preventImmatureAmethystBreaking": "Verhindert, dass du unreife Amethysten zerstörst",
+  "config.preventer.preventImmatureAmethystBreaking.text": "§4Unreife Amethysten zerstören verhindert§4",
+
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",
 

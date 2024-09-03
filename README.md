@@ -81,6 +81,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from breaking carpets, including moss carpets_
 - Prevent sapling breaking
   - _Prevents you from breaking saplings_
+- Prevent immature amethyst breaking
+  - _Prevents you from breaking immature amethyst crystals_
 </details>
 
 <details>

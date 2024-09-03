@@ -92,6 +92,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventCarpetBreaking_msg = false;
     public boolean preventSaplingBreaking = false;
     public boolean preventSaplingBreaking_msg = false;
+    public boolean preventImmatureAmethystBreaking = false;
+    public boolean preventImmatureAmethystBreaking_msg = false;
 
     // Placing
     public boolean preventCoralPlace = false;

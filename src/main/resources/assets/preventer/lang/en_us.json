@@ -233,6 +233,10 @@
   "tooltip.preventer.preventSaplingBreaking": "Prevents you from breaking saplings",
   "config.preventer.preventSaplingBreaking.text": "§4Sapling breaking prevented§4",
 
+  "option.preventer.preventImmatureAmethystBreaking": "Prevent immature amethyst breaking",
+  "tooltip.preventer.preventImmatureAmethystBreaking": "Prevents you from breaking immature amethyst crystals",
+  "config.preventer.preventImmatureAmethystBreaking.text": "§4Immature amethyst breaking prevented§4",
+
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
 
