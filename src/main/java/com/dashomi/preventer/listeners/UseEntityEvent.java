@@ -11,6 +11,8 @@ import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityProtection;
+
 public class UseEntityEvent {
     public static ActionResult useEntityListener(PlayerEntity player, World world, Hand hand, Entity entity, @Nullable EntityHitResult hitResult) {
         if (!PreventerClient.overrideKeyPressed) {
@@ -22,6 +24,8 @@ public class UseEntityEvent {
                     return ActionResult.FAIL;
                 }
             }
+
+            if (checkDurabilityProtection(player, hand)) return ActionResult.FAIL;
         }
 
         return ActionResult.PASS;

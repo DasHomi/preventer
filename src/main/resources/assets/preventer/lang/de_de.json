@@ -62,7 +62,7 @@
   "tooltip.preventer.lowDurabilityProtection": "Verhindert Zerstörung von Werkzeug & \nWaffen aufgrund von geringer Haltbarkeit",
   "config.preventer.lowDurabilityProtection.text": "§4Werkzeugbenutzung aufgrund von \ngeringer Haltbarkeit blockiert§4",
   "config.preventer.lowDurabilityProtectionRange": "Geringe Haltbarkeits Schwelle",
-  "tooltip.preventer.lowDurabilityProtectionRange": "Gibt die niedrigste Haltbarkeit \nvon Werkzeugen & Waffen an",
+  "tooltip.preventer.lowDurabilityProtectionRange": "Gibt die niedrigste Haltbarkeit \nvon Werkzeugen & Waffen an\nmanche Werkezuge wie z.b. ein Brush brauchen eine Mindesthaltbarkeit von über 16",
 
   "option.preventer.preventVillagerPunch": "Keine Dorfbewohner Schlagen",
   "tooltip.preventer.preventVillagerPunch": "Verhindert das Schlagen von Dorfbewohnern",

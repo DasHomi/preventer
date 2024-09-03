@@ -62,7 +62,7 @@
   "tooltip.preventer.lowDurabilityProtection": "Prevents tools & weapons from \nbreaking due to low durability",
   "config.preventer.lowDurabilityProtection.text": "§4Tool usage prevented due to low durability§4",
   "config.preventer.lowDurabilityProtectionRange": "Low durability protection threshold",
-  "tooltip.preventer.lowDurabilityProtectionRange": "Specify the lowest durability for tools & weapons",
+  "tooltip.preventer.lowDurabilityProtectionRange": "Specify the lowest durability for tools & weapons\ncertain items like a brush may need a higher lowest durability to prevent breaking",
 
   "option.preventer.preventVillagerPunch": "Prevent villager punching",
   "tooltip.preventer.preventVillagerPunch": "Prevents you from attacking villagers",
