@@ -204,7 +204,7 @@
   "config.preventer.preventCarpetBreaking.text": "§4Carpet breaking prevented§4",
 
   "option.preventer.preventGrassBonemeal": "Prevent grass block bone mealing",
-  "tooltip.preventer.preventGrassBonemeal": "Prevents you from using bone meal on grass blocks",
+  "tooltip.preventer.preventGrassBonemeal": "Prevents you from using bone meal on grass blocks (including (warped)nylium)",
   "config.preventer.preventGrassBonemeal.text": "§4Grass block bone mealing prevented§4",
 
   "option.preventer.preventSignEditing": "Prevent sign editing",

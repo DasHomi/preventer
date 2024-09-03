@@ -34,7 +34,7 @@ Each module can be enabled or disabled individually in game via a config screen 
 - Prevent dragon egg teleporting
   - _Prevents you from teleporting the dragon egg by using it_
 - Prevent grass block bone mealing
-  - _Prevents you from using bone meal on grass blocks_
+  - _Prevents you from using bone meal on grass blocks (including (warped)nylium)_
 - Prevent sign editing
   - _Prevents you from editing signs_
 - Prevent chiseled bookshelf interacting

@@ -261,7 +261,7 @@ public class UseBlockEvent {
 
             if (PreventerClient.config.preventGrassBonemeal) {
                 if (handItem.equals(Items.BONE_MEAL)) {
-                    if (targetBlock instanceof GrassBlock) {
+                    if (targetBlock instanceof GrassBlock || targetBlock instanceof NetherrackBlock || targetBlock instanceof NyliumBlock) {
                         if (PreventerClient.config.preventGrassBonemeal_msg) {
                             playerEntity.sendMessage(Text.translatable("config.preventer.preventGrassBonemeal.text"), true);
                         }

@@ -204,7 +204,7 @@
   "config.preventer.preventCarpetBreaking.text": "§4Teppich zerstören verhindert§4",
 
   "option.preventer.preventGrassBonemeal": "Verhindere Gras düngen",
-  "tooltip.preventer.preventGrassBonemeal": "Verhindert, dass du Gras Blöcke mit Knochenmehl düngst",
+  "tooltip.preventer.preventGrassBonemeal": "Verhindert, dass du Gras Blöcke mit Knochenmehl düngst (auch Nezel)",
   "config.preventer.preventGrassBonemeal.text": "§4Gras düngen verhindert§4",
 
   "option.preventer.preventSignEditing": "Verhindere Schild bearbeiten",
