@@ -261,12 +261,53 @@ public class UseBlockEvent {
 
             if (PreventerClient.config.preventGrassBonemeal) {
                 if (handItem.equals(Items.BONE_MEAL)) {
-                    if (targetBlock instanceof GrassBlock) {
+                    if (targetBlock instanceof GrassBlock || targetBlock instanceof NetherrackBlock || targetBlock instanceof NyliumBlock) {
                         if (PreventerClient.config.preventGrassBonemeal_msg) {
                             playerEntity.sendMessage(Text.translatable("config.preventer.preventGrassBonemeal.text"), true);
                         }
                         return ActionResult.FAIL;
                     }
+                }
+            }
+
+            if (PreventerClient.config.preventSignEditing) {
+                if (targetBlock instanceof AbstractSignBlock) {
+                    if (!PreventerClient.config.preventChestSignEditing) {
+                        if (PreventerClient.config.preventSignEditing_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventSignEditing.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    } else {
+                        if (targetBlock instanceof WallSignBlock) {
+                            Block blockBehindTargetBlock = world.getBlockState(blockHitResult.getBlockPos().offset(targetBlockState.get(HorizontalFacingBlock.FACING), -1)).getBlock();
+                            if (blockBehindTargetBlock instanceof AbstractChestBlock) {
+                                if (PreventerClient.config.preventSignEditing_msg) {
+                                    playerEntity.sendMessage(Text.translatable("config.preventer.preventSignEditing.text"), true);
+                                }
+                                return ActionResult.FAIL;
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (PreventerClient.config.preventBerriePlanting) {
+                if (handItem.equals(Items.SWEET_BERRIES) || handItem.equals(Items.GLOW_BERRIES)) {
+                    if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
+                        if (PreventerClient.config.preventBerriePlanting_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventBerriePlanting.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
+            if (PreventerClient.config.preventChiseledBookshelfInteracting) {
+                if (targetBlock instanceof ChiseledBookshelfBlock) {
+                    if (PreventerClient.config.preventChiseledBookshelfInteracting_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventChiseledBookshelfInteracting.text"), true);
+                    }
+                    return ActionResult.FAIL;
                 }
             }
 

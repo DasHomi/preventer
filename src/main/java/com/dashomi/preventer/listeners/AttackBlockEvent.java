@@ -39,6 +39,14 @@ public class AttackBlockEvent {
                         return ActionResult.FAIL;
                     }
                 }
+                if (targetBlock instanceof CocoaBlock) {
+                    if (world.getBlockState(pos).get(CocoaBlock.AGE) < 2) {
+                        if (PreventerClient.config.onlyMatureCropHarvest_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.onlyMatureCropHarvest.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
             }
 
             if (PreventerClient.config.preventBuddingAmethystBreaking) {
@@ -62,10 +70,12 @@ public class AttackBlockEvent {
             if (PreventerClient.config.preventGlassBreaking) {
                 if (targetBlock instanceof TransparentBlock || targetBlock instanceof PaneBlock) {
                     if (!Objects.equals(targetBlock.getTranslationKey(), "block.minecraft.iron_bars")) {
-                        if (PreventerClient.config.preventGlassBreaking_msg) {
-                            playerEntity.sendMessage(Text.translatable("config.preventer.preventGlassBreaking.text"), true);
+                        if (!(targetBlock instanceof TintedGlassBlock)) {
+                            if (PreventerClient.config.preventGlassBreaking_msg) {
+                                playerEntity.sendMessage(Text.translatable("config.preventer.preventGlassBreaking.text"), true);
+                            }
+                            return ActionResult.FAIL;
                         }
-                        return ActionResult.FAIL;
                     }
                 }
             }
@@ -137,6 +147,26 @@ public class AttackBlockEvent {
                         playerEntity.sendMessage(Text.translatable("config.preventer.preventCarpetBreaking.text"), true);
                     }
                     return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventSaplingBreaking) {
+                if (targetBlock instanceof SaplingBlock) {
+                    if (PreventerClient.config.preventSaplingBreaking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventSaplingBreaking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventImmatureAmethystBreaking) {
+                if (targetBlock instanceof AmethystClusterBlock) {
+                    if (!targetBlock.getTranslationKey().equals("block.minecraft.amethyst_cluster")) {
+                        if (PreventerClient.config.preventImmatureAmethystBreaking_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.preventImmatureAmethystBreaking.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
                 }
             }
 

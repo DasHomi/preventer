@@ -62,7 +62,7 @@
   "tooltip.preventer.lowDurabilityProtection": "Verhindert Zerstörung von Werkzeug & \nWaffen aufgrund von geringer Haltbarkeit",
   "config.preventer.lowDurabilityProtection.text": "§4Werkzeugbenutzung aufgrund von \ngeringer Haltbarkeit blockiert§4",
   "config.preventer.lowDurabilityProtectionRange": "Geringe Haltbarkeits Schwelle",
-  "tooltip.preventer.lowDurabilityProtectionRange": "Gibt die niedrigste Haltbarkeit \nvon Werkzeugen & Waffen an",
+  "tooltip.preventer.lowDurabilityProtectionRange": "Gibt die niedrigste Haltbarkeit \nvon Werkzeugen & Waffen an\nmanche Werkezuge wie z.b. ein Brush brauchen eine Mindesthaltbarkeit von über 16",
 
   "option.preventer.preventVillagerPunch": "Keine Dorfbewohner Schlagen",
   "tooltip.preventer.preventVillagerPunch": "Verhindert das Schlagen von Dorfbewohnern",
@@ -203,10 +203,39 @@
   "tooltip.preventer.preventCarpetBreaking": "Verhindert, dass du Teppiche zerstörst, auch Moosteppich",
   "config.preventer.preventCarpetBreaking.text": "§4Teppich zerstören verhindert§4",
 
-  "option.preventer.preventGrassBonemeal": "Verhindere gras düngen",
-  "tooltip.preventer.preventGrassBonemeal": "Verhindert, dass du Gras Blöcke mit Knochenmehl düngst",
+  "option.preventer.preventGrassBonemeal": "Verhindere Gras düngen",
+  "tooltip.preventer.preventGrassBonemeal": "Verhindert, dass du Gras Blöcke mit Knochenmehl düngst (auch Nezel)",
   "config.preventer.preventGrassBonemeal.text": "§4Gras düngen verhindert§4",
 
+  "option.preventer.preventSignEditing": "Verhindere Schild bearbeiten",
+  "tooltip.preventer.preventSignEditing": "Verhindert, dass du Schilder bearbeitest",
+  "config.preventer.preventSignEditing.text": "§4Schild bearbeiten verhindert§4",
+  "config.preventer.preventChestSignEditing": "Verhindere Truhen Schilder bearbeiten",
+  "tooltip.preventer.preventChestSignEditing": "Verhindert nur das Bearbeiten von Schildern, die an Kisten platziert sind;\nnormale Schilder können weiterhin bearbeitet werden.",
+
+  "option.preventer.preventFarmlandJumping": "Verhindere auf Ackerboden springen",
+  "tooltip.preventer.preventFarmlandJumping": "Verhindert, dass du auf Ackerboden springst. \nInfo: Aufgrund von Limitierungen funktioniert dies nicht, wenn du von einem anderen Block auf den Ackerboden springst.",
+  "config.preventer.preventFarmlandJumping.text": "§4Springen auf Ackerboden ist deaktiviert§4",
+
+  "option.preventer.preventBerriePlanting": "Verhindere Beeren pflanzen",
+  "tooltip.preventer.preventBerriePlanting": "Verhindert, dass du Beeren beim essen pflanzt (Glühbeeren, Süßbeeren)",
+  "config.preventer.preventBerriePlanting.text": "§4Beeren pflanzen verhindert§4",
+
+  "option.preventer.preventDolphinAttacking": "Verhindere Delfin angreifen",
+  "tooltip.preventer.preventDolphinAttacking": "Verhindert, dass du Delfine angreifst",
+  "config.preventer.preventDolphinAttacking.text": "§4Delfin angreifen verhindert§4",
+
+  "option.preventer.preventChiseledBookshelfInteracting": "Verhindere gearbeitete Bücherregal interagieren",
+  "tooltip.preventer.preventChiseledBookshelfInteracting": "Verhindert, dass du Bücher aus einem gearbeiteten Bücherregal nimmst, oder hineinlegst",
+  "config.preventer.preventChiseledBookshelfInteracting.text": "§4Gearbeitetes Bücherregal interagieren verhindert§4",
+
+  "option.preventer.preventSaplingBreaking": "Verhindere Setzling zerstören",
+  "tooltip.preventer.preventSaplingBreaking": "Verhindert, dass du Setzlinge zerstörst",
+  "config.preventer.preventSaplingBreaking.text": "§4Setzling zerstören verhindert§4",
+
+  "option.preventer.preventImmatureAmethystBreaking": "Verhindere unreife Amethysten zerstören",
+  "tooltip.preventer.preventImmatureAmethystBreaking": "Verhindert, dass du unreife Amethysten zerstörst",
+  "config.preventer.preventImmatureAmethystBreaking.text": "§4Unreife Amethysten zerstören verhindert§4",
 
   "option.preventer.hideTotem": "Versteckt das Totem",
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",

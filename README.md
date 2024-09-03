@@ -1,9 +1,9 @@
 # Preventer
 
-Preventer is a collection of **over forty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs).
+Preventer is a collection of **over fifty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs).
 Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
 
-## Modules (Preventer 1.1.0)
+## Modules (Preventer 1.2.0)
 <details open>
 <summary><b> Interactions </b></summary>
 
@@ -34,7 +34,11 @@ Each module can be enabled or disabled individually in game via a config screen 
 - Prevent dragon egg teleporting
   - _Prevents you from teleporting the dragon egg by using it_
 - Prevent grass block bone mealing
-  - _Prevents you from using bone meal on grass blocks_
+  - _Prevents you from using bone meal on grass blocks (including (warped)nylium)_
+- Prevent sign editing
+  - _Prevents you from editing signs_
+- Prevent chiseled bookshelf interacting
+  - _Prevents you from accidentally placing books in chiseled bookshelves or removing them_
 </details>
 
 <details>
@@ -50,8 +54,10 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from breaking pumpkin/melon stems_
 - Prevent sugar cane breaking
   - _Prevents you from breaking the lowest block of sugar cane/bamboo/cactus_
+- Prevent farmland jumping
+  - _Prevents you from jumping when on farmland. Note: Due to limitations this does not work when jumping from a non-farmland block to a farmland block_
 </details>
-
+ 
 <details>
 <summary><b> Breaking </b></summary>
 
@@ -73,6 +79,10 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from breaking chests with an axe_
 - Prevent carpet breaking
   - _Prevents you from breaking carpets, including moss carpets_
+- Prevent sapling breaking
+  - _Prevents you from breaking saplings_
+- Prevent immature amethyst breaking
+  - _Prevents you from breaking immature amethyst crystals_
 </details>
 
 <details>
@@ -86,6 +96,9 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from placing lava_
 - Prevent off-hand placing
   - _Prevents you from placing blocks in your off-hand_
+- Prevent berrie planting
+  - _Prevents you from planting berries while trying to eat them (Sweet Berries & Glow Berries)_
+
 </details>
 
 <details>
@@ -109,6 +122,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from attacking horses and similar creatures (Horses (including Skeleton & Zombie Horses), Donkeys, Mules, Llamas, Camels)_
 - Prevent neutral mob hitting
   - _Prevents you from hitting neutral mobs (as defined in the minecraft wiki, except Spiders and Endermen)_
+- Prevent dolphin attacking
+  - _Prevents you from attacking dolphins_
 </details>
 
 <details>
@@ -129,15 +144,15 @@ Each module can be enabled or disabled individually in game via a config screen 
 - Compatible with most servers
 - Forge support is planned
 
-| Minecraft version | Latest preventer version |
-|-------------------|--------------------------|
-| Fabric 1.21       | 1.1                      |
-| Fabric 1.20.[5-6] | 1.1                      |
-| Fabric 1.20.[3-4] | 1.1                      |
-| Fabric 1.20.[0-2] | 1.1                      |
-| Fabric 1.19.4🚩   | 1.0                      |
-| Fabric 1.19.x🚩   | 1.0                      |
-| Fabric 1.18.x🚩   | 0.9                      |
+| Minecraft version   | Latest preventer version |
+|---------------------|--------------------------|
+| Fabric 1.21.x       | 1.2                      |
+| Fabric 1.20.[5-6]   | 1.1                      |
+| Fabric 1.20.[3-4]🚩 | 1.1                      |
+| Fabric 1.20.[0-2]🚩 | 1.1                      |
+| Fabric 1.19.4🚩     | 1.0                      |
+| Fabric 1.19.x🚩     | 1.0                      |
+| Fabric 1.18.x🚩     | 0.9                      |
 🚩= Won't receive updates to newer Preventer versions
 
 ## Dependencies
