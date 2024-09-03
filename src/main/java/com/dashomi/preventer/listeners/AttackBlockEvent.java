@@ -70,10 +70,12 @@ public class AttackBlockEvent {
             if (PreventerClient.config.preventGlassBreaking) {
                 if (targetBlock instanceof TransparentBlock || targetBlock instanceof PaneBlock) {
                     if (!Objects.equals(targetBlock.getTranslationKey(), "block.minecraft.iron_bars")) {
-                        if (PreventerClient.config.preventGlassBreaking_msg) {
-                            playerEntity.sendMessage(Text.translatable("config.preventer.preventGlassBreaking.text"), true);
+                        if (!(targetBlock instanceof TintedGlassBlock)) {
+                            if (PreventerClient.config.preventGlassBreaking_msg) {
+                                playerEntity.sendMessage(Text.translatable("config.preventer.preventGlassBreaking.text"), true);
+                            }
+                            return ActionResult.FAIL;
                         }
-                        return ActionResult.FAIL;
                     }
                 }
             }
