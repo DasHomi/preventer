@@ -7,12 +7,10 @@ import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
-import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
-import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
-import net.fabricmc.fabric.api.event.player.UseBlockCallback;
-import net.fabricmc.fabric.api.event.player.UseItemCallback;
-import net.fabricmc.fabric.api.event.player.UseEntityCallback;
+
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +20,7 @@ public class PreventerClient implements ClientModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static PreventerConfig config;
     public static boolean overrideKeyPressed = false;
+    public static int ticksSinceEating = 0;
 
     @Override
     public void onInitializeClient() {
@@ -34,6 +33,8 @@ public class PreventerClient implements ClientModInitializer {
         UseBlockCallback.EVENT.register(UseBlockEvent::useBlockListener);
         UseItemCallback.EVENT.register(UseItemEvent::useItemListener);
         UseEntityCallback.EVENT.register(UseEntityEvent::useEntityListener);
+
+        ClientTickEvents.END_WORLD_TICK.register(world -> ticksSinceEating++);
 
         RegisterKeyBindings.register();
     }

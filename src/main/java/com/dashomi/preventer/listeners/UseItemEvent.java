@@ -4,8 +4,8 @@ import com.dashomi.preventer.PreventerClient;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.text.Text;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -20,6 +20,15 @@ public class UseItemEvent {
                             player.sendMessage(Text.translatable("config.preventer.preventRenamedItemUsing.text"), true);
                         }
                         return TypedActionResult.fail(player.getStackInHand(hand));
+                    }
+                }
+            }
+
+            if (PreventerClient.config.preventPlaceAfterEating) {
+                if (player.getStackInHand(hand).get(DataComponentTypes.FOOD) != null ) {
+                    //confirms the player is actually eating the food and not just right-clicked the food on full hunger
+                    if (player.getStackInHand(hand).use(world, player, hand).getResult() == ActionResult.CONSUME) {
+                        PreventerClient.ticksSinceEating = 0;
                     }
                 }
             }

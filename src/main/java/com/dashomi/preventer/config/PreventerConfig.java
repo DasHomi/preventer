@@ -106,6 +106,11 @@ public class PreventerConfig implements ConfigData {
     public boolean preventOffhandPlacing_msg = false;
     public boolean preventBerriePlanting = false;
     public boolean preventBerriePlanting_msg = false;
+    public boolean preventPlaceAfterEating = false;
+    public boolean preventPlaceAfterEating_msg = false;
+    public int afterEatingPreventionTicks = 10;
+    public boolean preventTorchPlaceAfterEating = false;
+    public boolean countLanternsAsTorches = false;
 
     // Attacking
     public boolean preventVillagerPunch = false;

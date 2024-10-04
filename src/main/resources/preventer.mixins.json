@@ -3,10 +3,12 @@
   "minVersion": "0.8",
   "package": "com.dashomi.preventer.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": [],
+  "mixins": [
+    "LivingEntityMixin"
+  ],
   "client": [
-    "RenderHandItemMixin",
-    "ClientPlayerEntityMixin"
+    "ClientPlayerEntityMixin",
+    "RenderHandItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

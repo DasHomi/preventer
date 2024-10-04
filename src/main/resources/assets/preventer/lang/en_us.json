@@ -221,6 +221,17 @@
   "tooltip.preventer.preventBerriePlanting": "Prevents you from planting berries while trying to eat them (Sweet Berries & Glow Berries)",
   "config.preventer.preventBerriePlanting.text": "§4Berrie planting prevented§4",
 
+  "option.preventer.preventPlaceAfterEating": "Prevent placing after eating",
+  "tooltip.preventer.preventPlaceAfterEating": "Temporary prevents you from placing blocks after eating a food item.",
+  "config.preventer.preventPlaceAfterEating.text": "§4After eating block placing prevented§4",
+  "option.preventer.afterEatingPreventionTicks": "Prevention ticks after eating",
+  "tooltip.preventer.afterEatingPreventionTicks": "The amount of ticks to prevent block placement after starting to eat a food item and after finishing eating a food item.",
+  "option.preventer.preventTorchPlaceAfterEating": "Prevent torch placing after eating",
+  "tooltip.preventer.preventTorchPlaceAfterEating": "Temporary prevents you only from placing torches after eating a food item. \nDoes not include torch variants such as redstone torches and soul torches.",
+  "config.preventer.preventTorchPlaceAfterEating.text": "§4After eating§4 %1$s §4placing prevented§4",
+  "option.preventer.countLanternsAsTorches": "Consider lanterns as torches",
+  "tooltip.preventer.countLanternsAsTorches": "If enabled, lanterns are treated as torches for preventing torch placing after eating. \nDoes not include the soul lantern variant.",
+
   "option.preventer.preventDolphinAttacking": "Prevent dolphin attacking",
   "tooltip.preventer.preventDolphinAttacking": "Prevents you from attacking dolphins",
   "config.preventer.preventDolphinAttacking.text": "§4Dolphin attacking prevented§4",
