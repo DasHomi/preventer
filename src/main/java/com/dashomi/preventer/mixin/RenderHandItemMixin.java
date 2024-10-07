@@ -11,6 +11,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.util.Hand;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -25,7 +26,7 @@ public class RenderHandItemMixin {
     )
     private void hideOffhandItem(LivingEntity entity, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, CallbackInfo callbackInfo) {
         if (!MinecraftClient.getInstance().options.getPerspective().isFirstPerson() ||
-                stack.isEmpty() || entity != MinecraftClient.getInstance().player || entity.isUsingItem()) return;
+                stack.isEmpty() || entity != MinecraftClient.getInstance().player || (entity.getActiveHand().equals(Hand.OFF_HAND) && entity.isUsingItem())) return;
 
         ClientPlayerEntity player = MinecraftClient.getInstance().player;
         if (player != null && player.getOffHandStack() != stack) return;
