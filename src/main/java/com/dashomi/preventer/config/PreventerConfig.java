@@ -142,4 +142,5 @@ public class PreventerConfig implements ConfigData {
     //public boolean preventEnchantedItemBurning_msg = false;
     public boolean hideShield = false;
     public boolean hideTotem = false;
+    public boolean notifyToggledOff = true;
 }

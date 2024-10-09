@@ -920,6 +920,14 @@ public class  CreateModConfig {
                                 config.preventRenamedItemDropping_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventRenamedItemDropping_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.notifyToggledOff"),
+                                config.notifyToggledOff)
+                        .setDefaultValue(true)
+                        .setTooltip(Text.translatable("tooltip.preventer.notifyToggledOff"))
+                        .setSaveConsumer(value -> config.notifyToggledOff = value)
                         .build());
 
                 //.addEntry(entryBuilder.startBooleanToggle(

@@ -8,8 +8,14 @@
 
   "key.preventer.overrideKey": "Override-Taste",
   "key.preventer.overrideKey.text": "Override Aktiv",
+  "key.preventer.overrideKey.notifyToggledOff": "(TODO) §4Preventer is toggled off§4",
   "key.preventer.category": "Preventer",
   "key.preventer.configKey": "Konfigurationsmenü-Taste",
+  "key.preventer.toggleKey": "(TODO) Toggle Key",
+  "key.preventer.toggleKey.onText": "(TODO) Preventer has been toggled §2on§2",
+  "key.preventer.toggleKey.offText": "(TODO) Preventer has been toggled §4off§4",
+  "option.preventer.notifyToggledOff": "(TODO) Notify on Global Toggle off",
+  "tooltip.preventer.notifyToggledOff": "(TODO) Displays an info message when the override key is pressed while Preventer is toggled off",
 
   "text.preventer.welcomeMessage": "Standardmäßig sind keine Preventer Module aktiviert, um die Module zu aktivieren, die du benutzen willst, drücke einfach die I Taste, um das Konfigurationsmenü zu öffnen. Um temporär alle Module zu deaktivieren, halte einfach die R Taste gedrückt.\n\nViel Spaß!",
   "text.preventer.moduleUseInfo": "Unten kannst du die Modulbenachrichtigungen einschalten, die angezeigt werden, wenn ein Modul eine Aktion verhindert hat",
