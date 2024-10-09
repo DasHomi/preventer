@@ -50,6 +50,11 @@ public class PreventerConfig implements ConfigData {
     public boolean preventRespawnAnchorUse_msg = false;
     public boolean preventGrassBonemeal = false;
     public boolean preventGrassBonemeal_msg = false;
+    public boolean preventSignEditing = false;
+    public boolean preventSignEditing_msg = false;
+    public boolean preventChestSignEditing = false;
+    public boolean preventChiseledBookshelfInteracting = false;
+    public boolean preventChiseledBookshelfInteracting_msg = false;
 
     // Plants
     public boolean noGlowBerrieHarvest = false;
@@ -62,6 +67,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventStemBreaking_msg = false;
     public boolean preventSugarCaneBreaking = false;
     public boolean preventSugarCaneBreaking_msg = false;
+    public boolean preventFarmlandJumping = false;
+    public boolean preventFarmlandJumping_msg = false;
 
     // Breaking
     public boolean preventBuddingAmethystBreaking = false;
@@ -83,6 +90,10 @@ public class PreventerConfig implements ConfigData {
     public boolean preventChestBreaking_msg = false;
     public boolean preventCarpetBreaking = false;
     public boolean preventCarpetBreaking_msg = false;
+    public boolean preventSaplingBreaking = false;
+    public boolean preventSaplingBreaking_msg = false;
+    public boolean preventImmatureAmethystBreaking = false;
+    public boolean preventImmatureAmethystBreaking_msg = false;
 
     // Placing
     public boolean preventCoralPlace = false;
@@ -93,6 +104,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventLavaPlacing_msg = false;
     public boolean preventOffhandPlacing = false;
     public boolean preventOffhandPlacing_msg = false;
+    public boolean preventBerriePlanting = false;
+    public boolean preventBerriePlanting_msg = false;
 
     // Attacking
     public boolean preventVillagerPunch = false;
@@ -114,6 +127,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventNeutralMobAttacking = false;
     public boolean preventNeutralMobAttacking_msg = false;
     public boolean fullNeutralMobAttackingPrevention = false;
+    public boolean preventDolphinAttacking = false;
+    public boolean preventDolphinAttacking_msg = false;
 
     // Other
     public boolean lowDurabilityProtection = false;
@@ -123,6 +138,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventToolDropping_msg = false;
     public boolean preventRenamedItemDropping = false;
     public boolean preventRenamedItemDropping_msg = false;
+    //public boolean preventEnchantedItemBurning = false;
+    //public boolean preventEnchantedItemBurning_msg = false;
     public boolean hideShield = false;
     public boolean hideTotem = false;
     public boolean notifyToggledOff = true;

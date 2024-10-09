@@ -68,7 +68,7 @@
   "tooltip.preventer.lowDurabilityProtection": "Prevents tools & weapons from \nbreaking due to low durability",
   "config.preventer.lowDurabilityProtection.text": "§4Tool usage prevented due to low durability§4",
   "config.preventer.lowDurabilityProtectionRange": "Low durability protection threshold",
-  "tooltip.preventer.lowDurabilityProtectionRange": "Specify the lowest durability for tools & weapons",
+  "tooltip.preventer.lowDurabilityProtectionRange": "Specify the lowest durability for tools & weapons\ncertain items like a brush may need a higher lowest durability to prevent breaking",
 
   "option.preventer.preventVillagerPunch": "Prevent villager punching",
   "tooltip.preventer.preventVillagerPunch": "Prevents you from attacking villagers",
@@ -210,9 +210,38 @@
   "config.preventer.preventCarpetBreaking.text": "§4Carpet breaking prevented§4",
 
   "option.preventer.preventGrassBonemeal": "Prevent grass block bone mealing",
-  "tooltip.preventer.preventGrassBonemeal": "Prevents you from using bone meal on grass blocks",
+  "tooltip.preventer.preventGrassBonemeal": "Prevents you from using bone meal on grass blocks (including (warped)nylium)",
   "config.preventer.preventGrassBonemeal.text": "§4Grass block bone mealing prevented§4",
 
+  "option.preventer.preventSignEditing": "Prevent sign editing",
+  "tooltip.preventer.preventSignEditing": "Prevents you from editing signs",
+  "config.preventer.preventSignEditing.text": "§4Sign editing prevented§4",
+  "config.preventer.preventChestSignEditing": "Prevent chest sign editing",
+  "tooltip.preventer.preventChestSignEditing": "Prevents you only from editing signs on chests,\nnormal sign editing is still enabled",
+
+  "option.preventer.preventFarmlandJumping": "Prevent farmland jumping",
+  "tooltip.preventer.preventFarmlandJumping": "Prevents you from jumping when on farmland. \nNote: Due to limitations this does not work when jumping from a non-farmland block to a farmland block",
+  "config.preventer.preventFarmlandJumping.text": "§4Farmland jumping is disabled§4",
+
+  "option.preventer.preventBerriePlanting": "Prevent berrie planting",
+  "tooltip.preventer.preventBerriePlanting": "Prevents you from planting berries while trying to eat them (Sweet Berries & Glow Berries)",
+  "config.preventer.preventBerriePlanting.text": "§4Berrie planting prevented§4",
+
+  "option.preventer.preventDolphinAttacking": "Prevent dolphin attacking",
+  "tooltip.preventer.preventDolphinAttacking": "Prevents you from attacking dolphins",
+  "config.preventer.preventDolphinAttacking.text": "§4Dolphin attacking prevented§4",
+
+  "option.preventer.preventChiseledBookshelfInteracting": "Prevent chiseled bookshelf interacting",
+  "tooltip.preventer.preventChiseledBookshelfInteracting": "Prevents you from accidentally placing books in chiseled bookshelves or removing them",
+  "config.preventer.preventChiseledBookshelfInteracting.text": "§4Chiseled bookshelf interaction prevented§4",
+
+  "option.preventer.preventSaplingBreaking": "Prevent sapling breaking",
+  "tooltip.preventer.preventSaplingBreaking": "Prevents you from breaking saplings",
+  "config.preventer.preventSaplingBreaking.text": "§4Sapling breaking prevented§4",
+
+  "option.preventer.preventImmatureAmethystBreaking": "Prevent immature amethyst breaking",
+  "tooltip.preventer.preventImmatureAmethystBreaking": "Prevents you from breaking immature amethyst crystals",
+  "config.preventer.preventImmatureAmethystBreaking.text": "§4Immature amethyst breaking prevented§4",
 
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",

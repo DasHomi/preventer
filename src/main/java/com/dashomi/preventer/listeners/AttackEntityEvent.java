@@ -133,6 +133,15 @@ public class AttackEntityEvent {
                 }
             }
 
+            if (PreventerClient.config.preventDolphinAttacking) {
+                if (entity instanceof DolphinEntity) {
+                    if (PreventerClient.config.preventDolphinAttacking_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventDolphinAttacking.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

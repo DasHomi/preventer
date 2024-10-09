@@ -132,6 +132,22 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventGrassBonemeal = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSignEditing"),
+                                config.preventSignEditing)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventSignEditing"))
+                        .setSaveConsumer(value -> config.preventSignEditing = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventChiseledBookshelfInteracting"),
+                                config.preventChiseledBookshelfInteracting)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventChiseledBookshelfInteracting"))
+                        .setSaveConsumer(value -> config.preventChiseledBookshelfInteracting = value)
+                        .build())
+
                 // Plants
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.plantsCategory"))
@@ -175,6 +191,14 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.preventSugarCaneBreaking"))
                         .setSaveConsumer(value -> config.preventSugarCaneBreaking = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventFarmlandJumping"),
+                                config.preventFarmlandJumping)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventFarmlandJumping"))
+                        .setSaveConsumer(value -> config.preventFarmlandJumping = value)
                         .build())
 
                 // Breaking
@@ -254,6 +278,22 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventCarpetBreaking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSaplingBreaking"),
+                                config.preventSaplingBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventSaplingBreaking"))
+                        .setSaveConsumer(value -> config.preventSaplingBreaking = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventImmatureAmethystBreaking"),
+                                config.preventImmatureAmethystBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventImmatureAmethystBreaking"))
+                        .setSaveConsumer(value -> config.preventImmatureAmethystBreaking = value)
+                        .build())
+
                 // Placing
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.placingCategory"))
@@ -289,6 +329,14 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.preventOffhandPlacing"))
                         .setSaveConsumer(value -> config.preventOffhandPlacing = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventBerriePlanting"),
+                                config.preventBerriePlanting)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventBerriePlanting"))
+                        .setSaveConsumer(value -> config.preventBerriePlanting = value)
                         .build())
 
                 // Attacking
@@ -368,6 +416,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventNeutralMobAttacking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventDolphinAttacking"),
+                                config.preventDolphinAttacking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventDolphinAttacking"))
+                        .setSaveConsumer(value -> config.preventDolphinAttacking = value)
+                        .build())
+
                 // Other
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.otherCategory"))
@@ -396,6 +452,14 @@ public class  CreateModConfig {
                         .setTooltip(Text.translatable("tooltip.preventer.preventRenamedItemDropping"))
                         .setSaveConsumer(value -> config.preventRenamedItemDropping = value)
                         .build())
+
+                //.addEntry(entryBuilder.startBooleanToggle(
+                //                Text.translatable("option.preventer.preventEnchantedItemBurning"),
+                //                config.preventEnchantedItemBurning)
+                //        .setDefaultValue(false)
+                //        .setTooltip(Text.translatable("tooltip.preventer.preventEnchantedItemBurning"))
+                //        .setSaveConsumer(value -> config.preventEnchantedItemBurning = value)
+                //        .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.hideShield"),
@@ -455,6 +519,14 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.fullNeutralMobAttackingPrevention"))
                         .setSaveConsumer(value -> config.fullNeutralMobAttackingPrevention = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("config.preventer.preventChestSignEditing"),
+                                config.preventChestSignEditing)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventChestSignEditing"))
+                        .setSaveConsumer(value -> config.preventChestSignEditing = value)
                         .build());
 
 
@@ -566,6 +638,20 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventGrassBonemeal_msg = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSignEditing"),
+                                config.preventSignEditing_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventSignEditing_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventChiseledBookshelfInteracting"),
+                                config.preventChiseledBookshelfInteracting_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventChiseledBookshelfInteracting_msg = value)
+                        .build())
+
                 // Plants
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.plantsCategory"))
@@ -604,6 +690,13 @@ public class  CreateModConfig {
                                 config.preventSugarCaneBreaking_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventSugarCaneBreaking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventFarmlandJumping"),
+                                config.preventFarmlandJumping_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventFarmlandJumping_msg = value)
                         .build())
 
                 // Breaking
@@ -674,6 +767,20 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventCarpetBreaking_msg = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSaplingBreaking"),
+                                config.preventSaplingBreaking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventSaplingBreaking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventImmatureAmethystBreaking"),
+                                config.preventImmatureAmethystBreaking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventImmatureAmethystBreaking_msg = value)
+                        .build())
+
                 // Placing
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.placingCategory"))
@@ -705,6 +812,13 @@ public class  CreateModConfig {
                                 config.preventOffhandPlacing_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventOffhandPlacing_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventBerriePlanting"),
+                                config.preventBerriePlanting_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventBerriePlanting_msg = value)
                         .build())
 
                 // Attacking
@@ -775,6 +889,13 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventNeutralMobAttacking_msg = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventDolphinAttacking"),
+                                config.preventDolphinAttacking_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventDolphinAttacking_msg = value)
+                        .build())
+
                 // Other
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.otherCategory"))
@@ -808,6 +929,13 @@ public class  CreateModConfig {
                         .setTooltip(Text.translatable("tooltip.preventer.notifyToggledOff"))
                         .setSaveConsumer(value -> config.notifyToggledOff = value)
                         .build());
+
+                //.addEntry(entryBuilder.startBooleanToggle(
+                //                Text.translatable("option.preventer.preventEnchantedItemBurning"),
+                //                config.preventEnchantedItemBurning_msg)
+                //        .setDefaultValue(false)
+                //        .setSaveConsumer(value -> config.preventEnchantedItemBurning_msg = value)
+                //        .build());
 
         return builder
                 .setSavingRunnable(PreventerConfig::save)
