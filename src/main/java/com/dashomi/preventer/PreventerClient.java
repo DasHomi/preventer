@@ -24,11 +24,7 @@ public class PreventerClient implements ClientModInitializer {
     public static boolean overrideKeyPressed = false;
     public static boolean overrideToggleOff = false;
 
-    // public static boolean getIgnore() {
-    //     return (overrideToggleOff || overrideKeyPressed);
-    // }
     public static boolean getPrevent() {
-        // return !getIgnore();
         return !(overrideToggleOff || overrideKeyPressed);
     }
 
