@@ -24,6 +24,11 @@ public class PreventerClient implements ClientModInitializer {
     public static PreventerConfig config;
     public static boolean overrideKeyPressed = false;
     public static int ticksSinceEating = 0;
+    public static boolean overrideToggleOff = false;
+
+    public static boolean getPrevent() {
+        return !(overrideToggleOff || overrideKeyPressed);
+    }
 
     @Override
     public void onInitializeClient() {

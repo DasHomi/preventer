@@ -3,7 +3,6 @@ package com.dashomi.preventer;
 import com.dashomi.preventer.config.CreateModConfig;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
@@ -15,6 +14,7 @@ public class RegisterKeyBindings {
     public static void register() {
         registerOverrideKey();
         registerConfigKey();
+        registerToggleKey();
     }
 
     private static void registerOverrideKey() {
@@ -22,17 +22,20 @@ public class RegisterKeyBindings {
         KeyBindingHelper.registerKeyBinding(overrideKey);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (client.player == null) return;
 
-            if (overrideKey.isPressed()) {
-                assert MinecraftClient.getInstance().player != null;
-                MinecraftClient.getInstance().player.sendMessage(Text.translatable("key.preventer.overrideKey.text"), true);
-            } else {
-                if (MinecraftClient.getInstance().player != null) {
-                    if (PreventerClient.overrideKeyPressed) {
-                        MinecraftClient.getInstance().player.sendMessage(Text.of(""), true);
-                    }
+            if (!PreventerClient.overrideToggleOff || PreventerClient.config.notifyToggledOff) {
+                if (overrideKey.isPressed()) {
+                    client.player.sendMessage(Text.translatable(
+                        PreventerClient.overrideToggleOff
+                        ? "key.preventer.overrideKey.notifyToggledOff"
+                        : "key.preventer.overrideKey.text"
+                        ), true);
+                } else if (PreventerClient.overrideKeyPressed) { // still haven't updated the status from last tick
+                    client.player.sendMessage(Text.of(""), true);
                 }
             }
+
             PreventerClient.overrideKeyPressed = overrideKey.isPressed();
         });
     }
@@ -43,7 +46,25 @@ public class RegisterKeyBindings {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (configKey.wasPressed()) {
-                MinecraftClient.getInstance().setScreenAndRender(CreateModConfig.createConfigScreen(MinecraftClient.getInstance().currentScreen));
+                client.setScreenAndRender(CreateModConfig.createConfigScreen(client.currentScreen));
+            }
+        });
+    }
+
+    private static void registerToggleKey() {
+        KeyBinding toggleKey = new KeyBinding("key.preventer.toggleKey", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_BACKSPACE, CATEGORY);
+        KeyBindingHelper.registerKeyBinding(toggleKey);
+
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (client.player == null) return;
+
+            while (toggleKey.wasPressed()) {
+                PreventerClient.overrideToggleOff = !PreventerClient.overrideToggleOff;
+                if (PreventerClient.overrideToggleOff) {
+                    client.player.sendMessage(Text.translatable("key.preventer.toggleKey.offText"), true);
+                } else {
+                    client.player.sendMessage(Text.translatable("key.preventer.toggleKey.onText"), true);
+                }
             }
         });
     }

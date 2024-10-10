@@ -19,7 +19,7 @@ import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityPr
 
 public class AttackEntityEvent {
     public static ActionResult attackEntityListener(PlayerEntity playerEntity, World world, Hand hand, Entity entity, @Nullable EntityHitResult result) {
-        if (!PreventerClient.overrideKeyPressed) {
+        if (PreventerClient.getPrevent()) {
             if (PreventerClient.config.preventVillagerPunch) {
                 if (entity instanceof VillagerEntity) {
                     if (PreventerClient.config.preventVillagerPunch_msg) {

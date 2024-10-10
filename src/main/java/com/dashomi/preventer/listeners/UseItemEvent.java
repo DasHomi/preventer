@@ -3,6 +3,7 @@ package com.dashomi.preventer.listeners;
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -12,7 +13,8 @@ import net.minecraft.world.World;
 
 public class UseItemEvent {
     public static TypedActionResult<ItemStack> useItemListener(PlayerEntity player, World world, Hand hand) {
-        if (!PreventerClient.overrideKeyPressed) {
+        if (PreventerClient.getPrevent()) {
+            Item handItem = player.getStackInHand(hand).getItem();
             if (PreventerClient.config.preventRenamedItemUsing) {
                 if (player.getStackInHand(hand).get(DataComponentTypes.FOOD) != null ) {
                     if (player.getStackInHand(hand).get(DataComponentTypes.CUSTOM_NAME) != null) {
