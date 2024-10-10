@@ -15,5 +15,7 @@ public class PlayerJoinEvent {
             PreventerClient.config.welcomeMessage = false;
             PreventerConfig.save();
         }
+
+        PreventerClient.ticksSinceEating = 0;
     }
 }

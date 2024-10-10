@@ -7,6 +7,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.world.World;
@@ -255,6 +256,34 @@ public class UseBlockEvent {
                             playerEntity.sendMessage(Text.translatable("config.preventer.preventOffhandPlacing.text"), true);
                         }
                         return ActionResult.FAIL;
+                    }
+                }
+            }
+
+            if (PreventerClient.config.preventPlaceAfterEating) {
+                if (PreventerClient.ticksSinceEating <= PreventerClient.config.afterEatingPreventionTicks) {
+                    if (handItem instanceof BlockItem && canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
+
+                        if (!PreventerClient.config.preventTorchPlaceAfterEating) {
+                            if (PreventerClient.config.preventPlaceAfterEating_msg) {
+                                playerEntity.sendMessage(Text.translatable("config.preventer.preventPlaceAfterEating.text"), true);
+                            }
+                            return ActionResult.FAIL;
+                        } else {
+                            boolean holdingTorch = handItem.equals(Items.TORCH);
+                            Text heldBlockName = Text.translatable("block.minecraft.torch").formatted(Formatting.DARK_RED);
+                            if (PreventerClient.config.countLanternsAsTorches && !holdingTorch) { //skipped if already holding torch
+                                holdingTorch = handItem.equals(Items.LANTERN);
+                                heldBlockName = Text.translatable("block.minecraft.lantern").formatted(Formatting.DARK_RED); //fun subtle detail :)
+                            }
+                            if (holdingTorch) {
+                                if (PreventerClient.config.preventPlaceAfterEating_msg) {
+                                    playerEntity.sendMessage(Text.translatable("config.preventer.preventTorchPlaceAfterEating.text", heldBlockName), true);
+                                }
+                                return ActionResult.FAIL;
+                            }
+                        }
+
                     }
                 }
             }

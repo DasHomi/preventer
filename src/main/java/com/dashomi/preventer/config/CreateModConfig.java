@@ -339,6 +339,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventBerriePlanting = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventPlaceAfterEating"),
+                                config.preventPlaceAfterEating)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventPlaceAfterEating"))
+                        .setSaveConsumer(value -> config.preventPlaceAfterEating = value)
+                        .build())
+
                 // Attacking
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.AttackingCategory"))
@@ -527,6 +535,30 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.preventChestSignEditing"))
                         .setSaveConsumer(value -> config.preventChestSignEditing = value)
+                        .build())
+
+                .addEntry(entryBuilder.startIntSlider(
+                                Text.translatable("option.preventer.afterEatingPreventionTicks"),
+                                config.afterEatingPreventionTicks, 1, 60)
+                        .setDefaultValue(15)
+                        .setTooltip(Text.translatable("tooltip.preventer.afterEatingPreventionTicks"))
+                        .setSaveConsumer(value -> config.afterEatingPreventionTicks = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventTorchPlaceAfterEating"),
+                                config.preventTorchPlaceAfterEating)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventTorchPlaceAfterEating"))
+                        .setSaveConsumer(value -> config.preventTorchPlaceAfterEating = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.countLanternsAsTorches"),
+                                config.countLanternsAsTorches)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.countLanternsAsTorches"))
+                        .setSaveConsumer(value -> config.countLanternsAsTorches = value)
                         .build());
 
 
@@ -819,6 +851,13 @@ public class  CreateModConfig {
                                 config.preventBerriePlanting_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventBerriePlanting_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventPlaceAfterEating"),
+                                config.preventPlaceAfterEating_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventPlaceAfterEating_msg = value)
                         .build())
 
                 // Attacking

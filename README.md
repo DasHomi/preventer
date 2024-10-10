@@ -97,6 +97,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from placing blocks in your off-hand_
 - Prevent berrie planting
   - _Prevents you from planting berries while trying to eat them (Sweet Berries & Glow Berries)_
+- Prevent block placing temporary after eating
+  - _Temporary prevents you from accidentally placing blocks after eating food_
 
 </details>
 
