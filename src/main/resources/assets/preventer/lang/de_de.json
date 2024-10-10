@@ -227,6 +227,17 @@
   "tooltip.preventer.preventBerriePlanting": "Verhindert, dass du Beeren beim essen pflanzt (Glühbeeren, Süßbeeren)",
   "config.preventer.preventBerriePlanting.text": "§4Beeren pflanzen verhindert§4",
 
+  "option.preventer.preventPlaceAfterEating": "Platzieren nach dem Essen verhindern",
+  "tooltip.preventer.preventPlaceAfterEating": "Verhindert nach dem Essen temporär das Platzieren von Blöcken.",
+  "config.preventer.preventPlaceAfterEating.text": "§4Platzieren nach dem Essen verhindert§4",
+  "option.preventer.afterEatingPreventionTicks": "Nach dem Essen Verhinderung Ticks",
+  "tooltip.preventer.afterEatingPreventionTicks": "Die Anzahl der Ticks, die nach dem Essen das Platzieren von Blöcken verhindert wird.",
+  "option.preventer.preventTorchPlaceAfterEating": "Verhindere das Platzieren von Fackeln nach dem Essen",
+  "tooltip.preventer.preventTorchPlaceAfterEating": "Verhindert nach dem Essen temporär das Platzieren von Fackeln. \nEnthält keine Fackelvarianten wie Redstone-Fackel und Seelenfackeln.",
+  "config.preventer.preventTorchPlaceAfterEating.text": "§4Platzieren von§4 %1$s §4nach dem Essen verhindert§4",
+  "option.preventer.countLanternsAsTorches": "Laternen als Fackeln betrachten",
+  "tooltip.preventer.countLanternsAsTorches": "Wenn aktiviert, zählen Laternen auch als Fackeln. \nEnthällt keine Seelenlaternen",
+
   "option.preventer.preventDolphinAttacking": "Verhindere Delfin angreifen",
   "tooltip.preventer.preventDolphinAttacking": "Verhindert, dass du Delfine angreifst",
   "config.preventer.preventDolphinAttacking.text": "§4Delfin angreifen verhindert§4",
