@@ -4,8 +4,7 @@ import com.dashomi.preventer.PreventerClient;
 import net.minecraft.block.*;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.tag.EnchantmentTags;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -22,6 +21,17 @@ public class AttackBlockEvent {
     public static ActionResult attackBlockListener(PlayerEntity playerEntity, World world, Hand hand, BlockPos pos, Direction direction) {
         if (PreventerClient.getPrevent()) {
             Block targetBlock = world.getBlockState(pos).getBlock();
+
+            if (PreventerClient.config.preventBreakingWithWeapon) {
+                Item item = playerEntity.getStackInHand(hand).getItem();
+                if (item instanceof SwordItem || item instanceof TridentItem || item instanceof MaceItem) {
+                    if (PreventerClient.config.preventBreakingWithWeapon_msg) {
+                        playerEntity.sendMessage(Text.translatable("config.preventer.preventBreakingWithWeapon.text"), true);
+                    }
+                    return ActionResult.FAIL;
+                }
+            }
+
             if (PreventerClient.config.onlyMatureCropHarvest) {
                 if (targetBlock instanceof CropBlock) {
                     if (!((CropBlock) targetBlock).isMature(world.getBlockState(pos))) {

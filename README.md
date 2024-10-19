@@ -82,6 +82,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from breaking saplings_
 - Prevent immature amethyst breaking
   - _Prevents you from breaking immature amethyst crystals_
+- Prevent breaking with weapons
+  - _Prevents you from breaking blocks with a sword, trident or mace_
 </details>
 
 <details>
