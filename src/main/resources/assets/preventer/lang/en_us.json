@@ -165,6 +165,8 @@
   "config.preventer.preventNeutralMobAttacking.text": "§4Neutral mob hitting prevented§4",
   "config.preventer.fullNeutralMobAttackingPrevention": "Full neutral mob hitting prevention",
   "tooltip.preventer.fullNeutralMobAttackingPrevention": "additionally prevents you from attacking spiders and endermen",
+  "config.preventer.neutralMobAttackingPiglinException": "Neutral mob piglin exception",
+  "tooltip.preventer.neutralMobAttackingPiglinException": "Allow hitting piglins if you're not wearing gold armor",
 
   "option.preventer.preventSuspiciousBlockBreaking": "Prevent suspicious block breaking",
   "tooltip.preventer.preventSuspiciousBlockBreaking": "Prevents you from breaking suspicious sand and gravel",
