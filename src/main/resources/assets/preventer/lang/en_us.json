@@ -258,5 +258,9 @@
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
 
   "option.preventer.hideShield": "Hide shield",
-  "tooltip.preventer.hideShield": "Hides shields in the offhand"
+  "tooltip.preventer.hideShield": "Hides shields in the offhand",
+
+  "option.preventer.preventSwimming": "Prevent swimming",
+  "tooltip.preventer.preventSwimming": "Prevents you from sprinting while underwater",
+  "config.preventer.preventSwimming.text": "§4Swimming prevented§4"
 }

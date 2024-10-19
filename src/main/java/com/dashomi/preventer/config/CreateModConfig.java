@@ -461,6 +461,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventRenamedItemDropping = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSwimming"),
+                                config.preventSwimming)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventSwimming"))
+                        .setSaveConsumer(value -> config.preventSwimming = value)
+                        .build())
+
                 //.addEntry(entryBuilder.startBooleanToggle(
                 //                Text.translatable("option.preventer.preventEnchantedItemBurning"),
                 //                config.preventEnchantedItemBurning)
@@ -959,6 +967,13 @@ public class  CreateModConfig {
                                 config.preventRenamedItemDropping_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventRenamedItemDropping_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSwimming"),
+                                config.preventSwimming_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.preventSwimming_msg = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
