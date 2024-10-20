@@ -3,12 +3,17 @@ package com.dashomi.preventer.config;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
+import net.minecraft.item.Items;
+import net.minecraft.registry.Registries;
+
+import java.util.List;
 
 @Config(name = "preventer")
 public class PreventerConfig implements ConfigData {
     public static PreventerConfig get() {
         return AutoConfig.getConfigHolder(PreventerConfig.class).getConfig();
     }
+
     public boolean welcomeMessage = true;
 
     public static void save() {
@@ -145,7 +150,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventRenamedItemDropping_msg = false;
     //public boolean preventEnchantedItemBurning = false;
     //public boolean preventEnchantedItemBurning_msg = false;
-    public boolean hideShield = false;
-    public boolean hideTotem = false;
+    public boolean hideOffhand = false;
+    public boolean unhideOffhandOnUse = true;
+    public List<String> hiddenOffhandItems = List.of(Registries.ITEM.getId(Items.TOTEM_OF_UNDYING).toString(), Registries.ITEM.getId(Items.SHIELD).toString());
     public boolean notifyToggledOff = true;
 }

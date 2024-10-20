@@ -3,7 +3,11 @@ package com.dashomi.preventer.config;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.item.Items;
+import net.minecraft.registry.Registries;
 import net.minecraft.text.Text;
+
+import java.util.List;
 
 public class  CreateModConfig {
     public static Screen createConfigScreen(Screen parent) {
@@ -470,19 +474,25 @@ public class  CreateModConfig {
                 //        .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.hideShield"),
-                                config.hideShield)
+                                Text.translatable("option.preventer.hideOffhand"),
+                                config.hideOffhand)
                         .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.hideShield"))
-                        .setSaveConsumer(value -> config.hideShield = value)
+                        .setSaveConsumer(value -> config.hideOffhand = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.hideTotem"),
-                                config.hideTotem)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.hideTotem"))
-                        .setSaveConsumer(value -> config.hideTotem = value)
+                                Text.translatable("option.preventer.unhideOffhandOnUse"),
+                                config.unhideOffhandOnUse)
+                        .setDefaultValue(true)
+                        .setTooltip(Text.translatable("tooltip.preventer.unhideOffhandOnUse"))
+                        .setSaveConsumer(value -> config.unhideOffhandOnUse = value)
+                        .build())
+
+                .addEntry(entryBuilder.startStrList(
+                                Text.translatable("option.preventer.hiddenOffhandItems"),
+                                config.hiddenOffhandItems)
+                        .setDefaultValue(List.of(Registries.ITEM.getId(Items.TOTEM_OF_UNDYING).toString(), Registries.ITEM.getId(Items.SHIELD).toString()))
+                        .setSaveConsumer(value -> config.hiddenOffhandItems = value)
                         .build())
 
                 .addEntry(entryBuilder.startTextDescription(
