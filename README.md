@@ -82,6 +82,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from breaking saplings_
 - Prevent immature amethyst breaking
   - _Prevents you from breaking immature amethyst crystals_
+- Prevent block breaking without Fortune III
+  - _Prevents you from breaking diamond, emerald, or lapis ore blocks without a tool with the "Fortune III" enchantment_
 </details>
 
 <details>

@@ -170,6 +170,17 @@ public class AttackBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.requireFortuneIII) {
+                if (targetBlock instanceof OreBlock) {
+                    if (!EnchantmentHelper.getLevel(EnchantmentTags.FORTUNE, playerEntity.getMainHandStack()) == 3) {
+                        if (PreventerClient.config.requireFortuneIII_msg) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.requireFortuneIII.text"), true);
+                        }
+                        return ActionResult.FAIL;
+                    }
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 

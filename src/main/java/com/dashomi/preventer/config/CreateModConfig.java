@@ -294,6 +294,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventImmatureAmethystBreaking = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.requireFortuneIII"),
+                                config.requireFortuneIII)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.requireFortuneIII"))
+                        .setSaveConsumer(value -> config.requireFortuneIII = value)
+                        .build())
+
                 // Placing
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.placingCategory"))
@@ -811,6 +819,13 @@ public class  CreateModConfig {
                                 config.preventImmatureAmethystBreaking_msg)
                         .setDefaultValue(false)
                         .setSaveConsumer(value -> config.preventImmatureAmethystBreaking_msg = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.requireFortuneIII"),
+                                config.requireFortuneIII_msg)
+                        .setDefaultValue(false)
+                        .setSaveConsumer(value -> config.requireFortuneIII_msg = value)
                         .build())
 
                 // Placing
