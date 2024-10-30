@@ -134,6 +134,7 @@ public class PreventerConfig implements ConfigData {
     public boolean preventNeutralMobAttacking = false;
     public boolean preventNeutralMobAttacking_msg = false;
     public boolean fullNeutralMobAttackingPrevention = false;
+    public boolean neutralMobAttackingPiglinException = false;
     public boolean preventDolphinAttacking = false;
     public boolean preventDolphinAttacking_msg = false;
 

@@ -546,6 +546,14 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("config.preventer.neutralMobAttackingPiglinException"),
+                                config.neutralMobAttackingPiglinException)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.neutralMobAttackingPiglinException"))
+                        .setSaveConsumer(value -> config.neutralMobAttackingPiglinException = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("config.preventer.preventChestSignEditing"),
                                 config.preventChestSignEditing)
                         .setDefaultValue(false)
