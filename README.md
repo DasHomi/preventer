@@ -136,6 +136,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from dropping tools out of your hotbar_
 - Prevent renamed item dropping
   - _Prevents you from dropping items with a custom name_
+- Prevent swimming
+  - _Prevents you from sprinting while underwater_
 </details>
 
 **_Missing any features? Open an [issue](https://github.com/DasHomi/preventer/issues)!_**

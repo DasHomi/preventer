@@ -1,6 +1,8 @@
 package com.dashomi.preventer.mixin;
 
 import com.dashomi.preventer.PreventerClient;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.component.DataComponentTypes;
@@ -60,5 +62,18 @@ public class ClientPlayerEntityMixin {
                 }
             }
         }
+    }
+
+    @WrapOperation(method = "tickMovement", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayerEntity;setSprinting(Z)V"))
+    private void wrapSetSprinting(ClientPlayerEntity instance, boolean value, Operation<Void> original) {
+        if (!PreventerClient.overrideKeyPressed && value && instance.isSubmergedInWater()) {
+            if (PreventerClient.config.preventSwimming) {
+                if (PreventerClient.config.preventSwimming_msg) {
+                    instance.sendMessage(Text.translatable("config.preventer.preventSwimming.text"), true);
+                }
+                return;
+            }
+        }
+        original.call(instance, value);
     }
 }
