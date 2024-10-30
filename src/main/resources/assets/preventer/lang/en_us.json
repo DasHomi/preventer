@@ -254,6 +254,10 @@
   "tooltip.preventer.preventImmatureAmethystBreaking": "Prevents you from breaking immature amethyst crystals",
   "config.preventer.preventImmatureAmethystBreaking.text": "§4Immature amethyst breaking prevented§4",
 
+  "option.preventer.preventBreakingWithWeapon": "Prevent breaking with weapons",
+  "tooltip.preventer.preventBreakingWithWeapon": "Prevents you from breaking blocks with a sword, trident or mace",
+  "config.preventer.preventBreakingWithWeapon.text": "§4Breaking with weapon prevented§4",
+
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
 
