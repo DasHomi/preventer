@@ -17,7 +17,8 @@
   "option.preventer.notifyToggledOff": "Benachrichtige wenn Preventer ausgeschaltet ist",
   "tooltip.preventer.notifyToggledOff": "Zeigt eine Info an, wenn die Override-Taste gedrückt wird, während Preventer ausgeschaltet ist",
 
-  "text.preventer.welcomeMessage": "Standardmäßig sind keine Preventer Module aktiviert, um die Module zu aktivieren, die du benutzen willst, drücke einfach die I Taste, um das Konfigurationsmenü zu öffnen. Um temporär alle Module zu deaktivieren, halte einfach die R Taste gedrückt.\n\nViel Spaß!",
+  "text.preventer.welcomeToast": "Um preveter Module zu aktivieren drücke einfach die I Taste. Um temporär alle Module zu deaktivieren, halte einfach die R Taste gedrückt.",
+  "text.preventer.welcomeToastTitle": "Welcome to Preventer!",
   "text.preventer.moduleUseInfo": "Unten kannst du die Modulbenachrichtigungen einschalten, die angezeigt werden, wenn ein Modul eine Aktion verhindert hat",
   "text.preventer.experimentalFeatures": "§c↓ Experimentelle Module ↓§c",
   "text.preventer.missingFeatures": "Vermisst du irgendwelche Module? Schlag sie auf Github vor!",

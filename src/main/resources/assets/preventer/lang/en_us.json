@@ -17,7 +17,8 @@
   "option.preventer.notifyToggledOff": "Notify on Global Toggle off",
   "tooltip.preventer.notifyToggledOff": "Displays an info message when the override key is pressed while Preventer is toggled off",
 
-  "text.preventer.welcomeMessage": "Welcome to Preventer! \n\nBy default no, modules are enabled, to enable the modules\nyou want just press the I key. If you want to temporarily\ndisable all modules, hold the override key R. \n\nHave fun!",
+  "text.preventer.welcomeToast": "To enable preventer modules head to the settings or press I. If you want to temporarily disable all modules, hold the override key R.",
+  "text.preventer.welcomeToastTitle": "Welcome to Preventer!",
   "text.preventer.moduleUseInfo": "Below you can toggle Module Notifications, which will be displayed if a module prevented an action",
   "text.preventer.experimentalFeatures": "§c↓ Experimental / Unstable Modules ↓§c",
   "text.preventer.missingFeatures": "Missing any features? Suggest them on GitHub!",
