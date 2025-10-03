@@ -1,5 +1,6 @@
 package com.dashomi.preventer.config;
 
+import com.dashomi.preventer.enums.ActionPreventedInfo;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
@@ -97,5 +98,7 @@ public class PreventerConfig implements ConfigData {
     public boolean hideShield = false;
     public boolean hideTotem = false;
     public boolean notifyToggledOff = true;
-    public boolean showActionPreventedMessage = true;
+
+    // General Settings
+    public ActionPreventedInfo actionPreventedInfoType = ActionPreventedInfo.UNOBTRUSIVE;
 }

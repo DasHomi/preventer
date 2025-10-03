@@ -6,10 +6,11 @@ import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 import org.lwjgl.glfw.GLFW;
 
 public class RegisterKeyBindings {
-    private static final String CATEGORY = "key.preventer.category";
+    private static final KeyBinding.Category PREVENTER_CATEGORY = KeyBinding.Category.create(Identifier.of("preventer", "category"));
 
     public static void register() {
         registerOverrideKey();
@@ -18,7 +19,7 @@ public class RegisterKeyBindings {
     }
 
     private static void registerOverrideKey() {
-        KeyBinding overrideKey = new KeyBinding("key.preventer.overrideKey", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_R, CATEGORY);
+        KeyBinding overrideKey = new KeyBinding("key.preventer.overrideKey", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_R, PREVENTER_CATEGORY);
         KeyBindingHelper.registerKeyBinding(overrideKey);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
@@ -27,10 +28,10 @@ public class RegisterKeyBindings {
             if (!PreventerClient.overrideToggleOff || PreventerClient.config.notifyToggledOff) {
                 if (overrideKey.isPressed()) {
                     client.player.sendMessage(Text.translatable(
-                        PreventerClient.overrideToggleOff
-                        ? "key.preventer.overrideKey.notifyToggledOff"
-                        : "key.preventer.overrideKey.text"
-                        ), true);
+                            PreventerClient.overrideToggleOff
+                                    ? "key.preventer.overrideKey.notifyToggledOff"
+                                    : "key.preventer.overrideKey.text"
+                    ), true);
                 } else if (PreventerClient.overrideKeyPressed) { // still haven't updated the status from last tick
                     client.player.sendMessage(Text.of(""), true);
                 }
@@ -41,7 +42,7 @@ public class RegisterKeyBindings {
     }
 
     private static void registerConfigKey() {
-        KeyBinding configKey = new KeyBinding("key.preventer.configKey", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_I, CATEGORY);
+        KeyBinding configKey = new KeyBinding("key.preventer.configKey", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_I, PREVENTER_CATEGORY);
         KeyBindingHelper.registerKeyBinding(configKey);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
@@ -52,7 +53,7 @@ public class RegisterKeyBindings {
     }
 
     private static void registerToggleKey() {
-        KeyBinding toggleKey = new KeyBinding("key.preventer.toggleKey", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_BACKSPACE, CATEGORY);
+        KeyBinding toggleKey = new KeyBinding("key.preventer.toggleKey", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_BACKSPACE, PREVENTER_CATEGORY);
         KeyBindingHelper.registerKeyBinding(toggleKey);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {

@@ -1,5 +1,6 @@
 package com.dashomi.preventer.config;
 
+import com.dashomi.preventer.enums.ActionPreventedInfo;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import net.minecraft.client.gui.screen.Screen;
@@ -570,20 +571,23 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.showActionPreventedMessage"),
-                                config.showActionPreventedMessage)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.showActionPreventedMessage"))
-                        .setSaveConsumer(value -> config.showActionPreventedMessage = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.countLanternsAsTorches"),
                                 config.countLanternsAsTorches)
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.countLanternsAsTorches"))
                         .setSaveConsumer(value -> config.countLanternsAsTorches = value)
                         .build());
+
+        // General Settings
+        builder.getOrCreateCategory(Text.translatable("preventer.category.general"))
+                .addEntry(entryBuilder.startEnumSelector(
+                        Text.translatable("preventer.option.general.actionPreventedInfoType"),
+                        ActionPreventedInfo.class, config.actionPreventedInfoType)
+                        .setDefaultValue(ActionPreventedInfo.UNOBTRUSIVE)
+                        .setTooltip(Text.translatable("preventer.tooltip.general.actionPreventedInfoType"))
+                        .setSaveConsumer(value -> config.actionPreventedInfoType = value)
+                        .build());
+
 
         return builder
                 .setSavingRunnable(PreventerConfig::save)

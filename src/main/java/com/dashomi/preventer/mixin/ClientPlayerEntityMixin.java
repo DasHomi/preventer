@@ -26,7 +26,7 @@ public class ClientPlayerEntityMixin {
 
             if (PreventerClient.config.preventToolDropping) {
                 if (itemStack.get(DataComponentTypes.TOOL) != null) {
-                    if (PreventerClient.config.showActionPreventedMessage) {
+                    if (PreventerClient.config.actionPreventedInfoType.ordinal() == 3) {
                         clientPlayerEntity.sendMessage(Text.translatable("config.preventer.preventToolDropping.text"), true);
                     }
                     cir.setReturnValue(false);
@@ -35,7 +35,7 @@ public class ClientPlayerEntityMixin {
 
             if (PreventerClient.config.preventRenamedItemDropping) {
                 if (itemStack.get(DataComponentTypes.CUSTOM_NAME) != null) {
-                    if (PreventerClient.config.showActionPreventedMessage) {
+                    if (PreventerClient.config.actionPreventedInfoType.ordinal() == 3) {
                         clientPlayerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedItemDropping.text"), true);
                     }
                     cir.setReturnValue(false);
@@ -48,13 +48,13 @@ public class ClientPlayerEntityMixin {
     private void onTickMovement(CallbackInfo ci) {
         if (!PreventerClient.overrideKeyPressed) {
             ClientPlayerEntity player = (ClientPlayerEntity) (Object) this;
-            World world = player.getWorld();
+            World world = player.getEntityWorld();
             BlockPos pos = player.getBlockPos();
 
 
             if (PreventerClient.config.preventFarmlandJumping) {
                 if (world.getBlockState(pos).isOf(Blocks.FARMLAND)) {
-                    if (PreventerClient.config.showActionPreventedMessage) {
+                    if (PreventerClient.config.actionPreventedInfoType.ordinal() == 3) {
                         player.sendMessage(Text.translatable("config.preventer.preventFarmlandJumping.text"), true);
                     }
                     PreventerClient.LOGGER.info(String.valueOf(player.getVelocity().y));
@@ -68,7 +68,7 @@ public class ClientPlayerEntityMixin {
     private void wrapSetSprinting(ClientPlayerEntity instance, boolean value, Operation<Void> original) {
         if (!PreventerClient.overrideKeyPressed && value && instance.isSubmergedInWater()) {
             if (PreventerClient.config.preventSwimming) {
-                if (PreventerClient.config.showActionPreventedMessage) {
+                if (PreventerClient.config.actionPreventedInfoType.ordinal() == 3) {
                     instance.sendMessage(Text.translatable("config.preventer.preventSwimming.text"), true);
                 }
                 return;
