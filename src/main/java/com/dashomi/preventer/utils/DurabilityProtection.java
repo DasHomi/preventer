@@ -13,7 +13,7 @@ public class DurabilityProtection {
                 ItemStack stack = playerEntity.getStackInHand(hand);
                 if (stack.isDamageable()) {
                     if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.lowDurabilityProtectionRange) {
-                        if (PreventerClient.config.lowDurabilityProtection_msg) {
+                        if (PreventerClient.config.showActionPreventedMessage) {
                             playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
                         }
                         return true;

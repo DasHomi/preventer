@@ -16,7 +16,7 @@ public class UseItemEvent {
             if (PreventerClient.config.preventRenamedItemUsing) {
                 if (player.getStackInHand(hand).get(DataComponentTypes.FOOD) != null ) {
                     if (player.getStackInHand(hand).get(DataComponentTypes.CUSTOM_NAME) != null) {
-                        if (PreventerClient.config.preventRenamedItemUsing_msg) {
+                        if (PreventerClient.config.showActionPreventedMessage) {
                             player.sendMessage(Text.translatable("config.preventer.preventRenamedItemUsing.text"), true);
                         }
                         return ActionResult.FAIL;
