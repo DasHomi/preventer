@@ -6,13 +6,13 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.tag.EnchantmentTags;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
-
 import java.util.Objects;
 
 import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreventedMessage;
@@ -22,12 +22,11 @@ public class AttackBlockEvent {
     public static ActionResult attackBlockListener(PlayerEntity playerEntity, World world, Hand hand, BlockPos pos, Direction direction) {
         if (PreventerClient.getPrevent()) {
             Block targetBlock = world.getBlockState(pos).getBlock();
-            ItemStack mhs = playerEntity.getMainHandStack();
+            ItemStack mainHandStack = playerEntity.getMainHandStack();
 
             if (PreventerClient.config.preventBreakingWithWeapon) {
-                Item item = playerEntity.getStackInHand(hand).getItem();
-                if (mhs.isOf(Items.DIAMOND_SWORD) || mhs.isOf(Items.STONE_SWORD) || mhs.isOf(Items.GOLDEN_SWORD) || item instanceof TridentItem
-                        || item instanceof MaceItem || mhs.isOf(Items.IRON_SWORD) || mhs.isOf(Items.WOODEN_SWORD) || mhs.isOf(Items.NETHERITE_SWORD)) {
+                Item item = mainHandStack.getItem();
+                if (mainHandStack.isIn(ItemTags.SWORDS) || item instanceof TridentItem || item instanceof MaceItem) {
                     sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventBreakingWithWeapon.text"));
                     return ActionResult.FAIL;
                 }
@@ -93,9 +92,8 @@ public class AttackBlockEvent {
 
             if (PreventerClient.config.preventEnderChestBreaking) {
                 if (targetBlock instanceof EnderChestBlock) {
-                    if (mhs.isOf(Items.DIAMOND_PICKAXE) || mhs.isOf(Items.NETHERITE_PICKAXE) || mhs.isOf(Items.IRON_PICKAXE)
-                            || mhs.isOf(Items.GOLDEN_PICKAXE) || mhs.isOf(Items.STONE_PICKAXE) || mhs.isOf(Items.WOODEN_PICKAXE)) {
-                        if (!EnchantmentHelper.hasAnyEnchantmentsIn(playerEntity.getMainHandStack(), EnchantmentTags.PREVENTS_BEE_SPAWNS_WHEN_MINING)) {
+                    if (mainHandStack.isIn(ItemTags.PICKAXES)) {
+                        if (!EnchantmentHelper.hasAnyEnchantmentsIn(mainHandStack, EnchantmentTags.PREVENTS_BEE_SPAWNS_WHEN_MINING)) {
                             sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventEnderChestBreaking.text"));
                             return ActionResult.FAIL;
                         }
@@ -122,7 +120,7 @@ public class AttackBlockEvent {
 
             if (PreventerClient.config.preventChestBreaking) {
                 if (targetBlock instanceof ChestBlock) {
-                    if (playerEntity.getMainHandStack().getItem() instanceof AxeItem) {
+                    if (mainHandStack.isIn(ItemTags.PICKAXES)) {
                         sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventChestBreaking.text"));
                         return ActionResult.FAIL;
                     }

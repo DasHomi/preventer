@@ -5,13 +5,13 @@ import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.world.World;
-
 import java.util.Objects;
 
 import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreventedMessage;
@@ -160,7 +160,7 @@ public class UseBlockEvent {
 
             if (PreventerClient.config.preventRenamedItemUsing) {
                 if (!(handItem.getDefaultStack().isDamageable())) {
-                    if (!isShulkerBox(handItem)) {
+                    if (!handItem.getDefaultStack().isIn(ItemTags.SHULKER_BOXES)) {
                         if (!playerEntity.getStackInHand(hand).getName().getString().equals(handItem.getName().getString())) {
                             if (targetBlock instanceof CakeBlock || targetBlock instanceof ComposterBlock || targetBlock instanceof CampfireBlock) {
                                 sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventRenamedItemUsing.text"));
@@ -298,12 +298,5 @@ public class UseBlockEvent {
         }
         ActionResult actionResult = block.onUse(playerEntity.getEntityWorld(), playerEntity, blockHitResult);
         return !actionResult.isAccepted();
-    }
-
-    private static boolean isShulkerBox(Item handItem) {
-        if (handItem instanceof BlockItem) {
-            return ((BlockItem) handItem).getBlock() instanceof ShulkerBoxBlock;
-        }
-        return false;
     }
 }

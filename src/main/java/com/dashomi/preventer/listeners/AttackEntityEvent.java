@@ -135,7 +135,8 @@ public class AttackEntityEvent {
                     entity instanceof PiglinEntity ||
                     entity instanceof PolarBearEntity ||
                     entity instanceof WolfEntity ||
-                    entity instanceof ZombifiedPiglinEntity
+                    entity instanceof ZombifiedPiglinEntity ||
+                    entity instanceof FoxEntity
                 );
     }
 }
