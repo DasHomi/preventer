@@ -100,5 +100,5 @@ public class PreventerConfig implements ConfigData {
     public boolean notifyToggledOff = true;
 
     // General Settings
-    public ActionPreventedInfo actionPreventedInfoType = ActionPreventedInfo.UNOBTRUSIVE;
+    public ActionPreventedInfo actionPreventedInfoType = ActionPreventedInfo.MINIMAL;
 }

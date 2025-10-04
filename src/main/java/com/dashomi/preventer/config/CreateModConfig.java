@@ -583,7 +583,7 @@ public class  CreateModConfig {
                 .addEntry(entryBuilder.startEnumSelector(
                         Text.translatable("preventer.option.general.actionPreventedInfoType"),
                         ActionPreventedInfo.class, config.actionPreventedInfoType)
-                        .setDefaultValue(ActionPreventedInfo.UNOBTRUSIVE)
+                        .setDefaultValue(ActionPreventedInfo.MINIMAL)
                         .setTooltip(Text.translatable("preventer.tooltip.general.actionPreventedInfoType"))
                         .setSaveConsumer(value -> config.actionPreventedInfoType = value)
                         .build());

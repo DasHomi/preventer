@@ -11,21 +11,20 @@ import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreventedMessage;
 import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityProtection;
 
 public class UseEntityEvent {
-    public static ActionResult useEntityListener(PlayerEntity player, World world, Hand hand, Entity entity, @Nullable EntityHitResult hitResult) {
+    public static ActionResult useEntityListener(PlayerEntity playerEntity, World world, Hand hand, Entity entity, @Nullable EntityHitResult hitResult) {
         if (PreventerClient.getPrevent()) {
             if (PreventerClient.config.preventRenamedItemUsing) {
-                if (player.getStackInHand(hand).get(DataComponentTypes.CUSTOM_NAME) != null) {
-                    if (PreventerClient.config.actionPreventedInfoType.ordinal() == 3) {
-                        player.sendMessage(Text.translatable("config.preventer.preventRenamedItemUsing.text"), true);
-                    }
+                if (playerEntity.getStackInHand(hand).get(DataComponentTypes.CUSTOM_NAME) != null) {
+                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventRenamedItemUsing.text"));
                     return ActionResult.FAIL;
                 }
             }
 
-            if (checkDurabilityProtection(player, hand)) return ActionResult.FAIL;
+            if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
 
         return ActionResult.PASS;

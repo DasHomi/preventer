@@ -16,6 +16,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreventedMessage;
+
 @Mixin(ClientPlayerEntity.class)
 public class ClientPlayerEntityMixin {
     @Inject(method = "dropSelectedItem(Z)Z", at = @At(value = "HEAD"), cancellable = true)
@@ -26,18 +28,14 @@ public class ClientPlayerEntityMixin {
 
             if (PreventerClient.config.preventToolDropping) {
                 if (itemStack.get(DataComponentTypes.TOOL) != null) {
-                    if (PreventerClient.config.actionPreventedInfoType.ordinal() == 3) {
-                        clientPlayerEntity.sendMessage(Text.translatable("config.preventer.preventToolDropping.text"), true);
-                    }
+                    sendActionPreventedMessage(clientPlayerEntity, Text.translatable("config.preventer.preventToolDropping.text"));
                     cir.setReturnValue(false);
                 }
             }
 
             if (PreventerClient.config.preventRenamedItemDropping) {
                 if (itemStack.get(DataComponentTypes.CUSTOM_NAME) != null) {
-                    if (PreventerClient.config.actionPreventedInfoType.ordinal() == 3) {
-                        clientPlayerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedItemDropping.text"), true);
-                    }
+                    sendActionPreventedMessage(clientPlayerEntity, Text.translatable("config.preventer.preventRenamedItemDropping.text"));
                     cir.setReturnValue(false);
                 }
             }
@@ -54,9 +52,7 @@ public class ClientPlayerEntityMixin {
 
             if (PreventerClient.config.preventFarmlandJumping) {
                 if (world.getBlockState(pos).isOf(Blocks.FARMLAND)) {
-                    if (PreventerClient.config.actionPreventedInfoType.ordinal() == 3) {
-                        player.sendMessage(Text.translatable("config.preventer.preventFarmlandJumping.text"), true);
-                    }
+                    sendActionPreventedMessage(player, Text.translatable("config.preventer.preventFarmlandJumping.text"));
                     PreventerClient.LOGGER.info(String.valueOf(player.getVelocity().y));
                     player.setOnGround(false);
                 }
@@ -68,9 +64,7 @@ public class ClientPlayerEntityMixin {
     private void wrapSetSprinting(ClientPlayerEntity instance, boolean value, Operation<Void> original) {
         if (!PreventerClient.overrideKeyPressed && value && instance.isSubmergedInWater()) {
             if (PreventerClient.config.preventSwimming) {
-                if (PreventerClient.config.actionPreventedInfoType.ordinal() == 3) {
-                    instance.sendMessage(Text.translatable("config.preventer.preventSwimming.text"), true);
-                }
+                sendActionPreventedMessage(instance, Text.translatable("config.preventer.preventSwimming.text"));
                 return;
             }
         }

@@ -6,6 +6,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 
+import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreventedMessage;
+
 public class DurabilityProtection {
     public static boolean checkDurabilityProtection(PlayerEntity playerEntity, Hand hand) {
         if (PreventerClient.config.lowDurabilityProtection) {
@@ -13,9 +15,7 @@ public class DurabilityProtection {
                 ItemStack stack = playerEntity.getStackInHand(hand);
                 if (stack.isDamageable()) {
                     if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.lowDurabilityProtectionRange) {
-                        if (PreventerClient.config.actionPreventedInfoType.ordinal() == 3) {
-                            playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
-                        }
+                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.lowDurabilityProtection.text"));
                         return true;
                     }
                 }

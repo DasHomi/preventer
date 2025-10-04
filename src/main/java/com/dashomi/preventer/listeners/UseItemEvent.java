@@ -9,25 +9,25 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
+import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreventedMessage;
+
 public class UseItemEvent {
-    public static ActionResult useItemListener(PlayerEntity player, World world, Hand hand) {
+    public static ActionResult useItemListener(PlayerEntity playerEntity, World world, Hand hand) {
         if (PreventerClient.getPrevent()) {
-            Item handItem = player.getStackInHand(hand).getItem();
+            Item handItem = playerEntity.getStackInHand(hand).getItem();
             if (PreventerClient.config.preventRenamedItemUsing) {
-                if (player.getStackInHand(hand).get(DataComponentTypes.FOOD) != null ) {
-                    if (player.getStackInHand(hand).get(DataComponentTypes.CUSTOM_NAME) != null) {
-                        if (PreventerClient.config.actionPreventedInfoType.ordinal() == 3) {
-                            player.sendMessage(Text.translatable("config.preventer.preventRenamedItemUsing.text"), true);
-                        }
+                if (playerEntity.getStackInHand(hand).get(DataComponentTypes.FOOD) != null ) {
+                    if (playerEntity.getStackInHand(hand).get(DataComponentTypes.CUSTOM_NAME) != null) {
+                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventRenamedItemUsing.text"));
                         return ActionResult.FAIL;
                     }
                 }
             }
 
             if (PreventerClient.config.preventPlaceAfterEating) {
-                if (player.getStackInHand(hand).get(DataComponentTypes.FOOD) != null ) {
+                if (playerEntity.getStackInHand(hand).get(DataComponentTypes.FOOD) != null ) {
                     //confirms the player is actually eating the food and not just right-clicked the food on full hunger
-                    if (player.getStackInHand(hand).use(world, player, hand).isAccepted()) {
+                    if (playerEntity.getStackInHand(hand).use(world, playerEntity, hand).isAccepted()) {
                         PreventerClient.ticksSinceEating = 0;
                     }
                 }
