@@ -101,4 +101,5 @@ public class PreventerConfig implements ConfigData {
 
     // General Settings
     public ActionPreventedInfo actionPreventedInfoType = ActionPreventedInfo.DEFAULT;
+    public boolean showLowDurabilityProtectionWarning = true;
 }

@@ -1,8 +1,10 @@
 package com.dashomi.preventer.utils;
 
 import com.dashomi.preventer.PreventerClient;
+import com.dashomi.preventer.enums.ActionPreventedInfo;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 
@@ -15,7 +17,14 @@ public class DurabilityProtection {
                 ItemStack stack = playerEntity.getStackInHand(hand);
                 if (stack.isDamageable()) {
                     if (stack.getDamage() >= stack.getMaxDamage() - PreventerClient.config.lowDurabilityProtectionRange) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.lowDurabilityProtection.text"));
+                        if (PreventerClient.config.showLowDurabilityProtectionWarning) {
+                            playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
+                            if (PreventerClient.config.actionPreventedInfoType == ActionPreventedInfo.AUDIO) {
+                                playerEntity.playSound(SoundEvents.BLOCK_NOTE_BLOCK_BASEDRUM.value(), 1.0f, 1.1f);
+                            }
+                        } else {
+                            sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.lowDurabilityProtection.text"));
+                        }
                         return true;
                     }
                 }

@@ -581,11 +581,19 @@ public class  CreateModConfig {
         // General Settings
         builder.getOrCreateCategory(Text.translatable("preventer.category.general"))
                 .addEntry(entryBuilder.startEnumSelector(
-                        Text.translatable("preventer.option.general.actionPreventedInfoType"),
-                        ActionPreventedInfo.class, config.actionPreventedInfoType)
+                                Text.translatable("preventer.general.option.actionPreventedInfoType"),
+                                ActionPreventedInfo.class, config.actionPreventedInfoType)
                         .setDefaultValue(ActionPreventedInfo.DEFAULT)
-                        .setTooltip(Text.translatable("preventer.tooltip.general.actionPreventedInfoType"))
+                        .setTooltip(Text.translatable("preventer.general.tooltip.actionPreventedInfoType"))
                         .setSaveConsumer(value -> config.actionPreventedInfoType = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("preventer.general.option.showLowDurabilityProtectionWarning"),
+                                config.showLowDurabilityProtectionWarning)
+                        .setDefaultValue(true)
+                        .setTooltip(Text.translatable("preventer.general.tooltip.showLowDurabilityProtectionWarning"))
+                        .setSaveConsumer(value -> config.showLowDurabilityProtectionWarning = value)
                         .build());
 
 
