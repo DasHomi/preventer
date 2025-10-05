@@ -26,12 +26,12 @@
   "depends": {
     "fabricloader": ">=0.16.0",
     "minecraft": ">=1.21.9",
-    "java": ">=17",
-    "fabric": ">=0.100.0",
-    "cloth-config": ">=16.0.0"
+    "java": ">=21",
+    "fabric": ">=0.134.0",
+    "cloth-config": ">=20.0.148"
   },
   "suggests": {
-    "modmenu": ">=12.0.0"
+    "modmenu": ">=16.0.0"
   },
   "accessWidener": "preventer.accesswidener",
   "custom": {

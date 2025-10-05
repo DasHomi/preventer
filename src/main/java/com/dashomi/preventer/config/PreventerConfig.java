@@ -1,5 +1,6 @@
 package com.dashomi.preventer.config;
 
+import com.dashomi.preventer.PreventerClient;
 import com.dashomi.preventer.enums.ActionPreventedInfo;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigData;
@@ -10,7 +11,6 @@ public class PreventerConfig implements ConfigData {
     public static PreventerConfig get() {
         return AutoConfig.getConfigHolder(PreventerConfig.class).getConfig();
     }
-    public boolean welcomeMessage = true;
 
     public static void save() {
         AutoConfig.getConfigHolder(PreventerConfig.class).save();
@@ -19,6 +19,8 @@ public class PreventerConfig implements ConfigData {
     public static void load() {
         AutoConfig.getConfigHolder(PreventerConfig.class).load();
     }
+
+    public boolean welcomeMessage = true;
 
     // Interaction
     public boolean noStrip = false;

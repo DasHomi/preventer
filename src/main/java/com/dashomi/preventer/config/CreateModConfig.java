@@ -10,17 +10,13 @@ public class  CreateModConfig {
     public static Screen createConfigScreen(Screen parent) {
         ConfigBuilder builder = ConfigBuilder.create()
                 .setParentScreen(parent)
-                .setTitle(Text.translatable("text.preventer.configTitle"));
+                .setTitle(Text.translatable("preventer.configTitle"));
 
         ConfigEntryBuilder entryBuilder = builder.entryBuilder();
         PreventerConfig config = PreventerConfig.get();
 
-        builder.getOrCreateCategory(Text.translatable("category.preventer.default"))
-                // Interaction
-                .addEntry(entryBuilder.startTextDescription(
-                                Text.translatable("text.preventer.interactionCategory"))
-                        .build())
-
+        // Interactions
+        builder.getOrCreateCategory(Text.translatable("preventer.category.interactions"))
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.noStrip"),
                                 config.noStrip)
@@ -86,6 +82,20 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("config.preventer.rocketInOffhand"),
+                                config.rocketInOffhand)
+                        .setDefaultValue(true)
+                        .setSaveConsumer(value -> config.rocketInOffhand = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("config.preventer.rocketInMainHand"),
+                                config.rocketInMainHand)
+                        .setDefaultValue(true)
+                        .setSaveConsumer(value -> config.rocketInMainHand = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventBedUse"),
                                 config.preventBedUse)
                         .setDefaultValue(false)
@@ -142,6 +152,14 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("config.preventer.preventChestSignEditing"),
+                                config.preventChestSignEditing)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventChestSignEditing"))
+                        .setSaveConsumer(value -> config.preventChestSignEditing = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventChiseledBookshelfInteracting"),
                                 config.preventChiseledBookshelfInteracting)
                         .setDefaultValue(false)
@@ -149,11 +167,12 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventChiseledBookshelfInteracting = value)
                         .build())
 
-                // Plants
                 .addEntry(entryBuilder.startTextDescription(
-                                Text.translatable("text.preventer.plantsCategory"))
-                        .build())
+                                Text.translatable("text.preventer.missingFeatures"))
+                        .build());
 
+        // Plants
+        builder.getOrCreateCategory(Text.translatable("preventer.category.plants"))
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.noGlowBerrieHarvest"),
                                 config.noGlowBerrieHarvest)
@@ -202,11 +221,12 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventFarmlandJumping = value)
                         .build())
 
-                // Breaking
                 .addEntry(entryBuilder.startTextDescription(
-                                Text.translatable("text.preventer.breakingCategory"))
-                        .build())
+                                Text.translatable("text.preventer.missingFeatures"))
+                        .build());
 
+        // Breaking
+        builder.getOrCreateCategory(Text.translatable("preventer.category.breaking"))
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventBuddingAmethystBreaking"),
                                 config.preventBuddingAmethystBreaking)
@@ -245,6 +265,14 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.preventSuspiciousBlockBreaking"))
                         .setSaveConsumer(value -> config.preventSuspiciousBlockBreaking = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("config.preventer.enhancedSuspiciousBlockBreakingPrevention"),
+                                config.enhancedSuspiciousBlockBreakingPrevention)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.enhancedSuspiciousBlockBreakingPrevention"))
+                        .setSaveConsumer(value -> config.enhancedSuspiciousBlockBreakingPrevention = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
@@ -303,11 +331,12 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventBreakingWithWeapon = value)
                         .build())
 
-                // Placing
                 .addEntry(entryBuilder.startTextDescription(
-                                Text.translatable("text.preventer.placingCategory"))
-                        .build())
+                                Text.translatable("text.preventer.missingFeatures"))
+                        .build());
 
+        // Placing
+        builder.getOrCreateCategory(Text.translatable("preventer.category.placing"))
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventCoralPlace"),
                                 config.preventCoralPlace)
@@ -356,11 +385,36 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventPlaceAfterEating = value)
                         .build())
 
-                // Attacking
-                .addEntry(entryBuilder.startTextDescription(
-                                Text.translatable("text.preventer.AttackingCategory"))
+                .addEntry(entryBuilder.startIntSlider(
+                                Text.translatable("option.preventer.afterEatingPreventionTicks"),
+                                config.afterEatingPreventionTicks, 1, 60)
+                        .setDefaultValue(15)
+                        .setTooltip(Text.translatable("tooltip.preventer.afterEatingPreventionTicks"))
+                        .setSaveConsumer(value -> config.afterEatingPreventionTicks = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventTorchPlaceAfterEating"),
+                                config.preventTorchPlaceAfterEating)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventTorchPlaceAfterEating"))
+                        .setSaveConsumer(value -> config.preventTorchPlaceAfterEating = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.countLanternsAsTorches"),
+                                config.countLanternsAsTorches)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.countLanternsAsTorches"))
+                        .setSaveConsumer(value -> config.countLanternsAsTorches = value)
+                        .build())
+
+                .addEntry(entryBuilder.startTextDescription(
+                                Text.translatable("text.preventer.missingFeatures"))
+                        .build());
+
+        // Attacking
+        builder.getOrCreateCategory(Text.translatable("preventer.category.attacking"))
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventVillagerPunch"),
                                 config.preventVillagerPunch)
@@ -434,6 +488,22 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("config.preventer.fullNeutralMobAttackingPrevention"),
+                                config.fullNeutralMobAttackingPrevention)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.fullNeutralMobAttackingPrevention"))
+                        .setSaveConsumer(value -> config.fullNeutralMobAttackingPrevention = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("config.preventer.neutralMobAttackingPiglinException"),
+                                config.neutralMobAttackingPiglinException)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.neutralMobAttackingPiglinException"))
+                        .setSaveConsumer(value -> config.neutralMobAttackingPiglinException = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventDolphinAttacking"),
                                 config.preventDolphinAttacking)
                         .setDefaultValue(false)
@@ -441,17 +511,26 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventDolphinAttacking = value)
                         .build())
 
-                // Other
                 .addEntry(entryBuilder.startTextDescription(
-                                Text.translatable("text.preventer.otherCategory"))
-                        .build())
+                                Text.translatable("text.preventer.missingFeatures"))
+                        .build());
 
+        // Other
+        builder.getOrCreateCategory(Text.translatable("preventer.category.miscellaneous"))
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.lowDurabilityProtection"),
                                 config.lowDurabilityProtection)
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.lowDurabilityProtection"))
                         .setSaveConsumer(value -> config.lowDurabilityProtection = value)
+                        .build())
+
+                .addEntry(entryBuilder.startIntSlider(
+                                Text.translatable("config.preventer.lowDurabilityProtectionRange"),
+                                config.lowDurabilityProtectionRange, 1, 30)
+                        .setDefaultValue(5)
+                        .setTooltip(Text.translatable("tooltip.preventer.lowDurabilityProtectionRange"))
+                        .setSaveConsumer(value -> config.lowDurabilityProtectionRange = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
@@ -496,86 +575,6 @@ public class  CreateModConfig {
 
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.missingFeatures"))
-                        .build());
-
-
-        builder.getOrCreateCategory(Text.translatable("category.preventer.moduleConfig"))
-                .addEntry(entryBuilder.startIntSlider(
-                                Text.translatable("config.preventer.lowDurabilityProtectionRange"),
-                                config.lowDurabilityProtectionRange, 1, 30)
-                        .setDefaultValue(5)
-                        .setTooltip(Text.translatable("tooltip.preventer.lowDurabilityProtectionRange"))
-                        .setSaveConsumer(value -> config.lowDurabilityProtectionRange = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("config.preventer.rocketInOffhand"),
-                                config.rocketInOffhand)
-                        .setDefaultValue(true)
-                        .setSaveConsumer(value -> config.rocketInOffhand = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("config.preventer.rocketInMainHand"),
-                                config.rocketInMainHand)
-                        .setDefaultValue(true)
-                        .setSaveConsumer(value -> config.rocketInMainHand = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("config.preventer.enhancedSuspiciousBlockBreakingPrevention"),
-                                config.enhancedSuspiciousBlockBreakingPrevention)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.enhancedSuspiciousBlockBreakingPrevention"))
-                        .setSaveConsumer(value -> config.enhancedSuspiciousBlockBreakingPrevention = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("config.preventer.fullNeutralMobAttackingPrevention"),
-                                config.fullNeutralMobAttackingPrevention)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.fullNeutralMobAttackingPrevention"))
-                        .setSaveConsumer(value -> config.fullNeutralMobAttackingPrevention = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("config.preventer.neutralMobAttackingPiglinException"),
-                                config.neutralMobAttackingPiglinException)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.neutralMobAttackingPiglinException"))
-                        .setSaveConsumer(value -> config.neutralMobAttackingPiglinException = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("config.preventer.preventChestSignEditing"),
-                                config.preventChestSignEditing)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventChestSignEditing"))
-                        .setSaveConsumer(value -> config.preventChestSignEditing = value)
-                        .build())
-
-                .addEntry(entryBuilder.startIntSlider(
-                                Text.translatable("option.preventer.afterEatingPreventionTicks"),
-                                config.afterEatingPreventionTicks, 1, 60)
-                        .setDefaultValue(15)
-                        .setTooltip(Text.translatable("tooltip.preventer.afterEatingPreventionTicks"))
-                        .setSaveConsumer(value -> config.afterEatingPreventionTicks = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventTorchPlaceAfterEating"),
-                                config.preventTorchPlaceAfterEating)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventTorchPlaceAfterEating"))
-                        .setSaveConsumer(value -> config.preventTorchPlaceAfterEating = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.countLanternsAsTorches"),
-                                config.countLanternsAsTorches)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.countLanternsAsTorches"))
-                        .setSaveConsumer(value -> config.countLanternsAsTorches = value)
                         .build());
 
         // General Settings
