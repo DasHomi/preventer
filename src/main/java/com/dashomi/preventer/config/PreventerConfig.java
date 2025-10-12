@@ -148,6 +148,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventRenamedItemDropping_msg = false;
     public boolean preventSwimming = false;
     public boolean preventSwimming_msg = false;
+    public boolean preventCurseOfBindingEquip = false;
+    public boolean preventCurseOfBindingEquip_msg = false;
     //public boolean preventEnchantedItemBurning = false;
     //public boolean preventEnchantedItemBurning_msg = false;
     public boolean hideShield = false;
