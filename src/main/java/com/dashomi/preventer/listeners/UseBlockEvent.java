@@ -1,6 +1,7 @@
 package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
+import com.dashomi.preventer.enums.PreventRocketUseConfig;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -21,7 +22,7 @@ import static net.minecraft.block.SweetBerryBushBlock.AGE;
 
 public class UseBlockEvent {
     public static ActionResult useBlockListener(PlayerEntity playerEntity, World world, Hand hand, BlockHitResult blockHitResult) {
-        if (PreventerClient.getPrevent()) {
+        if (PreventerClient.getPrevent() && !playerEntity.isSpectator()) {
             BlockState targetBlockState = world.getBlockState(blockHitResult.getBlockPos());
             Block targetBlock = targetBlockState.getBlock();
             Item handItem = playerEntity.getStackInHand(hand).getItem();
@@ -143,14 +144,14 @@ public class UseBlockEvent {
                 }
             }
 
-            if (PreventerClient.config.preventRocketUse && !playerEntity.isSpectator()) {
+            if (PreventerClient.config.preventRocketUse != PreventRocketUseConfig.OFF) {
                 if (!playerEntity.isGliding() && handItem instanceof FireworkRocketItem && playerEntity.getEntityWorld().isClient()) {
                     if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
-                        if (PreventerClient.config.rocketInOffhand && Hand.OFF_HAND == hand) {
+                        if ((PreventerClient.config.preventRocketUse == PreventRocketUseConfig.OFF_HAND || PreventerClient.config.preventRocketUse == PreventRocketUseConfig.BOTH)  && Hand.OFF_HAND == hand) {
                             sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventRocketUse.text"));
                             return ActionResult.FAIL;
                         }
-                        if (PreventerClient.config.rocketInMainHand && Hand.MAIN_HAND == hand) {
+                        if ((PreventerClient.config.preventRocketUse == PreventRocketUseConfig.MAIN_HAND || PreventerClient.config.preventRocketUse == PreventRocketUseConfig.BOTH) && Hand.MAIN_HAND == hand) {
                             sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventRocketUse.text"));
                             return ActionResult.FAIL;
                         }

@@ -1,6 +1,8 @@
 package com.dashomi.preventer.config;
 
 import com.dashomi.preventer.enums.ActionPreventedInfo;
+import com.dashomi.preventer.enums.PreventRocketUseConfig;
+import com.dashomi.preventer.enums.PreventSuspiciousBlockBreakingConfig;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import net.minecraft.client.gui.screen.Screen;
@@ -73,26 +75,12 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.noTrappedChestOpening = value)
                         .build())
 
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventRocketUse"),
-                                config.preventRocketUse)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventRocketUse"))
+                .addEntry(entryBuilder.startEnumSelector(
+                                Text.translatable("preventer.interactions.option.preventRocketUse"),
+                                PreventRocketUseConfig.class, config.preventRocketUse)
+                        .setDefaultValue(PreventRocketUseConfig.OFF)
+                        .setTooltip(Text.translatable("preventer.interactions.tooltip.preventRocketUse"))
                         .setSaveConsumer(value -> config.preventRocketUse = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("config.preventer.rocketInOffhand"),
-                                config.rocketInOffhand)
-                        .setDefaultValue(true)
-                        .setSaveConsumer(value -> config.rocketInOffhand = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("config.preventer.rocketInMainHand"),
-                                config.rocketInMainHand)
-                        .setDefaultValue(true)
-                        .setSaveConsumer(value -> config.rocketInMainHand = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
@@ -259,20 +247,12 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventGlassBreaking = value)
                         .build())
 
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventSuspiciousBlockBreaking"),
-                                config.preventSuspiciousBlockBreaking)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventSuspiciousBlockBreaking"))
+                .addEntry(entryBuilder.startEnumSelector(
+                                Text.translatable("preventer.breaking.option.preventSuspiciousBlockBreaking"),
+                                PreventSuspiciousBlockBreakingConfig.class, config.preventSuspiciousBlockBreaking)
+                        .setDefaultValue(PreventSuspiciousBlockBreakingConfig.OFF)
+                        .setTooltip(Text.translatable("preventer.breaking.tooltip.preventSuspiciousBlockBreaking"))
                         .setSaveConsumer(value -> config.preventSuspiciousBlockBreaking = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("config.preventer.enhancedSuspiciousBlockBreakingPrevention"),
-                                config.enhancedSuspiciousBlockBreakingPrevention)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.enhancedSuspiciousBlockBreakingPrevention"))
-                        .setSaveConsumer(value -> config.enhancedSuspiciousBlockBreakingPrevention = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
@@ -523,14 +503,6 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Text.translatable("tooltip.preventer.lowDurabilityProtection"))
                         .setSaveConsumer(value -> config.lowDurabilityProtection = value)
-                        .build())
-
-                .addEntry(entryBuilder.startIntSlider(
-                                Text.translatable("config.preventer.lowDurabilityProtectionRange"),
-                                config.lowDurabilityProtectionRange, 1, 30)
-                        .setDefaultValue(5)
-                        .setTooltip(Text.translatable("tooltip.preventer.lowDurabilityProtectionRange"))
-                        .setSaveConsumer(value -> config.lowDurabilityProtectionRange = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(

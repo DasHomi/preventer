@@ -1,7 +1,8 @@
 package com.dashomi.preventer.config;
 
-import com.dashomi.preventer.PreventerClient;
 import com.dashomi.preventer.enums.ActionPreventedInfo;
+import com.dashomi.preventer.enums.PreventRocketUseConfig;
+import com.dashomi.preventer.enums.PreventSuspiciousBlockBreakingConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
@@ -30,9 +31,7 @@ public class PreventerConfig implements ConfigData {
     public boolean noScraping = false;
     public boolean noDeWax = false;
     public boolean noTrappedChestOpening = false;
-    public boolean preventRocketUse = false;
-    public boolean rocketInOffhand = true;
-    public boolean rocketInMainHand = false;
+    public PreventRocketUseConfig preventRocketUse = PreventRocketUseConfig.OFF;
     public boolean preventBedUse = false;
     public boolean preventDragonEggTeleport = false;
     public boolean preventRenamedItemUsing = false;
@@ -56,8 +55,7 @@ public class PreventerConfig implements ConfigData {
     public boolean preventItemFrameBreaking = false;
     public boolean preventPaintingBreaking = false;
     public boolean preventGlassBreaking = false;
-    public boolean preventSuspiciousBlockBreaking = false;
-    public boolean enhancedSuspiciousBlockBreakingPrevention = false;
+    public PreventSuspiciousBlockBreakingConfig preventSuspiciousBlockBreaking = PreventSuspiciousBlockBreakingConfig.OFF;
     public boolean preventEnderChestBreaking = false;
     public boolean preventSpawnerBreaking = false;
     public boolean preventChestBreaking = false;
@@ -93,7 +91,6 @@ public class PreventerConfig implements ConfigData {
 
     // Other
     public boolean lowDurabilityProtection = false;
-    public int lowDurabilityProtectionRange = 5;
     public boolean preventToolDropping = false;
     public boolean preventRenamedItemDropping = false;
     public boolean preventSwimming = false;

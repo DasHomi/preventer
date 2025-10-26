@@ -1,6 +1,7 @@
 package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
+import com.dashomi.preventer.enums.PreventSuspiciousBlockBreakingConfig;
 import net.minecraft.block.*;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
@@ -78,11 +79,11 @@ public class AttackBlockEvent {
                 }
             }
 
-            if (PreventerClient.config.preventSuspiciousBlockBreaking) {
+            if (PreventerClient.config.preventSuspiciousBlockBreaking != PreventSuspiciousBlockBreakingConfig.OFF) {
                 if (targetBlock instanceof BrushableBlock) {
                     sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventSuspiciousBlockBreaking.text"));
                     return ActionResult.FAIL;
-                } else if (PreventerClient.config.enhancedSuspiciousBlockBreakingPrevention) {
+                } else if (PreventerClient.config.preventSuspiciousBlockBreaking == PreventSuspiciousBlockBreakingConfig.ENHANCED) {
                     if (world.getBlockState(pos.offset(Direction.Axis.Y, 1)).getBlock() instanceof BrushableBlock) {
                         sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.enhancedSuspiciousBlockBreakingPrevention.text"));
                         return ActionResult.FAIL;
