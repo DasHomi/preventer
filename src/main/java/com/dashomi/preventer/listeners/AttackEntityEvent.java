@@ -1,6 +1,7 @@
 package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
+import com.dashomi.preventer.enums.PreventNeutralMobAttackingConfig;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.decoration.EndCrystalEntity;
 import net.minecraft.entity.decoration.ItemFrameEntity;
@@ -96,15 +97,9 @@ public class AttackEntityEvent {
                 }
             }
 
-            if (PreventerClient.config.preventNeutralMobAttacking) {
-                if (PreventerClient.config.fullNeutralMobAttackingPrevention) {
+            if (PreventerClient.config.preventNeutralMobAttacking != PreventNeutralMobAttackingConfig.OFF) {
+                if (PreventerClient.config.preventNeutralMobAttacking == PreventNeutralMobAttackingConfig.FULL && !(entity instanceof PiglinEntity)) {
                     if (isNeutralMob(entity) || entity instanceof SpiderEntity || entity instanceof EndermanEntity) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventNeutralMobAttacking.text"));
-                        return ActionResult.FAIL;
-                    }
-                } else {
-                    if (isNeutralMob(entity) && (!(entity instanceof PiglinEntity)
-                            || !PreventerClient.config.neutralMobAttackingPiglinException)) {
                         sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventNeutralMobAttacking.text"));
                         return ActionResult.FAIL;
                     }

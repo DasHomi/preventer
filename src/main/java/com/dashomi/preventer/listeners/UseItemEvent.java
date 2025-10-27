@@ -1,6 +1,7 @@
 package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
+import com.dashomi.preventer.enums.PreventPlacingAfterEatingConfig;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -24,7 +25,7 @@ public class UseItemEvent {
                 }
             }
 
-            if (PreventerClient.config.preventPlaceAfterEating) {
+            if (PreventerClient.config.preventPlacingAfterEating != PreventPlacingAfterEatingConfig.OFF) {
                 if (playerEntity.getStackInHand(hand).get(DataComponentTypes.FOOD) != null ) {
                     //confirms the player is actually eating the food and not just right-clicked the food on full hunger
                     if (playerEntity.getStackInHand(hand).use(world, playerEntity, hand).isAccepted()) {

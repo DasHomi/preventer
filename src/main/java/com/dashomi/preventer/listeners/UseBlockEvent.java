@@ -1,6 +1,7 @@
 package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
+import com.dashomi.preventer.enums.PreventPlacingAfterEatingConfig;
 import com.dashomi.preventer.enums.PreventRocketUseConfig;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
@@ -218,17 +219,17 @@ public class UseBlockEvent {
                 }
             }
 
-            if (PreventerClient.config.preventPlaceAfterEating) {
-                if (PreventerClient.ticksSinceEating <= PreventerClient.config.afterEatingPreventionTicks) {
+            if (PreventerClient.config.preventPlacingAfterEating != PreventPlacingAfterEatingConfig.OFF) {
+                if (PreventerClient.ticksSinceEating <= 50) {
                     if (handItem instanceof BlockItem && canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
 
-                        if (!PreventerClient.config.preventTorchPlaceAfterEating) {
+                        if (PreventerClient.config.preventPlacingAfterEating != PreventPlacingAfterEatingConfig.TORCHES) {
                             sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventPlaceAfterEating.text"));
                             return ActionResult.FAIL;
                         } else {
                             boolean holdingTorch = handItem.equals(Items.TORCH);
                             Text heldBlockName = Text.translatable("block.minecraft.torch").formatted(Formatting.DARK_RED);
-                            if (PreventerClient.config.countLanternsAsTorches && !holdingTorch) { //skipped if already holding torch
+                            if (handItem.equals(Items.LANTERN) && !holdingTorch) { //skipped if already holding torch
                                 holdingTorch = handItem.equals(Items.LANTERN);
                                 heldBlockName = Text.translatable("block.minecraft.lantern").formatted(Formatting.DARK_RED); //fun subtle detail :)
                             }

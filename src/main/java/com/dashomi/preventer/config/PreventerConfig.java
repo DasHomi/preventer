@@ -1,8 +1,6 @@
 package com.dashomi.preventer.config;
 
-import com.dashomi.preventer.enums.ActionPreventedInfo;
-import com.dashomi.preventer.enums.PreventRocketUseConfig;
-import com.dashomi.preventer.enums.PreventSuspiciousBlockBreakingConfig;
+import com.dashomi.preventer.enums.*;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
@@ -70,10 +68,7 @@ public class PreventerConfig implements ConfigData {
     public boolean preventLavaPlacing = false;
     public boolean preventOffhandPlacing = false;
     public boolean preventBerriePlanting = false;
-    public boolean preventPlaceAfterEating = false;
-    public int afterEatingPreventionTicks = 10;
-    public boolean preventTorchPlaceAfterEating = false;
-    public boolean countLanternsAsTorches = false;
+    public PreventPlacingAfterEatingConfig preventPlacingAfterEating = PreventPlacingAfterEatingConfig.OFF;
 
     // Attacking
     public boolean preventVillagerPunch = false;
@@ -84,9 +79,7 @@ public class PreventerConfig implements ConfigData {
     public boolean preventTamedMobAttacking = false;
     public boolean preventRareMobAttacking = false;
     public boolean preventHorseAttacking = false;
-    public boolean preventNeutralMobAttacking = false;
-    public boolean fullNeutralMobAttackingPrevention = false;
-    public boolean neutralMobAttackingPiglinException = false;
+    public PreventNeutralMobAttackingConfig preventNeutralMobAttacking = PreventNeutralMobAttackingConfig.OFF;
     public boolean preventDolphinAttacking = false;
 
     // Other

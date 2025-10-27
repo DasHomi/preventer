@@ -1,8 +1,6 @@
 package com.dashomi.preventer.config;
 
-import com.dashomi.preventer.enums.ActionPreventedInfo;
-import com.dashomi.preventer.enums.PreventRocketUseConfig;
-import com.dashomi.preventer.enums.PreventSuspiciousBlockBreakingConfig;
+import com.dashomi.preventer.enums.*;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import net.minecraft.client.gui.screen.Screen;
@@ -357,36 +355,12 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventBerriePlanting = value)
                         .build())
 
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventPlaceAfterEating"),
-                                config.preventPlaceAfterEating)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventPlaceAfterEating"))
-                        .setSaveConsumer(value -> config.preventPlaceAfterEating = value)
-                        .build())
-
-                .addEntry(entryBuilder.startIntSlider(
-                                Text.translatable("option.preventer.afterEatingPreventionTicks"),
-                                config.afterEatingPreventionTicks, 1, 60)
-                        .setDefaultValue(15)
-                        .setTooltip(Text.translatable("tooltip.preventer.afterEatingPreventionTicks"))
-                        .setSaveConsumer(value -> config.afterEatingPreventionTicks = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventTorchPlaceAfterEating"),
-                                config.preventTorchPlaceAfterEating)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventTorchPlaceAfterEating"))
-                        .setSaveConsumer(value -> config.preventTorchPlaceAfterEating = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.countLanternsAsTorches"),
-                                config.countLanternsAsTorches)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.countLanternsAsTorches"))
-                        .setSaveConsumer(value -> config.countLanternsAsTorches = value)
+                .addEntry(entryBuilder.startEnumSelector(
+                                Text.translatable("preventer.placing.option.preventPlacingAfterEating"),
+                                PreventPlacingAfterEatingConfig.class, config.preventPlacingAfterEating)
+                        .setDefaultValue(PreventPlacingAfterEatingConfig.OFF)
+                        .setTooltip(Text.translatable("preventer.placing.tooltip.preventPlacingAfterEating"))
+                        .setSaveConsumer(value -> config.preventPlacingAfterEating = value)
                         .build())
 
                 .addEntry(entryBuilder.startTextDescription(
@@ -459,28 +433,12 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventHorseAttacking = value)
                         .build())
 
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventNeutralMobAttacking"),
-                                config.preventNeutralMobAttacking)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventNeutralMobAttacking"))
+                .addEntry(entryBuilder.startEnumSelector(
+                                Text.translatable("preventer.attacking.option.preventNeutralMobAttacking"),
+                                PreventNeutralMobAttackingConfig.class, config.preventNeutralMobAttacking)
+                        .setDefaultValue(PreventNeutralMobAttackingConfig.OFF)
+                        .setTooltip(Text.translatable("preventer.attacking.tooltip.preventNeutralMobAttacking"))
                         .setSaveConsumer(value -> config.preventNeutralMobAttacking = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("config.preventer.fullNeutralMobAttackingPrevention"),
-                                config.fullNeutralMobAttackingPrevention)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.fullNeutralMobAttackingPrevention"))
-                        .setSaveConsumer(value -> config.fullNeutralMobAttackingPrevention = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("config.preventer.neutralMobAttackingPiglinException"),
-                                config.neutralMobAttackingPiglinException)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.neutralMobAttackingPiglinException"))
-                        .setSaveConsumer(value -> config.neutralMobAttackingPiglinException = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
