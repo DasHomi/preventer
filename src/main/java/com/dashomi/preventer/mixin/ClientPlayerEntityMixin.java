@@ -28,14 +28,14 @@ public class ClientPlayerEntityMixin {
 
             if (PreventerClient.config.preventToolDropping) {
                 if (itemStack.get(DataComponentTypes.TOOL) != null) {
-                    sendActionPreventedMessage(clientPlayerEntity, Text.translatable("config.preventer.preventToolDropping.text"));
+                    sendActionPreventedMessage(clientPlayerEntity, Text.translatable("preventer.miscellaneous.prevented.preventToolDropping"));
                     cir.setReturnValue(false);
                 }
             }
 
             if (PreventerClient.config.preventRenamedItemDropping) {
                 if (itemStack.get(DataComponentTypes.CUSTOM_NAME) != null) {
-                    sendActionPreventedMessage(clientPlayerEntity, Text.translatable("config.preventer.preventRenamedItemDropping.text"));
+                    sendActionPreventedMessage(clientPlayerEntity, Text.translatable("preventer.miscellaneous.prevented.preventRenamedItemDropping"));
                     cir.setReturnValue(false);
                 }
             }
@@ -52,7 +52,7 @@ public class ClientPlayerEntityMixin {
 
             if (PreventerClient.config.preventFarmlandJumping) {
                 if (world.getBlockState(pos).isOf(Blocks.FARMLAND)) {
-                    sendActionPreventedMessage(player, Text.translatable("config.preventer.preventFarmlandJumping.text"));
+                    sendActionPreventedMessage(player, Text.translatable("preventer.plants.prevented.preventFarmlandJumping"));
                     PreventerClient.LOGGER.info(String.valueOf(player.getVelocity().y));
                     player.setOnGround(false);
                 }
@@ -64,7 +64,7 @@ public class ClientPlayerEntityMixin {
     private void wrapSetSprinting(ClientPlayerEntity instance, boolean value, Operation<Void> original) {
         if (!PreventerClient.overrideKeyPressed && value && instance.isSubmergedInWater()) {
             if (PreventerClient.config.preventSwimming) {
-                sendActionPreventedMessage(instance, Text.translatable("config.preventer.preventSwimming.text"));
+                sendActionPreventedMessage(instance, Text.translatable("preventer.miscellaneous.prevented.preventSwimming"));
                 return;
             }
         }

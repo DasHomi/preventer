@@ -19,7 +19,7 @@ public class UseEntityEvent {
         if (PreventerClient.getPrevent()) {
             if (PreventerClient.config.preventRenamedItemUsing) {
                 if (playerEntity.getStackInHand(hand).get(DataComponentTypes.CUSTOM_NAME) != null) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventRenamedItemUsing.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventRenamedItemUsing"));
                     return ActionResult.FAIL;
                 }
             }

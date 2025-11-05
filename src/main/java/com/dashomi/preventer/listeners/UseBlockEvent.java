@@ -27,85 +27,85 @@ public class UseBlockEvent {
             BlockState targetBlockState = world.getBlockState(blockHitResult.getBlockPos());
             Block targetBlock = targetBlockState.getBlock();
             Item handItem = playerEntity.getStackInHand(hand).getItem();
-            if (PreventerClient.config.noStrip) {
+            if (PreventerClient.config.preventLogStripping) {
                 if (handItem instanceof AxeItem) {
                     if (AxeItem.STRIPPED_BLOCKS.containsKey(targetBlock)) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.noStrip.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventLogStripping"));
                         return ActionResult.FAIL;
                     }
                 }
             }
 
-            if (PreventerClient.config.noPath) {
+            if (PreventerClient.config.preventPathCreation) {
                 if (handItem instanceof ShovelItem) {
                     if (ShovelItem.PATH_STATES.containsKey(targetBlock)) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.noPath.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventPathCreation"));
                         return ActionResult.FAIL;
                     }
                 }
             }
 
-            if (PreventerClient.config.noFarmland) {
+            if (PreventerClient.config.preventFarmlandCreation) {
                 if (handItem instanceof HoeItem) {
                     if (HoeItem.TILLING_ACTIONS.containsKey(targetBlock)) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.noFarmland.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventFarmlandCreation"));
                         return ActionResult.FAIL;
                     }
                 }
             }
 
-            if (PreventerClient.config.noGlowBerrieHarvest) {
+            if (PreventerClient.config.preventGlowBerrieHarvesting) {
                 if (targetBlock instanceof CaveVines) {
                     if (world.getBlockState(blockHitResult.getBlockPos()).get(BERRIES)) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.noGlowBerrieHarvest.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.plants.prevented.preventGlowBerrieHarvesting"));
                         return ActionResult.FAIL;
                     }
                 }
             }
 
-            if (PreventerClient.config.noSweetBerrieHarvest) {
+            if (PreventerClient.config.preventSweetBerrieHarvesting) {
                 if (targetBlock instanceof SweetBerryBushBlock) {
                     if (world.getBlockState(blockHitResult.getBlockPos()).get(AGE) >= 2) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.noSweetBerrieHarvest.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.plants.prevented.preventSweetBerrieHarvesting"));
                         return ActionResult.FAIL;
                     }
                 }
             }
 
-            if (PreventerClient.config.noScraping) {
+            if (PreventerClient.config.preventCopperOxidationScraping) {
                 if (handItem instanceof AxeItem) {
                     if (targetBlock instanceof Oxidizable) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.noScraping.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventCopperOxidationScraping"));
                         return ActionResult.FAIL;
                     }
                 }
             }
 
-            if (PreventerClient.config.noDeWax) {
+            if (PreventerClient.config.preventCopperDeWaxing) {
                 if (handItem instanceof AxeItem) {
                     if (HoneycombItem.WAXED_TO_UNWAXED_BLOCKS.get().containsKey(targetBlock)) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.noDeWax.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventCopperDeWaxing"));
                         return ActionResult.FAIL;
                     }
                 }
             }
 
-            if (PreventerClient.config.noCake) {
+            if (PreventerClient.config.preventCakeEating) {
                 if (targetBlock instanceof CandleCakeBlock) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.noCake.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventCakeEating"));
                     return ActionResult.FAIL;
                 } else if (targetBlock instanceof CakeBlock) {
                     String[] itemName = String.valueOf(handItem).split("_");
                     if (!Objects.equals(itemName[itemName.length - 1], "candle")) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.noCake.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventCakeEating"));
                         return ActionResult.FAIL;
                     }
                 }
             }
 
-            if (PreventerClient.config.noTrappedChestOpening) {
+            if (PreventerClient.config.preventTrappedChestOpening) {
                 if (targetBlock instanceof TrappedChestBlock) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.noTrappedChestOpening.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventTrappedChestOpening"));
                     return ActionResult.FAIL;
                 }
             }
@@ -113,31 +113,31 @@ public class UseBlockEvent {
             if (PreventerClient.config.preventBedUse) {
                 if (targetBlock instanceof BedBlock) {
                     if (!world.getDimension().bedWorks()) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventBedUse.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventBedUse"));
                         return ActionResult.FAIL;
                     }
                 }
             }
 
-            if (PreventerClient.config.preventWaterPlace) {
+            if (PreventerClient.config.preventWaterPlacing) {
                 if (handItem.equals(Items.WATER_BUCKET)) {
                     if (world.getDimension().ultrawarm()) {
                         if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
-                            sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventWaterPlace.text"));
+                            sendActionPreventedMessage(playerEntity, Text.translatable("preventer.placing.prevented.preventWaterPlacing"));
                             return ActionResult.FAIL;
                         }
                     }
                 }
             }
 
-            if (PreventerClient.config.preventCoralPlace) {
+            if (PreventerClient.config.preventCoralPlacing) {
                 if (handItem instanceof BlockItem){
                     Block handItemBlock = ((BlockItem) handItem).getBlock();
                     if (handItemBlock instanceof CoralBlock || handItemBlock instanceof CoralBlockBlock || handItemBlock instanceof CoralFanBlock) {
                         Block targetBlock2 = world.getBlockState(blockHitResult.getBlockPos().offset(blockHitResult.getSide(), 1)).getBlock();
                         if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
                             if (!targetBlock2.equals(Blocks.WATER)) {
-                                sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventCoralPlace.text"));
+                                sendActionPreventedMessage(playerEntity, Text.translatable("preventer.placing.prevented.preventCoralPlacing"));
                                 return ActionResult.FAIL;
                             }
                         }
@@ -149,11 +149,11 @@ public class UseBlockEvent {
                 if (!playerEntity.isGliding() && handItem instanceof FireworkRocketItem && playerEntity.getEntityWorld().isClient()) {
                     if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
                         if ((PreventerClient.config.preventRocketUse == PreventRocketUseConfig.OFF_HAND || PreventerClient.config.preventRocketUse == PreventRocketUseConfig.BOTH)  && Hand.OFF_HAND == hand) {
-                            sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventRocketUse.text"));
+                            sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventRocketUse"));
                             return ActionResult.FAIL;
                         }
                         if ((PreventerClient.config.preventRocketUse == PreventRocketUseConfig.MAIN_HAND || PreventerClient.config.preventRocketUse == PreventRocketUseConfig.BOTH) && Hand.MAIN_HAND == hand) {
-                            sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventRocketUse.text"));
+                            sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventRocketUse"));
                             return ActionResult.FAIL;
                         }
                     }
@@ -165,11 +165,11 @@ public class UseBlockEvent {
                     if (!handItem.getDefaultStack().isIn(ItemTags.SHULKER_BOXES)) {
                         if (!playerEntity.getStackInHand(hand).getName().getString().equals(handItem.getName().getString())) {
                             if (targetBlock instanceof CakeBlock || targetBlock instanceof ComposterBlock || targetBlock instanceof CampfireBlock) {
-                                sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventRenamedItemUsing.text"));
+                                sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventRenamedItemUsing"));
                                 return ActionResult.FAIL;
                             } else {
                                 if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
-                                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventRenamedItemUsing.text"));
+                                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventRenamedItemUsing"));
                                     return ActionResult.FAIL;
                                 }
                             }
@@ -180,7 +180,7 @@ public class UseBlockEvent {
 
             if (PreventerClient.config.preventNoteBlockEditing) {
                 if (targetBlock instanceof NoteBlock) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventNoteBlockEditing.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventNoteBlockEditing"));
                     return ActionResult.FAIL;
                 }
             }
@@ -188,7 +188,7 @@ public class UseBlockEvent {
             if (PreventerClient.config.preventLavaPlacing) {
                 if (handItem.equals(Items.LAVA_BUCKET)) {
                     if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventLavaPlacing.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.placing.prevented.preventLavaPlacing"));
                         return ActionResult.FAIL;
                     }
                 }
@@ -197,7 +197,7 @@ public class UseBlockEvent {
             if (PreventerClient.config.preventRespawnAnchorUse) {
                 if(targetBlock instanceof RespawnAnchorBlock) {
                     if (!world.getDimension().respawnAnchorWorks()) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventRespawnAnchorUse.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventRespawnAnchorUse"));
                         return ActionResult.FAIL;
                     }
                 }
@@ -205,7 +205,7 @@ public class UseBlockEvent {
 
             if (PreventerClient.config.preventDragonEggTeleport) {
                 if (targetBlock instanceof DragonEggBlock) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventDragonEggTeleport.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventDragonEggTeleport"));
                     return ActionResult.FAIL;
                 }
             }
@@ -213,7 +213,7 @@ public class UseBlockEvent {
             if (PreventerClient.config.preventOffhandPlacing) {
                 if (hand == Hand.OFF_HAND && handItem != Items.AIR) {
                     if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventOffhandPlacing.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.placing.prevented.preventOffhandPlacing"));
                         return ActionResult.FAIL;
                     }
                 }
@@ -224,7 +224,7 @@ public class UseBlockEvent {
                     if (handItem instanceof BlockItem && canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
 
                         if (PreventerClient.config.preventPlacingAfterEating != PreventPlacingAfterEatingConfig.TORCHES) {
-                            sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventPlaceAfterEating.text"));
+                            sendActionPreventedMessage(playerEntity, Text.translatable("preventer.placing.prevented.preventPlacingAfterEating"));
                             return ActionResult.FAIL;
                         } else {
                             boolean holdingTorch = handItem.equals(Items.TORCH);
@@ -234,7 +234,7 @@ public class UseBlockEvent {
                                 heldBlockName = Text.translatable("block.minecraft.lantern").formatted(Formatting.DARK_RED); //fun subtle detail :)
                             }
                             if (holdingTorch) {
-                                sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventTorchPlaceAfterEating.text", heldBlockName));
+                                sendActionPreventedMessage(playerEntity, Text.translatable("preventer.placing.prevented.preventTorchPlaceAfterEating", heldBlockName));
                                 return ActionResult.FAIL;
                             }
                         }
@@ -246,7 +246,7 @@ public class UseBlockEvent {
             if (PreventerClient.config.preventGrassBonemeal) {
                 if (handItem.equals(Items.BONE_MEAL)) {
                     if (targetBlock instanceof GrassBlock || targetBlock instanceof NetherrackBlock || targetBlock instanceof NyliumBlock) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventGrassBonemeal.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventGrassBonemeal"));
                         return ActionResult.FAIL;
                     }
                 }
@@ -255,13 +255,13 @@ public class UseBlockEvent {
             if (PreventerClient.config.preventSignEditing) {
                 if (targetBlock instanceof AbstractSignBlock) {
                     if (!PreventerClient.config.preventChestSignEditing) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventSignEditing.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventSignEditing"));
                         return ActionResult.FAIL;
                     } else {
                         if (targetBlock instanceof WallSignBlock) {
                             Block blockBehindTargetBlock = world.getBlockState(blockHitResult.getBlockPos().offset(targetBlockState.get(HorizontalFacingBlock.FACING), -1)).getBlock();
                             if (blockBehindTargetBlock instanceof AbstractChestBlock) {
-                                sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventSignEditing.text"));
+                                sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventSignEditing"));
                                 return ActionResult.FAIL;
                             }
                         }
@@ -272,7 +272,7 @@ public class UseBlockEvent {
             if (PreventerClient.config.preventBerriePlanting) {
                 if (handItem.equals(Items.SWEET_BERRIES) || handItem.equals(Items.GLOW_BERRIES)) {
                     if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventBerriePlanting.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.placing.prevented.preventBerriePlanting"));
                         return ActionResult.FAIL;
                     }
                 }
@@ -280,7 +280,7 @@ public class UseBlockEvent {
 
             if (PreventerClient.config.preventChiseledBookshelfInteracting) {
                 if (targetBlock instanceof ChiseledBookshelfBlock) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventChiseledBookshelfInteracting.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventChiseledBookshelfInteracting"));
                     return ActionResult.FAIL;
                 }
             }

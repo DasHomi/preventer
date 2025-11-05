@@ -22,16 +22,16 @@ import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityPr
 public class AttackEntityEvent {
     public static ActionResult attackEntityListener(PlayerEntity playerEntity, World world, Hand hand, Entity entity, @Nullable EntityHitResult result) {
         if (PreventerClient.getPrevent()) {
-            if (PreventerClient.config.preventVillagerPunch) {
+            if (PreventerClient.config.preventVillagerPunching) {
                 if (entity instanceof VillagerEntity) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventVillagerPunch.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.attacking.prevented.preventVillagerPunching"));
                     return ActionResult.FAIL;
                 }
             }
 
-            if (PreventerClient.config.noZombifiedPiglinPunch) {
+            if (PreventerClient.config.preventZombifiedPiglinPunching) {
                 if (entity instanceof ZombifiedPiglinEntity) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.noZombifiedPiglinPunch.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.attacking.prevented.preventZombifiedPiglinPunching"));
                     return ActionResult.FAIL;
 
                 }
@@ -39,21 +39,21 @@ public class AttackEntityEvent {
 
             if (PreventerClient.config.preventEndCrystalHitting) {
                 if (entity instanceof EndCrystalEntity) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventEndCrystalHitting.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.attacking.prevented.preventEndCrystalHitting"));
                     return ActionResult.FAIL;
                 }
             }
 
             if (PreventerClient.config.preventItemFrameBreaking) {
                 if (entity instanceof ItemFrameEntity) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventItemFrameBreaking.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.breaking.prevented.preventItemFrameBreaking"));
                     return ActionResult.FAIL;
                 }
             }
 
             if (PreventerClient.config.preventPaintingBreaking) {
                 if (entity instanceof PaintingEntity) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventPaintingBreaking.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.breaking.prevented.preventPaintingBreaking"));
                     return ActionResult.FAIL;
                 }
             }
@@ -61,7 +61,7 @@ public class AttackEntityEvent {
             if (PreventerClient.config.preventGolemAttacking) {
                 if (entity instanceof GolemEntity) {
                     if (!(entity instanceof ShulkerEntity)) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventGolemAttacking.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.attacking.prevented.preventGolemAttacking"));
                         return ActionResult.FAIL;
                     }
                 }
@@ -69,7 +69,7 @@ public class AttackEntityEvent {
 
             if (PreventerClient.config.preventNamedMobAttacking) {
                 if (entity.hasCustomName()) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventNamedMobAttacking.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.attacking.prevented.preventNamedMobAttacking"));
                     return ActionResult.FAIL;
                 }
             }
@@ -77,7 +77,7 @@ public class AttackEntityEvent {
             if (PreventerClient.config.preventTamedMobAttacking) {
                 if (entity instanceof TameableEntity) {
                     if (((TameableEntity) entity).isTamed()) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventTamedMobAttacking.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.attacking.prevented.preventTamedMobAttacking"));
                         return ActionResult.FAIL;
                     }
                 }
@@ -85,14 +85,14 @@ public class AttackEntityEvent {
 
             if (PreventerClient.config.preventRareMobAttacking) {
                 if (entity instanceof AxolotlEntity || entity instanceof ParrotEntity || entity instanceof AllayEntity) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventRareMobAttacking.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.attacking.prevented.preventRareMobAttacking"));
                     return ActionResult.FAIL;
                 }
             }
 
             if (PreventerClient.config.preventHorseAttacking) {
                 if (entity instanceof AbstractHorseEntity) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventHorseAttacking.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.attacking.prevented.preventHorseAttacking"));
                     return ActionResult.FAIL;
                 }
             }
@@ -100,7 +100,7 @@ public class AttackEntityEvent {
             if (PreventerClient.config.preventNeutralMobAttacking != PreventNeutralMobAttackingConfig.OFF) {
                 if (PreventerClient.config.preventNeutralMobAttacking == PreventNeutralMobAttackingConfig.FULL && !(entity instanceof PiglinEntity)) {
                     if (isNeutralMob(entity) || entity instanceof SpiderEntity || entity instanceof EndermanEntity) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventNeutralMobAttacking.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.attacking.prevented.preventNeutralMobAttacking"));
                         return ActionResult.FAIL;
                     }
                 }
@@ -108,7 +108,7 @@ public class AttackEntityEvent {
 
             if (PreventerClient.config.preventDolphinAttacking) {
                 if (entity instanceof DolphinEntity) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventDolphinAttacking.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.attacking.prevented.preventDolphinAttacking"));
                     return ActionResult.FAIL;
                 }
             }

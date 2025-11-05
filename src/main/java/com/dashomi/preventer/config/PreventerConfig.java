@@ -22,13 +22,13 @@ public class PreventerConfig implements ConfigData {
     public boolean welcomeMessage = true;
 
     // Interaction
-    public boolean noStrip = false;
-    public boolean noPath = false;
-    public boolean noFarmland = false;
-    public boolean noCake = false;
-    public boolean noScraping = false;
-    public boolean noDeWax = false;
-    public boolean noTrappedChestOpening = false;
+    public boolean preventLogStripping = false;
+    public boolean preventPathCreation = false;
+    public boolean preventFarmlandCreation = false;
+    public boolean preventCakeEating = false;
+    public boolean preventCopperOxidationScraping = false;
+    public boolean preventCopperDeWaxing = false;
+    public boolean preventTrappedChestOpening = false;
     public PreventRocketUseConfig preventRocketUse = PreventRocketUseConfig.OFF;
     public boolean preventBedUse = false;
     public boolean preventDragonEggTeleport = false;
@@ -41,9 +41,9 @@ public class PreventerConfig implements ConfigData {
     public boolean preventChiseledBookshelfInteracting = false;
 
     // Plants
-    public boolean noGlowBerrieHarvest = false;
-    public boolean noSweetBerrieHarvest = false;
-    public boolean onlyMatureCropHarvest = false; // fix
+    public boolean preventGlowBerrieHarvesting = false;
+    public boolean preventSweetBerrieHarvesting = false;
+    public boolean preventNonMatureCropHarvesting = false; // fix
     public boolean preventStemBreaking = false;
     public boolean preventSugarCaneBreaking = false;
     public boolean preventFarmlandJumping = false;
@@ -63,16 +63,16 @@ public class PreventerConfig implements ConfigData {
     public boolean preventBreakingWithWeapon = false;
 
     // Placing
-    public boolean preventCoralPlace = false;
-    public boolean preventWaterPlace = false;
+    public boolean preventCoralPlacing = false;
+    public boolean preventWaterPlacing = false;
     public boolean preventLavaPlacing = false;
     public boolean preventOffhandPlacing = false;
     public boolean preventBerriePlanting = false;
     public PreventPlacingAfterEatingConfig preventPlacingAfterEating = PreventPlacingAfterEatingConfig.OFF;
 
     // Attacking
-    public boolean preventVillagerPunch = false;
-    public boolean noZombifiedPiglinPunch = false;
+    public boolean preventVillagerPunching = false;
+    public boolean preventZombifiedPiglinPunching = false;
     public boolean preventEndCrystalHitting = false;
     public boolean preventGolemAttacking = false;
     public boolean preventNamedMobAttacking = false;

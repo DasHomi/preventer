@@ -18,12 +18,12 @@ public class DurabilityProtection {
                 if (stack.isDamageable()) {
                     if (stack.getDamage() >= stack.getMaxDamage() - 5) {
                         if (PreventerClient.config.showLowDurabilityProtectionWarning) {
-                            playerEntity.sendMessage(Text.translatable("config.preventer.lowDurabilityProtection.text"), true);
+                            playerEntity.sendMessage(Text.translatable("preventer.miscellaneous.prevented.lowDurabilityProtection"), true);
                             if (PreventerClient.config.actionPreventedInfoType == ActionPreventedInfo.AUDIO) {
                                 playerEntity.playSound(SoundEvents.BLOCK_NOTE_BLOCK_BASEDRUM.value(), 1.0f, 1.1f);
                             }
                         } else {
-                            sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.lowDurabilityProtection.text"));
+                            sendActionPreventedMessage(playerEntity, Text.translatable("preventer.miscellaneous.prevented.lowDurabilityProtection"));
                         }
                         return true;
                     }

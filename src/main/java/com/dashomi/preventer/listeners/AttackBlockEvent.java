@@ -28,15 +28,15 @@ public class AttackBlockEvent {
             if (PreventerClient.config.preventBreakingWithWeapon) {
                 Item item = mainHandStack.getItem();
                 if (mainHandStack.isIn(ItemTags.SWORDS) || item instanceof TridentItem || item instanceof MaceItem) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventBreakingWithWeapon.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.breaking.prevented.preventBreakingWithWeapon"));
                     return ActionResult.FAIL;
                 }
             }
 
-            if (PreventerClient.config.onlyMatureCropHarvest) {
+            if (PreventerClient.config.preventNonMatureCropHarvesting) {
                 if (targetBlock instanceof CropBlock) {
                     if (!((CropBlock) targetBlock).isMature(world.getBlockState(pos))) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.onlyMatureCropHarvest.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.plants.prevented.preventNonMatureCropHarvesting"));
                         return ActionResult.FAIL;
                     }
                 }
@@ -56,14 +56,14 @@ public class AttackBlockEvent {
 
             if (PreventerClient.config.preventBuddingAmethystBreaking) {
                 if (targetBlock instanceof BuddingAmethystBlock) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventBuddingAmethystBreaking.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.breaking.prevented.preventBuddingAmethystBreaking"));
                     return ActionResult.FAIL;
                 }
             }
 
             if (PreventerClient.config.preventStemBreaking) {
                 if (targetBlock instanceof AttachedStemBlock || targetBlock instanceof StemBlock) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventStemBreaking.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.plants.prevented.preventStemBreaking"));
                     return ActionResult.FAIL;
                 }
             }
@@ -72,7 +72,7 @@ public class AttackBlockEvent {
                 if (targetBlock instanceof TransparentBlock || targetBlock instanceof PaneBlock) {
                     if (!Objects.equals(targetBlock.getTranslationKey(), "block.minecraft.iron_bars")) {
                         if (!(targetBlock instanceof TintedGlassBlock)) {
-                            sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventGlassBreaking.text"));
+                            sendActionPreventedMessage(playerEntity, Text.translatable("preventer.breaking.prevented.preventGlassBreaking"));
                             return ActionResult.FAIL;
                         }
                     }
@@ -81,11 +81,11 @@ public class AttackBlockEvent {
 
             if (PreventerClient.config.preventSuspiciousBlockBreaking != PreventSuspiciousBlockBreakingConfig.OFF) {
                 if (targetBlock instanceof BrushableBlock) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventSuspiciousBlockBreaking.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.breaking.prevented.preventSuspiciousBlockBreaking"));
                     return ActionResult.FAIL;
                 } else if (PreventerClient.config.preventSuspiciousBlockBreaking == PreventSuspiciousBlockBreakingConfig.ENHANCED) {
                     if (world.getBlockState(pos.offset(Direction.Axis.Y, 1)).getBlock() instanceof BrushableBlock) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.enhancedSuspiciousBlockBreakingPrevention.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.breaking.prevented.enhancedSuspiciousBlockBreakingPrevention"));
                         return ActionResult.FAIL;
                     }
                 }
@@ -95,7 +95,7 @@ public class AttackBlockEvent {
                 if (targetBlock instanceof EnderChestBlock) {
                     if (mainHandStack.isIn(ItemTags.PICKAXES)) {
                         if (!EnchantmentHelper.hasAnyEnchantmentsIn(mainHandStack, EnchantmentTags.PREVENTS_BEE_SPAWNS_WHEN_MINING)) {
-                            sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventEnderChestBreaking.text"));
+                            sendActionPreventedMessage(playerEntity, Text.translatable("preventer.breaking.prevented.preventEnderChestBreaking"));
                             return ActionResult.FAIL;
                         }
                     }
@@ -104,7 +104,7 @@ public class AttackBlockEvent {
 
             if (PreventerClient.config.preventSpawnerBreaking) {
                 if (targetBlock instanceof SpawnerBlock) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventSpawnerBreaking.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.breaking.prevented.preventSpawnerBreaking"));
                     return ActionResult.FAIL;
                 }
             }
@@ -113,7 +113,7 @@ public class AttackBlockEvent {
                 if (targetBlock instanceof SugarCaneBlock || targetBlock instanceof BambooBlock || targetBlock instanceof CactusBlock) {
                     Block block = world.getBlockState(pos.offset(Direction.Axis.Y, -1)).getBlock();
                     if (!(block instanceof SugarCaneBlock) && !(block instanceof BambooBlock) && !(block instanceof CactusBlock)) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventSugarCaneBreaking.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.plants.prevented.preventSugarCaneBreaking"));
                         return ActionResult.FAIL;
                     }
                 }
@@ -122,7 +122,7 @@ public class AttackBlockEvent {
             if (PreventerClient.config.preventChestBreaking) {
                 if (targetBlock instanceof ChestBlock) {
                     if (mainHandStack.isIn(ItemTags.PICKAXES)) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventChestBreaking.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.breaking.prevented.preventChestBreaking"));
                         return ActionResult.FAIL;
                     }
                 }
@@ -130,14 +130,14 @@ public class AttackBlockEvent {
 
             if (PreventerClient.config.preventCarpetBreaking) {
                 if (targetBlock instanceof CarpetBlock) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventCarpetBreaking.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.breaking.prevented.preventCarpetBreaking"));
                     return ActionResult.FAIL;
                 }
             }
 
             if (PreventerClient.config.preventSaplingBreaking) {
                 if (targetBlock instanceof SaplingBlock) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventSaplingBreaking.text"));
+                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.breaking.prevented.preventSaplingBreaking"));
                     return ActionResult.FAIL;
                 }
             }
@@ -145,7 +145,7 @@ public class AttackBlockEvent {
             if (PreventerClient.config.preventImmatureAmethystBreaking) {
                 if (targetBlock instanceof AmethystClusterBlock) {
                     if (!targetBlock.getTranslationKey().equals("block.minecraft.amethyst_cluster")) {
-                        sendActionPreventedMessage(playerEntity, Text.translatable("config.preventer.preventImmatureAmethystBreaking.text"));
+                        sendActionPreventedMessage(playerEntity, Text.translatable("preventer.breaking.prevented.preventImmatureAmethystBreaking"));
                         return ActionResult.FAIL;
                     }
                 }
