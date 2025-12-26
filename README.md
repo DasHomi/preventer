@@ -149,7 +149,7 @@ Each module can be enabled or disabled individually in game via a config screen 
 - Compatible with most servers
 - Forge support is currently **not** planned
 - Compatible with the latest version of Minecraft 
-  - Currently supported: 1.21.9-10 (Fabric)
+  - Currently supported: 1.21.11 (Fabric)
 
 ## Dependencies
 **Required:**
