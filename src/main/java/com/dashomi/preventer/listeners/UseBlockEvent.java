@@ -14,6 +14,8 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.world.World;
+import net.minecraft.world.attribute.EnvironmentAttributes;
+
 import java.util.Objects;
 
 import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreventedMessage;
@@ -112,7 +114,7 @@ public class UseBlockEvent {
 
             if (PreventerClient.config.preventBedUse) {
                 if (targetBlock instanceof BedBlock) {
-                    if (!world.getDimension().bedWorks()) {
+                    if (world.getRegistryKey() == World.NETHER || world.getRegistryKey() == World.END) {
                         sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventBedUse"));
                         return ActionResult.FAIL;
                     }
@@ -121,7 +123,7 @@ public class UseBlockEvent {
 
             if (PreventerClient.config.preventWaterPlacing) {
                 if (handItem.equals(Items.WATER_BUCKET)) {
-                    if (world.getDimension().ultrawarm()) {
+                    if (world.getDimension().attributes().containsKey(EnvironmentAttributes.WATER_EVAPORATES_GAMEPLAY)) {
                         if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
                             sendActionPreventedMessage(playerEntity, Text.translatable("preventer.placing.prevented.preventWaterPlacing"));
                             return ActionResult.FAIL;
@@ -196,7 +198,7 @@ public class UseBlockEvent {
 
             if (PreventerClient.config.preventRespawnAnchorUse) {
                 if(targetBlock instanceof RespawnAnchorBlock) {
-                    if (!world.getDimension().respawnAnchorWorks()) {
+                    if (world.getRegistryKey() == World.NETHER || world.getRegistryKey() == World.END) {
                         sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventRespawnAnchorUse"));
                         return ActionResult.FAIL;
                     }
