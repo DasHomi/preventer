@@ -1,32 +1,32 @@
 package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.hit.EntityHitResult;
-import net.minecraft.world.World;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreventedMessage;
 import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityProtection;
 
 public class UseEntityEvent {
-    public static ActionResult useEntityListener(PlayerEntity playerEntity, World world, Hand hand, Entity entity, @Nullable EntityHitResult hitResult) {
+    public static InteractionResult useEntityListener(Player playerEntity, Level world, InteractionHand hand, Entity entity, @Nullable EntityHitResult hitResult) {
         if (PreventerClient.getPrevent()) {
             if (PreventerClient.config.preventRenamedItemUsing) {
-                if (playerEntity.getStackInHand(hand).get(DataComponentTypes.CUSTOM_NAME) != null) {
-                    sendActionPreventedMessage(playerEntity, Text.translatable("preventer.interactions.prevented.preventRenamedItemUsing"));
-                    return ActionResult.FAIL;
+                if (playerEntity.getItemInHand(hand).get(DataComponents.CUSTOM_NAME) != null) {
+                    sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventRenamedItemUsing"));
+                    return InteractionResult.FAIL;
                 }
             }
 
-            if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
+            if (checkDurabilityProtection(playerEntity, hand)) return InteractionResult.FAIL;
         }
 
-        return ActionResult.PASS;
+        return InteractionResult.PASS;
     }
 }
