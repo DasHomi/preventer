@@ -26,6 +26,7 @@
   "text.preventer.moduleUseInfo": "Below you can toggle Module Notifications, which will be displayed if a module prevented an action",
   "text.preventer.missingFeatures": "Missing any modules? Suggest them on GitHub!",
 
+
   "preventer.interactions.option.preventLogStripping": "Prevent log stripping",
   "preventer.interactions.tooltip.preventLogStripping": "Prevents you from stripping logs",
   "preventer.interactions.prevented.noStrip": "§4Log stripping was prevented§4",
