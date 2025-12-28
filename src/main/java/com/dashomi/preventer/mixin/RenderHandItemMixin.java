@@ -28,16 +28,19 @@ public class RenderHandItemMixin {
         if (!Minecraft.getInstance().options.getCameraType().isFirstPerson() ||
                 stack.isEmpty() || entity != Minecraft.getInstance().player || (entity.getUsedItemHand().equals(InteractionHand.OFF_HAND) && entity.isUsingItem())) return;
 
-        LocalPlayer player = Minecraft.getInstance().player;
-        if (player != null && player.getOffhandItem() != stack) return;
-        Item handItem = stack.getItem();
+        if (PreventerClient.preventerActive()) {
+            LocalPlayer player = Minecraft.getInstance().player;
+            if (player != null && player.getOffhandItem() != stack) return;
+            Item handItem = stack.getItem();
 
-        if (handItem == Items.SHIELD && PreventerClient.config.hideShield) {
-            ci.cancel();
+            if (handItem == Items.SHIELD && PreventerClient.config.hideShield) {
+                ci.cancel();
+            }
+
+            if (handItem == Items.TOTEM_OF_UNDYING && PreventerClient.config.hideTotem) {
+                ci.cancel();
+            }
         }
 
-        if (handItem == Items.TOTEM_OF_UNDYING && PreventerClient.config.hideTotem) {
-            ci.cancel();
-        }
     }
 }

@@ -16,7 +16,7 @@ import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityPr
 
 public class UseEntityEvent {
     public static InteractionResult useEntityListener(Player playerEntity, Level world, InteractionHand hand, Entity entity, @Nullable EntityHitResult hitResult) {
-        if (PreventerClient.getPrevent()) {
+        if (PreventerClient.preventerActive()) {
             if (PreventerClient.config.preventRenamedItemUsing) {
                 if (playerEntity.getItemInHand(hand).get(DataComponents.CUSTOM_NAME) != null) {
                     sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventRenamedItemUsing"));

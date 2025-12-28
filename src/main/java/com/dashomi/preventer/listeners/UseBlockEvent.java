@@ -57,7 +57,7 @@ import static net.minecraft.world.level.block.SweetBerryBushBlock.AGE;
 
 public class UseBlockEvent {
     public static InteractionResult useBlockListener(Player playerEntity, Level world, InteractionHand hand, BlockHitResult blockHitResult) {
-        if (PreventerClient.getPrevent() && !playerEntity.isSpectator()) {
+        if (PreventerClient.preventerActive() && !playerEntity.isSpectator()) {
             BlockState targetBlockState = world.getBlockState(blockHitResult.getBlockPos());
             Block targetBlock = targetBlockState.getBlock();
             Item handItem = playerEntity.getItemInHand(hand).getItem();

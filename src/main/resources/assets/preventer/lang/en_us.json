@@ -13,11 +13,12 @@
   "key.preventer.overrideKey": "Override Key",
   "key.preventer.overrideKey.text": "Override Active",
   "key.preventer.overrideKey.notifyToggledOff": "§4Preventer is toggled off§4",
-  "key.preventer.category": "Preventer",
+  "key.category.preventer.category": "Preventer",
   "key.preventer.configKey": "Open-Config Key",
   "key.preventer.toggleKey": "Global Toggle Key",
   "key.preventer.toggleKey.onText": "Preventer has been toggled §2on§2",
   "key.preventer.toggleKey.offText": "Preventer has been toggled §4off§4",
+  "preventer.general.info.keyBindLocation": "Keybinds can be changed in the Minecraft Keybinds menu",
   "option.preventer.notifyToggledOff": "Notify on Global Toggle off",
   "tooltip.preventer.notifyToggledOff": "Displays an info message when the override key is pressed while Preventer is toggled off",
 

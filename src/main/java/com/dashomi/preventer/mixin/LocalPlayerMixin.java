@@ -22,7 +22,7 @@ import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreve
 public class LocalPlayerMixin {
     @Inject(method = "drop(Z)Z", at = @At(value = "HEAD"), cancellable = true)
     private void stopDropSelectedItem(boolean entireStack, CallbackInfoReturnable<Boolean> cir) {
-        if (PreventerClient.getPrevent()) {
+        if (PreventerClient.preventerActive()) {
             LocalPlayer clientPlayerEntity = (LocalPlayer) (Object) this;
             ItemStack itemStack = clientPlayerEntity.getMainHandItem();
 

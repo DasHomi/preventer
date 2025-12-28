@@ -89,7 +89,6 @@ public class PreventerConfig implements ConfigData {
     public boolean preventSwimming = false;
     public boolean hideShield = false;
     public boolean hideTotem = false;
-    public boolean notifyToggledOff = true;
 
     // General Settings
     public ActionPreventedInfo actionPreventedInfoType = ActionPreventedInfo.DEFAULT;
