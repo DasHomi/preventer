@@ -3,6 +3,7 @@ package com.dashomi.preventer.listeners;
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.decoration.ItemFrame;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
@@ -20,6 +21,13 @@ public class UseEntityEvent {
             if (PreventerClient.config.preventRenamedItemUsing) {
                 if (playerEntity.getItemInHand(hand).get(DataComponents.CUSTOM_NAME) != null) {
                     sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventRenamedItemUsing"));
+                    return InteractionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventItemFrameInteracting) {
+                if (entity instanceof ItemFrame) {
+                    sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventItemFrameInteracting"));
                     return InteractionResult.FAIL;
                 }
             }

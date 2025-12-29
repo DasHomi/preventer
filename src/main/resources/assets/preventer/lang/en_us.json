@@ -95,6 +95,10 @@
   "preventer.interactions.tooltip.preventChiseledBookshelfInteracting": "Prevents you from accidentally placing books in chiseled bookshelves or removing them",
   "preventer.interactions.prevented.preventChiseledBookshelfInteracting": "§4Chiseled bookshelf interaction prevented§4",
 
+  "preventer.interactions.option.preventItemFrameInteracting": "Prevent item frame interacting",
+  "preventer.interactions.tooltip.preventItemFrameInteracting": "Prevents from interacting with item frames",
+  "preventer.interactions.prevented.preventItemFrameInteracting": "§4Item frame interaction prevented§4",
+
 
   "preventer.plants.option.preventGlowBerrieHarvesting": "Prevent glow berry harvesting",
   "preventer.plants.tooltip.preventGlowBerrieHarvesting": "Prevents you from harvesting Glow Berries",

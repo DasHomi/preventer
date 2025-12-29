@@ -94,6 +94,10 @@
   "preventer.interactions.tooltip.preventChiseledBookshelfInteracting": "Verhindert, dass du Bücher aus einem gearbeiteten Bücherregal nimmst, oder hineinlegst",
   "preventer.interactions.prevented.preventChiseledBookshelfInteracting": "§4Gearbeitetes Bücherregal interagieren verhindert§4",
 
+  "preventer.interactions.option.preventItemFrameInteracting": "Verhindere Rahmen interagieren",
+  "preventer.interactions.tooltip.preventItemFrameInteracting": "Verhindert, dass du mit Rahmen interagierst",
+  "preventer.interactions.prevented.preventItemFrameInteracting": "§4Rahmen interagieren verhindert§4",
+
 
   "preventer.plants.option.preventGlowBerrieHarvesting": "Kein Leuchtbeeren Ernten",
   "preventer.plants.tooltip.preventGlowBerrieHarvesting": "Verhindert das Ernten von Leuchtbeeren",

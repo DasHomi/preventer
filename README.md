@@ -38,6 +38,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from editing signs_
 - Prevent chiseled bookshelf interacting
   - _Prevents you from accidentally placing books in chiseled bookshelves or removing them_
+- Prevent item frame interacting
+  - _Prevents from interacting with item frames_
 </details>
 
 <details>

@@ -1,13 +1,8 @@
 package com.dashomi.preventer.config;
 
-import com.dashomi.preventer.PreventerClient;
 import com.dashomi.preventer.enums.*;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
-import me.shedaniel.clothconfig2.api.Modifier;
-import me.shedaniel.clothconfig2.api.ModifierKeyCode;
-import me.shedaniel.clothconfig2.impl.GameOptionsHooks;
-import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 
@@ -156,6 +151,14 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Component.translatable("preventer.interactions.tooltip.preventChiseledBookshelfInteracting"))
                         .setSaveConsumer(value -> config.preventChiseledBookshelfInteracting = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Component.translatable("preventer.interactions.option.preventItemFrameInteracting"),
+                                config.preventItemFrameInteracting)
+                        .setDefaultValue(false)
+                        .setTooltip(Component.translatable("preventer.interactions.tooltip.preventItemFrameInteracting"))
+                        .setSaveConsumer(value -> config.preventItemFrameInteracting = value)
                         .build())
 
                 .addEntry(entryBuilder.startTextDescription(
