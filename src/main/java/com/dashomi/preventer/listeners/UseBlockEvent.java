@@ -332,6 +332,12 @@ public class UseBlockEvent {
                 block.is(Blocks.COMPARATOR)) {
             return false;
         }
+
+        // automatically return true if the player is sneaking
+        if (playerEntity.isCrouching()) {
+            return true;
+        }
+
         InteractionResult actionResult = block.useWithoutItem(playerEntity.level(), playerEntity, blockHitResult);
         return !actionResult.consumesAction();
     }
