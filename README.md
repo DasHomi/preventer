@@ -79,7 +79,7 @@ Each module can be enabled or disabled individually in game via a config screen 
 - Prevent chest breaking
   - _Prevents you from breaking chests with an axe_
 - Prevent carpet breaking
-  - _Prevents you from breaking carpets, including moss carpets_
+  - _Prevents you from breaking carpets_
 - Prevent sapling breaking
   - _Prevents you from breaking saplings_
 - Prevent immature amethyst breaking

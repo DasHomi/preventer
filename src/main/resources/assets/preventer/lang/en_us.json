@@ -30,7 +30,7 @@
 
   "preventer.interactions.option.preventLogStripping": "Prevent log stripping",
   "preventer.interactions.tooltip.preventLogStripping": "Prevents you from stripping logs",
-  "preventer.interactions.prevented.noStrip": "§4Log stripping was prevented§4",
+  "preventer.interactions.prevented.preventLogStripping": "§4Log stripping was prevented§4",
 
   "preventer.interactions.option.preventPathCreation": "Prevent path creation",
   "preventer.interactions.tooltip.preventPathCreation": "Prevents you from creating path blocks",
@@ -144,6 +144,7 @@
   "preventer.breaking.option.preventSuspiciousBlockBreaking": "Prevent suspicious block breaking",
   "preventer.breaking.tooltip.preventSuspiciousBlockBreaking": "§lOFF§r: Module disabled\n§lNORMAL§r: Prevents you from breaking suspicious sand and gravel\n§lENHANCED§r: Prevents you from breaking a block if there is a suspicious block above it.",
   "preventer.breaking.prevented.preventSuspiciousBlockBreaking": "§4Suspicious block breaking prevented§4",
+  "preventer.breaking.prevented.enhancedPreventSuspiciousBlockBreaking": "§4The block above this one is a suspicious Block§4",
 
   "preventer.breaking.option.preventEnderChestBreaking": "Prevent ender chest destruction",
   "preventer.breaking.tooltip.preventEnderChestBreaking": "Prevents you from breaking ender chests without a silk touch pickaxe",
@@ -158,7 +159,7 @@
   "preventer.breaking.prevented.preventChestBreaking": "§4Chest breaking prevented§4",
 
   "preventer.breaking.option.preventCarpetBreaking": "Prevent carpet breaking",
-  "preventer.breaking.tooltip.preventCarpetBreaking": "Prevents you from breaking carpets,\nincluding moss carpets",
+  "preventer.breaking.tooltip.preventCarpetBreaking": "Prevents you from breaking carpets",
   "preventer.breaking.prevented.preventCarpetBreaking": "§4Carpet breaking prevented§4",
 
   "preventer.breaking.option.preventSaplingBreaking": "Prevent sapling breaking",
