@@ -2,6 +2,8 @@ package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
 import com.dashomi.preventer.enums.PreventSuspiciousBlockBreakingConfig;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.MaceItem;
@@ -15,27 +17,10 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.AmethystClusterBlock;
-import net.minecraft.world.level.block.AttachedStemBlock;
-import net.minecraft.world.level.block.BambooStalkBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.BrushableBlock;
-import net.minecraft.world.level.block.BuddingAmethystBlock;
-import net.minecraft.world.level.block.CactusBlock;
-import net.minecraft.world.level.block.CarpetBlock;
-import net.minecraft.world.level.block.ChestBlock;
-import net.minecraft.world.level.block.CocoaBlock;
-import net.minecraft.world.level.block.CropBlock;
-import net.minecraft.world.level.block.EnderChestBlock;
-import net.minecraft.world.level.block.IronBarsBlock;
-import net.minecraft.world.level.block.NetherWartBlock;
-import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.SpawnerBlock;
-import net.minecraft.world.level.block.StemBlock;
-import net.minecraft.world.level.block.SugarCaneBlock;
-import net.minecraft.world.level.block.TintedGlassBlock;
-import net.minecraft.world.level.block.TransparentBlock;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.Objects;
 
@@ -45,7 +30,8 @@ import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityPr
 public class AttackBlockEvent {
     public static InteractionResult attackBlockListener(Player playerEntity, Level world, InteractionHand hand, BlockPos pos, Direction direction) {
         if (PreventerClient.preventerActive()) {
-            Block targetBlock = world.getBlockState(pos).getBlock();
+            BlockState blockState = world.getBlockState(pos);
+            Block targetBlock = blockState.getBlock();
             ItemStack mainHandStack = playerEntity.getMainHandItem();
 
             if (PreventerClient.config.preventBreakingWithWeapon) {
@@ -174,9 +160,31 @@ public class AttackBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventBreakingWithoutFortune) {
+                if (isOreBlock(blockState)) {
+                    if (EnchantmentHelper.getItemEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE), mainHandStack) == 0) {
+                        sendActionPreventedMessage(playerEntity, Component.translatable("preventer.breaking.prevented.preventBreakingWithoutFortune"));
+                        return InteractionResult.FAIL;
+                    }
+                }
+            }
+
             if (checkDurabilityProtection(playerEntity, hand)) return InteractionResult.FAIL;
         }
 
         return InteractionResult.PASS;
+    }
+
+    private static boolean isOreBlock(BlockState blockState) {
+        return blockState.is(BlockTags.COAL_ORES) ||
+               blockState.is(BlockTags.DIAMOND_ORES) ||
+               blockState.is(BlockTags.EMERALD_ORES) ||
+               blockState.is(BlockTags.GOLD_ORES) ||
+               blockState.is(BlockTags.IRON_ORES) ||
+               blockState.is(BlockTags.LAPIS_ORES) ||
+               blockState.is(BlockTags.REDSTONE_ORES) ||
+               blockState.is(Blocks.NETHER_QUARTZ_ORE) ||
+               blockState.is(Blocks.GLOWSTONE) ||
+               blockState.is(Blocks.AMETHYST_CLUSTER);
     }
 }

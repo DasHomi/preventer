@@ -173,6 +173,10 @@
   "preventer.breaking.tooltip.preventBreakingWithWeapon": "Prevents you from breaking blocks with a sword, trident or mace",
   "preventer.breaking.prevented.preventBreakingWithWeapon": "§4Breaking with weapon prevented§4",
 
+  "preventer.breaking.option.preventBreakingWithoutFortune": "Prevent breaking without fortune",
+  "preventer.breaking.tooltip.preventBreakingWithoutFortune": "Prevents you from breaking ore blocks without a tool enchanted with Fortune",
+  "preventer.breaking.prevented.preventBreakingWithoutFortune": "§4Breaking without fortune prevented§4",
+
 
   "preventer.placing.option.preventCoralPlacing": "Prevent coral placing",
   "preventer.placing.tooltip.preventCoralPlacing": "Prevents you from placing corals out of water",

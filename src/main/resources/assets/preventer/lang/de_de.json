@@ -172,6 +172,10 @@
   "preventer.breaking.tooltip.preventBreakingWithWeapon": "Verhindert das Zerstören von Blöcken mit Schwertern, Dreizacken und Streitkolben",
   "preventer.breaking.prevented.preventBreakingWithWeapon": "§4Zerstören mit Waffen verhindert§4",
 
+  "preventer.breaking.option.preventBreakingWithoutFortune": "Verhindere zerstören ohne Glück",
+  "preventer.breaking.tooltip.preventBreakingWithoutFortune": "Verhindere das Zerstören von Erz Blöcken ohne Glücksverzauberung",
+  "preventer.breaking.prevented.preventBreakingWithoutFortune": "§4Zerstören ohne Glück verhindert§4",
+
 
   "preventer.placing.option.preventCoralPlacing": "Verhindere Korallen Platzieren",
   "preventer.placing.tooltip.preventCoralPlacing": "Verhindert das Platzieren von\nKorallen außerhalb von Wasser",

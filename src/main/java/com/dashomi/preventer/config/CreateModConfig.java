@@ -317,6 +317,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventBreakingWithWeapon = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Component.translatable("preventer.breaking.option.preventBreakingWithoutFortune"),
+                                config.preventBreakingWithoutFortune)
+                        .setDefaultValue(false)
+                        .setTooltip(Component.translatable("preventer.breaking.tooltip.preventBreakingWithoutFortune"))
+                        .setSaveConsumer(value -> config.preventBreakingWithoutFortune = value)
+                        .build())
+
                 .addEntry(entryBuilder.startTextDescription(
                                 Component.translatable("text.preventer.missingFeatures"))
                         .build());
