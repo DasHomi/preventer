@@ -40,7 +40,7 @@ import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityPr
 
 public class AttackEntityEvent {
     public static InteractionResult attackEntityListener(Player playerEntity, Level world, InteractionHand hand, Entity entity, @Nullable EntityHitResult result) {
-        if (PreventerClient.preventerActive()) {
+        if (PreventerClient.preventerActive() && !playerEntity.isSpectator()) {
             if (PreventerClient.config.preventVillagerPunching) {
                 if (entity instanceof Villager) {
                     sendActionPreventedMessage(playerEntity, Component.translatable("preventer.attacking.prevented.preventVillagerPunching"));

@@ -22,8 +22,8 @@ import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreve
 public class LocalPlayerMixin {
     @Inject(method = "drop(Z)Z", at = @At(value = "HEAD"), cancellable = true)
     private void stopDropSelectedItem(boolean entireStack, CallbackInfoReturnable<Boolean> cir) {
-        if (PreventerClient.preventerActive()) {
-            LocalPlayer clientPlayerEntity = (LocalPlayer) (Object) this;
+        LocalPlayer clientPlayerEntity = (LocalPlayer) (Object) this;
+        if (PreventerClient.preventerActive() && !clientPlayerEntity.isSpectator()) {
             ItemStack itemStack = clientPlayerEntity.getMainHandItem();
 
             if (PreventerClient.config.preventToolDropping) {
@@ -44,11 +44,10 @@ public class LocalPlayerMixin {
 
     @Inject(method = "aiStep", at = @At(value = "HEAD"))
     private void onTickMovement(CallbackInfo ci) {
-        if (!PreventerClient.overrideKeyPressed) {
-            LocalPlayer player = (LocalPlayer) (Object) this;
+        LocalPlayer player = (LocalPlayer) (Object) this;
+        if (!PreventerClient.preventerActive() && !player.isSpectator()) {
             Level world = player.level();
             BlockPos pos = player.blockPosition();
-
 
             if (PreventerClient.config.preventFarmlandJumping) {
                 if (world.getBlockState(pos).is(Blocks.FARMLAND)) {
@@ -62,7 +61,7 @@ public class LocalPlayerMixin {
 
     @WrapOperation(method = "aiStep", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;setSprinting(Z)V"))
     private void wrapSetSprinting(LocalPlayer instance, boolean value, Operation<Void> original) {
-        if (!PreventerClient.overrideKeyPressed && value && instance.isUnderWater()) {
+        if (!PreventerClient.preventerActive() && value && instance.isUnderWater() && !instance.isSpectator()) {
             if (PreventerClient.config.preventSwimming) {
                 sendActionPreventedMessage(instance, Component.translatable("preventer.miscellaneous.prevented.preventSwimming"));
                 return;

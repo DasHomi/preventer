@@ -17,7 +17,7 @@ import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreve
 
 public class UseItemEvent {
     public static InteractionResult useItemListener(Player playerEntity, Level world, InteractionHand hand) {
-        if (PreventerClient.preventerActive()) {
+        if (PreventerClient.preventerActive() && !playerEntity.isSpectator()) {
             ItemStack handStack = playerEntity.getItemInHand(hand);
             if (PreventerClient.config.preventRenamedItemUsing) {
                 if (playerEntity.getItemInHand(hand).get(DataComponents.FOOD) != null ) {

@@ -23,7 +23,7 @@ import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityPr
 
 public class AttackBlockEvent {
     public static InteractionResult attackBlockListener(Player playerEntity, Level world, InteractionHand hand, BlockPos pos, Direction direction) {
-        if (PreventerClient.preventerActive()) {
+        if (PreventerClient.preventerActive() && !playerEntity.isSpectator()) {
             BlockState targetBlockState = world.getBlockState(pos);
             Block targetBlock = targetBlockState.getBlock();
             ItemStack mainHandStack = playerEntity.getMainHandItem();
