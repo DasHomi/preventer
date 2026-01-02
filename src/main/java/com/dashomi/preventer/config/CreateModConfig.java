@@ -161,6 +161,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventItemFrameInteracting = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Component.translatable("preventer.interactions.option.preventRocketSpamming"),
+                                config.preventRocketSpamming)
+                        .setDefaultValue(false)
+                        .setTooltip(Component.translatable("preventer.interactions.tooltip.preventRocketSpamming"))
+                        .setSaveConsumer(value -> config.preventRocketSpamming = value)
+                        .build())
+
                 .addEntry(entryBuilder.startTextDescription(
                                 Component.translatable("text.preventer.missingFeatures"))
                         .build());

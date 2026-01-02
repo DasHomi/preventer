@@ -98,6 +98,10 @@
   "preventer.interactions.tooltip.preventItemFrameInteracting": "Verhindert, dass du mit Rahmen interagierst",
   "preventer.interactions.prevented.preventItemFrameInteracting": "§4Rahmen interagieren verhindert§4",
 
+  "preventer.interactions.option.preventRocketSpamming": "Verhindere Feuerwerksrakete spammen",
+  "preventer.interactions.tooltip.preventRocketSpamming": "Verhindert, dass du Feuerwerksraketen beim Elytra fliegen spammst",
+  "preventer.interactions.prevented.preventRocketSpamming": "§4Feuerwerksraketen spammen verhindert§4",
+
 
   "preventer.plants.option.preventGlowBerrieHarvesting": "Kein Leuchtbeeren Ernten",
   "preventer.plants.tooltip.preventGlowBerrieHarvesting": "Verhindert das Ernten von Leuchtbeeren",

@@ -29,8 +29,10 @@ public class PreventerClient implements ClientModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static PreventerConfig config;
     public static boolean overrideKeyPressed = false;
-    public static int ticksSinceEating = 0;
     public static boolean overrideToggleOff = false;
+
+    public static int ticksSinceEating = 0;
+    public static int rocketTicksRemaining = 0;
 
     public static KeyMapping overrideKey;
     public static KeyMapping configKey;
@@ -63,6 +65,6 @@ public class PreventerClient implements ClientModInitializer {
         UseItemCallback.EVENT.register(UseItemEvent::useItemListener);
         UseEntityCallback.EVENT.register(UseEntityEvent::useEntityListener);
         ClientTickEvents.END_CLIENT_TICK.register(EndClientTickEvent::endClientTickListener);
-        ClientTickEvents.END_WORLD_TICK.register(world -> ticksSinceEating++);
+        ClientTickEvents.END_WORLD_TICK.register(EndWorldTickEvent::endWorldTickListener);
     }
 }
