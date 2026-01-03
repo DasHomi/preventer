@@ -2,7 +2,7 @@
 Preventer is a collection of **over fifty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs).
 Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
 
-## Modules (Preventer 1.2.3-beta)
+## Modules (Latest version)
 <details open>
 <summary><b> Interactions </b></summary>
 
@@ -24,20 +24,22 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from using firework rockets while not flying_
 - Prevent bed use
   - _Prevents you using beds in the End or Nether dimension_
+- Prevent dragon egg teleporting
+  - _Prevents you from teleporting the dragon egg by using it_
 - Prevent renamed item using
   - _Prevents you from placing, eating, using, ... items with a custom name (except tools, weapons, and armor)_
 - Prevent note block editing
   - _Prevents you from changing the pitch of note blocks_
 - Prevent respawn anchor use
   - _Prevents you from using respawn anchors in the overworld and the end_
-- Prevent dragon egg teleporting
-  - _Prevents you from teleporting the dragon egg by using it_
 - Prevent grass block bone mealing
   - _Prevents you from using bone meal on grass blocks (including (warped)nylium)_
 - Prevent sign editing
   - _Prevents you from editing signs_
 - Prevent chiseled bookshelf interacting
   - _Prevents you from accidentally placing books in chiseled bookshelves or removing them_
+- Prevent item frame interacting
+  - _Prevents from interacting with item frames_
 </details>
 
 <details>
@@ -77,7 +79,7 @@ Each module can be enabled or disabled individually in game via a config screen 
 - Prevent chest breaking
   - _Prevents you from breaking chests with an axe_
 - Prevent carpet breaking
-  - _Prevents you from breaking carpets, including moss carpets_
+  - _Prevents you from breaking carpets_
 - Prevent sapling breaking
   - _Prevents you from breaking saplings_
 - Prevent immature amethyst breaking
@@ -130,7 +132,7 @@ Each module can be enabled or disabled individually in game via a config screen 
 </details>
 
 <details>
-<summary><b> Other </b></summary>
+<summary><b> Miscellaneous </b></summary>
 
 - Low durability protection
   - _Prevent tools & weapons from breaking due to low durability_
@@ -140,26 +142,21 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from dropping items with a custom name_
 - Prevent swimming
   - _Prevents you from sprinting while underwater_
+- Hide shield
+  - _Hides shields in the offhand_
+- Hide totem
+  - _Hides totems of undying in the offhand_
 </details>
 
 **_Missing any features? Open an [issue](https://github.com/DasHomi/preventer/issues)!_**
 
 ## Compatibility
+- Compatible with the latest version of Minecraft Fabric (1.21.11 Fabric)
 - Compatible with most other client-side mods
 - Compatible with most servers
-- Forge support is planned
-
-| Minecraft version   | Latest preventer version |
-|---------------------|--------------------------|
-| Fabric 1.21.6-8     | 1.2.3-beta               |
-| Fabric 1.21.1-2     | 1.2                      |
-| Fabric 1.20.[5-6]🚩 | 1.1                      |
-| Fabric 1.20.[3-4]🚩 | 1.1                      |
-| Fabric 1.20.[0-2]🚩 | 1.1                      |
-| Fabric 1.19.4🚩     | 1.0                      |
-| Fabric 1.19.x🚩     | 1.0                      |
-| Fabric 1.18.x🚩     | 0.9                      |
-🚩= Won't receive new Preventer feature versions
+- Primarily made for survival gameplay
+  - Most modules work in creative but some may behave unexpectedly
+- Forge support is currently **not** planned
 
 ## Dependencies
 **Required:**

@@ -1,65 +1,70 @@
 package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.DynamicRegistryManager;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.world.World;
+import com.dashomi.preventer.enums.PreventPlacingAfterEatingConfig;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.Level;
 
-import java.util.Optional;
+import java.util.Objects;
+
+import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreventedMessage;
 
 public class UseItemEvent {
-    public static ActionResult useItemListener(PlayerEntity player, World world, Hand hand) {
-        if (PreventerClient.getPrevent()) {
-            Item handItem = player.getStackInHand(hand).getItem();
-            ItemStack handStack = player.getStackInHand(hand);
+    public static InteractionResult useItemListener(Player playerEntity, Level world, InteractionHand hand) {
+        if (PreventerClient.preventerActive() && !playerEntity.isSpectator()) {
+            ItemStack handStack = playerEntity.getItemInHand(hand);
             if (PreventerClient.config.preventRenamedItemUsing) {
-                if (handStack.get(DataComponentTypes.FOOD) != null ) {
-                    if (handStack.get(DataComponentTypes.CUSTOM_NAME) != null) {
-                        if (PreventerClient.config.preventRenamedItemUsing_msg) {
-                            player.sendMessage(Text.translatable("config.preventer.preventRenamedItemUsing.text"), true);
-                        }
-                        return ActionResult.FAIL;
+                if (playerEntity.getItemInHand(hand).get(DataComponents.FOOD) != null ) {
+                    if (playerEntity.getItemInHand(hand).get(DataComponents.CUSTOM_NAME) != null) {
+                        sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventRenamedItemUsing"));
+                        return InteractionResult.FAIL;
                     }
                 }
             }
 
-            if (PreventerClient.config.preventPlaceAfterEating) {
-                if (handStack.get(DataComponentTypes.FOOD) != null ) {
+            if (PreventerClient.config.preventPlacingAfterEating != PreventPlacingAfterEatingConfig.OFF) {
+                if (playerEntity.getItemInHand(hand).get(DataComponents.FOOD) != null ) {
                     //confirms the player is actually eating the food and not just right-clicked the food on full hunger
-                    if (handStack.use(world, player, hand).isAccepted()) {
+                    if (playerEntity.getItemInHand(hand).use(world, playerEntity, hand).consumesAction()) {
                         PreventerClient.ticksSinceEating = 0;
                     }
                 }
             }
 
-            if (PreventerClient.config.preventCurseOfBindingEquip) {
-                DynamicRegistryManager drm = world.getRegistryManager();
-                Optional<RegistryEntry<Enchantment>> enchantRegistry = drm.getOptional(RegistryKeys.ENCHANTMENT)
-                        .flatMap(r -> r.getEntry(Enchantments.BINDING_CURSE.getValue()));
-                if (enchantRegistry.isPresent()) {
-                    int curseLvl = handStack.getEnchantments().getLevel(enchantRegistry.get());
-                    if (curseLvl > 0) {
-                        if (PreventerClient.config.preventCurseOfBindingEquip_msg) {
-                            player.sendMessage(Text.translatable("config.preventer.preventCurseOfBindingEquip.text"), true);
-                        }
-                        return ActionResult.FAIL;
+            if (PreventerClient.config.preventRocketSpamming) {
+                if (handStack.is(Items.FIREWORK_ROCKET) && playerEntity.isFallFlying()) {
+                    if (PreventerClient.rocketTicksRemaining > 0) {
+                        sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventRocketSpamming"));
+                        return InteractionResult.FAIL;
+                    }
+                    int flightDuration = Objects.requireNonNull(handStack.get(DataComponents.FIREWORKS)).flightDuration();
+                    if (flightDuration == 1) {
+                        PreventerClient.rocketTicksRemaining = 24; // 1.2 seconds
+                    } else if (flightDuration == 2) {
+                        PreventerClient.rocketTicksRemaining = 30; // 1.5 seconds
+                    } else {
+                        PreventerClient.rocketTicksRemaining = 45; // 2.25 seconds
                     }
                 }
             }
 
+            if (PreventerClient.config.preventCurseOfBindingEquip) {
+                if (EnchantmentHelper.getItemEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.BINDING_CURSE), handStack) > 0) {
+                    sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventCurseOfBindingEquip"));
+                    return InteractionResult.FAIL;
+                }
+            }
         }
 
-        return ActionResult.PASS;
+        return InteractionResult.PASS;
     }
 }

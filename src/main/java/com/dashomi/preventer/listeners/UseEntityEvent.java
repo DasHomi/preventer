@@ -1,33 +1,40 @@
 package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.hit.EntityHitResult;
-import net.minecraft.world.World;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.decoration.ItemFrame;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
+import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreventedMessage;
 import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityProtection;
 
 public class UseEntityEvent {
-    public static ActionResult useEntityListener(PlayerEntity player, World world, Hand hand, Entity entity, @Nullable EntityHitResult hitResult) {
-        if (PreventerClient.getPrevent()) {
+    public static InteractionResult useEntityListener(Player playerEntity, Level world, InteractionHand hand, Entity entity, @Nullable EntityHitResult hitResult) {
+        if (PreventerClient.preventerActive() && !playerEntity.isSpectator()) {
             if (PreventerClient.config.preventRenamedItemUsing) {
-                if (player.getStackInHand(hand).get(DataComponentTypes.CUSTOM_NAME) != null) {
-                    if (PreventerClient.config.preventRenamedItemUsing_msg) {
-                        player.sendMessage(Text.translatable("config.preventer.preventRenamedItemUsing.text"), true);
-                    }
-                    return ActionResult.FAIL;
+                if (playerEntity.getItemInHand(hand).get(DataComponents.CUSTOM_NAME) != null) {
+                    sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventRenamedItemUsing"));
+                    return InteractionResult.FAIL;
                 }
             }
 
-            if (checkDurabilityProtection(player, hand)) return ActionResult.FAIL;
+            if (PreventerClient.config.preventItemFrameInteracting) {
+                if (entity instanceof ItemFrame) {
+                    sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventItemFrameInteracting"));
+                    return InteractionResult.FAIL;
+                }
+            }
+
+            if (checkDurabilityProtection(playerEntity, hand)) return InteractionResult.FAIL;
         }
 
-        return ActionResult.PASS;
+        return InteractionResult.PASS;
     }
 }

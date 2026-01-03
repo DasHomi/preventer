@@ -1,43 +1,45 @@
 package com.dashomi.preventer.mixin;
 
 import com.dashomi.preventer.PreventerClient;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.ClientPlayerEntity;
-import net.minecraft.client.render.command.OrderedRenderCommandQueue;
-import net.minecraft.client.render.item.HeldItemRenderer;
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemDisplayContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.util.Hand;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.client.renderer.SubmitNodeCollector;
+import net.minecraft.client.renderer.ItemInHandRenderer;
+import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.InteractionHand;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(HeldItemRenderer.class)
+@Mixin(ItemInHandRenderer.class)
 public class RenderHandItemMixin {
     @Inject(
-            method = "Lnet/minecraft/client/render/item/HeldItemRenderer;renderItem(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemDisplayContext;Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/command/OrderedRenderCommandQueue;I)V",
+            method = "renderItem(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;I)V",
             at = @At(value = "HEAD"),
             cancellable = true
     )
-    private void hideOffhandItem(LivingEntity entity, ItemStack stack, ItemDisplayContext renderMode, MatrixStack matrices, OrderedRenderCommandQueue orderedRenderCommandQueue, int light, CallbackInfo ci) {
-        if (!MinecraftClient.getInstance().options.getPerspective().isFirstPerson() ||
-                stack.isEmpty() || entity != MinecraftClient.getInstance().player || (entity.getActiveHand().equals(Hand.OFF_HAND) && entity.isUsingItem())) return;
+    private void hideOffhandItem(LivingEntity entity, ItemStack stack, ItemDisplayContext renderMode, PoseStack matrices, SubmitNodeCollector orderedRenderCommandQueue, int light, CallbackInfo ci) {
+        if (!Minecraft.getInstance().options.getCameraType().isFirstPerson() ||
+                stack.isEmpty() || entity != Minecraft.getInstance().player || (entity.getUsedItemHand().equals(InteractionHand.OFF_HAND) && entity.isUsingItem())) return;
 
-        ClientPlayerEntity player = MinecraftClient.getInstance().player;
-        if (player != null && player.getOffHandStack() != stack) return;
-        Item handItem = stack.getItem();
+        if (PreventerClient.preventerActive()) {
+            LocalPlayer player = Minecraft.getInstance().player;
+            if (player != null && player.getOffhandItem() != stack) return;
+            Item handItem = stack.getItem();
 
-        if (handItem == Items.SHIELD && PreventerClient.config.hideShield) {
-            ci.cancel();
-        }
+            if (handItem == Items.SHIELD && PreventerClient.config.hideShield) {
+                ci.cancel();
+            }
 
-        if (handItem == Items.TOTEM_OF_UNDYING && PreventerClient.config.hideTotem) {
-            ci.cancel();
+            if (handItem == Items.TOTEM_OF_UNDYING && PreventerClient.config.hideTotem) {
+                ci.cancel();
+            }
         }
     }
 }

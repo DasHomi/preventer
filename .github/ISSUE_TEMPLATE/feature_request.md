@@ -4,7 +4,6 @@ about: Suggest a new module for Preventer
 title: ''
 labels: enhancement
 assignees: ''
-
 ---
 
 **Is your feature request related to a problem? Please describe.**
