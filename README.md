@@ -154,6 +154,8 @@ Each module can be enabled or disabled individually in game via a config screen 
 - Compatible with the latest version of Minecraft Fabric (1.21.11 Fabric)
 - Compatible with most other client-side mods
 - Compatible with most servers
+- Primarily made for survival gameplay
+  - Most modules work in creative but some may behave unexpectedly
 - Forge support is currently **not** planned
 
 ## Dependencies
