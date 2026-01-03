@@ -527,6 +527,14 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.hideTotem = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Component.translatable("preventer.miscellaneous.option.preventEnchantedItemSmelting"),
+                                config.preventEnchantedItemSmelting)
+                        .setDefaultValue(false)
+                        .setTooltip(Component.translatable("preventer.miscellaneous.tooltip.preventEnchantedItemSmelting"))
+                        .setSaveConsumer(value -> config.preventEnchantedItemSmelting = value)
+                        .build())
+
                 .addEntry(entryBuilder.startTextDescription(
                                 Component.translatable("text.preventer.missingFeatures"))
                         .build());

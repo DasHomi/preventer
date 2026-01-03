@@ -1,12 +1,14 @@
 package com.dashomi.preventer.mixin;
 
 import com.dashomi.preventer.PreventerClient;
+import net.minecraft.client.gui.screens.inventory.BlastFurnaceScreen;
+import net.minecraft.client.gui.screens.inventory.FurnaceScreen;
+import net.minecraft.client.gui.screens.inventory.SmokerScreen;
 import net.minecraft.client.multiplayer.MultiPlayerGameMode;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ClickType;
+import net.minecraft.world.inventory.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -25,13 +27,11 @@ public class MultiplayerGameModeMixin {
             if (PreventerClient.config.preventToolDropping) {
                 if (clickType == ClickType.THROW) {
                     if (j == AbstractContainerMenu.SLOT_CLICKED_OUTSIDE) {
-                        PreventerClient.LOGGER.info("AAA1");
                         if (menu.getCarried().get(DataComponents.TOOL) != null) {
                             sendActionPreventedMessage(player, Component.translatable("preventer.miscellaneous.prevented.preventToolDropping"));
                             ci.cancel();
                         }
                     } else if (menu.getSlot(j).getItem().get(DataComponents.TOOL) != null) {
-                        PreventerClient.LOGGER.info("BBB1");
                         sendActionPreventedMessage(player, Component.translatable("preventer.miscellaneous.prevented.preventToolDropping"));
                         ci.cancel();
                     }
@@ -41,20 +41,27 @@ public class MultiplayerGameModeMixin {
             if (PreventerClient.config.preventRenamedItemDropping) {
                 if (clickType == ClickType.THROW) {
                     if (j == AbstractContainerMenu.SLOT_CLICKED_OUTSIDE) {
-                        PreventerClient.LOGGER.info("AAA2");
                         if (menu.getCarried().get(DataComponents.CUSTOM_NAME) != null) {
                             sendActionPreventedMessage(player, Component.translatable("preventer.miscellaneous.prevented.preventRenamedItemDropping"));
                             ci.cancel();
                         }
                     } else if (menu.getSlot(j).getItem().get(DataComponents.CUSTOM_NAME) != null) {
-                        PreventerClient.LOGGER.info("BBB2");
                         sendActionPreventedMessage(player, Component.translatable("preventer.miscellaneous.prevented.preventRenamedItemDropping"));
                         ci.cancel();
                     }
                 }
             }
 
-
+            if (PreventerClient.config.preventEnchantedItemSmelting) {
+                if (clickType == ClickType.QUICK_MOVE && j != AbstractContainerMenu.SLOT_CLICKED_OUTSIDE) {
+                    if (menu instanceof FurnaceMenu || menu instanceof BlastFurnaceMenu || menu instanceof SmokerMenu) {
+                        if (!menu.getSlot(j).getItem().getEnchantments().isEmpty()) {
+                            sendActionPreventedMessage(player);
+                            ci.cancel();
+                        }
+                    }
+                }
+            }
         }
 
     }

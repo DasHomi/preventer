@@ -271,6 +271,10 @@
   "preventer.miscellaneous.option.hideTotem": "Versteckt das Totem",
   "preventer.miscellaneous.tooltip.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",
 
+  "preventer.miscellaneous.option.preventEnchantedItemSmelting": "Verhindere einschmelzen von verzauberten Gegenständen",
+  "preventer.miscellaneous.tooltip.preventEnchantedItemSmelting": "Verhindert das schnell bewegen von verzauberten Gegenständen in einem Ofen",
+
+
   "preventer.general.option.actionPreventedInfoType": "Aktion verhindert Info Typ",
   "preventer.general.tooltip.actionPreventedInfoType": "§lOFF§r: Keine Info angezeigt\n§lMINIMAL§r: ❌ as info\n§lDEFAULT§r: Allgemeine aktion verhindert Anzeige\n§lAUDIO§r: Spielt einen Sound ab wenn eine Aktion verhindert wurde\n§lLEGACY§r: Zeigt modul spezifische Nachrichten an",
   "preventer.defaultActionPreventedMessage": "Aktion wurde von Preventer verhindert",

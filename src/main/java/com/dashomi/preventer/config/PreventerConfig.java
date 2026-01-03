@@ -92,6 +92,7 @@ public class PreventerConfig implements ConfigData {
     public boolean preventSwimming = false;
     public boolean hideShield = false;
     public boolean hideTotem = false;
+    public boolean preventEnchantedItemSmelting = false;
 
     // General Settings
     public ActionPreventedInfo actionPreventedInfoType = ActionPreventedInfo.DEFAULT;

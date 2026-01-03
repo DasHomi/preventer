@@ -272,6 +272,9 @@
   "preventer.miscellaneous.option.hideTotem": "Hide totem",
   "preventer.miscellaneous.tooltip.hideTotem": "Hides totems of undying in the offhand",
 
+  "preventer.miscellaneous.option.preventEnchantedItemSmelting": "Prevent enchanted item smelting",
+  "preventer.miscellaneous.tooltip.preventEnchantedItemSmelting": "Prevents you from quickmoving enchanted items into a furnace",
+
 
   "preventer.general.option.actionPreventedInfoType": "Action prevented info type",
   "preventer.general.tooltip.actionPreventedInfoType": "§lOFF§r: No info shown\n§lMINIMAL§r: ❌ as info\n§lDEFAULT§r: General action prevented info message\n§lAUDIO§r: Plays a sound when an action is prevented\n§lLEGACY§r: Shows module specific messages for some modules",

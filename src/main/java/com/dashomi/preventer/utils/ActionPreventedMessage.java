@@ -21,7 +21,7 @@ public class ActionPreventedMessage {
             case MINIMAL:
                 player.displayClientMessage(Component.literal("❌").withStyle(ChatFormatting.RED), true);
                 break;
-            case DEFAULT:
+            case LEGACY, DEFAULT:
                 player.displayClientMessage(Component.translatable("preventer.defaultActionPreventedMessage"), true);
                 break;
             case AUDIO:
