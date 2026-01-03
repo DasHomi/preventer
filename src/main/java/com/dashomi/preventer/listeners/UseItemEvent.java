@@ -15,6 +15,8 @@ import java.util.Objects;
 
 import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreventedMessage;
 
+import java.util.Optional;
+
 public class UseItemEvent {
     public static InteractionResult useItemListener(Player playerEntity, Level world, InteractionHand hand) {
         if (PreventerClient.preventerActive() && !playerEntity.isSpectator()) {
@@ -50,6 +52,21 @@ public class UseItemEvent {
                         PreventerClient.rocketTicksRemaining = 30; // 1.5 seconds
                     } else {
                         PreventerClient.rocketTicksRemaining = 45; // 2.25 seconds
+                    }
+                }
+            }
+
+            if (PreventerClient.config.preventCurseOfBindingEquip) {
+                DynamicRegistryManager drm = world.getRegistryManager();
+                Optional<RegistryEntry<Enchantment>> enchantRegistry = drm.getOptional(RegistryKeys.ENCHANTMENT)
+                        .flatMap(r -> r.getEntry(Enchantments.BINDING_CURSE.getValue()));
+                if (enchantRegistry.isPresent()) {
+                    int curseLvl = handStack.getEnchantments().getLevel(enchantRegistry.get());
+                    if (curseLvl > 0) {
+                        if (PreventerClient.config.preventCurseOfBindingEquip_msg) {
+                            player.sendMessage(Text.translatable("config.preventer.preventCurseOfBindingEquip.text"), true);
+                        }
+                        return ActionResult.FAIL;
                     }
                 }
             }

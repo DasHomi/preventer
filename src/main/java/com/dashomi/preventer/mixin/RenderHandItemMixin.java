@@ -41,6 +41,5 @@ public class RenderHandItemMixin {
                 ci.cancel();
             }
         }
-
     }
 }

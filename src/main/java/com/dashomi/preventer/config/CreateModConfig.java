@@ -106,6 +106,14 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventCurseOfBindingEquip"),
+                                config.preventCurseOfBindingEquip)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventCurseOfBindingEquip"))
+                        .setSaveConsumer(value -> config.preventCurseOfBindingEquip = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
                                 Component.translatable("preventer.interactions.option.preventNoteBlockEditing"),
                                 config.preventNoteBlockEditing)
                         .setDefaultValue(false)

@@ -281,5 +281,9 @@
   "preventer.defaultActionPreventedMessage": "Action was prevented by Preventer",
 
   "preventer.general.option.showLowDurabilityProtectionWarning": "Always show low durability protection warning",
-  "preventer.general.tooltip.showLowDurabilityProtectionWarning": "Shows the low durability protection warning,\neven the action prevented info is turned off"
+  "preventer.general.tooltip.showLowDurabilityProtectionWarning": "Shows the low durability protection warning,\neven the action prevented info is turned off",
+
+  "option.preventer.preventCurseOfBindingEquip": "Prevent Curse of Binding",
+  "tooltip.preventer.preventCurseOfBindingEquip": "Prevents equipping items with the Curse Of Binding enchant",
+  "config.preventer.preventCurseOfBindingEquip.text": "§4Equipping a Curse Of Binding item prevented§4"
 }

@@ -93,6 +93,7 @@ public class PreventerConfig implements ConfigData {
     public boolean hideShield = false;
     public boolean hideTotem = false;
     public boolean preventEnchantedItemSmelting = false;
+    public boolean preventCurseOfBindingEquip = false;
 
     // General Settings
     public ActionPreventedInfo actionPreventedInfoType = ActionPreventedInfo.DEFAULT;
