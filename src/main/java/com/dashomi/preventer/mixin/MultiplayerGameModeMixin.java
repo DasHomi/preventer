@@ -24,13 +24,14 @@ public class MultiplayerGameModeMixin {
 
             if (PreventerClient.config.preventToolDropping) {
                 if (clickType == ClickType.THROW) {
-                    if (menu.getSlot(j).getItem().get(DataComponents.TOOL) != null) {
-                        sendActionPreventedMessage(player, Component.translatable("preventer.miscellaneous.prevented.preventToolDropping"));
-                        ci.cancel();
-                    }
-                }
-                if (j == AbstractContainerMenu.SLOT_CLICKED_OUTSIDE) {
-                    if (menu.getCarried().get(DataComponents.TOOL) != null) {
+                    if (j == AbstractContainerMenu.SLOT_CLICKED_OUTSIDE) {
+                        PreventerClient.LOGGER.info("AAA1");
+                        if (menu.getCarried().get(DataComponents.TOOL) != null) {
+                            sendActionPreventedMessage(player, Component.translatable("preventer.miscellaneous.prevented.preventToolDropping"));
+                            ci.cancel();
+                        }
+                    } else if (menu.getSlot(j).getItem().get(DataComponents.TOOL) != null) {
+                        PreventerClient.LOGGER.info("BBB1");
                         sendActionPreventedMessage(player, Component.translatable("preventer.miscellaneous.prevented.preventToolDropping"));
                         ci.cancel();
                     }
@@ -39,18 +40,21 @@ public class MultiplayerGameModeMixin {
 
             if (PreventerClient.config.preventRenamedItemDropping) {
                 if (clickType == ClickType.THROW) {
-                    if (menu.getSlot(j).getItem().get(DataComponents.CUSTOM_NAME) != null) {
-                        sendActionPreventedMessage(player, Component.translatable("preventer.miscellaneous.prevented.preventRenamedItemDropping"));
-                        ci.cancel();
-                    }
-                }
-                if (j == AbstractContainerMenu.SLOT_CLICKED_OUTSIDE) {
-                    if (menu.getCarried().get(DataComponents.CUSTOM_NAME) != null) {
+                    if (j == AbstractContainerMenu.SLOT_CLICKED_OUTSIDE) {
+                        PreventerClient.LOGGER.info("AAA2");
+                        if (menu.getCarried().get(DataComponents.CUSTOM_NAME) != null) {
+                            sendActionPreventedMessage(player, Component.translatable("preventer.miscellaneous.prevented.preventRenamedItemDropping"));
+                            ci.cancel();
+                        }
+                    } else if (menu.getSlot(j).getItem().get(DataComponents.CUSTOM_NAME) != null) {
+                        PreventerClient.LOGGER.info("BBB2");
                         sendActionPreventedMessage(player, Component.translatable("preventer.miscellaneous.prevented.preventRenamedItemDropping"));
                         ci.cancel();
                     }
                 }
             }
+
+
         }
 
     }
