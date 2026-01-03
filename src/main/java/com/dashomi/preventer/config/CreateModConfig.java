@@ -106,14 +106,6 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventCurseOfBindingEquip"),
-                                config.preventCurseOfBindingEquip)
-                        .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventCurseOfBindingEquip"))
-                        .setSaveConsumer(value -> config.preventCurseOfBindingEquip = value)
-                        .build())
-
-                .addEntry(entryBuilder.startBooleanToggle(
                                 Component.translatable("preventer.interactions.option.preventNoteBlockEditing"),
                                 config.preventNoteBlockEditing)
                         .setDefaultValue(false)
@@ -175,6 +167,14 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Component.translatable("preventer.interactions.tooltip.preventRocketSpamming"))
                         .setSaveConsumer(value -> config.preventRocketSpamming = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Component.translatable("preventer.interactions.option.preventCurseOfBindingEquip"),
+                                config.preventCurseOfBindingEquip)
+                        .setDefaultValue(false)
+                        .setTooltip(Component.translatable("preventer.interactions.tooltip.preventCurseOfBindingEquip"))
+                        .setSaveConsumer(value -> config.preventCurseOfBindingEquip = value)
                         .build())
 
                 .addEntry(entryBuilder.startTextDescription(

@@ -103,6 +103,10 @@
   "preventer.interactions.tooltip.preventRocketSpamming": "Prevents you from using firework rockets while flying with elytra when one is still active",
   "preventer.interactions.prevented.preventRocketSpamming": "§4Rocket spamming prevented§4",
 
+  "preventer.interactions.option.preventCurseOfBindingEquip": "Prevent Curse of Binding equipping",
+  "preventer.interactions.tooltip.preventCurseOfBindingEquip": "Prevents equipping items with the Curse Of Binding enchant",
+  "preventer.interactions.prevented.preventCurseOfBindingEquip": "§4Equipping a Curse Of Binding item prevented§4",
+
 
   "preventer.plants.option.preventGlowBerrieHarvesting": "Prevent glow berry harvesting",
   "preventer.plants.tooltip.preventGlowBerrieHarvesting": "Prevents you from harvesting Glow Berries",
@@ -281,9 +285,5 @@
   "preventer.defaultActionPreventedMessage": "Action was prevented by Preventer",
 
   "preventer.general.option.showLowDurabilityProtectionWarning": "Always show low durability protection warning",
-  "preventer.general.tooltip.showLowDurabilityProtectionWarning": "Shows the low durability protection warning,\neven the action prevented info is turned off",
-
-  "option.preventer.preventCurseOfBindingEquip": "Prevent Curse of Binding",
-  "tooltip.preventer.preventCurseOfBindingEquip": "Prevents equipping items with the Curse Of Binding enchant",
-  "config.preventer.preventCurseOfBindingEquip.text": "§4Equipping a Curse Of Binding item prevented§4"
+  "preventer.general.tooltip.showLowDurabilityProtectionWarning": "Shows the low durability protection warning,\neven the action prevented info is turned off"
 }

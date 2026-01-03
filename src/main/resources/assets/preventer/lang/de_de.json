@@ -102,6 +102,10 @@
   "preventer.interactions.tooltip.preventRocketSpamming": "Verhindert, dass du Feuerwerksraketen beim Elytra fliegen spammst",
   "preventer.interactions.prevented.preventRocketSpamming": "§4Feuerwerksraketen spammen verhindert§4",
 
+  "preventer.interactions.option.preventCurseOfBindingEquip": "Verhindere Fluch der Bindung anlegen",
+  "preventer.interactions.tooltip.preventCurseOfBindingEquip": "Verhindert, dass du Gegenstände mit dem Fluch der Bindung anlegst",
+  "preventer.interactions.prevented.preventCurseOfBindingEquip": "§4Fluch der Bindung anlegen verhindert§4",
+
 
   "preventer.plants.option.preventGlowBerrieHarvesting": "Kein Leuchtbeeren Ernten",
   "preventer.plants.tooltip.preventGlowBerrieHarvesting": "Verhindert das Ernten von Leuchtbeeren",

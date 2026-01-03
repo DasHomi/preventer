@@ -41,6 +41,7 @@ public class PreventerConfig implements ConfigData {
     public boolean preventChiseledBookshelfInteracting = false;
     public boolean preventItemFrameInteracting = false;
     public boolean preventRocketSpamming = false;
+    public boolean preventCurseOfBindingEquip = false;
 
     // Plants
     public boolean preventGlowBerrieHarvesting = false;
@@ -93,7 +94,6 @@ public class PreventerConfig implements ConfigData {
     public boolean hideShield = false;
     public boolean hideTotem = false;
     public boolean preventEnchantedItemSmelting = false;
-    public boolean preventCurseOfBindingEquip = false;
 
     // General Settings
     public ActionPreventedInfo actionPreventedInfoType = ActionPreventedInfo.DEFAULT;

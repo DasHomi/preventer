@@ -1,9 +1,6 @@
 package com.dashomi.preventer.mixin;
 
 import com.dashomi.preventer.PreventerClient;
-import net.minecraft.client.gui.screens.inventory.BlastFurnaceScreen;
-import net.minecraft.client.gui.screens.inventory.FurnaceScreen;
-import net.minecraft.client.gui.screens.inventory.SmokerScreen;
 import net.minecraft.client.multiplayer.MultiPlayerGameMode;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;

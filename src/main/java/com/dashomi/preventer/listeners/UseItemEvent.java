@@ -3,19 +3,20 @@ package com.dashomi.preventer.listeners;
 import com.dashomi.preventer.PreventerClient;
 import com.dashomi.preventer.enums.PreventPlacingAfterEatingConfig;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 
 import java.util.Objects;
 
 import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreventedMessage;
-
-import java.util.Optional;
 
 public class UseItemEvent {
     public static InteractionResult useItemListener(Player playerEntity, Level world, InteractionHand hand) {
@@ -57,17 +58,9 @@ public class UseItemEvent {
             }
 
             if (PreventerClient.config.preventCurseOfBindingEquip) {
-                DynamicRegistryManager drm = world.getRegistryManager();
-                Optional<RegistryEntry<Enchantment>> enchantRegistry = drm.getOptional(RegistryKeys.ENCHANTMENT)
-                        .flatMap(r -> r.getEntry(Enchantments.BINDING_CURSE.getValue()));
-                if (enchantRegistry.isPresent()) {
-                    int curseLvl = handStack.getEnchantments().getLevel(enchantRegistry.get());
-                    if (curseLvl > 0) {
-                        if (PreventerClient.config.preventCurseOfBindingEquip_msg) {
-                            player.sendMessage(Text.translatable("config.preventer.preventCurseOfBindingEquip.text"), true);
-                        }
-                        return ActionResult.FAIL;
-                    }
+                if (EnchantmentHelper.getItemEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.BINDING_CURSE), handStack) > 0) {
+                    sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventCurseOfBindingEquip"));
+                    return InteractionResult.FAIL;
                 }
             }
         }
