@@ -268,5 +268,9 @@
 
   "option.preventer.preventSwimming": "Prevent swimming",
   "tooltip.preventer.preventSwimming": "Prevents you from sprinting while underwater",
-  "config.preventer.preventSwimming.text": "§4Swimming prevented§4"
+  "config.preventer.preventSwimming.text": "§4Swimming prevented§4",
+
+  "option.preventer.preventCurseOfBindingEquip": "Prevent Curse of Binding",
+  "tooltip.preventer.preventCurseOfBindingEquip": "Prevents equipping items with the Curse Of Binding enchant",
+  "config.preventer.preventCurseOfBindingEquip.text": "§4Equipping a Curse Of Binding item prevented§4"
 }
