@@ -1,5 +1,5 @@
 # Preventer
-Preventer is a collection of **over fifty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs).
+Preventer is a collection of **over sixty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs).
 Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
 
 ## Modules (Latest version)
@@ -40,6 +40,10 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from accidentally placing books in chiseled bookshelves or removing them_
 - Prevent item frame interacting
   - _Prevents from interacting with item frames_
+- Prevent rocket spamming
+  - _Prevents you from using firework rockets while flying with elytra when one is still active_
+- Prevent Curse of Binding equipping
+  - _Prevents equipping items with the curse of binding enchant_
 </details>
 
 <details>
@@ -146,6 +150,8 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Hides shields in the offhand_
 - Hide totem
   - _Hides totems of undying in the offhand_
+- Prevent enchanted item smelting
+  - _Prevents you from quickmoving enchanted items into a furnace_
 </details>
 
 **_Missing any features? Open an [issue](https://github.com/DasHomi/preventer/issues)!_**

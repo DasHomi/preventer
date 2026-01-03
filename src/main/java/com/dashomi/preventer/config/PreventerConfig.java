@@ -46,7 +46,7 @@ public class PreventerConfig implements ConfigData {
     // Plants
     public boolean preventGlowBerrieHarvesting = false;
     public boolean preventSweetBerrieHarvesting = false;
-    public boolean preventNonMatureCropHarvesting = false; // fix
+    public boolean preventNonMatureCropHarvesting = false;
     public boolean preventStemBreaking = false;
     public boolean preventSugarCaneBreaking = false;
     public boolean preventFarmlandJumping = false;

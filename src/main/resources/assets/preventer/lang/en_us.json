@@ -103,9 +103,9 @@
   "preventer.interactions.tooltip.preventRocketSpamming": "Prevents you from using firework rockets while flying with elytra when one is still active",
   "preventer.interactions.prevented.preventRocketSpamming": "§4Rocket spamming prevented§4",
 
-  "preventer.interactions.option.preventCurseOfBindingEquip": "Prevent Curse of Binding equipping",
-  "preventer.interactions.tooltip.preventCurseOfBindingEquip": "Prevents equipping items with the Curse Of Binding enchant",
-  "preventer.interactions.prevented.preventCurseOfBindingEquip": "§4Equipping a Curse Of Binding item prevented§4",
+  "preventer.interactions.option.preventCurseOfBindingEquip": "Prevent curse of binding equipping",
+  "preventer.interactions.tooltip.preventCurseOfBindingEquip": "Prevents equipping items with the curse of binding enchant",
+  "preventer.interactions.prevented.preventCurseOfBindingEquip": "§4Equipping a curse of binding item prevented§4",
 
 
   "preventer.plants.option.preventGlowBerrieHarvesting": "Prevent glow berry harvesting",
