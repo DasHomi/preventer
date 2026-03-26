@@ -9,7 +9,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
@@ -49,9 +49,9 @@ public class PreventerClient implements ClientModInitializer {
         overrideKey = new KeyMapping("key.preventer.overrideKey", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_R, PREVENTER_CATEGORY);
         configKey = new KeyMapping("key.preventer.configKey", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_I, PREVENTER_CATEGORY);
         toggleKey = new KeyMapping("key.preventer.toggleKey", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, PREVENTER_CATEGORY);
-        KeyBindingHelper.registerKeyBinding(overrideKey);
-        KeyBindingHelper.registerKeyBinding(configKey);
-        KeyBindingHelper.registerKeyBinding(toggleKey);
+        KeyMappingHelper.registerKeyMapping(overrideKey);
+        KeyMappingHelper.registerKeyMapping(configKey);
+        KeyMappingHelper.registerKeyMapping(toggleKey);
 
         // Register Config
         AutoConfig.register(PreventerConfig.class, GsonConfigSerializer::new);
@@ -65,6 +65,6 @@ public class PreventerClient implements ClientModInitializer {
         UseItemCallback.EVENT.register(UseItemEvent::useItemListener);
         UseEntityCallback.EVENT.register(UseEntityEvent::useEntityListener);
         ClientTickEvents.END_CLIENT_TICK.register(EndClientTickEvent::endClientTickListener);
-        ClientTickEvents.END_WORLD_TICK.register(EndWorldTickEvent::endWorldTickListener);
+        ClientTickEvents.END_LEVEL_TICK.register(EndLevelTickEvent::endLevelTickListener);
     }
 }

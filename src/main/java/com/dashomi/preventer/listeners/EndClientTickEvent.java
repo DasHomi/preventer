@@ -20,21 +20,21 @@ public class EndClientTickEvent {
         while (toggleKey.consumeClick()) {
             PreventerClient.overrideToggleOff = !PreventerClient.overrideToggleOff;
             if (PreventerClient.overrideToggleOff) {
-                client.player.displayClientMessage(Component.translatable("key.preventer.toggleKey.offText"), true);
+                client.player.sendOverlayMessage(Component.translatable("key.preventer.toggleKey.offText"));
             } else {
-                client.player.displayClientMessage(Component.translatable("key.preventer.toggleKey.onText"), true);
+                client.player.sendOverlayMessage(Component.translatable("key.preventer.toggleKey.onText"));
             }
         }
 
         if (!PreventerClient.overrideToggleOff) {
             if (overrideKey.isDown()) {
-                client.player.displayClientMessage(Component.translatable(
+                client.player.sendOverlayMessage(Component.translatable(
                         PreventerClient.overrideToggleOff
                                 ? "key.preventer.overrideKey.notifyToggledOff"
                                 : "key.preventer.overrideKey.text"
-                ), true);
+                ));
             } else if (PreventerClient.overrideKeyPressed) {
-                client.player.displayClientMessage(Component.nullToEmpty(""), true);
+                client.player.sendOverlayMessage(Component.nullToEmpty(""));
             }
         }
 

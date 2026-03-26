@@ -18,7 +18,7 @@ public class DurabilityProtection {
                 if (stack.isDamageableItem()) {
                     if (stack.getDamageValue() >= stack.getMaxDamage() - 5) {
                         if (PreventerClient.config.showLowDurabilityProtectionWarning) {
-                            playerEntity.displayClientMessage(Component.translatable("preventer.miscellaneous.prevented.lowDurabilityProtection"), true);
+                            playerEntity.sendOverlayMessage(Component.translatable("preventer.miscellaneous.prevented.lowDurabilityProtection"));
                             if (PreventerClient.config.actionPreventedInfoType == ActionPreventedInfo.AUDIO) {
                                 playerEntity.playSound(SoundEvents.NOTE_BLOCK_BASEDRUM.value(), 1.0f, 1.1f);
                             }

@@ -10,7 +10,7 @@ import net.minecraft.ChatFormatting;
 public class ActionPreventedMessage {
     public static void sendActionPreventedMessage(Player player, Component legacyMessage) {
         if (PreventerClient.config.actionPreventedInfoType == ActionPreventedInfo.LEGACY) {
-            player.displayClientMessage(legacyMessage, true);
+            player.sendOverlayMessage(legacyMessage);
             return;
         }
         sendActionPreventedMessage(player);
@@ -19,10 +19,10 @@ public class ActionPreventedMessage {
     public static void sendActionPreventedMessage(Player player) {
         switch (PreventerClient.config.actionPreventedInfoType) {
             case MINIMAL:
-                player.displayClientMessage(Component.literal("❌").withStyle(ChatFormatting.RED), true);
+                player.sendOverlayMessage(Component.literal("❌").withStyle(ChatFormatting.RED));
                 break;
             case LEGACY, DEFAULT:
-                player.displayClientMessage(Component.translatable("preventer.defaultActionPreventedMessage"), true);
+                player.sendOverlayMessage(Component.translatable("preventer.defaultActionPreventedMessage"));
                 break;
             case AUDIO:
                 player.playSound(SoundEvents.NOTE_BLOCK_BASEDRUM.value(), 1.0f, 1.1f);

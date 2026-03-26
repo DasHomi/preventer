@@ -157,7 +157,7 @@ Each module can be enabled or disabled individually in game via a config screen 
 **_Missing any features? Open an [issue](https://github.com/DasHomi/preventer/issues)!_**
 
 ## Compatibility
-- Compatible with the latest version of Minecraft Fabric (1.21.11 Fabric)
+- Compatible with the latest version of Minecraft Fabric (26.1 Fabric)
 - Compatible with most other client-side mods
 - Compatible with most servers
 - Primarily made for survival gameplay

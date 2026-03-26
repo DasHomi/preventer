@@ -15,14 +15,14 @@ import static com.dashomi.preventer.utils.ActionPreventedMessage.sendActionPreve
 
 @Mixin(MultiPlayerGameMode.class)
 public class MultiplayerGameModeMixin {
-    @Inject(method = "handleInventoryMouseClick(IIILnet/minecraft/world/inventory/ClickType;Lnet/minecraft/world/entity/player/Player;)V", at = @At("HEAD"), cancellable = true)
-    private void interceptInventoryDrop(int i, int j, int k, ClickType clickType, Player player, CallbackInfo ci) {
+    @Inject(method = "handleContainerInput(IIILnet/minecraft/world/inventory/ContainerInput;Lnet/minecraft/world/entity/player/Player;)V", at = @At("HEAD"), cancellable = true)
+    private void interceptInventoryDrop(int i, int j, int k, ContainerInput containerInput, Player player, CallbackInfo ci) {
         if (PreventerClient.preventerActive() && !player.isSpectator()) {
             // j is slotId
             AbstractContainerMenu menu = player.containerMenu;
 
             if (PreventerClient.config.preventToolDropping) {
-                if (clickType == ClickType.THROW) {
+                if (containerInput == ContainerInput.THROW) {
                     if (j == AbstractContainerMenu.SLOT_CLICKED_OUTSIDE) {
                         if (menu.getCarried().get(DataComponents.TOOL) != null) {
                             sendActionPreventedMessage(player, Component.translatable("preventer.miscellaneous.prevented.preventToolDropping"));
@@ -36,7 +36,7 @@ public class MultiplayerGameModeMixin {
             }
 
             if (PreventerClient.config.preventRenamedItemDropping) {
-                if (clickType == ClickType.THROW) {
+                if (containerInput == ContainerInput.THROW) {
                     if (j == AbstractContainerMenu.SLOT_CLICKED_OUTSIDE) {
                         if (menu.getCarried().get(DataComponents.CUSTOM_NAME) != null) {
                             sendActionPreventedMessage(player, Component.translatable("preventer.miscellaneous.prevented.preventRenamedItemDropping"));
@@ -50,7 +50,7 @@ public class MultiplayerGameModeMixin {
             }
 
             if (PreventerClient.config.preventEnchantedItemSmelting) {
-                if (clickType == ClickType.QUICK_MOVE && j != AbstractContainerMenu.SLOT_CLICKED_OUTSIDE) {
+                if (containerInput == ContainerInput.QUICK_MOVE && j != AbstractContainerMenu.SLOT_CLICKED_OUTSIDE) {
                     if (menu instanceof FurnaceMenu || menu instanceof BlastFurnaceMenu || menu instanceof SmokerMenu) {
                         if (!menu.getSlot(j).getItem().getEnchantments().isEmpty()) {
                             sendActionPreventedMessage(player);

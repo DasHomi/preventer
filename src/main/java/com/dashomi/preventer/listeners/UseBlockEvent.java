@@ -3,6 +3,7 @@ package com.dashomi.preventer.listeners;
 import com.dashomi.preventer.PreventerClient;
 import com.dashomi.preventer.enums.PreventPlacingAfterEatingConfig;
 import com.dashomi.preventer.enums.PreventRocketUseConfig;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -180,7 +181,7 @@ public class UseBlockEvent {
             if (PreventerClient.config.preventRenamedItemUsing) {
                 if (!(handItem.getDefaultInstance().isDamageableItem())) {
                     if (!handItem.getDefaultInstance().is(ItemTags.SHULKER_BOXES)) {
-                        if (!playerEntity.getItemInHand(hand).getHoverName().getString().equals(handItem.getName().getString())) {
+                        if (handStack.get(DataComponents.CUSTOM_NAME) != null) {
                             if (targetBlock instanceof CakeBlock || targetBlock instanceof ComposterBlock || targetBlock instanceof CampfireBlock) {
                                 sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventRenamedItemUsing"));
                                 return InteractionResult.FAIL;
