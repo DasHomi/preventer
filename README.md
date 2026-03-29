@@ -2,6 +2,8 @@
 Preventer is a collection of **over sixty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs).
 Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
 
+> If you want even more control over what actions are blocked, check out [Action Regulator](https://github.com/DasHomi/ActionRegulator) which allows you to create custom rules for blocking any action in the game based on a wide variety of conditions.
+
 ## Modules (Latest version)
 <details open>
 <summary><b> Interactions </b></summary>
