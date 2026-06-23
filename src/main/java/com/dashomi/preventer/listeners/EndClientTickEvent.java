@@ -14,7 +14,7 @@ public class EndClientTickEvent {
         if (client.player == null) return;
 
         while (configKey.consumeClick()) {
-            client.setScreenAndShow(CreateModConfig.createConfigScreen(client.screen));
+            client.setScreenAndShow(CreateModConfig.createConfigScreen(client.gui.screen()));
         }
 
         while (toggleKey.consumeClick()) {

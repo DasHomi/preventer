@@ -2,6 +2,7 @@ package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
 import com.dashomi.preventer.enums.PreventSuspiciousBlockBreakingConfig;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.*;
@@ -138,7 +139,7 @@ public class AttackBlockEvent {
             }
 
             if (PreventerClient.config.preventSaplingBreaking) {
-                if (targetBlockState.is(BlockTags.SAPLINGS)) {
+                if (targetBlockState.getBlock() instanceof SaplingBlock) {
                     sendActionPreventedMessage(playerEntity, Component.translatable("preventer.breaking.prevented.preventSaplingBreaking"));
                     return InteractionResult.FAIL;
                 }
@@ -169,14 +170,7 @@ public class AttackBlockEvent {
     }
 
     private static boolean isOreBlock(BlockState blockState) {
-        return blockState.is(BlockTags.COAL_ORES) ||
-               blockState.is(BlockTags.DIAMOND_ORES) ||
-               blockState.is(BlockTags.EMERALD_ORES) ||
-               blockState.is(BlockTags.GOLD_ORES) ||
-               blockState.is(BlockTags.IRON_ORES) ||
-               blockState.is(BlockTags.LAPIS_ORES) ||
-               blockState.is(BlockTags.REDSTONE_ORES) ||
-               blockState.is(Blocks.NETHER_QUARTZ_ORE) ||
+        return blockState.is(ConventionalBlockTags.ORES) ||
                blockState.is(Blocks.GLOWSTONE) ||
                blockState.is(Blocks.AMETHYST_CLUSTER);
     }
