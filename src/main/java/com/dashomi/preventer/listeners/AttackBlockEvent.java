@@ -154,6 +154,13 @@ public class AttackBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventJungleLogBreaking) {
+                if (targetBlockState.is(Blocks.JUNGLE_LOG)) {
+                    sendActionPreventedMessage(playerEntity, Component.translatable("preventer.breaking.prevented.preventJungleLogBreaking"));
+                    return InteractionResult.FAIL;
+                }
+            }
+
             if (PreventerClient.config.preventBreakingWithoutFortune) {
                 if (isOreBlock(targetBlockState)) {
                     if (EnchantmentHelper.getItemEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE), mainHandStack) == 0) {

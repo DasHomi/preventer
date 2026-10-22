@@ -107,6 +107,13 @@
   "preventer.interactions.tooltip.preventCurseOfBindingEquip": "Prevents equipping items with the curse of binding enchant",
   "preventer.interactions.prevented.preventCurseOfBindingEquip": "§4Equipping a curse of binding item prevented§4",
 
+  "preventer.interactions.option.preventFenceGateInteraction": "Prevent fence gate toggling",
+  "preventer.interactions.tooltip.preventFenceGateInteraction": "Prevents the use of fence gates",
+  "preventer.interactions.prevented.preventFenceGateInteraction": "§4Fence gate use prevented§4",
+
+  "preventer.interactions.option.preventSnowballThrow": "Prevent snowball throw",
+  "preventer.interactions.tooltip.preventSnowballThrow": "Prevents throwing snowballs",
+  "preventer.interactions.prevented.preventSnowballThrow": "§4Snowball throw prevented§4",
 
   "preventer.plants.option.preventGlowBerrieHarvesting": "Prevent glow berry harvesting",
   "preventer.plants.tooltip.preventGlowBerrieHarvesting": "Prevents you from harvesting Glow Berries",
@@ -177,6 +184,10 @@
   "preventer.breaking.option.preventImmatureAmethystBreaking": "Prevent immature amethyst breaking",
   "preventer.breaking.tooltip.preventImmatureAmethystBreaking": "Prevents you from breaking immature amethyst crystals",
   "preventer.breaking.prevented.preventImmatureAmethystBreaking": "§4Immature amethyst breaking prevented§4",
+
+  "preventer.breaking.option.preventJungleLogBreaking": "Prevent jungle log breaking",
+  "preventer.breaking.tooltip.preventJungleLogBreaking": "Prevents you from breaking jungle log",
+  "preventer.breaking.prevented.preventJungleLogBreaking": "§4Jungle logs breaking prevented§4",
 
   "preventer.breaking.option.preventBreakingWithWeapon": "Prevent breaking with weapons",
   "preventer.breaking.tooltip.preventBreakingWithWeapon": "Prevents you from breaking blocks with a sword, trident or mace",

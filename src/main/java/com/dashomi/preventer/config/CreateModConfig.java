@@ -177,6 +177,22 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventCurseOfBindingEquip = value)
                         .build())
 
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Component.translatable("preventer.interactions.option.preventFenceGateInteraction"),
+                                config.preventFenceGateInteraction)
+                        .setDefaultValue(false)
+                        .setTooltip(Component.translatable("preventer.interactions.tooltip.preventFenceGateInteraction"))
+                        .setSaveConsumer(value -> config.preventFenceGateInteraction = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Component.translatable("preventer.interactions.option.preventSnowballThrow"),
+                                config.preventSnowballThrow)
+                        .setDefaultValue(false)
+                        .setTooltip(Component.translatable("preventer.interactions.tooltip.preventSnowballThrow"))
+                        .setSaveConsumer(value -> config.preventSnowballThrow = value)
+                        .build())
+
                 .addEntry(entryBuilder.startTextDescription(
                                 Component.translatable("text.preventer.missingFeatures"))
                         .build());
@@ -323,6 +339,14 @@ public class  CreateModConfig {
                         .setDefaultValue(false)
                         .setTooltip(Component.translatable("preventer.breaking.tooltip.preventImmatureAmethystBreaking"))
                         .setSaveConsumer(value -> config.preventImmatureAmethystBreaking = value)
+                        .build())
+
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Component.translatable("preventer.breaking.option.preventJungleLogBreaking"),
+                                config.preventJungleLogBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Component.translatable("preventer.breaking.tooltip.preventJungleLogBreaking"))
+                        .setSaveConsumer(value -> config.preventJungleLogBreaking = value)
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(

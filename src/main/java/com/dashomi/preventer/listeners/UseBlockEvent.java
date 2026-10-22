@@ -292,6 +292,13 @@ public class UseBlockEvent {
                 }
             }
 
+            if (PreventerClient.config.preventFenceGateInteraction) {
+                if (targetBlockState.is(BlockTags.FENCE_GATES)) {
+                    sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventFenceGateInteraction"));
+                    return InteractionResult.FAIL;
+                }
+            }
+
             if (PreventerClient.config.preventBerriePlanting) {
                 if (handItem.equals(Items.SWEET_BERRIES) || handItem.equals(Items.GLOW_BERRIES)) {
                     if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {

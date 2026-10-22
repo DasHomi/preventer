@@ -46,6 +46,10 @@ Each module can be enabled or disabled individually in game via a config screen 
   - _Prevents you from using firework rockets while flying with elytra when one is still active_
 - Prevent Curse of Binding equipping
   - _Prevents equipping items with the curse of binding enchant_
+- Prevent fence gate toggling
+  - _Prevents the use of fence gates_
+- Prevent snowball throw
+  - _Prevents throwing snowballs_
 </details>
 
 <details>
@@ -70,6 +74,8 @@ Each module can be enabled or disabled individually in game via a config screen 
 
 - Prevent budding amethyst block breaking
   - _Prevents you from breaking budding amethyst blocks_
+- Prevent jungle log breaking
+  - _Prevents you from breaking jungle logs_
 - Prevent item frame breaking
   - _Prevents you from breaking item frames (and glowing item frames)_
 - Prevent painting breaking

@@ -63,6 +63,13 @@ public class UseItemEvent {
                     return InteractionResult.FAIL;
                 }
             }
+
+            if (PreventerClient.config.preventSnowballThrow) {
+                if (playerEntity.getItemInHand(hand).is(Items.SNOWBALL)) {
+                    sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventSnowballThrow"));
+                    return InteractionResult.FAIL;
+                }
+            }
         }
 
         return InteractionResult.PASS;

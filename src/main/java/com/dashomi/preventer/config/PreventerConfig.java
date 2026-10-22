@@ -42,6 +42,8 @@ public class PreventerConfig implements ConfigData {
     public boolean preventItemFrameInteracting = false;
     public boolean preventRocketSpamming = false;
     public boolean preventCurseOfBindingEquip = false;
+    public boolean preventFenceGateInteraction = false;
+    public boolean preventSnowballThrow = false;
 
     // Plants
     public boolean preventGlowBerrieHarvesting = false;
@@ -63,6 +65,7 @@ public class PreventerConfig implements ConfigData {
     public boolean preventCarpetBreaking = false;
     public boolean preventSaplingBreaking = false;
     public boolean preventImmatureAmethystBreaking = false;
+    public boolean preventJungleLogBreaking = false;
     public boolean preventBreakingWithWeapon = false;
     public boolean preventBreakingWithoutFortune = false;
 
