@@ -2,7 +2,9 @@ package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.animal.golem.CopperGolem;
 import net.minecraft.world.entity.decoration.ItemFrame;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
@@ -28,6 +30,13 @@ public class UseEntityEvent {
             if (PreventerClient.config.preventItemFrameInteracting) {
                 if (entity instanceof ItemFrame) {
                     sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventItemFrameInteracting"));
+                    return InteractionResult.FAIL;
+                }
+            }
+
+            if (PreventerClient.config.preventCopperDeWaxing) {
+                if (playerEntity.getItemInHand(hand).is(ItemTags.AXES) && entity instanceof CopperGolem) {
+                    sendActionPreventedMessage(playerEntity, Component.translatable("preventer.interactions.prevented.preventCopperDeWaxing"));
                     return InteractionResult.FAIL;
                 }
             }
